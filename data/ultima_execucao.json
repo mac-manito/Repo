@@ -1,9 +1,9 @@
 {
- "gerada_em": "2026-09-29T11:11:50.384278-03:00",
+ "gerada_em": "2026-09-29T11:14:32.157204-03:00",
  "numeros": {
   "veiculos": 38,
   "consultados": 40,
-  "manchetes": 139,
+  "manchetes": 138,
   "historias": 8
  },
  "backend": "tfidf",
@@ -20,6 +20,13 @@
  ],
  "historias": [
   {
+   "titulo": "Taxa de desemprego cai para 5,3%, a menor para o trimestre até agosto",
+   "veiculos": [
+    "Agência Brasil",
+    "CartaCapital"
+   ]
+  },
+  {
    "titulo": "Live Updates: Lindsay Clancy's first hearing following mistrial",
    "veiculos": [
     "CBS News",
@@ -28,13 +35,6 @@
   },
   {
    "titulo": "Ausência de agenda real desestimula o eleitor a votar",
-   "veiculos": [
-    "Folha de S.Paulo",
-    "UOL"
-   ]
-  },
-  {
-   "titulo": "Novo Nordisk pagará até US$2,6 bi à chinesa Hengrui por direitos de pílula para perda de peso",
    "veiculos": [
     "Folha de S.Paulo",
     "UOL"
