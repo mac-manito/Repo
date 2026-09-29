@@ -1,10 +1,10 @@
 {
- "gerada_em": "2026-09-29T15:13:16.910100-03:00",
+ "gerada_em": "2026-09-29T17:24:49.515179-03:00",
  "numeros": {
   "veiculos": 182,
   "consultados": 409,
-  "manchetes": 667,
-  "historias": 24
+  "manchetes": 672,
+  "historias": 30
  },
  "backend": "tfidf",
  "limiar": 0.36,
@@ -378,10 +378,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Kan",
-   "motivo": "feed não encontrado ou fora do ar"
-  },
-  {
    "veiculo": "Kommersant",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -404,10 +400,6 @@
   {
    "veiculo": "La Presse",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "La Silla Vacía",
-   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Le Devoir",
@@ -504,6 +496,10 @@
   {
    "veiculo": "News24",
    "motivo": "sem feed (verificado recentemente)"
+  },
+  {
+   "veiculo": "Newslaundry",
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Newstapa",
@@ -906,6 +902,10 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
+   "veiculo": "elDiario.es",
+   "motivo": "feed não encontrado ou fora do ar"
+  },
+  {
    "veiculo": "heise online",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -920,97 +920,200 @@
  ],
  "historias": [
   {
-   "titulo": "Lindsay Clancy’s lawyer now questions whether she killed her three children",
+   "titulo": "Caleb Flynn, former \"American Idol\" contested, found guilty of murdering wife",
    "veiculos": [
-    "The Age",
-    "NBC News",
+    "CBS News",
+    "ABC News (EUA)",
+    "Daily Mail",
+    "Fox News"
+   ]
+  },
+  {
+   "titulo": "Quaest: Tarcísio tem 44% na disputa pelo governo de São Paulo; Haddad, 24%",
+   "veiculos": [
+    "CartaCapital",
+    "UOL",
+    "Valor Econômico",
+    "Veja"
+   ]
+  },
+  {
+   "titulo": "Fatima El Mansouri Becomes Morocco’s First Woman Prime Minister",
+   "veiculos": [
+    "Channels TV",
+    "France 24",
+    "Stuff"
+   ]
+  },
+  {
+   "titulo": "U.S. Supreme Court sides with Trump administration in third-country deportations",
+   "veiculos": [
     "NPR",
-    "The Sydney Morning Herald"
+    "Axios",
+    "NBC News",
+    "The Intercept"
    ]
   },
   {
-   "titulo": "El Gobierno aprueba la protección frente a los desahucios hasta 2030 y la prórroga de los contratos de alquiler hasta 2028",
+   "titulo": "‘I Enjoyed Myself, Ready To Kick’, Tinubu Says After Returning From Europe Vacation",
    "veiculos": [
-    "El País",
-    "elDiario.es",
-    "infoLibre"
+    "Channels TV",
+    "Premium Times",
+    "ThisDay"
    ]
   },
   {
-   "titulo": "Man City guilty of all serious financial breach charges: Premier League",
+   "titulo": "Doblete para Lamine Yamal",
    "veiculos": [
-    "Al Jazeera",
+    "ABC (Espanha)",
+    "La República (Peru)"
+   ]
+  },
+  {
+   "titulo": "Man City Guilty Of Financial Rule Breaches, Says Premier League",
+   "veiculos": [
+    "Channels TV",
     "Daily Mail"
    ]
   },
   {
-   "titulo": "AFCON Qualifiers: Adams, Awoniyi Lead Super Eagles Attack As Chelle Names Team For Guinea-Bissau",
+   "titulo": "Lindsay Clancy's defense makes stunning argument there is NO EVIDENCE she killed her three children as retrial hangs in the balance",
+   "veiculos": [
+    "Daily Mail",
+    "NPR"
+   ]
+  },
+  {
+   "titulo": "Magic Mountain closes X2 coaster permanently after history of injuries",
+   "veiculos": [
+    "Los Angeles Times",
+    "Stuff"
+   ]
+  },
+  {
+   "titulo": "Mystery over UK airbase scare as police find 'quantity of petrol' but no explosives",
+   "veiculos": [
+    "France 24",
+    "South China Morning Post"
+   ]
+  },
+  {
+   "titulo": "Digger review – Tom Cruise’s loudmouth oil tycoon goes hard in Alejandro G Iñárritu’s eco-satire",
+   "veiculos": [
+    "The Guardian",
+    "The Guardian Australia"
+   ]
+  },
+  {
+   "titulo": "AFCON Qualifiers: Guinea-Bissau Beat Super Eagles 3-0, Hand Chelle First Defeat",
    "veiculos": [
     "Channels TV",
     "Punch"
    ]
   },
   {
-   "titulo": "رکورد تاریخی حاج‌صفی در شب تلخ دیدار با روسیه؛ آقای بازی‌های ملی",
+   "titulo": "Cámara de Diputados debatirá este jueves censura contra ministro del Interior",
    "veiculos": [
-    "IRNA",
-    "Iran International"
+    "El Comercio (Peru)",
+    "La República (Peru)"
    ]
   },
   {
-   "titulo": "Temblor en Perú hoy, martes 29 de septiembre: último sismo, magnitud y epicentro según el IGP",
+   "titulo": "Governo solicita o bloqueio de 5.209 sites de apostas após assinatura de MP",
    "veiculos": [
-    "La República (Peru)",
-    "RPP"
+    "Folha de S.Paulo",
+    "Valor Econômico"
    ]
   },
   {
-   "titulo": "Ahora Nación acuerda por mayoría no apoyar la moción de censura a ministro del Interior, anuncia diputado Marcelo",
+   "titulo": "Journalist caught dissing Simmons on hot mic",
+   "veiculos": [
+    "The Age",
+    "The Sydney Morning Herald"
+   ]
+  },
+  {
+   "titulo": "España vs. Croacia, EN VIVO por la Nations League: el minuto a minuto del partido",
+   "veiculos": [
+    "La Nación (Argentina)",
+    "La Tercera"
+   ]
+  },
+  {
+   "titulo": "EN VIVO: Comisión de Constitución inicia debate de predictamen que rechaza pedido de facultades del Gobierno",
    "veiculos": [
     "El Comercio (Peru)",
     "RPP"
    ]
   },
   {
-   "titulo": "Madre de EEUU que mató a sus tres hijos busca la absolución tras juicio nulo",
+   "titulo": "Victorian hospital doctors to hold strike",
    "veiculos": [
-    "Clarín",
-    "El Comercio (Peru)"
+    "The Age",
+    "The Sydney Morning Herald"
    ]
   },
   {
-   "titulo": "Palco de protestos por crise de habitação, Espanha quer proibir despejos até 2030",
+   "titulo": "Female motorcyclist tasered in gang attack",
    "veiculos": [
-    "Folha de S.Paulo",
-    "UOL"
+    "The Age",
+    "The Sydney Morning Herald"
    ]
   },
   {
-   "titulo": "Juro dos Treasuries de 30 anos dos EUA atinge maior nível desde 2002",
+   "titulo": "Family raise alarm for missing hiker",
    "veiculos": [
-    "Folha de S.Paulo",
-    "UOL"
+    "The Age",
+    "The Sydney Morning Herald"
    ]
   },
   {
-   "titulo": "Ex-special counsel Jack Smith tells lawmakers 'I stand by' decisions to charge Trump",
+   "titulo": "El Rey, sobre Ceuta ante Macron: «No podemos afrontar solos una responsabilidad que es de todos»",
+   "veiculos": [
+    "ABC (Espanha)",
+    "El Mundo"
+   ]
+  },
+  {
+   "titulo": "Supreme Court rules Trump admin can continue deporting migrants to 3rd countries",
    "veiculos": [
     "ABC News (EUA)",
-    "NBC News"
+    "PBS"
    ]
   },
   {
-   "titulo": "El Gobierno irrumpe en el mercado de vivienda: castiga a fondos y pisos turísticos y prohíbe los desahucios",
+   "titulo": "Reuters: в бюджете России на 2027 год социальные расходы сократят на 7%, расходы на здравоохранение — на 6,8%, на образование — на 6%",
    "veiculos": [
-    "ABC (Espanha)",
-    "El País"
+    "Meduza",
+    "iStories / Vazhnye Istorii"
    ]
   },
   {
-   "titulo": "Mohamed VI nombra a Fátima Zahra el Mansouri primera ministra de Marruecos",
+   "titulo": "OpenAI hit with landmark lawsuit following Hugging Face hack",
    "veiculos": [
-    "ABC (Espanha)",
-    "France 24"
+    "Axios",
+    "Wired"
+   ]
+  },
+  {
+   "titulo": "Andy Burnham’s Labour Conference Speech Offers a Clear Break From the Politics of Despair",
+   "veiculos": [
+    "Byline Times",
+    "Channel 4"
+   ]
+  },
+  {
+   "titulo": "آمریکا ۱۰ فرد و شرکت مرتبط با صنایع نظامی جمهوری اسلامی را تحریم کرد",
+   "veiculos": [
+    "Iran International",
+    "IranWire"
+   ]
+  },
+  {
+   "titulo": "Нотариусы в нескольких регионах стали требовать у призывников выписки из реестра повесток. Без них отказываются оформлять доверенности",
+   "veiculos": [
+    "Meduza",
+    "Novaya Gazeta Europe"
    ]
   },
   {
@@ -1021,48 +1124,6 @@
    ]
   },
   {
-   "titulo": "Concurso convida devs a democratizar o ensino de TI",
-   "veiculos": [
-    "O Globo",
-    "Valor Econômico"
-   ]
-  },
-  {
-   "titulo": "EEUU acusa al migrante venezolano baleado por ICE de agredir a un agente federal",
-   "veiculos": [
-    "Clarín",
-    "O Globo"
-   ]
-  },
-  {
-   "titulo": "Governo Central registra déficit de R$ 13,6 bilhões em agosto",
-   "veiculos": [
-    "Agência Brasil",
-    "CNN Brasil"
-   ]
-  },
-  {
-   "titulo": "LIVE: President Ramaphosa addresses nation on GBVF scourge",
-   "veiculos": [
-    "SABC",
-    "eNCA"
-   ]
-  },
-  {
-   "titulo": "Au Maroc, le roi nomme pour la première fois une femme, Fatima Ezzahra El-Mansouri, à la tête du gouvernement",
-   "veiculos": [
-    "Le Monde",
-    "RFI"
-   ]
-  },
-  {
-   "titulo": "Man charged with murder after two men found dead on NSW property",
-   "veiculos": [
-    "The Age",
-    "The Sydney Morning Herald"
-   ]
-  },
-  {
    "titulo": "Família de condenado por garimpo na terra Yanomami bancou vida de Ramagem nos EUA",
    "veiculos": [
     "Agência Pública",
@@ -1070,24 +1131,10 @@
    ]
   },
   {
-   "titulo": "Surveillance Finds a Way",
+   "titulo": "El Gobierno aprueba la protección frente a los desahucios hasta 2030 y la prórroga de los contratos de alquiler hasta 2028",
    "veiculos": [
-    "404 Media",
-    "Wired"
-   ]
-  },
-  {
-   "titulo": "Queensland Ballet posts another multimillion-dollar loss",
-   "veiculos": [
-    "The Age",
-    "The Sydney Morning Herald"
-   ]
-  },
-  {
-   "titulo": "Superquiz, Wednesday, September 30",
-   "veiculos": [
-    "The Age",
-    "The Sydney Morning Herald"
+    "El País",
+    "infoLibre"
    ]
   }
  ]

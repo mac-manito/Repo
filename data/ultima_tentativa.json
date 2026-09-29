@@ -1,5 +1,5 @@
 {
-  "gerada_em": "2026-09-29T15:13:16.910100-03:00",
+  "gerada_em": "2026-09-29T17:24:49.515179-03:00",
   "consultados": 409,
   "com_manchetes": 182,
   "falhas": [
@@ -372,10 +372,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Kan",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "Kommersant",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -398,10 +394,6 @@
     {
       "veiculo": "La Presse",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "La Silla Vacía",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Le Devoir",
@@ -498,6 +490,10 @@
     {
       "veiculo": "News24",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Newslaundry",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Newstapa",
@@ -898,6 +894,10 @@
     {
       "veiculo": "bianet",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "elDiario.es",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "heise online",
