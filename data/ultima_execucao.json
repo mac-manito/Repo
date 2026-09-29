@@ -1,0 +1,79 @@
+{
+ "gerada_em": "2026-09-29T11:11:50.384278-03:00",
+ "numeros": {
+  "veiculos": 38,
+  "consultados": 40,
+  "manchetes": 139,
+  "historias": 8
+ },
+ "backend": "tfidf",
+ "limiar": 0.36,
+ "falhas": [
+  {
+   "veiculo": "Revista Piauí",
+   "motivo": "feed sem itens recentes"
+  },
+  {
+   "veiculo": "The Marshall Project",
+   "motivo": "feed sem itens recentes"
+  }
+ ],
+ "historias": [
+  {
+   "titulo": "Live Updates: Lindsay Clancy's first hearing following mistrial",
+   "veiculos": [
+    "CBS News",
+    "NBC News"
+   ]
+  },
+  {
+   "titulo": "Ausência de agenda real desestimula o eleitor a votar",
+   "veiculos": [
+    "Folha de S.Paulo",
+    "UOL"
+   ]
+  },
+  {
+   "titulo": "Novo Nordisk pagará até US$2,6 bi à chinesa Hengrui por direitos de pílula para perda de peso",
+   "veiculos": [
+    "Folha de S.Paulo",
+    "UOL"
+   ]
+  },
+  {
+   "titulo": "Surveillance Finds a Way",
+   "veiculos": [
+    "404 Media",
+    "Wired"
+   ]
+  },
+  {
+   "titulo": "Hábitos do dia a dia podem elevar o risco de infarto",
+   "veiculos": [
+    "O Globo",
+    "Valor Econômico"
+   ]
+  },
+  {
+   "titulo": "Real Time: Celina lidera no DF e pode se reeleger no 1º turno",
+   "veiculos": [
+    "CartaCapital",
+    "Exame"
+   ]
+  },
+  {
+   "titulo": "OpenAI Halts New Model Over Safety Worries",
+   "veiculos": [
+    "The Wall Street Journal",
+    "Wired"
+   ]
+  },
+  {
+   "titulo": "Os candidatos das Big Techs nas eleições 2026",
+   "veiculos": [
+    "Agência Pública",
+    "Núcleo"
+   ]
+  }
+ ]
+}

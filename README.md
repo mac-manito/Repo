@@ -47,7 +47,7 @@ A lista ativa não depende de todas as fontes publicarem todos os dias.
 Na validação inicial, alguns feeds da proposta anterior estavam bloqueados, vazios ou antigos.
 Foram substituídos: Estadão → Manual do Usuário; CNN → Drop Site News;
 New York Times → The New Yorker; Politico → Platformer; USA Today → Defector;
-Los Angeles Times → The Marshall Project; The Intercept → CNBC.
+Los Angeles Times → The Marshall Project; The Intercept → Ars Technica.
 O Globo, Valor e Nexo tiveram seus endereços de feed corrigidos.
 A disponibilidade pode mudar, inclusive entre o ambiente local e os executores do GitHub.
 

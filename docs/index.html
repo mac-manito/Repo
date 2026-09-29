@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Capa do Mundo, 29/09/2026</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,800;1,6..72,400&display=swap">
+<style>
+:root{
+  --papel:#e9ece8; --tinta:#121619; --fio:rgba(18,22,25,.28); --azul:#1d4b7c; --suave:#4b555c; --aviso:#fff3c4;
+  --serifa:"Newsreader",Georgia,"Times New Roman",serif;
+  --fio-sans:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --papel:#14181b; --tinta:#e6e9e4; --fio:rgba(230,233,228,.28); --azul:#93bde8; --suave:#a3adb3; --aviso:#3a3416; }
+}
+:root[data-theme="dark"]{ --papel:#14181b; --tinta:#e6e9e4; --fio:rgba(230,233,228,.28); --azul:#93bde8; --suave:#a3adb3; --aviso:#3a3416; }
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:400 1.0625rem/1.45 var(--serifa)}
+[hidden]{display:none!important}
+a:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--azul);outline-offset:2px}
+
+.pagina{max-width:1180px;margin:0 auto;padding:0 max(1rem,env(safe-area-inset-right)) 3rem max(1rem,env(safe-area-inset-left))}
+
+/* cabeçalho */
+.cabeca{text-align:center;padding:1.5rem 0 .7rem;border-bottom:4px double var(--tinta)}
+.cabeca h1{margin:0;font-weight:800;font-size:clamp(2.7rem,9.5vw,5.8rem);line-height:.95;letter-spacing:-.02em}
+.cabeca p{margin:.45rem 0 0;font-style:italic;color:var(--suave)}
+.faixa{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.3rem 1.5rem;padding:.5rem 0;border-bottom:1px solid var(--tinta);font:600 .8125rem/1.25 var(--fio-sans)}
+.numeros{display:flex;flex-wrap:wrap;font-weight:400;color:var(--suave)}
+.numeros span{padding:0 .85rem;border-left:1px solid var(--fio)}
+.numeros span:first-child{padding-left:0;border-left:0}
+.numeros b{color:var(--tinta);font-weight:600}
+.aviso{margin:.8rem 0 0;padding:.6rem .8rem;background:var(--aviso);border:1px solid var(--tinta);font:400 .875rem/1.35 var(--fio-sans)}
+.busca{padding:.7rem 0;border-bottom:1px solid var(--fio)}
+.busca input{width:100%;padding:.5rem 0;border:0;border-bottom:1px solid var(--tinta);background:transparent;color:inherit;font:400 1rem var(--fio-sans);border-radius:0}
+
+/* títulos e fontes */
+.t a{color:inherit;text-decoration:none}
+.t a:hover{color:var(--azul);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.15em}
+.fontes{margin:.4rem 0 0;font:400 .8125rem/1.4 var(--fio-sans);color:var(--suave)}
+.fontes .n{margin-right:.45rem;font-weight:600;color:var(--tinta)}
+.fontes a{color:var(--azul);text-decoration:none}
+.fontes a:hover{text-decoration:underline}
+.fontes .l a:not(:last-child)::after{content:",";color:var(--suave)}
+.orig{margin:.25rem 0 0;font-style:italic;font-size:.9rem;color:var(--suave)}
+
+/* topo: manchete + lateral */
+.topo{display:grid;grid-template-columns:minmax(0,1.85fr) minmax(0,1fr);border-bottom:1px solid var(--tinta)}
+.principal{padding:1.3rem 1.5rem 1.5rem 0;border-right:1px solid var(--fio)}
+.principal .t{margin:0 0 .5rem;font-weight:800;font-size:clamp(2rem,5.4vw,3.7rem);line-height:1.04;letter-spacing:-.01em}
+.principal .fontes{font-size:.875rem}
+.cada{margin:1rem 0 0;border-top:1px solid var(--fio);padding-top:.5rem}
+.cada summary{cursor:pointer;font:600 .875rem var(--fio-sans)}
+.cada ul{list-style:none;margin:.6rem 0 0;padding:0;font-size:.98rem;line-height:1.35}
+.cada li{margin:0 0 .45rem}
+.cada li a{font:600 .8125rem var(--fio-sans);color:var(--azul);text-decoration:none;margin-right:.4rem}
+.lateral{padding:1.3rem 0 1.2rem 1.5rem}
+.lateral h2,.secao{margin:0;font:600 1rem/1.2 var(--fio-sans)}
+.lateral .historia{padding:.8rem 0;border-bottom:1px solid var(--fio)}
+.lateral .historia:last-child{border-bottom:0}
+@media (max-width:820px){
+  .topo{grid-template-columns:1fr}
+  .principal{padding-right:0;border-right:0;border-bottom:1px solid var(--tinta)}
+  .lateral{padding-left:0}
+}
+
+/* histórias: o tamanho do título acompanha quantos veículos deram o assunto */
+.historia .t{margin:0;line-height:1.12}
+.peso-2 .t{font-size:1.06rem;font-weight:600}
+.peso-3 .t{font-size:1.2rem;font-weight:600}
+.peso-4 .t{font-size:1.38rem;font-weight:800}
+.peso-5 .t{font-size:1.65rem;font-weight:800;line-height:1.08}
+.secao{margin:1.6rem 0 0;padding-top:.5rem;border-top:4px double var(--tinta)}
+.colunas{column-width:19rem;column-gap:1.6rem;column-rule:1px solid var(--fio);padding-top:.8rem}
+.colunas .historia{break-inside:avoid;margin:0 0 .9rem;padding:0 0 .9rem;border-bottom:1px solid var(--fio)}
+
+/* regiões */
+details.regiao{border-top:1px solid var(--tinta)}
+details.regiao:last-of-type{border-bottom:1px solid var(--tinta)}
+details.regiao>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.75rem 0}
+details.regiao>summary::-webkit-details-marker{display:none}
+details.regiao>summary .nome{font-size:1.45rem;font-weight:800}
+details.regiao>summary .qtd{font:400 .8125rem var(--fio-sans);color:var(--suave);margin-left:auto}
+details.regiao>summary::after{content:"+";font:600 1.3rem var(--fio-sans)}
+details.regiao[open]>summary::after{content:"\2212"}
+.veiculos{column-width:17rem;column-gap:1.6rem;column-rule:1px solid var(--fio);padding:.3rem 0 1rem}
+.veiculo{break-inside:avoid;margin:0 0 1rem}
+.veiculo h4{margin:0 0 .25rem;font:600 .875rem/1.2 var(--fio-sans)}
+.veiculo h4 a{color:var(--azul);text-decoration:none}
+.veiculo h4 span{font-weight:400;color:var(--suave)}
+.veiculo ul{list-style:none;margin:0;padding:0}
+.veiculo li{margin:0 0 .35rem;font-size:.98rem;line-height:1.3}
+.veiculo li a{color:inherit;text-decoration:none}
+.veiculo li a:hover{color:var(--azul);text-decoration:underline}
+
+.rodape{margin-top:2rem;padding-top:.8rem;border-top:4px double var(--tinta);font:400 .8125rem/1.5 var(--fio-sans);color:var(--suave)}
+.rodape details{margin:.6rem 0}
+.rodape summary{cursor:pointer;font-weight:600;color:var(--tinta)}
+.rodape ul{columns:16rem;margin:.5rem 0 0;padding-left:1.1rem}
+</style>
+</head>
+<body>
+<div class="pagina">
+
+<header class="cabeca">
+  <h1>Capa do Mundo</h1>
+  <p>Brasil e Estados Unidos · 40 fontes acompanhadas · edição diária</p>
+</header>
+<div class="faixa">
+  <span>terça-feira, 29 de setembro de 2026</span>
+  <span class="numeros">
+    <span><b>38</b> veículos com manchetes</span>
+    <span><b>139</b> manchetes lidas</span>
+    <span><b>8</b> assuntos em mais de um veículo</span>
+  </span>
+</div>
+
+<p class="aviso">Atualização programada para as 7h de Brasília, sujeita a atrasos. Notícias em português e inglês, no idioma original. <a href="edicoes/index.html">Edições anteriores</a></p>
+<div class="busca"><input id="q" type="search" placeholder="Filtrar por palavra ou veículo" aria-label="Filtrar manchetes"></div>
+
+
+
+<section class="topo">
+  <article class="principal" data-busca="live updates: lindsay clancy&#39;s first hearing following mistrial live updates: lindsay clancy&#39;s first hearing following mistrial cbs news live updates: lindsay clancy&#39;s first hearing following mistrial nbc news lindsay clancy to appear in court for first time since mistrial">
+    <h2 class="t"><a href="https://www.cbsnews.com/live-updates/lindsay-clancy-murder-trial-mistrial-hearing-watch-live-updates/" target="_blank" rel="noopener noreferrer">Live Updates: Lindsay Clancy&#39;s first hearing following mistrial</a></h2>
+    
+    <p class="fontes"><span class="n">2 veículos</span><span class="l"><a href="https://www.cbsnews.com/live-updates/lindsay-clancy-murder-trial-mistrial-hearing-watch-live-updates/" title="Live Updates: Lindsay Clancy&#39;s first hearing following mistrial" target="_blank" rel="noopener noreferrer">CBS News</a> <a href="https://www.today.com/video/lindsay-clancy-to-appear-in-court-for-first-time-since-mistrial-270711365586" title="Lindsay Clancy to Appear in Court for First Time Since Mistrial" target="_blank" rel="noopener noreferrer">NBC News</a> </span></p>
+    
+    <details class="cada">
+      <summary>Como cada veículo chamou o assunto</summary>
+      <ul><li><a href="https://www.cbsnews.com/live-updates/lindsay-clancy-murder-trial-mistrial-hearing-watch-live-updates/" target="_blank" rel="noopener noreferrer">CBS News</a>Live Updates: Lindsay Clancy&#39;s first hearing following mistrial</li><li><a href="https://www.today.com/video/lindsay-clancy-to-appear-in-court-for-first-time-since-mistrial-270711365586" target="_blank" rel="noopener noreferrer">NBC News</a>Lindsay Clancy to Appear in Court for First Time Since Mistrial</li></ul>
+    </details>
+    
+  </article>
+  <aside class="lateral">
+    <h2>Também em vários veículos</h2>
+    
+    <article class="historia peso-2" data-busca="ausência de agenda real desestimula o eleitor a votar ausência de agenda real desestimula o eleitor a votar folha de s.paulo ausência de agenda real desestimula o eleitor a votar uol ausência de agenda real desestimula o eleitor a votar">
+      <h3 class="t"><a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/dora-kramer/2026/09/ausencia-de-agenda-real-desestimula-o-eleitor-a-votar.shtml" target="_blank" rel="noopener noreferrer">Ausência de agenda real desestimula o eleitor a votar</a></h3>
+      <p class="fontes"><span class="n">2 veículos</span><span class="l"><a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/dora-kramer/2026/09/ausencia-de-agenda-real-desestimula-o-eleitor-a-votar.shtml" title="Ausência de agenda real desestimula o eleitor a votar" target="_blank" rel="noopener noreferrer">Folha de S.Paulo</a> <a href="https://www1.folha.uol.com.br/colunas/dora-kramer/2026/09/ausencia-de-agenda-real-desestimula-o-eleitor-a-votar.shtml" title="Ausência de agenda real desestimula o eleitor a votar" target="_blank" rel="noopener noreferrer">UOL</a> </span></p>
+    </article>
+    
+    <article class="historia peso-2" data-busca="novo nordisk pagará até us$2,6 bi à chinesa hengrui por direitos de pílula para perda de peso novo nordisk pagará até us$2,6 bi à chinesa hengrui por direitos de pílula para perda de peso folha de s.paulo novo nordisk pagará até us$2,6 bi à chinesa hengrui por direitos de pílula para perda de peso uol novo nordisk pagará até us$2,6 bi à chinesa hengrui por direitos de pílula para perda de peso">
+      <h3 class="t"><a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://c-level.folha.uol.com.br/negocios/2026/09/novo-nordisk-pagara-ate-us26-bi-a-chinesa-hengrui-por-direitos-de-pilula-para-perda-de-peso.shtml" target="_blank" rel="noopener noreferrer">Novo Nordisk pagará até US$2,6 bi à chinesa Hengrui por direitos de pílula para perda de peso</a></h3>
+      <p class="fontes"><span class="n">2 veículos</span><span class="l"><a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://c-level.folha.uol.com.br/negocios/2026/09/novo-nordisk-pagara-ate-us26-bi-a-chinesa-hengrui-por-direitos-de-pilula-para-perda-de-peso.shtml" title="Novo Nordisk pagará até US$2,6 bi à chinesa Hengrui por direitos de pílula para perda de peso" target="_blank" rel="noopener noreferrer">Folha de S.Paulo</a> <a href="https://c-level.folha.uol.com.br/negocios/2026/09/novo-nordisk-pagara-ate-us26-bi-a-chinesa-hengrui-por-direitos-de-pilula-para-perda-de-peso.shtml" title="Novo Nordisk pagará até US$2,6 bi à chinesa Hengrui por direitos de pílula para perda de peso" target="_blank" rel="noopener noreferrer">UOL</a> </span></p>
+    </article>
+    
+    <article class="historia peso-2" data-busca="surveillance finds a way surveillance finds a way 404 media surveillance finds a way wired how to beat surveillance pricing before it bleeds you dry">
+      <h3 class="t"><a href="https://www.404media.co/surveillance-finds-a-way/" target="_blank" rel="noopener noreferrer">Surveillance Finds a Way</a></h3>
+      <p class="fontes"><span class="n">2 veículos</span><span class="l"><a href="https://www.404media.co/surveillance-finds-a-way/" title="Surveillance Finds a Way" target="_blank" rel="noopener noreferrer">404 Media</a> <a href="https://www.wired.com/story/how-to-beat-surveillance-pricing-before-it-bleeds-you-dry/" title="How to Beat Surveillance Pricing Before It Bleeds You Dry" target="_blank" rel="noopener noreferrer">Wired</a> </span></p>
+    </article>
+    
+    <article class="historia peso-2" data-busca="hábitos do dia a dia podem elevar o risco de infarto hábitos do dia a dia podem elevar o risco de infarto o globo hábitos do dia a dia podem elevar o risco de infarto valor econômico hábitos do dia a dia podem elevar o risco de infarto">
+      <h3 class="t"><a href="https://oglobo.globo.com/patrocinado/dino/noticia/2026/09/29/habitos-do-dia-a-dia-podem-elevar-o-risco-de-infarto-1.ghtml" target="_blank" rel="noopener noreferrer">Hábitos do dia a dia podem elevar o risco de infarto</a></h3>
+      <p class="fontes"><span class="n">2 veículos</span><span class="l"><a href="https://oglobo.globo.com/patrocinado/dino/noticia/2026/09/29/habitos-do-dia-a-dia-podem-elevar-o-risco-de-infarto-1.ghtml" title="Hábitos do dia a dia podem elevar o risco de infarto" target="_blank" rel="noopener noreferrer">O Globo</a> <a href="https://valor.globo.com/patrocinado/dino/noticia/2026/09/29/habitos-do-dia-a-dia-podem-elevar-o-risco-de-infarto-1.ghtml" title="Hábitos do dia a dia podem elevar o risco de infarto" target="_blank" rel="noopener noreferrer">Valor Econômico</a> </span></p>
+    </article>
+    
+    <article class="historia peso-2" data-busca="real time: celina lidera no df e pode se reeleger no 1º turno real time: celina lidera no df e pode se reeleger no 1º turno cartacapital real time: celina lidera no df e pode se reeleger no 1º turno exame real time: celina lidera com mais de 20 pontos de vantagem no 1º turno no distrito federal">
+      <h3 class="t"><a href="https://www.cartacapital.com.br/politica/real-time-celina-lidera-no-df-e-pode-se-reeleger-no-1o-turno/" target="_blank" rel="noopener noreferrer">Real Time: Celina lidera no DF e pode se reeleger no 1º turno</a></h3>
+      <p class="fontes"><span class="n">2 veículos</span><span class="l"><a href="https://www.cartacapital.com.br/politica/real-time-celina-lidera-no-df-e-pode-se-reeleger-no-1o-turno/" title="Real Time: Celina lidera no DF e pode se reeleger no 1º turno" target="_blank" rel="noopener noreferrer">CartaCapital</a> <a href="https://exame.com/brasil/real-time-celina-lidera-com-mais-de-20-pontos-de-vantagem-no-1o-turno-no-distrito-federal/" title="Real Time: Celina lidera com mais de 20 pontos de vantagem no 1º turno no Distrito Federal" target="_blank" rel="noopener noreferrer">Exame</a> </span></p>
+    </article>
+    
+    <article class="historia peso-2" data-busca="openai halts new model over safety worries openai halts new model over safety worries the wall street journal openai halts new model over safety worries wired openai delays release of latest model over safety concerns">
+      <h3 class="t"><a href="https://www.wsj.com/world/openai-halts-new-model-over-safety-worries-e0b12abb?mod=rss_worldnews" target="_blank" rel="noopener noreferrer">OpenAI Halts New Model Over Safety Worries</a></h3>
+      <p class="fontes"><span class="n">2 veículos</span><span class="l"><a href="https://www.wsj.com/world/openai-halts-new-model-over-safety-worries-e0b12abb?mod=rss_worldnews" title="OpenAI Halts New Model Over Safety Worries" target="_blank" rel="noopener noreferrer">The Wall Street Journal</a> <a href="https://www.wired.com/story/openai-delays-release-of-latest-model-over-safety-concerns/" title="OpenAI Delays Release of Latest Model Over Safety Concerns" target="_blank" rel="noopener noreferrer">Wired</a> </span></p>
+    </article>
+    
+    <article class="historia peso-2" data-busca="os candidatos das big techs nas eleições 2026 os candidatos das big techs nas eleições 2026 agência pública os candidatos das big techs nas eleições 2026 núcleo appzinho pra saber quem são os candidatos das big techs">
+      <h3 class="t"><a href="https://apublica.org/2026/09/os-candidatos-das-big-techs-nas-eleicoes-2026/" target="_blank" rel="noopener noreferrer">Os candidatos das Big Techs nas eleições 2026</a></h3>
+      <p class="fontes"><span class="n">2 veículos</span><span class="l"><a href="https://apublica.org/2026/09/os-candidatos-das-big-techs-nas-eleicoes-2026/" title="Os candidatos das Big Techs nas eleições 2026" target="_blank" rel="noopener noreferrer">Agência Pública</a> <a href="https://nucleo.jor.br/curtas/2026/09/28/appzinho-pra-saber-quem-sao-candidatos-das-big-techs/" title="Appzinho pra saber quem são os candidatos das Big Techs" target="_blank" rel="noopener noreferrer">Núcleo</a> </span></p>
+    </article>
+    
+  </aside>
+</section>
+
+
+
+<h2 class="secao">Manchetes por região</h2>
+
+<details class="regiao" open>
+  <summary><span class="nome">América do Norte</span><span class="qtd">19 veículos, 65 manchetes</span></summary>
+  <div class="veiculos">
+    
+    <div class="veiculo" data-busca="404 media fbi hackers say they won’t publish massive trove of fbi employee data fbi hackers say they won’t publish massive trove of fbi employee data surveillance company tells cops it wants to add facial recognition to flock cameras surveillance company tells cops it wants to add facial recognition to flock cameras these tech workers made chatgpt drive a toyota corolla these tech workers made chatgpt drive a toyota corolla">
+      <h4><a href="https://404media.co" target="_blank" rel="noopener noreferrer">404 Media</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.404media.co/fbi-hackers-say-they-wont-publish-massive-trove-of-fbi-employee-data/" title="FBI Hackers Say They Won’t Publish Massive Trove of FBI Employee Data" target="_blank" rel="noopener noreferrer">FBI Hackers Say They Won’t Publish Massive Trove of FBI Employee Data</a></li><li><a href="https://www.404media.co/surveillance-company-tells-cops-it-wants-to-add-facial-recognition-to-flock-cameras/" title="Surveillance Company Tells Cops It Wants to Add Facial Recognition to Flock Cameras" target="_blank" rel="noopener noreferrer">Surveillance Company Tells Cops It Wants to Add Facial Recognition to Flock Cameras</a></li><li><a href="https://www.404media.co/these-tech-workers-made-chatgpt-drive-a-toyota-corolla/" title="These Tech Workers Made ChatGPT Drive a Toyota Corolla" target="_blank" rel="noopener noreferrer">These Tech Workers Made ChatGPT Drive a Toyota Corolla</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="abc news (eua) abc news&#39; will reeve reveals testicular cancer diagnosis abc news&#39; will reeve reveals testicular cancer diagnosis hurricane polo makes landfall in baja california, &#39;life-threatening&#39; winds forecast hurricane polo makes landfall in baja california, &#39;life-threatening&#39; winds forecast da defends decision not to prosecute alleged cornell &#39;gang rape&#39; case in 2024 da defends decision not to prosecute alleged cornell &#39;gang rape&#39; case in 2024 watch: future hall of famer justin verlander talks emotional moment on the mound watch: future hall of famer justin verlander talks emotional moment on the mound">
+      <h4><a href="https://abcnews.go.com" target="_blank" rel="noopener noreferrer">ABC News (EUA)</a> <span>EUA</span></h4>
+      <ul><li><a href="https://abcnews.com/GMA/Wellness/abc-news-reeve-reveals-testicular-cancer-diagnosis-chemotherapy/story?id=136838395" title="ABC News&#39; Will Reeve reveals testicular cancer diagnosis" target="_blank" rel="noopener noreferrer">ABC News&#39; Will Reeve reveals testicular cancer diagnosis</a></li><li><a href="https://abcnews.com/International/wireStory/hurricane-polo-makes-landfall-baja-california-forecast-life-136845534" title="Hurricane Polo makes landfall in Baja California, &#39;life-threatening&#39; winds forecast" target="_blank" rel="noopener noreferrer">Hurricane Polo makes landfall in Baja California, &#39;life-threatening&#39; winds forecast</a></li><li><a href="https://abcnews.com/US/da-defends-decision-prosecute-alleged-cornell-gang-rape/story?id=136835936" title="DA defends decision not to prosecute alleged Cornell &#39;gang rape&#39; case in 2024" target="_blank" rel="noopener noreferrer">DA defends decision not to prosecute alleged Cornell &#39;gang rape&#39; case in 2024</a></li><li><a href="https://abcnews.com/video/136848064/" title="WATCH: Future Hall of Famer Justin Verlander talks emotional moment on the mound" target="_blank" rel="noopener noreferrer">WATCH: Future Hall of Famer Justin Verlander talks emotional moment on the mound</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="ars technica florida invokes extinction fears in legal bid to halt openai development florida invokes extinction fears in legal bid to halt openai development boeing &#34;incredibly excited&#34; to serve as nation&#39;s only astronaut transportation boeing &#34;incredibly excited&#34; to serve as nation&#39;s only astronaut transportation spacex&#39;s starship goes orbital, deploying first next-gen starlinks spacex&#39;s starship goes orbital, deploying first next-gen starlinks experts worry about nvidia&#39;s ai chip sales in china and influence over trump experts worry about nvidia&#39;s ai chip sales in china and influence over trump">
+      <h4><a href="https://arstechnica.com" target="_blank" rel="noopener noreferrer">Ars Technica</a> <span>EUA</span></h4>
+      <ul><li><a href="https://arstechnica.com/ai/2026/09/florida-asks-court-to-put-the-brakes-on-openais-frontier-ai-development/" title="Florida invokes extinction fears in legal bid to halt OpenAI development" target="_blank" rel="noopener noreferrer">Florida invokes extinction fears in legal bid to halt OpenAI development</a></li><li><a href="https://arstechnica.com/space/2026/09/boeing-incredibly-excited-to-serve-as-nations-only-astronaut-transportation/" title="Boeing &#34;incredibly excited&#34; to serve as nation&#39;s only astronaut transportation" target="_blank" rel="noopener noreferrer">Boeing &#34;incredibly excited&#34; to serve as nation&#39;s only astronaut transportation</a></li><li><a href="https://arstechnica.com/space/2026/09/starships-first-orbital-launch-gives-lift-to-spacexs-next-gen-starlinks/" title="SpaceX&#39;s Starship goes orbital, deploying first next-gen Starlinks" target="_blank" rel="noopener noreferrer">SpaceX&#39;s Starship goes orbital, deploying first next-gen Starlinks</a></li><li><a href="https://arstechnica.com/tech-policy/2026/09/nvidia-may-sell-more-chips-in-china-as-jensen-huangs-influence-over-trump-grows/" title="Experts worry about Nvidia&#39;s AI chip sales in China and influence over Trump" target="_blank" rel="noopener noreferrer">Experts worry about Nvidia&#39;s AI chip sales in China and influence over Trump</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="axios &#34;brace for losing everything&#34;: farm crisis fears grip gop in iowa &#34;brace for losing everything&#34;: farm crisis fears grip gop in iowa midterm pocketbook pain bites trump midterm pocketbook pain bites trump the future is ai vs. ai the future is ai vs. ai exclusive: full list of attendees at white house ai lunch exclusive: full list of attendees at white house ai lunch">
+      <h4><a href="https://axios.com" target="_blank" rel="noopener noreferrer">Axios</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.axios.com/2026/09/29/iowa-midterms-farms-trump" title="&#34;Brace for losing everything&#34;: Farm crisis fears grip GOP in Iowa" target="_blank" rel="noopener noreferrer">&#34;Brace for losing everything&#34;: Farm crisis fears grip GOP in Iowa</a></li><li><a href="https://www.axios.com/2026/09/29/midterms-economy-inflation-wages" title="Midterm pocketbook pain bites Trump" target="_blank" rel="noopener noreferrer">Midterm pocketbook pain bites Trump</a></li><li><a href="https://www.axios.com/2026/09/29/the-future-is-ai-vs-ai" title="The future is AI vs. AI" target="_blank" rel="noopener noreferrer">The future is AI vs. AI</a></li><li><a href="https://www.axios.com/2026/09/29/trump-ai-meeting-list-ceos-johnson" title="Exclusive: Full list of attendees at White House AI lunch" target="_blank" rel="noopener noreferrer">Exclusive: Full list of attendees at White House AI lunch</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="bloomberg stocks churn after rout as brent falls below $105: markets wrap stocks churn after rout as brent falls below $105: markets wrap hungary’s kurali, otp bank ceo back path to euro accession hungary’s kurali, otp bank ceo back path to euro accession trump drive for minerals leads cove capital to eye central asia trump drive for minerals leads cove capital to eye central asia builders vs buyers: who wins in the uk&#39;s new home deposit scheme? builders vs buyers: who wins in the uk&#39;s new home deposit scheme?">
+      <h4><a href="https://bloomberg.com" target="_blank" rel="noopener noreferrer">Bloomberg</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.bloomberg.com/news/articles/2026-09-28/stock-market-today-dow-s-p-live-updates" title="Stocks Churn After Rout as Brent Falls Below $105: Markets Wrap" target="_blank" rel="noopener noreferrer">Stocks Churn After Rout as Brent Falls Below $105: Markets Wrap</a></li><li><a href="https://www.bloomberg.com/news/articles/2026-09-29/hungary-s-kurali-urges-sticking-to-path-toward-euro-accession" title="Hungary’s Kurali, OTP Bank CEO Back Path to Euro Accession" target="_blank" rel="noopener noreferrer">Hungary’s Kurali, OTP Bank CEO Back Path to Euro Accession</a></li><li><a href="https://www.bloomberg.com/news/articles/2026-09-29/trump-drive-for-minerals-leads-cove-capital-to-eye-central-asia" title="Trump Drive for Minerals Leads Cove Capital to Eye Central Asia" target="_blank" rel="noopener noreferrer">Trump Drive for Minerals Leads Cove Capital to Eye Central Asia</a></li><li><a href="https://www.bloomberg.com/news/videos/2026-09-29/who-wins-in-the-uk-s-new-home-deposit-scheme-video" title="Builders vs Buyers: Who Wins in the UK&#39;s New Home Deposit Scheme?" target="_blank" rel="noopener noreferrer">Builders vs Buyers: Who Wins in the UK&#39;s New Home Deposit Scheme?</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="cbs news iran says it expects response to cease-fire plan already rejected by trump iran says it expects response to cease-fire plan already rejected by trump u.s. ban on almost $1 billion in canadian imports takes effect u.s. ban on almost $1 billion in canadian imports takes effect tips to save as holiday travel costs soar tips to save as holiday travel costs soar">
+      <h4><a href="https://cbsnews.com" target="_blank" rel="noopener noreferrer">CBS News</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.cbsnews.com/live-updates/iran-war-us-trump-talks-strait-of-hormuz/" title="Iran says it expects response to cease-fire plan already rejected by Trump" target="_blank" rel="noopener noreferrer">Iran says it expects response to cease-fire plan already rejected by Trump</a></li><li><a href="https://www.cbsnews.com/news/us-ban-canadian-imports-almost-1-billion-dollars-takes-effect/" title="U.S. ban on almost $1 billion in Canadian imports takes effect" target="_blank" rel="noopener noreferrer">U.S. ban on almost $1 billion in Canadian imports takes effect</a></li><li><a href="https://www.cbsnews.com/video/tips-to-save-as-holiday-travel-costs-soar/" title="Tips to save as holiday travel costs soar" target="_blank" rel="noopener noreferrer">Tips to save as holiday travel costs soar</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="defector breanna stewart and a’ja wilson sit at the grown-ups table breanna stewart and a’ja wilson sit at the grown-ups table case keenum made for great tv case keenum made for great tv it’s the 2026–27 nhl season preview. what’s the worst that could happen? it’s the 2026–27 nhl season preview. what’s the worst that could happen? nfl threatened to pull azeez al-shaair from game for eye black memorializing palestinian child nfl threatened to pull azeez al-shaair from game for eye black memorializing palestinian child">
+      <h4><a href="https://defector.com" target="_blank" rel="noopener noreferrer">Defector</a> <span>EUA</span></h4>
+      <ul><li><a href="https://defector.com/breanna-stewart-and-aja-wilson-sit-at-the-grown-ups-table" title="Breanna Stewart And A’ja Wilson Sit At The Grown-Ups Table" target="_blank" rel="noopener noreferrer">Breanna Stewart And A’ja Wilson Sit At The Grown-Ups Table</a></li><li><a href="https://defector.com/case-keenum-made-for-great-tv" title="Case Keenum Made For Great TV" target="_blank" rel="noopener noreferrer">Case Keenum Made For Great TV</a></li><li><a href="https://defector.com/its-the-2026-27-nhl-season-preview-whats-the-worst-that-could-happen" title="It’s The 2026–27 NHL Season Preview. What’s The Worst That Could Happen?" target="_blank" rel="noopener noreferrer">It’s The 2026–27 NHL Season Preview. What’s The Worst That Could Happen?</a></li><li><a href="https://defector.com/nfl-threatened-to-pull-azeez-al-shaair-from-game-for-eye-black-wafaa-akila" title="NFL Threatened To Pull Azeez Al-Shaair From Game For Eye Black Memorializing Palestinian Child" target="_blank" rel="noopener noreferrer">NFL Threatened To Pull Azeez Al-Shaair From Game For Eye Black Memorializing Palestinian Child</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="drop site news oil exports see modest rebound; senate map expands for dems; israeli settlers attack palestinian olive harvest oil exports see modest rebound; senate map expands for dems; israeli settlers attack palestinian olive harvest washington is about to make the energy crisis a whole lot worse washington is about to make the energy crisis a whole lot worse">
+      <h4><a href="https://dropsitenews.com" target="_blank" rel="noopener noreferrer">Drop Site News</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.dropsitenews.com/p/oil-exports-hormuz-senate-democrats-midterms-israel-west-bank-settlers" title="Oil exports see modest rebound; Senate map expands for Dems; Israeli settlers attack Palestinian olive harvest" target="_blank" rel="noopener noreferrer">Oil exports see modest rebound; Senate map expands for Dems; Israeli settlers attack Palestinian olive harvest</a></li><li><a href="https://www.dropsitenews.com/p/washington-make-energy-crisis-much-worse" title="Washington Is About to Make the Energy Crisis a Whole Lot Worse" target="_blank" rel="noopener noreferrer">Washington Is About to Make the Energy Crisis a Whole Lot Worse</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="fox news mamdani deflects kimmel&#39;s anti-trump bait when pressed repeatedly on relationship with the president mamdani deflects kimmel&#39;s anti-trump bait when pressed repeatedly on relationship with the president i&#39;ve battled gangs for decades. now i&#39;m fighting a threat that&#39;s even harder i&#39;ve battled gangs for decades. now i&#39;m fighting a threat that&#39;s even harder koe wetzel goes viral with stripped-down &#39;when i&#39;m gone&#39; performance that has fans buzzing koe wetzel goes viral with stripped-down &#39;when i&#39;m gone&#39; performance that has fans buzzing video shows florida food truck workers fleeing from ice during tallahassee immigration raid video shows florida food truck workers fleeing from ice during tallahassee immigration raid">
+      <h4><a href="https://foxnews.com" target="_blank" rel="noopener noreferrer">Fox News</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.foxnews.com/media/mamdani-deflects-kimmel-anti-trump-bait-pressed-repeatedly-relationship-president" title="Mamdani deflects Kimmel&#39;s anti-Trump bait when pressed repeatedly on relationship with the president" target="_blank" rel="noopener noreferrer">Mamdani deflects Kimmel&#39;s anti-Trump bait when pressed repeatedly on relationship with the president</a></li><li><a href="https://www.foxnews.com/opinion/battled-gangs-decades-fighting-threat-even-harder" title="I&#39;ve battled gangs for decades. Now I&#39;m fighting a threat that&#39;s even harder" target="_blank" rel="noopener noreferrer">I&#39;ve battled gangs for decades. Now I&#39;m fighting a threat that&#39;s even harder</a></li><li><a href="https://www.foxnews.com/outkick-culture/koe-wetzel-viral-stripped-down-when-im-gone-performance-fans-buzzing" title="Koe Wetzel goes viral with stripped-down &#39;When I&#39;m Gone&#39; performance that has fans buzzing" target="_blank" rel="noopener noreferrer">Koe Wetzel goes viral with stripped-down &#39;When I&#39;m Gone&#39; performance that has fans buzzing</a></li><li><a href="https://www.foxnews.com/politics/video-shows-florida-food-truck-workers-fleeing-ice-tallahassee-immigration-raid" title="Video shows Florida food truck workers fleeing from ICE during Tallahassee immigration raid" target="_blank" rel="noopener noreferrer">Video shows Florida food truck workers fleeing from ICE during Tallahassee immigration raid</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="nbc news jack smith testifies at senate hearing jack smith testifies at senate hearing trump set to host top tech leaders amid ai safety concerns trump set to host top tech leaders amid ai safety concerns cornell sexual assault investigation reopened by prosecutors cornell sexual assault investigation reopened by prosecutors">
+      <h4><a href="https://nbcnews.com" target="_blank" rel="noopener noreferrer">NBC News</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.nbcnews.com/video/watch-live-jack-smith-testifies-at-senate-hearing-270667333671" title="Jack Smith testifies at Senate hearing" target="_blank" rel="noopener noreferrer">Jack Smith testifies at Senate hearing</a></li><li><a href="https://www.today.com/video/ai-concerns-in-spotlight-amid-white-house-meeting-270708805834" title="Trump Set to Host Top Tech Leaders Amid AI Safety Concerns" target="_blank" rel="noopener noreferrer">Trump Set to Host Top Tech Leaders Amid AI Safety Concerns</a></li><li><a href="https://www.today.com/video/cornell-sexual-assault-investigation-reopened-by-prosecutors-270710853527" title="Cornell Sexual Assault Investigation Reopened by Prosecutors" target="_blank" rel="noopener noreferrer">Cornell Sexual Assault Investigation Reopened by Prosecutors</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="npr trump weakens fuel efficiency standards. and, cornell fraternity rape case reopened trump weakens fuel efficiency standards. and, cornell fraternity rape case reopened morning news brief morning news brief 4 ways to avoid getting ripped off, according to a pricing expert 4 ways to avoid getting ripped off, according to a pricing expert as the u.s. signals a smaller middle east footprint, turkey is ready to step in as the u.s. signals a smaller middle east footprint, turkey is ready to step in">
+      <h4><a href="https://npr.org" target="_blank" rel="noopener noreferrer">NPR</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.npr.org/2026/09/29/g-s1-145422/up-first-newsletter-fuel-efficiency-standards-cornell-rape-case-terror-suspects" title="Trump weakens fuel efficiency standards. And, Cornell fraternity rape case reopened" target="_blank" rel="noopener noreferrer">Trump weakens fuel efficiency standards. And, Cornell fraternity rape case reopened</a></li><li><a href="https://www.npr.org/2026/09/29/nx-s1-5979951/morning-news-brief" title="Morning news brief" target="_blank" rel="noopener noreferrer">Morning news brief</a></li><li><a href="https://www.npr.org/2026/09/29/nx-s1-5983457/4-ways-to-avoid-getting-ripped-off-according-to-a-pricing-expert" title="4 ways to avoid getting ripped off, according to a pricing expert" target="_blank" rel="noopener noreferrer">4 ways to avoid getting ripped off, according to a pricing expert</a></li><li><a href="https://www.npr.org/2026/09/29/nx-s1-5983685/turkey-influence" title="As the U.S. signals a smaller Middle East footprint, Turkey is ready to step in" target="_blank" rel="noopener noreferrer">As the U.S. signals a smaller Middle East footprint, Turkey is ready to step in</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="pbs watch live: lindsay clancy returns to court for hearing to help determine whether she will be retried watch live: lindsay clancy returns to court for hearing to help determine whether she will be retried news wrap: uk police investigating possible plot targeting u.s. base news wrap: uk police investigating possible plot targeting u.s. base powerful nor&#39;easter batters parts of east coast powerful nor&#39;easter batters parts of east coast what trump&#39;s rollback of fuel economy standards means for drivers what trump&#39;s rollback of fuel economy standards means for drivers">
+      <h4><a href="https://pbs.org" target="_blank" rel="noopener noreferrer">PBS</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.pbs.org/newshour/nation/watch-live-lindsay-clancy-returns-to-court-for-hearing-to-help-determine-whether-she-will-be-retried" title="WATCH LIVE: Lindsay Clancy returns to court for hearing to help determine whether she will be retried" target="_blank" rel="noopener noreferrer">WATCH LIVE: Lindsay Clancy returns to court for hearing to help determine whether she will be retried</a></li><li><a href="https://www.pbs.org/newshour/show/news-wrap-uk-police-investigating-possible-plot-targeting-u-s-base" title="News Wrap: UK police investigating possible plot targeting U.S. base" target="_blank" rel="noopener noreferrer">News Wrap: UK police investigating possible plot targeting U.S. base</a></li><li><a href="https://www.pbs.org/newshour/show/powerful-noreaster-batters-parts-of-east-coast" title="Powerful nor&#39;easter batters parts of East Coast" target="_blank" rel="noopener noreferrer">Powerful nor&#39;easter batters parts of East Coast</a></li><li><a href="https://www.pbs.org/newshour/show/what-trumps-rollback-of-fuel-economy-standards-means-for-drivers" title="What Trump&#39;s rollback of fuel economy standards means for drivers" target="_blank" rel="noopener noreferrer">What Trump&#39;s rollback of fuel economy standards means for drivers</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="platformer following: openai taps the brakes following: openai taps the brakes">
+      <h4><a href="https://platformer.news" target="_blank" rel="noopener noreferrer">Platformer</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.platformer.news/open-ai-model-release-canceled/" title="Following: OpenAI taps the brakes" target="_blank" rel="noopener noreferrer">Following: OpenAI taps the brakes</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="propublica arizona lawmaker proposes more federal support for english fluency services arizona lawmaker proposes more federal support for english fluency services “a massive power grab”: white house proposal threatens funding that helps disabled americans vote “a massive power grab”: white house proposal threatens funding that helps disabled americans vote two years after hurricane helene, people are still allowed to live in harm’s way two years after hurricane helene, people are still allowed to live in harm’s way the untold origins of trump’s plan to sharply restrict mail-in voting the untold origins of trump’s plan to sharply restrict mail-in voting">
+      <h4><a href="https://propublica.org" target="_blank" rel="noopener noreferrer">ProPublica</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.propublica.org/article/arizona-english-fluency-legislation-adelita-grijalva" title="Arizona Lawmaker Proposes More Federal Support for English Fluency Services" target="_blank" rel="noopener noreferrer">Arizona Lawmaker Proposes More Federal Support for English Fluency Services</a></li><li><a href="https://www.propublica.org/article/disabled-voters-nonprofit-funding-cuts-omb" title="“A Massive Power Grab”: White House Proposal Threatens Funding That Helps Disabled Americans Vote" target="_blank" rel="noopener noreferrer">“A Massive Power Grab”: White House Proposal Threatens Funding That Helps Disabled Americans Vote</a></li><li><a href="https://www.propublica.org/article/hurricane-helene-flood-prone-areas" title="Two Years After Hurricane Helene, People Are Still Allowed to Live in Harm’s Way" target="_blank" rel="noopener noreferrer">Two Years After Hurricane Helene, People Are Still Allowed to Live in Harm’s Way</a></li><li><a href="https://www.propublica.org/article/trumps-plan-to-restrict-mail-voting" title="The Untold Origins of Trump’s Plan to Sharply Restrict Mail-In Voting" target="_blank" rel="noopener noreferrer">The Untold Origins of Trump’s Plan to Sharply Restrict Mail-In Voting</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="the atlantic the family that refused to vanish the family that refused to vanish el salvador’s mass incarceration of u.s. deportees el salvador’s mass incarceration of u.s. deportees can the polls possibly be right? can the polls possibly be right? the atlantic announces roles for zachary fryer-biggs, sophie haigney, jebediah reed, kevin roose, lindsey sitz, alex stockton, and robert f. worth the atlantic announces roles for zachary fryer-biggs, sophie haigney, jebediah reed, kevin roose, lindsey sitz, alex stockton, and robert f. worth">
+      <h4><a href="https://theatlantic.com" target="_blank" rel="noopener noreferrer">The Atlantic</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.theatlantic.com/books/2026/09/robert-kolker-vanishing-family-dementia-book-review/688818/" title="The Family That Refused to Vanish" target="_blank" rel="noopener noreferrer">The Family That Refused to Vanish</a></li><li><a href="https://www.theatlantic.com/politics/2026/09/el-salvador-bukele-trump-ice-deportation/688799/" title="El Salvador’s Mass Incarceration of U.S. Deportees" target="_blank" rel="noopener noreferrer">El Salvador’s Mass Incarceration of U.S. Deportees</a></li><li><a href="https://www.theatlantic.com/politics/2026/09/midterm-polls-democrats-senate/688809/" title="Can the Polls Possibly Be Right?" target="_blank" rel="noopener noreferrer">Can the Polls Possibly Be Right?</a></li><li><a href="https://www.theatlantic.com/press-releases/2026/09/the-atlantic-is-announcing-seven-new-roles-in-the-newsroom/688820/" title="The Atlantic Announces Roles for Zachary Fryer-Biggs, Sophie Haigney, Jebediah Reed, Kevin Roose, Lindsey Sitz, Alex Stockton, and Robert F. Worth" target="_blank" rel="noopener noreferrer">The Atlantic Announces Roles for Zachary Fryer-Biggs, Sophie Haigney, Jebediah Reed, Kevin Roose, Lindsey Sitz, Alex Stockton, and Robert F. Worth</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="the new yorker hockey dads and hockey sons hockey dads and hockey sons how paweł pawlikowski learned to film europe’s fractures how paweł pawlikowski learned to film europe’s fractures at the department of justice, many lawyers are wondering if it’s time to quit at the department of justice, many lawyers are wondering if it’s time to quit why doesn’t anyone want to fix one of america’s scariest roads? why doesn’t anyone want to fix one of america’s scariest roads?">
+      <h4><a href="https://newyorker.com" target="_blank" rel="noopener noreferrer">The New Yorker</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.newyorker.com/magazine/2026/10/05/hockey-dads-and-hockey-sons" title="Hockey Dads and Hockey Sons" target="_blank" rel="noopener noreferrer">Hockey Dads and Hockey Sons</a></li><li><a href="https://www.newyorker.com/magazine/2026/10/05/pawel-pawlikowski-profile" title="How Paweł Pawlikowski Learned to Film Europe’s Fractures" target="_blank" rel="noopener noreferrer">How Paweł Pawlikowski Learned to Film Europe’s Fractures</a></li><li><a href="https://www.newyorker.com/magazine/2026/10/05/should-i-stay-or-should-i-go" title="At the Department of Justice, Many Lawyers Are Wondering If It’s Time to Quit" target="_blank" rel="noopener noreferrer">At the Department of Justice, Many Lawyers Are Wondering If It’s Time to Quit</a></li><li><a href="https://www.newyorker.com/magazine/2026/10/05/why-doesnt-anyone-want-to-fix-one-of-americas-scariest-roads" title="Why Doesn’t Anyone Want to Fix One of America’s Scariest Roads?" target="_blank" rel="noopener noreferrer">Why Doesn’t Anyone Want to Fix One of America’s Scariest Roads?</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="the wall street journal north korea land mines ‘highly likely’ behind dmz explosion, seoul says north korea land mines ‘highly likely’ behind dmz explosion, seoul says what xi’s grip on his wife’s hand tells us about power in china what xi’s grip on his wife’s hand tells us about power in china middle east oil exports rebound as iran’s chokehold on hormuz breaks down middle east oil exports rebound as iran’s chokehold on hormuz breaks down">
+      <h4><a href="https://wsj.com" target="_blank" rel="noopener noreferrer">The Wall Street Journal</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.wsj.com/world/asia/north-korea-land-mines-highly-likely-behind-dmz-explosion-seoul-says-c7c99699?mod=rss_worldnews" title="North Korea Land Mines ‘Highly Likely’ Behind DMZ Explosion, Seoul Says" target="_blank" rel="noopener noreferrer">North Korea Land Mines ‘Highly Likely’ Behind DMZ Explosion, Seoul Says</a></li><li><a href="https://www.wsj.com/world/china/what-xis-grip-on-his-wifes-hand-tells-us-about-power-in-china-cca91567?mod=rss_worldnews" title="What Xi’s Grip on His Wife’s Hand Tells Us About Power in China" target="_blank" rel="noopener noreferrer">What Xi’s Grip on His Wife’s Hand Tells Us About Power in China</a></li><li><a href="https://www.wsj.com/world/middle-east/middle-east-oil-exports-rebound-as-irans-chokehold-on-hormuz-breaks-down-4ffde655?mod=rss_worldnews" title="Middle East Oil Exports Rebound as Iran’s Chokehold on Hormuz Breaks Down" target="_blank" rel="noopener noreferrer">Middle East Oil Exports Rebound as Iran’s Chokehold on Hormuz Breaks Down</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="the washington post pope leo leans into statesman role, urging peace in an era of renewed war pope leo leans into statesman role, urging peace in an era of renewed war russia’s jet-powered drones are turning kyiv into a daytime war zone russia’s jet-powered drones are turning kyiv into a daytime war zone trump’s proposed diesel export ban spurs fear of energy crunch in europe trump’s proposed diesel export ban spurs fear of energy crunch in europe reports that netanyahu ignored oct. 7 warnings dominate israeli election reports that netanyahu ignored oct. 7 warnings dominate israeli election">
+      <h4><a href="https://washingtonpost.com" target="_blank" rel="noopener noreferrer">The Washington Post</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.washingtonpost.com/world/2026/09/28/pope-leo-leans-into-statesman-role-urging-peace-an-era-renewed-war/" title="Pope Leo leans into statesman role, urging peace in an era of renewed war" target="_blank" rel="noopener noreferrer">Pope Leo leans into statesman role, urging peace in an era of renewed war</a></li><li><a href="https://www.washingtonpost.com/world/2026/09/28/russias-jet-powered-drones-are-turning-kyiv-into-daytime-war-zone/" title="Russia’s jet-powered drones are turning Kyiv into a daytime war zone" target="_blank" rel="noopener noreferrer">Russia’s jet-powered drones are turning Kyiv into a daytime war zone</a></li><li><a href="https://www.washingtonpost.com/world/2026/09/29/european-fears-energy-crunch-over-trumps-proposed-ban-diesel-exports/" title="Trump’s proposed diesel export ban spurs fear of energy crunch in Europe" target="_blank" rel="noopener noreferrer">Trump’s proposed diesel export ban spurs fear of energy crunch in Europe</a></li><li><a href="https://www.washingtonpost.com/world/2026/09/29/reports-that-netanyahu-ignored-oct-7-warnings-dominate-israeli-election/" title="Reports that Netanyahu ignored Oct. 7 warnings dominate Israeli election" target="_blank" rel="noopener noreferrer">Reports that Netanyahu ignored Oct. 7 warnings dominate Israeli election</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="wired 7 best smartwatch models: apple, google, garmin (2026) 7 best smartwatch models: apple, google, garmin (2026) i found national coffee day deals worth making coffee at home for (2026) i found national coffee day deals worth making coffee at home for (2026)">
+      <h4><a href="https://wired.com" target="_blank" rel="noopener noreferrer">Wired</a> <span>EUA</span></h4>
+      <ul><li><a href="https://www.wired.com/story/best-smartwatch/" title="7 Best Smartwatch Models: Apple, Google, Garmin (2026)" target="_blank" rel="noopener noreferrer">7 Best Smartwatch Models: Apple, Google, Garmin (2026)</a></li><li><a href="https://www.wired.com/story/national-coffee-day-deals-2026/" title="I Found National Coffee Day Deals Worth Making Coffee at Home For (2026)" target="_blank" rel="noopener noreferrer">I Found National Coffee Day Deals Worth Making Coffee at Home For (2026)</a></li></ul>
+    </div>
+    
+  </div>
+</details>
+
+<details class="regiao">
+  <summary><span class="nome">América Latina</span><span class="qtd">19 veículos, 58 manchetes</span></summary>
+  <div class="veiculos">
+    
+    <div class="veiculo" data-busca="agência brasil igp-m volta a subir em setembro e acumula alta de 3,34% em 12 meses igp-m volta a subir em setembro e acumula alta de 3,34% em 12 meses taxa de desemprego cai para 5,3%, a menor para o trimestre até agosto taxa de desemprego cai para 5,3%, a menor para o trimestre até agosto fux suspende decisão de dino que restabelecia posts de nossa senhora fux suspende decisão de dino que restabelecia posts de nossa senhora governo publica estratégia para avaliar hospitais particulares; veja governo publica estratégia para avaliar hospitais particulares; veja">
+      <h4><a href="https://agenciabrasil.ebc.com.br" target="_blank" rel="noopener noreferrer">Agência Brasil</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-09/igp-m-volta-subir-em-setembro-e-acumula-alta-de-334-em-12-meses" title="IGP-M volta a subir em setembro e acumula alta de 3,34% em 12 meses" target="_blank" rel="noopener noreferrer">IGP-M volta a subir em setembro e acumula alta de 3,34% em 12 meses</a></li><li><a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-09/taxa-de-desemprego-cai-para-53-menor-para-o-trimestre-ate-agosto" title="Taxa de desemprego cai para 5,3%, a menor para o trimestre até agosto" target="_blank" rel="noopener noreferrer">Taxa de desemprego cai para 5,3%, a menor para o trimestre até agosto</a></li><li><a href="https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/fux-suspende-decisao-de-dino-que-restabelecia-posts-sobre-nossa-senhora" title="Fux suspende decisão de Dino que restabelecia posts de Nossa Senhora" target="_blank" rel="noopener noreferrer">Fux suspende decisão de Dino que restabelecia posts de Nossa Senhora</a></li><li><a href="https://agenciabrasil.ebc.com.br/saude/noticia/2026-09/governo-publica-estrategia-para-avaliar-hospitais-particulares-veja" title="Governo publica estratégia para avaliar hospitais particulares; veja" target="_blank" rel="noopener noreferrer">Governo publica estratégia para avaliar hospitais particulares; veja</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="agência lupa golpe simula promoção de aniversário da coca-cola para roubar dados de usuários golpe simula promoção de aniversário da coca-cola para roubar dados de usuários">
+      <h4><a href="https://lupa.uol.com.br" target="_blank" rel="noopener noreferrer">Agência Lupa</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://www.agencialupa.org/verificacao/2026/09/28/golpe-simula-promocao-de-aniversario-da-coca-cola-para-roubar-dados-de-usuarios/" title="Golpe simula promoção de aniversário da Coca-Cola para roubar dados de usuários" target="_blank" rel="noopener noreferrer">Golpe simula promoção de aniversário da Coca-Cola para roubar dados de usuários</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="agência pública de apostas, predições e eleições de apostas, predições e eleições família de condenado por garimpo na terra yanomami bancou vida de ramagem nos eua família de condenado por garimpo na terra yanomami bancou vida de ramagem nos eua nossa senhora aparecida vira evento eleitoral e aprofunda crise entre ministros do stf nossa senhora aparecida vira evento eleitoral e aprofunda crise entre ministros do stf">
+      <h4><a href="https://apublica.org" target="_blank" rel="noopener noreferrer">Agência Pública</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://apublica.org/2026/09/de-apostas-predicoes-e-eleicoes/" title="De apostas, predições e eleições" target="_blank" rel="noopener noreferrer">De apostas, predições e eleições</a></li><li><a href="https://apublica.org/2026/09/familia-de-condenado-por-garimpo-na-terra-yanomami-bancou-vida-de-ramagem-nos-eua/" title="Família de condenado por garimpo na terra Yanomami bancou vida de Ramagem nos EUA" target="_blank" rel="noopener noreferrer">Família de condenado por garimpo na terra Yanomami bancou vida de Ramagem nos EUA</a></li><li><a href="https://apublica.org/2026/09/nossa-senhora-vira-evento-politico-e-aprofunda-crise-do-stf/" title="Nossa Senhora Aparecida vira evento eleitoral e aprofunda crise entre ministros do STF" target="_blank" rel="noopener noreferrer">Nossa Senhora Aparecida vira evento eleitoral e aprofunda crise entre ministros do STF</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="aos fatos é falso que lula avalia desistir de candidatura é falso que lula avalia desistir de candidatura é falso que presidente do paraguai agradeceu a lula por migração de empresas é falso que presidente do paraguai agradeceu a lula por migração de empresas">
+      <h4><a href="https://aosfatos.org" target="_blank" rel="noopener noreferrer">Aos Fatos</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://www.aosfatos.org/noticias/lula-desistir-candidatura/" title="É falso que Lula avalia desistir de candidatura" target="_blank" rel="noopener noreferrer">É falso que Lula avalia desistir de candidatura</a></li><li><a href="https://www.aosfatos.org/noticias/presidente-paraguai-lula-migracao-empresas/" title="É falso que presidente do Paraguai agradeceu a Lula por migração de empresas" target="_blank" rel="noopener noreferrer">É falso que presidente do Paraguai agradeceu a Lula por migração de empresas</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="cartacapital homem que passou décadas no corredor da morte nos eua é libertado homem que passou décadas no corredor da morte nos eua é libertado real time mostra zucco na liderança da disputa pelo governo do rs real time mostra zucco na liderança da disputa pelo governo do rs van hattem à frente e briga aberta pela 2ª vaga: a disputa pelo senado no rs, segundo a nova pesquisa real time van hattem à frente e briga aberta pela 2ª vaga: a disputa pelo senado no rs, segundo a nova pesquisa real time">
+      <h4><a href="https://cartacapital.com.br" target="_blank" rel="noopener noreferrer">CartaCapital</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://www.cartacapital.com.br/mundo/homem-que-passou-decadas-no-corredor-da-morte-nos-eua-e-libertado/" title="Homem que passou décadas no corredor da morte nos EUA é libertado" target="_blank" rel="noopener noreferrer">Homem que passou décadas no corredor da morte nos EUA é libertado</a></li><li><a href="https://www.cartacapital.com.br/politica/real-time-mostra-zucco-na-lideranca-da-disputa-pelo-governo-do-rs/" title="Real Time mostra Zucco na liderança da disputa pelo governo do RS" target="_blank" rel="noopener noreferrer">Real Time mostra Zucco na liderança da disputa pelo governo do RS</a></li><li><a href="https://www.cartacapital.com.br/politica/van-hattem-a-frente-e-briga-aberta-pela-2a-vaga-a-disputa-pelo-senado-no-rs-segundo-a-nova-pesquisa-real-time/" title="Van Hattem à frente e briga aberta pela 2ª vaga: a disputa pelo Senado no RS, segundo a nova pesquisa Real Time" target="_blank" rel="noopener noreferrer">Van Hattem à frente e briga aberta pela 2ª vaga: a disputa pelo Senado no RS, segundo a nova pesquisa Real Time</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="cnn brasil concessões no crédito livre caem 0,4% em agosto ante julho, revela bc concessões no crédito livre caem 0,4% em agosto ante julho, revela bc após estreia de otávio, ancelotti confirma morisco como titular do brasil após estreia de otávio, ancelotti confirma morisco como titular do brasil lutador de muay thai é morto no rj; ele teria sido confundido após briga lutador de muay thai é morto no rj; ele teria sido confundido após briga mcdonald’s adota ia para calcular preço de seus lanches; entenda estratégia mcdonald’s adota ia para calcular preço de seus lanches; entenda estratégia">
+      <h4><a href="https://cnnbrasil.com.br" target="_blank" rel="noopener noreferrer">CNN Brasil</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://www.cnnbrasil.com.br/economia/money/macroeconomia/concessoes-no-credito-livre-caem-04-em-agosto-ante-julho-revela-bc/" title="Concessões no crédito livre caem 0,4% em agosto ante julho, revela BC" target="_blank" rel="noopener noreferrer">Concessões no crédito livre caem 0,4% em agosto ante julho, revela BC</a></li><li><a href="https://www.cnnbrasil.com.br/esportes/futebol/selecao-brasileira/apos-estreia-de-otavio-ancelotti-confirma-morisco-como-titular-do-brasil/" title="Após estreia de Otávio, Ancelotti confirma Morisco como titular do Brasil" target="_blank" rel="noopener noreferrer">Após estreia de Otávio, Ancelotti confirma Morisco como titular do Brasil</a></li><li><a href="https://www.cnnbrasil.com.br/nacional/sudeste/rj/lutador-de-muay-thai-e-morto-no-rj-ele-teria-sido-confundido-apos-briga/" title="Lutador de muay thai é morto no RJ; ele teria sido confundido após briga" target="_blank" rel="noopener noreferrer">Lutador de muay thai é morto no RJ; ele teria sido confundido após briga</a></li><li><a href="https://www.cnnbrasil.com.br/noticias/mcdonalds-adota-ia-para-calcular-preco-de-seus-lanches-entenda-estrategia/" title="McDonald’s adota IA para calcular preço de seus lanches; entenda estratégia" target="_blank" rel="noopener noreferrer">McDonald’s adota IA para calcular preço de seus lanches; entenda estratégia</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="exame esta fruta contém composto que melhora função do coração em até 80%, diz estudo esta fruta contém composto que melhora função do coração em até 80%, diz estudo rematar a amazônia produzirá empregos, renda e qualidade ambiental rematar a amazônia produzirá empregos, renda e qualidade ambiental quer jogar ea sports fc 27 de graça? veja como funciona a versão lite do jogo quer jogar ea sports fc 27 de graça? veja como funciona a versão lite do jogo">
+      <h4><a href="https://exame.com" target="_blank" rel="noopener noreferrer">Exame</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://exame.com/ciencia/esta-fruta-contem-composto-que-melhora-funcao-do-coracao-em-ate-80-diz-estudo/" title="Esta fruta contém composto que melhora função do coração em até 80%, diz estudo" target="_blank" rel="noopener noreferrer">Esta fruta contém composto que melhora função do coração em até 80%, diz estudo</a></li><li><a href="https://exame.com/esg/rematar-a-amazonia-produzira-empregos-renda-e-qualidade-ambiental/" title="Rematar a Amazônia produzirá empregos, renda e qualidade ambiental" target="_blank" rel="noopener noreferrer">Rematar a Amazônia produzirá empregos, renda e qualidade ambiental</a></li><li><a href="https://exame.com/pop/quer-jogar-ea-sports-fc-27-de-graca-veja-como-funciona-a-versao-lite-do-jogo/" title="Quer jogar EA Sports FC 27 de graça? Veja como funciona a versão Lite do jogo" target="_blank" rel="noopener noreferrer">Quer jogar EA Sports FC 27 de graça? Veja como funciona a versão Lite do jogo</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="folha de s.paulo btg pactual obtém licença para operar banco no peru btg pactual obtém licença para operar banco no peru petrobras assina acordo de 22 anos com a americana cheniere para compra e venda de gás natural petrobras assina acordo de 22 anos com a americana cheniere para compra e venda de gás natural">
+      <h4><a href="https://folha.uol.com.br" target="_blank" rel="noopener noreferrer">Folha de S.Paulo</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://c-level.folha.uol.com.br/financas/2026/09/btg-pactual-obtem-licenca-para-operar-banco-no-peru.shtml" title="BTG Pactual obtém licença para operar banco no Peru" target="_blank" rel="noopener noreferrer">BTG Pactual obtém licença para operar banco no Peru</a></li><li><a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://c-level.folha.uol.com.br/negocios/2026/09/petrobras-assina-acordo-de-22-anos-com-a-americana-cheniere-para-compra-e-venda-de-gas-natural.shtml" title="Petrobras assina acordo de 22 anos com a americana Cheniere para compra e venda de gás natural" target="_blank" rel="noopener noreferrer">Petrobras assina acordo de 22 anos com a americana Cheniere para compra e venda de gás natural</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="g1 da recepção à entrega, vectra personaliza experiência dos clientes da recepção à entrega, vectra personaliza experiência dos clientes candidatos a deputado estadual pelo agir no rj; veja quem são e os números candidatos a deputado estadual pelo agir no rj; veja quem são e os números candidatos a deputado estadual pelo novo no rj; veja quem são e os números candidatos a deputado estadual pelo novo no rj; veja quem são e os números grandes vãos livres revolucionam projetos industriais com concreto protendido grandes vãos livres revolucionam projetos industriais com concreto protendido">
+      <h4><a href="https://g1.globo.com" target="_blank" rel="noopener noreferrer">g1</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://g1.globo.com/pr/parana/especial-publicitario/vectra-30-anos-transformando-londrina/noticia/2026/09/29/da-recepcao-a-entrega-vectra-personaliza-experiencia-dos-clientes.ghtml" title="Da recepção à entrega, Vectra personaliza experiência dos clientes" target="_blank" rel="noopener noreferrer">Da recepção à entrega, Vectra personaliza experiência dos clientes</a></li><li><a href="https://g1.globo.com/rj/rio-de-janeiro/eleicoes/2026/noticia/2026/09/29/candidatos-a-deputado-estadual-pelo-agir-no-rj-veja-quem-sao-e-os-numeros.ghtml" title="Candidatos a deputado estadual pelo Agir no RJ; veja quem são e os números" target="_blank" rel="noopener noreferrer">Candidatos a deputado estadual pelo Agir no RJ; veja quem são e os números</a></li><li><a href="https://g1.globo.com/rj/rio-de-janeiro/eleicoes/2026/noticia/2026/09/29/candidatos-a-deputado-estadual-pelo-novo-no-rj-veja-quem-sao-e-os-numeros.ghtml" title="Candidatos a deputado estadual pelo Novo no RJ; veja quem são e os números" target="_blank" rel="noopener noreferrer">Candidatos a deputado estadual pelo Novo no RJ; veja quem são e os números</a></li><li><a href="https://g1.globo.com/sp/santos-regiao/especial-publicitario/hipermolde/noticia/2026/09/29/grandes-vaos-livres-revolucionam-projetos-industriais-com-concreto-protendido.ghtml" title="Grandes vãos livres revolucionam projetos industriais com concreto protendido" target="_blank" rel="noopener noreferrer">Grandes vãos livres revolucionam projetos industriais com concreto protendido</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="intercept brasil eleições 2026: todos os candidatos falam para as mulheres, mas nenhum divide o poder com elas eleições 2026: todos os candidatos falam para as mulheres, mas nenhum divide o poder com elas nossa senhora aparecida e a polêmica que acaba com o mito do bolsonaro moderado nossa senhora aparecida e a polêmica que acaba com o mito do bolsonaro moderado">
+      <h4><a href="https://intercept.com.br" target="_blank" rel="noopener noreferrer">Intercept Brasil</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://www.intercept.com.br/2026/09/28/candidatos-falam-para-mulheres-mas-nao-dividem-poder/" title="Eleições 2026: todos os candidatos falam para as mulheres, mas nenhum divide o poder com elas" target="_blank" rel="noopener noreferrer">Eleições 2026: todos os candidatos falam para as mulheres, mas nenhum divide o poder com elas</a></li><li><a href="https://www.intercept.com.br/2026/09/28/nossa-senhora-polemica-flavio-bolsonaro/" title="Nossa Senhora Aparecida e a polêmica que acaba com o mito do Bolsonaro moderado" target="_blank" rel="noopener noreferrer">Nossa Senhora Aparecida e a polêmica que acaba com o mito do Bolsonaro moderado</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="manual do usuário instalar bloqueador de anúncios é um gesto de amor instalar bloqueador de anúncios é um gesto de amor bloqueio a aplicativos não verificados no android começa nesta quinta (1º/10) bloqueio a aplicativos não verificados no android começa nesta quinta (1º/10) firefox 157 traz a nova interface “nova” firefox 157 traz a nova interface “nova” ¡macos 27 estas loco! ¡macos 27 estas loco!">
+      <h4><a href="https://manualdousuario.net" target="_blank" rel="noopener noreferrer">Manual do Usuário</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://manualdousuario.net/bloqueador-anuncios-gesto-amor/" title="Instalar bloqueador de anúncios é um gesto de amor" target="_blank" rel="noopener noreferrer">Instalar bloqueador de anúncios é um gesto de amor</a></li><li><a href="https://manualdousuario.net/bloqueio-aplicativos-nao-verificados-android/" title="Bloqueio a aplicativos não verificados no Android começa nesta quinta (1º/10)" target="_blank" rel="noopener noreferrer">Bloqueio a aplicativos não verificados no Android começa nesta quinta (1º/10)</a></li><li><a href="https://manualdousuario.net/firefox-157-interface-nova/" title="Firefox 157 traz a nova interface “Nova”" target="_blank" rel="noopener noreferrer">Firefox 157 traz a nova interface “Nova”</a></li><li><a href="https://manualdousuario.net/macos-27-estas-loco/" title="¡macOS 27 estas loco!" target="_blank" rel="noopener noreferrer">¡macOS 27 estas loco!</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="nexo jornal se proibir bets é uma medida eleitoreira, um viva às eleições! se proibir bets é uma medida eleitoreira, um viva às eleições! o que muda com a igreja católica na pauta eleitoral o que muda com a igreja católica na pauta eleitoral o que o caso de nossa senhora revela sobre as redes na eleição o que o caso de nossa senhora revela sobre as redes na eleição ‘bohemian rhapsody’ não estaria no topo das paradas hoje. por quê? ‘bohemian rhapsody’ não estaria no topo das paradas hoje. por quê?">
+      <h4><a href="https://nexojornal.com.br" target="_blank" rel="noopener noreferrer">Nexo Jornal</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://www.nexojornal.com.br/colunistas/2026/09/28/eleicoes-2026-bets-aposta-proibicao-lula" title="Se proibir bets é uma medida eleitoreira, um viva às eleições!" target="_blank" rel="noopener noreferrer">Se proibir bets é uma medida eleitoreira, um viva às eleições!</a></li><li><a href="https://www.nexojornal.com.br/expresso/2026/09/28/eleicoes-2026-flavio-bolsonaro-igreja-catolica-cnbb" title="O que muda com a Igreja Católica na pauta eleitoral" target="_blank" rel="noopener noreferrer">O que muda com a Igreja Católica na pauta eleitoral</a></li><li><a href="https://www.nexojornal.com.br/expresso/2026/09/28/eleicoes-nossa-senhora-aparecida-fake-news-redes-sociais" title="O que o caso de Nossa Senhora revela sobre as redes na eleição" target="_blank" rel="noopener noreferrer">O que o caso de Nossa Senhora revela sobre as redes na eleição</a></li><li><a href="https://www.nexojornal.com.br/externo/2026/09/28/musica-pop-bohemian-rhapsody-hiperselecao-otimizacao-repeticao" title="‘Bohemian Rhapsody’ não estaria no topo das paradas hoje. Por quê?" target="_blank" rel="noopener noreferrer">‘Bohemian Rhapsody’ não estaria no topo das paradas hoje. Por quê?</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="núcleo cópia de app de ia da meta engana usuários da apple cópia de app de ia da meta engana usuários da apple papo aberto #11: fim das bets, sim ou claro? papo aberto #11: fim das bets, sim ou claro? entidades pedem investigação à pge de perfis que usam apostas do polymarket e da kalshi como pesquisa eleitoral entidades pedem investigação à pge de perfis que usam apostas do polymarket e da kalshi como pesquisa eleitoral">
+      <h4><a href="https://nucleo.jor.br" target="_blank" rel="noopener noreferrer">Núcleo</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://nucleo.jor.br/curtas/2026/09/28/copia-de-app-de-ia-da-meta-engana-usuarios-da-apple/" title="Cópia de app de IA da Meta engana usuários da Apple" target="_blank" rel="noopener noreferrer">Cópia de app de IA da Meta engana usuários da Apple</a></li><li><a href="https://nucleo.jor.br/papo-aberto/2026/09/28/papo-aberto-11-fim-das-bets-sim-ou-claro/" title="Papo aberto #11: fim das bets, sim ou claro?" target="_blank" rel="noopener noreferrer">Papo aberto #11: fim das bets, sim ou claro?</a></li><li><a href="https://nucleo.jor.br/reportagem/2026/09/28/entidades-pedem-investigacao-a-pge-de-perfis-que-usam-apostas-do-polymarket-e-da-kalshi-como-pesquisa-eleitoral/" title="Entidades pedem investigação à PGE de perfis que usam apostas do Polymarket e da Kalshi como pesquisa eleitoral" target="_blank" rel="noopener noreferrer">Entidades pedem investigação à PGE de perfis que usam apostas do Polymarket e da Kalshi como pesquisa eleitoral</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="o globo maturatta leva cortes para churrasco à 16ª edição do rio gastronomia maturatta leva cortes para churrasco à 16ª edição do rio gastronomia fim das bets: fazenda estima perda de tributos até 2028 bem abaixo da arrecadação atual fim das bets: fazenda estima perda de tributos até 2028 bem abaixo da arrecadação atual selic a 15% não garante retorno: recuperações judiciais alertam investidores selic a 15% não garante retorno: recuperações judiciais alertam investidores">
+      <h4><a href="https://oglobo.globo.com" target="_blank" rel="noopener noreferrer">O Globo</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://oglobo.globo.com/conteudo-de-marca/maturatta/noticia/2026/09/29/maturatta-leva-cortes-para-churrasco-a-16a-edicao-do-rio-gastronomia.ghtml" title="Maturatta leva cortes para churrasco à 16ª edição do Rio Gastronomia" target="_blank" rel="noopener noreferrer">Maturatta leva cortes para churrasco à 16ª edição do Rio Gastronomia</a></li><li><a href="https://oglobo.globo.com/economia/fabio-graner/post/2026/09/fim-das-bets-fazenda-estima-perda-de-tributos-ate-2028-bem-abaixo-da-arrecadacao-atual.ghtml" title="Fim das bets: Fazenda estima perda de tributos até 2028 bem abaixo da arrecadação atual" target="_blank" rel="noopener noreferrer">Fim das bets: Fazenda estima perda de tributos até 2028 bem abaixo da arrecadação atual</a></li><li><a href="https://oglobo.globo.com/patrocinado/pulse-brand/noticia/2026/09/29/selic-a-15-nao-garante-retorno-recuperacoes-judiciais-alertam-investidores-1.ghtml" title="Selic a 15% não garante retorno: recuperações judiciais alertam investidores" target="_blank" rel="noopener noreferrer">Selic a 15% não garante retorno: recuperações judiciais alertam investidores</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="repórter brasil anp garante selo ‘verde’ para usinas de etanol na lista suja do trabalho escravo anp garante selo ‘verde’ para usinas de etanol na lista suja do trabalho escravo posicionamentos enviados para matéria sobre usinas na lista suja certificadas pelo renovabio posicionamentos enviados para matéria sobre usinas na lista suja certificadas pelo renovabio repórter brasil é parceira em investigação premiada pelo covering climate award repórter brasil é parceira em investigação premiada pelo covering climate award">
+      <h4><a href="https://reporterbrasil.org.br" target="_blank" rel="noopener noreferrer">Repórter Brasil</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://reporterbrasil.org.br/2026/09/anp-selo-verde-usinas-etanol-lista-suja/" title="ANP garante selo ‘verde’ para usinas de etanol na Lista Suja do trabalho escravo" target="_blank" rel="noopener noreferrer">ANP garante selo ‘verde’ para usinas de etanol na Lista Suja do trabalho escravo</a></li><li><a href="https://reporterbrasil.org.br/2026/09/posicionamentos-enviados-para-materia-sobre-usinas-na-lista-suja-certificadas-pelo-renovabio/" title="Posicionamentos enviados para matéria sobre usinas na Lista Suja certificadas pelo RenovaBio" target="_blank" rel="noopener noreferrer">Posicionamentos enviados para matéria sobre usinas na Lista Suja certificadas pelo RenovaBio</a></li><li><a href="https://reporterbrasil.org.br/2026/09/reporter-brasil-e-parceira-em-investigacao-premiada-pelo-covering-climate-award/" title="Repórter Brasil é parceira em investigação premiada pelo Covering Climate Award" target="_blank" rel="noopener noreferrer">Repórter Brasil é parceira em investigação premiada pelo Covering Climate Award</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="tecnoblog galaxy s26 plus (512 gb) chega ao menor preço dos últimos meses galaxy s26 plus (512 gb) chega ao menor preço dos últimos meses galaxy z flip 8 (512 gb) com chip de 2 nm tem queda de 37% no mercado livre galaxy z flip 8 (512 gb) com chip de 2 nm tem queda de 37% no mercado livre moto g86 (512 gb) tem 12 gb de ram e o melhor preço desde julho com cupom moto g86 (512 gb) tem 12 gb de ram e o melhor preço desde julho com cupom primeiro god of war com protagonista mulher entra em pré-venda primeiro god of war com protagonista mulher entra em pré-venda">
+      <h4><a href="https://tecnoblog.net" target="_blank" rel="noopener noreferrer">Tecnoblog</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://tecnoblog.net/achados/galaxy-s26-plus-512-gb-chega-ao-menor-preco-dos-ultimos-meses/" title="Galaxy S26 Plus (512 GB) chega ao menor preço dos últimos meses" target="_blank" rel="noopener noreferrer">Galaxy S26 Plus (512 GB) chega ao menor preço dos últimos meses</a></li><li><a href="https://tecnoblog.net/achados/galaxy-z-flip-8-512-gb-com-chip-de-2-nm-tem-queda-de-37-no-mercado-livre/" title="Galaxy Z Flip 8 (512 GB) com chip de 2 nm tem queda de 37% no Mercado Livre" target="_blank" rel="noopener noreferrer">Galaxy Z Flip 8 (512 GB) com chip de 2 nm tem queda de 37% no Mercado Livre</a></li><li><a href="https://tecnoblog.net/achados/moto-g86-512-gb-tem-12-gb-de-ram-e-o-melhor-preco-desde-julho-com-cupom/" title="Moto G86 (512 GB) tem 12 GB de RAM e o melhor preço desde julho com cupom" target="_blank" rel="noopener noreferrer">Moto G86 (512 GB) tem 12 GB de RAM e o melhor preço desde julho com cupom</a></li><li><a href="https://tecnoblog.net/noticias/primeiro-god-of-war-com-protagonista-mulher-entra-em-pre-venda/" title="Primeiro God of War com protagonista mulher entra em pré-venda" target="_blank" rel="noopener noreferrer">Primeiro God of War com protagonista mulher entra em pré-venda</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="uol penélope, líder da ala feminina do pcc, é condenada a 4 anos de prisão penélope, líder da ala feminina do pcc, é condenada a 4 anos de prisão mensagens indicam que flávio bolsonaro participou de festas com prostitutas mensagens indicam que flávio bolsonaro participou de festas com prostitutas">
+      <h4><a href="https://uol.com.br" target="_blank" rel="noopener noreferrer">UOL</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://noticias.uol.com.br/colunas/josmar-jozino/2026/09/29/penelope-a-lider-da-ala-feminina-do-pcc-e-condenada-a-quatro-anos-em-sp.htm" title="Penélope, líder da ala feminina do PCC, é condenada a 4 anos de prisão" target="_blank" rel="noopener noreferrer">Penélope, líder da ala feminina do PCC, é condenada a 4 anos de prisão</a></li><li><a href="https://noticias.uol.com.br/politica/ultimas-noticias/2026/09/29/mensagens-flavio-bolsonaro-amigo-alexandre-santini-festas.ghtm" title="Mensagens indicam que Flávio Bolsonaro participou de festas com prostitutas" target="_blank" rel="noopener noreferrer">Mensagens indicam que Flávio Bolsonaro participou de festas com prostitutas</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="valor econômico dirigentes do bce apontam alta dos juros globais e preços de energia como principais preocupações dirigentes do bce apontam alta dos juros globais e preços de energia como principais preocupações análise: o iraque que washington deixa para trás análise: o iraque que washington deixa para trás china oferece crédito barato para ajudar estatais a quitar dívidas em atraso china oferece crédito barato para ajudar estatais a quitar dívidas em atraso">
+      <h4><a href="https://valor.globo.com" target="_blank" rel="noopener noreferrer">Valor Econômico</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://valor.globo.com/financas/noticia/2026/09/29/dirigentes-do-bce-apontam-alta-dos-juros-globais-e-preos-de-energia-como-principais-preocupaes.ghtml" title="Dirigentes do BCE apontam alta dos juros globais e preços de energia como principais preocupações" target="_blank" rel="noopener noreferrer">Dirigentes do BCE apontam alta dos juros globais e preços de energia como principais preocupações</a></li><li><a href="https://valor.globo.com/mundo/noticia/2026/09/29/anlise-o-iraque-que-washington-deixa-para-trs.ghtml" title="Análise: O Iraque que Washington deixa para trás" target="_blank" rel="noopener noreferrer">Análise: O Iraque que Washington deixa para trás</a></li><li><a href="https://valor.globo.com/mundo/noticia/2026/09/29/china-oferece-crdito-barato-para-ajudar-estatais-a-quitar-dvidas-em-atraso.ghtml" title="China oferece crédito barato para ajudar estatais a quitar dívidas em atraso" target="_blank" rel="noopener noreferrer">China oferece crédito barato para ajudar estatais a quitar dívidas em atraso</a></li></ul>
+    </div>
+    
+    <div class="veiculo" data-busca="veja o sinal de alerta para os brasileiros que investem em imóveis nos eua o sinal de alerta para os brasileiros que investem em imóveis nos eua alex escobar ganha surpresa da família na volta à globo após 98 dias alex escobar ganha surpresa da família na volta à globo após 98 dias governo central fecha as contas de agosto devendo r$ 13,6 bilhões no mês governo central fecha as contas de agosto devendo r$ 13,6 bilhões no mês argentina anuncia arbitragem internacional contra reino unido por petróleo nas malvinas argentina anuncia arbitragem internacional contra reino unido por petróleo nas malvinas">
+      <h4><a href="https://veja.abril.com.br" target="_blank" rel="noopener noreferrer">Veja</a> <span>Brasil</span></h4>
+      <ul><li><a href="https://veja.abril.com.br/coluna/real-estate/o-sinal-de-alerta-para-os-brasileiros-que-investem-em-imoveis-nos-eua/" title="O sinal de alerta para os brasileiros que investem em imóveis nos EUA" target="_blank" rel="noopener noreferrer">O sinal de alerta para os brasileiros que investem em imóveis nos EUA</a></li><li><a href="https://veja.abril.com.br/cultura/alex-escobar-ganha-surpresa-da-familia-na-volta-a-globo-apos-98-dias/" title="Alex Escobar ganha surpresa da família na volta à Globo após 98 dias" target="_blank" rel="noopener noreferrer">Alex Escobar ganha surpresa da família na volta à Globo após 98 dias</a></li><li><a href="https://veja.abril.com.br/economia/governo-central-deficit-primario-r-13-bilhoes-agosto/" title="Governo central fecha as contas de agosto devendo R$ 13,6 bilhões no mês" target="_blank" rel="noopener noreferrer">Governo central fecha as contas de agosto devendo R$ 13,6 bilhões no mês</a></li><li><a href="https://veja.abril.com.br/mundo/argentina-anuncia-arbitragem-internacional-contra-reino-unido-por-petroleo-nas-malvinas/" title="Argentina anuncia arbitragem internacional contra Reino Unido por petróleo nas Malvinas" target="_blank" rel="noopener noreferrer">Argentina anuncia arbitragem internacional contra Reino Unido por petróleo nas Malvinas</a></li></ul>
+    </div>
+    
+  </div>
+</details>
+
+
+<footer class="rodape">
+  <p>Edição gerada em 29/09/2026 às 11:11 (horário de Brasília). A página mostra só títulos e links; o conteúdo pertence a cada veículo.
+  A seleção usa feeds públicos, que podem ser gerais ou de editorias específicas; não representa necessariamente a capa editorial de cada veículo. O acesso ao texto completo pode exigir assinatura do veículo. Manchetes sobre o mesmo assunto são reunidas por similaridade de texto, então o agrupamento pode errar em casos limítrofes.</p>
+  
+  <details>
+    <summary>2 veículos sem manchetes nesta edição</summary>
+    <ul><li>Revista Piauí — feed sem itens recentes</li><li>The Marshall Project — feed sem itens recentes</li></ul>
+  </details>
+  
+</footer>
+
+</div>
+<script>
+(function(){
+  var q=document.getElementById('q'); if(!q) return;
+  var alvos=[].slice.call(document.querySelectorAll('[data-busca]'));
+  var regs=[].slice.call(document.querySelectorAll('details.regiao'));
+  var estado=regs.map(function(d){return d.open;});
+  q.addEventListener('input',function(){
+    var norm=function(s){return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();};
+    var t=norm(q.value.trim());
+    alvos.forEach(function(el){ el.hidden = !!t && norm(el.getAttribute('data-busca')).indexOf(t)<0; });
+    regs.forEach(function(d,i){ d.open = t ? true : estado[i]; });
+  });
+})();
+</script>
+</body>
+</html>

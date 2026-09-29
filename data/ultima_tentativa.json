@@ -1,0 +1,15 @@
+{
+  "gerada_em": "2026-09-29T11:11:50.384278-03:00",
+  "consultados": 40,
+  "com_manchetes": 38,
+  "falhas": [
+    {
+      "veiculo": "Revista Piauí",
+      "motivo": "feed sem itens recentes"
+    },
+    {
+      "veiculo": "The Marshall Project",
+      "motivo": "feed sem itens recentes"
+    }
+  ]
+}

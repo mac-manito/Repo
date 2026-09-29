@@ -1,0 +1,326 @@
+[
+ {
+  "veiculo": "Reuters",
+  "titulo": "Cúpula do clima termina sem acordo sobre financiamento a países pobres (exemplo)"
+ },
+ {
+  "veiculo": "Associated Press (AP)",
+  "titulo": "Cúpula do clima encerra sem acordo sobre financiamento (exemplo)"
+ },
+ {
+  "veiculo": "BBC",
+  "titulo": "Cúpula do clima acaba sem acordo sobre dinheiro para países pobres (exemplo)"
+ },
+ {
+  "veiculo": "DW",
+  "titulo": "Cúpula do clima fracassa em acordo sobre financiamento (exemplo)"
+ },
+ {
+  "veiculo": "Folha de S.Paulo",
+  "titulo": "Cúpula do clima termina sem acordo sobre financiamento e adia decisão (exemplo)"
+ },
+ {
+  "veiculo": "O Globo",
+  "titulo": "Sem acordo sobre financiamento, cúpula do clima termina e decisão fica para 2027 (exemplo)"
+ },
+ {
+  "veiculo": "O Estado de S. Paulo (Estadão)",
+  "titulo": "Cúpula do clima termina sem consenso sobre financiamento (exemplo)"
+ },
+ {
+  "veiculo": "The Guardian",
+  "titulo": "Cúpula do clima termina sem acordo sobre financiamento, dizem delegados (exemplo)"
+ },
+ {
+  "veiculo": "Le Monde",
+  "titulo": "Cúpula do clima termina sem acordo sobre o financiamento (exemplo)"
+ },
+ {
+  "veiculo": "El País",
+  "titulo": "Cúpula do clima termina sin acuerdo sobre financiamento (exemplo)"
+ },
+ {
+  "veiculo": "Al Jazeera",
+  "titulo": "Cúpula do clima termina sem acordo sobre financiamento climático (exemplo)"
+ },
+ {
+  "veiculo": "The New York Times",
+  "titulo": "Cúpula do clima termina sem acordo sobre financiamento para países em desenvolvimento (exemplo)"
+ },
+ {
+  "veiculo": "Nikkei",
+  "titulo": "Cúpula do clima termina sem acordo sobre financiamento (exemplo)"
+ },
+ {
+  "veiculo": "The Hindu",
+  "titulo": "Cúpula do clima termina sem acordo sobre financiamento, países pobres criticam (exemplo)"
+ },
+ {
+  "veiculo": "Valor Econômico",
+  "titulo": "Banco Central mantém taxa de juros e sinaliza cautela (exemplo)"
+ },
+ {
+  "veiculo": "g1",
+  "titulo": "Banco Central mantém juros e sinaliza cautela com inflação (exemplo)"
+ },
+ {
+  "veiculo": "UOL",
+  "titulo": "Banco Central mantém a taxa de juros; veja o que muda (exemplo)"
+ },
+ {
+  "veiculo": "Exame",
+  "titulo": "Banco Central mantém juros e indica cautela nos próximos meses (exemplo)"
+ },
+ {
+  "veiculo": "CNN Brasil",
+  "titulo": "Banco Central mantém taxa de juros e sinaliza cautela (exemplo)"
+ },
+ {
+  "veiculo": "Agência Brasil",
+  "titulo": "Banco Central mantém juros e sinaliza cautela (exemplo)"
+ },
+ {
+  "veiculo": "El Tiempo",
+  "titulo": "Eleição presidencial terá segundo turno entre dois candidatos (exemplo)"
+ },
+ {
+  "veiculo": "Semana",
+  "titulo": "Eleição presidencial vai a segundo turno entre dois candidatos (exemplo)"
+ },
+ {
+  "veiculo": "El Espectador",
+  "titulo": "Eleição presidencial: segundo turno será disputado por dois candidatos (exemplo)"
+ },
+ {
+  "veiculo": "Caracol Noticias",
+  "titulo": "Eleição presidencial terá segundo turno com dois candidatos (exemplo)"
+ },
+ {
+  "veiculo": "Infobae",
+  "titulo": "Eleição presidencial definida em segundo turno entre dois candidatos (exemplo)"
+ },
+ {
+  "veiculo": "NHK",
+  "titulo": "Terremoto de magnitude 6,8 atinge região costeira (exemplo)"
+ },
+ {
+  "veiculo": "Asahi Shimbun",
+  "titulo": "Terremoto de magnitude 6,8 atinge a costa; sem alerta de tsunami (exemplo)"
+ },
+ {
+  "veiculo": "Yomiuri Shimbun",
+  "titulo": "Terremoto de 6,8 atinge região costeira (exemplo)"
+ },
+ {
+  "veiculo": "Kyodo News",
+  "titulo": "Terremoto de magnitude 6,8 sacode região costeira (exemplo)"
+ },
+ {
+  "veiculo": "Le Figaro",
+  "titulo": "Greve geral paralisa transportes e voos no país (exemplo)"
+ },
+ {
+  "veiculo": "Libération",
+  "titulo": "Greve geral paralisa transportes e cancela voos (exemplo)"
+ },
+ {
+  "veiculo": "Les Échos",
+  "titulo": "Greve geral paralisa transportes; voos cancelados (exemplo)"
+ },
+ {
+  "veiculo": "Wired",
+  "titulo": "Empresa de tecnologia anuncia demissão de mil funcionários (exemplo)"
+ },
+ {
+  "veiculo": "Tecnoblog",
+  "titulo": "Empresa de tecnologia anuncia demissão de mil funcionários (exemplo)"
+ },
+ {
+  "veiculo": "Núcleo",
+  "titulo": "Empresa de tecnologia demite mil funcionários e cita inteligência artificial (exemplo)"
+ },
+ {
+  "veiculo": "Record / R7",
+  "titulo": "Time vence final do campeonato nos pênaltis (exemplo)"
+ },
+ {
+  "veiculo": "Band",
+  "titulo": "Time vence a final do campeonato nos pênaltis (exemplo)"
+ },
+ {
+  "veiculo": "Daily Nation / Nation.Africa",
+  "titulo": "Novo aeroporto internacional é inaugurado após seis anos de obras (exemplo)"
+ },
+ {
+  "veiculo": "The Standard (Quênia)",
+  "titulo": "Novo aeroporto internacional é inaugurado depois de seis anos de obras (exemplo)"
+ },
+ {
+  "veiculo": "NPR",
+  "titulo": "Escolas testam calendário com semana de quatro dias (exemplo)"
+ },
+ {
+  "veiculo": "ProPublica",
+  "titulo": "Investigação aponta falhas na fiscalização de barragens (exemplo)"
+ },
+ {
+  "veiculo": "The Markup",
+  "titulo": "Testes mostram que aplicativos de saúde repassam dados a anunciantes (exemplo)"
+ },
+ {
+  "veiculo": "Politico",
+  "titulo": "Senado adia votação de projeto sobre orçamento militar (exemplo)"
+ },
+ {
+  "veiculo": "The Globe and Mail",
+  "titulo": "Preço de moradias recua pelo terceiro mês seguido em Toronto (exemplo)"
+ },
+ {
+  "veiculo": "Agência Pública",
+  "titulo": "Contratos de merenda escolar têm sobrepreço em municípios do Norte (exemplo)"
+ },
+ {
+  "veiculo": "Repórter Brasil",
+  "titulo": "Fiscais resgatam trabalhadores de fazenda de café (exemplo)"
+ },
+ {
+  "veiculo": "Nexo Jornal",
+  "titulo": "O que os dados mostram sobre a queda da natalidade (exemplo)"
+ },
+ {
+  "veiculo": "Aos Fatos",
+  "titulo": "É falso que vídeo de enchente seja da cidade citada nas redes (exemplo)"
+ },
+ {
+  "veiculo": "Clarín",
+  "titulo": "Inflação de setembro deve ficar abaixo da de agosto, estimam consultorias (exemplo)"
+ },
+ {
+  "veiculo": "Reforma",
+  "titulo": "Prefeitura anuncia obras no metrô da capital (exemplo)"
+ },
+ {
+  "veiculo": "La Tercera",
+  "titulo": "Congresso debate reforma do sistema de aposentadorias (exemplo)"
+ },
+ {
+  "veiculo": "Proceso",
+  "titulo": "Investigação sobre desaparecimentos ganha novo perfil de suspeito (exemplo)"
+ },
+ {
+  "veiculo": "Público (Portugal)",
+  "titulo": "Habitação: Governo apresenta novo pacote de apoio a jovens (exemplo)"
+ },
+ {
+  "veiculo": "Der Spiegel",
+  "titulo": "Coalizão discute corte de subsídios à energia (exemplo)"
+ },
+ {
+  "veiculo": "Süddeutsche Zeitung",
+  "titulo": "Fabricante de automóveis anuncia fechamento de linha de montagem (exemplo)"
+ },
+ {
+  "veiculo": "Corriere della Sera",
+  "titulo": "Turismo bate recorde de chegadas no verão (exemplo)"
+ },
+ {
+  "veiculo": "La Vanguardia",
+  "titulo": "Barcelona testa nova rede de ônibus elétricos (exemplo)"
+ },
+ {
+  "veiculo": "NRC",
+  "titulo": "Diques passam por inspeção antes da temporada de tempestades (exemplo)"
+ },
+ {
+  "veiculo": "DR",
+  "titulo": "Parlamento aprova lei sobre inteligência artificial nas escolas (exemplo)"
+ },
+ {
+  "veiculo": "Kyiv Independent",
+  "titulo": "Defesa aérea intercepta drones durante a noite (exemplo)"
+ },
+ {
+  "veiculo": "Meduza",
+  "titulo": "Economistas veem desaceleração na indústria (exemplo)"
+ },
+ {
+  "veiculo": "Haaretz",
+  "titulo": "Negociações por trégua entram em nova rodada (exemplo)"
+ },
+ {
+  "veiculo": "Mada Masr",
+  "titulo": "Governo anuncia reajuste no preço do pão subsidiado (exemplo)"
+ },
+ {
+  "veiculo": "Daily Maverick",
+  "titulo": "Racionamento de energia volta a atingir cidades sul-africanas (exemplo)"
+ },
+ {
+  "veiculo": "Premium Times",
+  "titulo": "Governo lança programa de crédito para pequenos agricultores (exemplo)"
+ },
+ {
+  "veiculo": "The Continent",
+  "titulo": "Como jovens africanos estão criando startups de energia solar (exemplo)"
+ },
+ {
+  "veiculo": "The Hindu",
+  "titulo": "Chuvas fortes alagam ruas de cidades do sul do país (exemplo)"
+ },
+ {
+  "veiculo": "Scroll.in",
+  "titulo": "Escritores discutem tradução de literatura regional (exemplo)"
+ },
+ {
+  "veiculo": "South China Morning Post",
+  "titulo": "Exportações chinesas crescem acima do esperado em setembro (exemplo)"
+ },
+ {
+  "veiculo": "Caixin",
+  "titulo": "Reguladores propõem novas regras para fundos de investimento (exemplo)"
+ },
+ {
+  "veiculo": "Tansa",
+  "titulo": "Investigação revela irregularidades em contratos de obras públicas (exemplo)"
+ },
+ {
+  "veiculo": "Yonhap",
+  "titulo": "Exportações de semicondutores sobem pelo sexto mês seguido (exemplo)"
+ },
+ {
+  "veiculo": "Rappler",
+  "titulo": "Senadores questionam orçamento de programas de assistência (exemplo)"
+ },
+ {
+  "veiculo": "The Straits Times",
+  "titulo": "Cingapura amplia incentivos para empresas de baterias (exemplo)"
+ },
+ {
+  "veiculo": "Kompas",
+  "titulo": "Governo inaugura nova linha de trem urbano (exemplo)"
+ },
+ {
+  "veiculo": "The Sydney Morning Herald",
+  "titulo": "Universidades preveem queda de matrículas de estrangeiros (exemplo)"
+ },
+ {
+  "veiculo": "NZ Herald",
+  "titulo": "Preço do leite em pó sobe em leilão internacional (exemplo)"
+ },
+ {
+  "veiculo": "Bellingcat",
+  "titulo": "Imagens de satélite ajudam a mapear desmatamento em área protegida (exemplo)"
+ },
+ {
+  "veiculo": "Rest of World",
+  "titulo": "Como entregadores de aplicativos se organizam no Sul Global (exemplo)"
+ },
+ {
+  "veiculo": "Financial Times",
+  "titulo": "Bancos europeus reforçam capital antes de novos testes de estresse (exemplo)"
+ },
+ {
+  "veiculo": "The Economist",
+  "titulo": "Por que o comércio de serviços cresce mais que o de bens (exemplo)"
+ }
+]

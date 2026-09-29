@@ -1,0 +1,41 @@
+nome,site,pais,regiao,feed
+Agência Brasil,https://agenciabrasil.ebc.com.br,Brasil,América Latina,https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml
+g1,https://g1.globo.com,Brasil,América Latina,https://g1.globo.com/rss/g1/
+UOL,https://uol.com.br,Brasil,América Latina,https://rss.uol.com.br/feed/noticias.xml
+Folha de S.Paulo,https://folha.uol.com.br,Brasil,América Latina,https://feeds.folha.uol.com.br/emcimadahora/rss091.xml
+Manual do Usuário,https://manualdousuario.net,Brasil,América Latina,https://manualdousuario.net/feed/
+O Globo,https://oglobo.globo.com,Brasil,América Latina,https://oglobo.globo.com/rss/oglobo/
+CNN Brasil,https://cnnbrasil.com.br,Brasil,América Latina,https://www.cnnbrasil.com.br/feed/
+Valor Econômico,https://valor.globo.com,Brasil,América Latina,https://valor.globo.com/rss/valor
+Exame,https://exame.com,Brasil,América Latina,https://exame.com/feed/
+Nexo Jornal,https://nexojornal.com.br,Brasil,América Latina,https://www.nexojornal.com.br/rss.xml
+Agência Pública,https://apublica.org,Brasil,América Latina,https://apublica.org/feed/
+Repórter Brasil,https://reporterbrasil.org.br,Brasil,América Latina,https://reporterbrasil.org.br/feed/
+Intercept Brasil,https://intercept.com.br,Brasil,América Latina,https://www.intercept.com.br/feed/
+Agência Lupa,https://lupa.uol.com.br,Brasil,América Latina,https://lupa.uol.com.br/feed/
+Aos Fatos,https://aosfatos.org,Brasil,América Latina,https://www.aosfatos.org/noticias/feed/
+Revista Piauí,https://piaui.uol.com.br,Brasil,América Latina,https://piaui.folha.uol.com.br/feed/
+CartaCapital,https://cartacapital.com.br,Brasil,América Latina,https://www.cartacapital.com.br/feed/
+Veja,https://veja.abril.com.br,Brasil,América Latina,https://veja.abril.com.br/feed/
+Tecnoblog,https://tecnoblog.net,Brasil,América Latina,https://tecnoblog.net/feed/
+Núcleo,https://nucleo.jor.br,Brasil,América Latina,https://nucleo.jor.br/rss/
+ABC News (EUA),https://abcnews.go.com,EUA,América do Norte,https://abcnews.go.com/abcnews/topstories
+CBS News,https://cbsnews.com,EUA,América do Norte,https://www.cbsnews.com/latest/rss/main
+NBC News,https://nbcnews.com,EUA,América do Norte,https://feeds.nbcnews.com/nbcnews/public/news
+Drop Site News,https://dropsitenews.com,EUA,América do Norte,https://www.dropsitenews.com/feed
+Fox News,https://foxnews.com,EUA,América do Norte,https://moxie.foxnews.com/google-publisher/latest.xml
+NPR,https://npr.org,EUA,América do Norte,https://feeds.npr.org/1001/rss.xml
+PBS,https://pbs.org,EUA,América do Norte,https://www.pbs.org/newshour/feeds/rss/headlines
+The New Yorker,https://newyorker.com,EUA,América do Norte,https://www.newyorker.com/feed/news
+The Washington Post,https://washingtonpost.com,EUA,América do Norte,https://feeds.washingtonpost.com/rss/world
+The Wall Street Journal,https://wsj.com,EUA,América do Norte,https://feeds.content.dowjones.io/public/rss/RSSWorldNews
+Bloomberg,https://bloomberg.com,EUA,América do Norte,https://feeds.bloomberg.com/markets/news.rss
+Axios,https://axios.com,EUA,América do Norte,https://api.axios.com/feed/
+Platformer,https://platformer.news,EUA,América do Norte,https://www.platformer.news/rss/
+Defector,https://defector.com,EUA,América do Norte,https://defector.com/feed
+The Marshall Project,https://themarshallproject.org,EUA,América do Norte,https://www.themarshallproject.org/rss/recent
+ProPublica,https://propublica.org,EUA,América do Norte,https://www.propublica.org/feeds/propublica/main
+The Atlantic,https://theatlantic.com,EUA,América do Norte,https://www.theatlantic.com/feed/all/
+Ars Technica,https://arstechnica.com,EUA,América do Norte,https://feeds.arstechnica.com/arstechnica/index
+Wired,https://wired.com,EUA,América do Norte,https://www.wired.com/feed/rss
+404 Media,https://404media.co,EUA,América do Norte,https://www.404media.co/rss/

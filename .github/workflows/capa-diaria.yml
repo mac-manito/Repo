@@ -1,0 +1,72 @@
+name: Capa diária
+
+on:
+  schedule:
+    - cron: '0 10 * * *' # 7h de Brasília; sujeito à fila do GitHub
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/**'
+      - 'data/**'
+      - '*.md'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: capa-diaria
+  cancel-in-progress: false
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt pytest==9.1.1
+      - name: Testar
+        run: python -m pytest tests -q
+      - name: Coletar manchetes e gerar edição
+        run: python capa.py --backend tfidf --min-veiculos 20
+      - name: Guardar diagnóstico
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: diagnostico
+          path: data/*.json
+          retention-days: 7
+          if-no-files-found: ignore
+      - name: Guardar edição e histórico
+        run: |
+          git config user.name 'capa-do-mundo-bot'
+          git config user.email 'capa-do-mundo-bot@users.noreply.github.com'
+          git add docs data
+          if ! git diff --cached --quiet; then
+            git commit -m "Atualiza edição diária"
+            git push
+          fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  publicar:
+    needs: gerar
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
