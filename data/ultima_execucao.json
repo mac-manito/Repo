@@ -1,10 +1,10 @@
 {
- "gerada_em": "2026-09-29T11:14:32.157204-03:00",
+ "gerada_em": "2026-09-29T12:44:34.937852-03:00",
  "numeros": {
   "veiculos": 38,
   "consultados": 40,
-  "manchetes": 138,
-  "historias": 8
+  "manchetes": 144,
+  "historias": 6
  },
  "backend": "tfidf",
  "limiar": 0.36,
@@ -20,24 +20,24 @@
  ],
  "historias": [
   {
-   "titulo": "Taxa de desemprego cai para 5,3%, a menor para o trimestre até agosto",
-   "veiculos": [
-    "Agência Brasil",
-    "CartaCapital"
-   ]
-  },
-  {
-   "titulo": "Live Updates: Lindsay Clancy's first hearing following mistrial",
-   "veiculos": [
-    "CBS News",
-    "NBC News"
-   ]
-  },
-  {
-   "titulo": "Ausência de agenda real desestimula o eleitor a votar",
+   "titulo": "Janja ganha protagonismo na campanha, dirige a cena em atos e contraria aliados de Lula",
    "veiculos": [
     "Folha de S.Paulo",
     "UOL"
+   ]
+  },
+  {
+   "titulo": "Justiça confirma dívidas de Renan Santos e frustra tentativa de sigilo sobre cobranças de impostos",
+   "veiculos": [
+    "Folha de S.Paulo",
+    "UOL"
+   ]
+  },
+  {
+   "titulo": "Taxa de desemprego cai para 5,3%, a menor para o trimestre até agosto",
+   "veiculos": [
+    "Agência Brasil",
+    "Valor Econômico"
    ]
   },
   {
@@ -45,20 +45,6 @@
    "veiculos": [
     "404 Media",
     "Wired"
-   ]
-  },
-  {
-   "titulo": "Hábitos do dia a dia podem elevar o risco de infarto",
-   "veiculos": [
-    "O Globo",
-    "Valor Econômico"
-   ]
-  },
-  {
-   "titulo": "Real Time: Celina lidera no DF e pode se reeleger no 1º turno",
-   "veiculos": [
-    "CartaCapital",
-    "Exame"
    ]
   },
   {
