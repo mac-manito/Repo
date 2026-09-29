@@ -1,6 +1,6 @@
 # Capa do Mundo
 
-Agregador pessoal de manchetes de **20 fontes brasileiras e 20 dos Estados Unidos**.
+Agregador pessoal de manchetes de **409 fontes: os 408 veículos da lista original e Ars Technica, já incluído no piloto**.
 Página pública, responsiva, com busca, agrupamento de assuntos e histórico das últimas 90 edições.
 
 ## Colocar no ar — uma configuração
@@ -27,28 +27,27 @@ o app mostra apenas títulos e links e não contorna assinaturas.
 - Consulta feeds RSS/Atom públicos configurados em `outlets.csv`.
 - Aceita até quatro manchetes por fonte, com publicação nas últimas 36 horas.
 - Exclui itens sem data interpretável ou mais de seis horas no futuro.
-- Usa TF-IDF local para agrupar títulos semelhantes. Não traduz: português e inglês
+- Usa TF-IDF local para agrupar títulos semelhantes. Não traduz: as manchetes
   permanecem no idioma original, e o agrupamento entre idiomas não é garantido.
 - O destaque considera o número de veículos e a diversidade de regiões no grupo,
   não uma avaliação editorial da importância da notícia.
 - Um feed pode representar uma editoria específica, e a ordem do feed não equivale
   necessariamente à capa editorial do veículo.
-- Exige pelo menos 20 das 40 fontes com notícias recentes antes de substituir a edição.
+- Exige pelo menos 20 fontes com notícias recentes antes de substituir a edição.
 - Preserva a edição anterior se a geração falhar. O rodapé informa a data da última edição
   e as fontes sem notícias recentes, sem preencher lacunas com títulos fictícios.
 - Todas as histórias agrupadas são exibidas; não há corte silencioso dos grupos excedentes.
 
 ## Fontes
 
-`outlets.csv` contém a seleção ativa, com os feeds configurados.
-`outlets-completo.csv` preserva o cadastro original de 408 veículos para consultas futuras.
+`outlets.csv` contém toda a lista ativa. Os 40 feeds do piloto foram preservados;
+para as demais fontes, o coletor procura RSS/Atom automaticamente e guarda o resultado em cache.
+`outlets-completo.csv` preserva o cadastro original de 408 veículos como referência.
 A lista ativa não depende de todas as fontes publicarem todos os dias.
 
-Na validação inicial, alguns feeds da proposta anterior estavam bloqueados, vazios ou antigos.
-Foram substituídos: Estadão → Manual do Usuário; CNN → Drop Site News;
-New York Times → The New Yorker; Politico → Platformer; USA Today → Defector;
-Los Angeles Times → The Marshall Project; The Intercept → Ars Technica.
-O Globo, Valor e Nexo tiveram seus endereços de feed corrigidos.
+As fontes anteriormente substituídas no piloto voltaram à coleta. Todas as fontes da
+lista original são consultadas; algumas podem não oferecer RSS público ou notícias recentes.
+A presença no cadastro não garante manchetes em cada edição.
 A disponibilidade pode mudar, inclusive entre o ambiente local e os executores do GitHub.
 
 ## Executar localmente
@@ -85,5 +84,5 @@ python -m pytest tests -q
 - Em **Actions**, o artefato `diagnostico` é guardado por sete dias, inclusive após falhas.
 - O workflow faz commit das edições e do cache; a publicação ocorre explicitamente com
   `upload-pages-artifact` e `deploy-pages`, sem depender do commit do robô para disparar Pages.
-- Para trocar uma fonte, edite `outlets.csv`, preservando 20 entradas de cada país, e execute novamente.
+- Para trocar uma fonte, edite `outlets.csv`, sem duplicar o endereço do veículo, e execute novamente.
 - O acesso à página é público. Não coloque senhas, chaves ou informação privada no repositório.

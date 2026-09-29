@@ -85,9 +85,14 @@ def test_demo_funciona_com_lista_parcial(monkeypatch):
     assert all(i['veiculo'] in {v['nome'] for v in selecionados} for i in itens)
 
 
-def test_fontes_20_por_pais():
-    from collections import Counter
+def test_fontes_incluem_lista_original_sem_duplicatas():
+    import csv
     fontes = capa.carregar_veiculos()
-    assert Counter(v['pais'] for v in fontes) == {'Brasil':20, 'EUA':20}
-    assert len({v['nome'] for v in fontes}) == 40
-    assert all(capa.url_limpa(v['feed']) for v in fontes)
+    with (capa.RAIZ / 'outlets-completo.csv').open() as f:
+        originais = list(csv.DictReader(f))
+    sites = {v['site'] for v in fontes}
+    assert len(sites) == len(fontes) == 409
+    assert {v['site'] for v in originais} <= sites
+    assert all(capa.url_limpa(v['site']) for v in fontes)
+    assert all(not v['feed'] or capa.url_limpa(v['feed']) for v in fontes)
+    assert sum(bool(v['feed']) for v in fontes) >= 40

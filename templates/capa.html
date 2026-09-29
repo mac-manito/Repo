@@ -111,7 +111,7 @@ details.regiao[open]>summary::after{content:"\2212"}
 
 <header class="cabeca">
   <h1>Capa do Mundo</h1>
-  <p>Brasil e Estados Unidos · {{ numeros.consultados }} fontes acompanhadas · edição diária</p>
+  <p>Notícias do mundo · {{ numeros.consultados }} fontes acompanhadas · edição diária</p>
 </header>
 <div class="faixa">
   <span>{{ edicao.data }}</span>
@@ -124,7 +124,7 @@ details.regiao[open]>summary::after{content:"\2212"}
 {% if demo %}
 <p class="aviso"><strong>Prévia do layout.</strong> Os títulos abaixo são fictícios e os links levam à página inicial de cada veículo. A edição real usa as manchetes publicadas nos feeds de cada veículo.</p>
 {% endif %}
-<p class="aviso">Atualização programada para as 7h de Brasília, sujeita a atrasos. Notícias em português e inglês, no idioma original. {% if not demo %}<a href="{{ arquivo_href }}">Edições anteriores</a>{% endif %}</p>
+<p class="aviso">Atualização programada para as 7h de Brasília, sujeita a atrasos. Manchetes no idioma original de cada fonte. {% if not demo %}<a href="{{ arquivo_href }}">Edições anteriores</a>{% endif %}</p>
 <div class="busca"><input id="q" type="search" placeholder="Filtrar por palavra ou veículo" aria-label="Filtrar manchetes"></div>
 
 {% macro fontes(h) -%}
