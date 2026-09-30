@@ -1,7 +1,19 @@
 # Capa do Mundo
 
-Agregador pessoal de manchetes de **409 fontes: os 408 veículos da lista original e Ars Technica, já incluído no piloto**.
+Agregador pessoal de manchetes de **436 fontes: 55 do Brasil e 381 do restante do mundo**.
 Página pública, responsiva, com busca, agrupamento de assuntos e histórico das últimas 90 edições.
+
+## Brasil e Resto do mundo
+
+A página tem dois grupos, definidos pelo país cadastrado do veículo — não pelo idioma
+ou pelo assunto da notícia. Destaques e agrupamentos são calculados separadamente;
+as fontes estrangeiras não aparecem nos destaques brasileiros, nem o contrário.
+
+Foram adicionadas 27 fontes locais brasileiras, uma em cada estado e no Distrito Federal,
+com feeds validados em 30/09/2026. Consulte [a lista por UF](FONTES_BRASIL.md).
+A seção Brasil mostra as cinco regiões, a UF das fontes locais e um quadro de cobertura
+por UF, inclusive quando não houver notícias recentes. Isso não significa cobertura
+de todos os municípios. Os 28 veículos brasileiros anteriores foram preservados.
 
 ## Colocar no ar — uma configuração
 
@@ -34,8 +46,8 @@ o app mostra apenas títulos e links e não contorna assinaturas.
 - Um feed pode representar uma editoria específica, e a ordem do feed não equivale
   necessariamente à capa editorial do veículo.
 - Exige pelo menos 20 fontes com notícias recentes antes de substituir a edição.
-- Preserva a edição anterior se a geração falhar. O rodapé informa a data da última edição
-  e as fontes sem notícias recentes, sem preencher lacunas com títulos fictícios.
+- Preserva a edição anterior se a geração falhar. O rodapé informa a data da última edição;
+  cada grupo informa suas fontes sem notícias recentes, sem preencher lacunas com títulos fictícios.
 - Todas as histórias agrupadas são exibidas; não há corte silencioso dos grupos excedentes.
 
 ## Fontes
@@ -44,6 +56,8 @@ o app mostra apenas títulos e links e não contorna assinaturas.
 para as demais fontes, o coletor procura RSS/Atom automaticamente e guarda o resultado em cache.
 `outlets-completo.csv` preserva o cadastro original de 408 veículos como referência.
 A lista ativa não depende de todas as fontes publicarem todos os dias.
+As colunas opcionais `uf` e `regiao_br` identificam as fontes locais brasileiras.
+Fontes brasileiras sem classificação local ficam em “Nacionais e especializados”.
 
 As fontes anteriormente substituídas no piloto voltaram à coleta. Todas as fontes da
 lista original são consultadas; algumas podem não oferecer RSS público ou notícias recentes.

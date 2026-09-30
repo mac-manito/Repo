@@ -319,16 +319,56 @@ def montar_regioes(itens: list[dict], consumidos: set[int]):
     for idx, it in enumerate(itens):
         if idx in consumidos:
             continue
-        v = por_regiao[it["regiao"]].setdefault(
-            it["veiculo"], {"nome": it["veiculo"], "site": it["site"], "pais": it["pais"], "itens": []})
+        regiao = (it.get("regiao_br") or "Nacionais e especializados") if it["pais"] == "Brasil" else it["regiao"]
+        v = por_regiao[regiao].setdefault(
+            it["veiculo"], {"nome": it["veiculo"], "site": it["site"], "pais": it["pais"],
+                            "uf": it.get("uf", ""), "itens": []})
         v["itens"].append({"titulo": it["titulo_exibicao"], "original": it["titulo"], "url": it["url"]})
     regioes = []
-    for nome in sorted(por_regiao, key=lambda r: ORDEM_REGIOES.index(r) if r in ORDEM_REGIOES else 99):
+    ordem = ["Nacionais e especializados", "Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"] + ORDEM_REGIOES
+    for nome in sorted(por_regiao, key=lambda r: ordem.index(r) if r in ordem else 99):
         veics = sorted(por_regiao[nome].values(), key=lambda v: v["nome"].lower())
         for v in veics:
-            v["busca"] = " ".join([v["nome"]] + [i["titulo"] + " " + i["original"] for i in v["itens"]]).lower()
+            v["busca"] = " ".join([v["nome"], v["pais"], v["uf"], nome] + [i["titulo"] + " " + i["original"] for i in v["itens"]]).lower()
         regioes.append({"nome": nome, "veiculos": veics, "total": sum(len(v["itens"]) for v in veics)})
     return regioes
+
+
+def montar_secoes(itens, veiculos, falhas, backend, limiar):
+    """Separa pelo país cadastrado do veículo, nunca pelo idioma ou assunto."""
+    secoes, todas_historias = [], []
+    cadastro = {v["nome"]: v for v in veiculos}
+    for slug, nome, brasileiro in [("brasil", "Brasil", True), ("mundo", "Resto do mundo", False)]:
+        fontes = [v for v in veiculos if (v["pais"] == "Brasil") == brasileiro]
+        subset = [dict(i, uf=cadastro.get(i["veiculo"], {}).get("uf", ""),
+                       regiao_br=cadastro.get(i["veiculo"], {}).get("regiao_br", ""))
+                  for i in itens if (i["pais"] == "Brasil") == brasileiro]
+        grupos, sim, usado, corte = agrupar([i["titulo_exibicao"] for i in subset], backend, limiar)
+        historias, consumidos = montar_historias(subset, grupos, sim)
+        destaque = historias[0] if historias else None
+        resto = historias[1:]
+        if not destaque and subset:
+            idx = max(range(len(subset)), key=lambda j: subset[j]["publicado"] or "")
+            it = subset[idx]
+            destaque = dict(titulo=it["titulo_exibicao"], original=it["titulo"], url=it["url"], n=1,
+                             busca=(it["titulo_exibicao"] + " " + it["veiculo"]).lower(),
+                             fontes=[dict(veiculo=it["veiculo"], url=it["url"], titulo=it["titulo_exibicao"],
+                                          original=it["titulo"])])
+            consumidos.add(idx)
+        nomes = {v["nome"] for v in fontes}
+        cobertura = []
+        if brasileiro:
+            for uf in sorted({v.get("uf") for v in fontes if v.get("uf")}):
+                locais = [v for v in fontes if v.get("uf") == uf]
+                noticias = [i for i in subset if i.get("uf") == uf]
+                cobertura.append(dict(uf=uf, fontes=locais, manchetes=len(noticias)))
+        secoes.append(dict(id=slug, nome=nome, destaque=destaque, laterais=resto[:8], demais=resto[8:],
+                           regioes=montar_regioes(subset, consumidos), consultados=len(fontes),
+                           ativos=len({i["veiculo"] for i in subset}), manchetes=len(subset),
+                           falhas=[f for f in falhas if f["veiculo"] in nomes], backend=usado, limiar=corte,
+                           cobertura=cobertura))
+        todas_historias.extend(historias)
+    return secoes, todas_historias
 
 
 # --------------------------------------------------------------------------- página
@@ -383,19 +423,7 @@ def principal() -> int:
         it["titulo_exibicao"] = it["titulo"]
 
     limiar = args.limiar if args.limiar is not None else LIMIAR_PADRAO[args.backend]
-    grupos, sim, args.backend, limiar = agrupar([i["titulo_exibicao"] for i in itens], args.backend, limiar)
-    historias, consumidos = montar_historias(itens, grupos, sim)
-    regioes = montar_regioes(itens, consumidos)
-
-    if historias:
-        destaque, resto = historias[0], historias[1:]
-    else:  # nenhum assunto repetido: a manchete é o item mais recente
-        it = max(itens, key=lambda i: i["publicado"] or "")
-        destaque = {"titulo": it["titulo_exibicao"], "original": it["titulo"], "url": it["url"], "n": 1, "n_regioes": 1,
-                    "peso": 1, "busca": it["titulo"].lower(),
-                    "fontes": [{"veiculo": it["veiculo"], "url": it["url"], "titulo": it["titulo_exibicao"],
-                                "original": it["titulo"], "regiao": it["regiao"], "site": it["site"]}]}
-        resto = []
+    secoes, historias = montar_secoes(itens, veiculos, status["falhas"], args.backend, limiar)
 
     contexto = {
         "demo": args.demo,
@@ -403,8 +431,7 @@ def principal() -> int:
                    "gerada_em": agora.strftime("%d/%m/%Y às %H:%M"), "iso": agora.date().isoformat()},
         "numeros": {"veiculos": status["com_manchetes"], "consultados": status["consultados"],
                     "manchetes": len(itens), "historias": len(historias)},
-        "destaque": destaque, "laterais": resto[:8], "demais": resto[8:],
-        "regioes": regioes, "falhas": status["falhas"], "traduzida": False,
+        "secoes": secoes, "traduzida": False,
     }
     saida = Path(args.saida)
     contexto["arquivo_href"] = "edicoes/index.html"
@@ -426,6 +453,7 @@ def principal() -> int:
         resumo.write_text(json.dumps({
             "gerada_em": agora.isoformat(), "numeros": contexto["numeros"], "backend": args.backend, "limiar": limiar,
             "falhas": status["falhas"],
+            "secoes": [{k: s[k] for k in ("id", "nome", "consultados", "ativos", "manchetes", "backend", "limiar")} for s in secoes],
             "historias": [{"titulo": h["titulo"], "veiculos": [f["veiculo"] for f in h["fontes"]]} for h in historias],
         }, ensure_ascii=False, indent=1), "utf-8")
     log(f"ok: {len(historias)} histórias em vários veículos; página em {saida / 'index.html'}")

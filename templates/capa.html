@@ -104,6 +104,13 @@ details.regiao[open]>summary::after{content:"\2212"}
 .rodape details{margin:.6rem 0}
 .rodape summary{cursor:pointer;font-weight:600;color:var(--tinta)}
 .rodape ul{columns:16rem;margin:.5rem 0 0;padding-left:1.1rem}
+.grupos-nav{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0;font-family:var(--fio-sans)}
+.grupos-nav a{padding:.65rem 1rem;border:1px solid var(--tinta);color:var(--tinta);text-decoration:none}
+.grupo{scroll-margin-top:1rem;margin-top:2rem}
+.grupo>h2{font-size:2rem;border-bottom:4px double var(--tinta);margin:0}
+.grupo-resumo{font:400 .875rem/1.4 var(--fio-sans);color:var(--suave)}
+.falhas-grupo{margin:1rem 0;font:400 .875rem/1.4 var(--fio-sans)}
+.falhas-grupo ul{columns:18rem;padding-left:1.2rem}
 </style>
 </head>
 <body>
@@ -126,11 +133,29 @@ details.regiao[open]>summary::after{content:"\2212"}
 {% endif %}
 <p class="aviso">Atualização programada para as 7h de Brasília, sujeita a atrasos. Manchetes no idioma original de cada fonte. {% if not demo %}<a href="{{ arquivo_href }}">Edições anteriores</a>{% endif %}</p>
 <div class="busca"><input id="q" type="search" placeholder="Filtrar por palavra ou veículo" aria-label="Filtrar manchetes"></div>
+<nav class="grupos-nav" aria-label="Grupos de fontes">
+{% for s in secoes %}<a href="#{{ s.id }}">{{ s.nome }} · {{ s.ativos }} veículos com notícias</a>{% endfor %}
+</nav>
+<p class="grupo-resumo">Divisão pelo país do veículo, não pelo assunto da notícia. No Brasil, a UF indica a base de cobertura local, não uma garantia de cobertura de todos os municípios.</p>
 
 {% macro fontes(h) -%}
 <p class="fontes"><span class="n">{{ h.n }} {{ 'veículo' if h.n == 1 else 'veículos' }}</span><span class="l">{% for f in h.fontes %}<a href="{{ f.url }}" title="{{ f.original }}" target="_blank" rel="noopener noreferrer">{{ f.veiculo }}</a> {% endfor %}</span></p>
 {%- endmacro %}
 
+{% for s in secoes %}
+{% set destaque = s.destaque %}
+{% set laterais = s.laterais %}
+{% set demais = s.demais %}
+{% set regioes = s.regioes %}
+<section class="grupo" id="{{ s.id }}" aria-labelledby="titulo-{{ s.id }}">
+<h2 id="titulo-{{ s.id }}">{{ s.nome }}</h2>
+<p class="grupo-resumo">{{ s.consultados }} fontes cadastradas · {{ s.ativos }} com notícias · {{ s.manchetes }} manchetes nesta edição</p>
+{% if s.cobertura %}
+<details class="falhas-grupo"><summary>Cobertura local: {{ s.cobertura|length }} UFs cadastradas — consulte fontes e disponibilidade</summary>
+<ul>{% for c in s.cobertura %}<li><strong>{{ c.uf }}</strong>: {% for v in c.fontes %}<a href="{{ v.site }}" target="_blank" rel="noopener noreferrer">{{ v.nome }}</a>{% if not loop.last %}, {% endif %}{% endfor %} — {{ c.manchetes }} manchetes nesta edição</li>{% endfor %}</ul>
+</details>
+{% endif %}
+{% if destaque %}
 <section class="topo">
   <article class="principal" data-busca="{{ destaque.busca }}">
     <h2 class="t"><a href="{{ destaque.url }}" target="_blank" rel="noopener noreferrer">{{ destaque.titulo }}</a></h2>
@@ -153,6 +178,9 @@ details.regiao[open]>summary::after{content:"\2212"}
     {% endfor %}
   </aside>
 </section>
+{% else %}
+<p>Nenhuma manchete recente disponível neste grupo.</p>
+{% endif %}
 
 {% if demais %}
 <h2 class="secao">Mais assuntos repetidos</h2>
@@ -166,30 +194,30 @@ details.regiao[open]>summary::after{content:"\2212"}
 </section>
 {% endif %}
 
-<h2 class="secao">Manchetes por região</h2>
+{% if regioes %}<h3 class="secao">Outras manchetes por região</h3>{% endif %}
 {% for r in regioes %}
 <details class="regiao"{% if loop.first %} open{% endif %}>
   <summary><span class="nome">{{ r.nome }}</span><span class="qtd">{{ r.veiculos|length }} veículos, {{ r.total }} manchetes</span></summary>
   <div class="veiculos">
     {% for v in r.veiculos %}
     <div class="veiculo" data-busca="{{ v.busca }}">
-      <h4><a href="{{ v.site }}" target="_blank" rel="noopener noreferrer">{{ v.nome }}</a> <span>{{ v.pais }}</span></h4>
+      <h4><a href="{{ v.site }}" target="_blank" rel="noopener noreferrer">{{ v.nome }}</a> <span>{{ v.uf or v.pais }}</span></h4>
       <ul>{% for i in v.itens %}<li><a href="{{ i.url }}" title="{{ i.original }}" target="_blank" rel="noopener noreferrer">{{ i.titulo }}</a></li>{% endfor %}</ul>
     </div>
     {% endfor %}
   </div>
 </details>
 {% endfor %}
+{% if s.falhas %}
+<details class="falhas-grupo"><summary>{{ s.falhas|length }} fontes de {{ s.nome }} sem manchetes nesta edição</summary>
+<ul>{% for f in s.falhas %}<li>{{ f.veiculo }} — {{ f.motivo }}</li>{% endfor %}</ul></details>
+{% endif %}
+</section>
+{% endfor %}
 
 <footer class="rodape">
   <p>Edição gerada em {{ edicao.gerada_em }} (horário de Brasília). A página mostra só títulos e links; o conteúdo pertence a cada veículo.
   A seleção usa feeds públicos, que podem ser gerais ou de editorias específicas; não representa necessariamente a capa editorial de cada veículo. O acesso ao texto completo pode exigir assinatura do veículo. Manchetes sobre o mesmo assunto são reunidas por similaridade de texto{% if traduzida %}, depois de traduzidas para o português{% endif %}, então o agrupamento pode errar em casos limítrofes.</p>
-  {% if falhas %}
-  <details>
-    <summary>{{ falhas|length }} veículos sem manchetes nesta edição</summary>
-    <ul>{% for f in falhas %}<li>{{ f.veiculo }} — {{ f.motivo }}</li>{% endfor %}</ul>
-  </details>
-  {% endif %}
 </footer>
 
 </div>

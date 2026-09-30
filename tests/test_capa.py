@@ -91,8 +91,41 @@ def test_fontes_incluem_lista_original_sem_duplicatas():
     with (capa.RAIZ / 'outlets-completo.csv').open() as f:
         originais = list(csv.DictReader(f))
     sites = {v['site'] for v in fontes}
-    assert len(sites) == len(fontes) == 409
+    assert len(sites) == len(fontes)
+    assert len(fontes) >= 436
     assert {v['site'] for v in originais} <= sites
     assert all(capa.url_limpa(v['site']) for v in fontes)
     assert all(not v['feed'] or capa.url_limpa(v['feed']) for v in fontes)
     assert sum(bool(v['feed']) for v in fontes) >= 40
+
+
+def test_cobertura_brasil_todas_ufs():
+    fontes = [v for v in capa.carregar_veiculos() if v['pais'] == 'Brasil']
+    ufs = set('AC AL AP AM BA CE DF ES GO MA MT MS MG PA PB PR PE PI RJ RN RS RO RR SC SP SE TO'.split())
+    assert {v['uf'] for v in fontes if v.get('uf')} == ufs
+    assert {v['regiao_br'] for v in fontes if v.get('regiao_br')} == {'Norte','Nordeste','Centro-Oeste','Sudeste','Sul'}
+
+
+def test_grupos_separam_pelo_pais_e_nao_pelo_idioma():
+    titulo = 'Banco Central mantém taxa de juros e sinaliza cautela'
+    fontes = [dict(nome='Fonte BR', pais='Brasil', site='https://br.example', uf='RS', regiao_br='Sul'),
+              dict(nome='Fonte estrangeira em português', pais='Portugal', site='https://pt.example')]
+    itens = [dict(veiculo=v['nome'], pais=v['pais'], site=v['site'], regiao='Europa',
+                  titulo=titulo, titulo_exibicao=titulo, url=v['site']+'/noticia', publicado='2026-09-30T10:00:00+00:00') for v in fontes]
+    secoes, historias = capa.montar_secoes(itens, fontes, [], 'tfidf', .36)
+    assert [s['nome'] for s in secoes] == ['Brasil','Resto do mundo']
+    assert [s['manchetes'] for s in secoes] == [1,1]
+    assert historias == [] # títulos iguais em grupos distintos não se misturam
+    assert secoes[0]['destaque']['fontes'][0]['veiculo'] == 'Fonte BR'
+    assert secoes[1]['destaque']['fontes'][0]['veiculo'] == 'Fonte estrangeira em português'
+    assert secoes[0]['cobertura'][0]['uf'] == 'RS'
+    assert secoes[0]['cobertura'][0]['manchetes'] == 1
+
+
+def test_grupo_vazio_e_falhas_ficam_no_grupo_correto():
+    fontes = [dict(nome='Fonte BR', pais='Brasil', site='https://br.example')]
+    secoes, historias = capa.montar_secoes([], fontes, [{'veiculo':'Fonte BR','motivo':'sem notícias'}], 'tfidf', .36)
+    assert historias == []
+    assert all(s['destaque'] is None for s in secoes)
+    assert len(secoes[0]['falhas']) == 1
+    assert secoes[1]['falhas'] == []
