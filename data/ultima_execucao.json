@@ -1,10 +1,10 @@
 {
- "gerada_em": "2026-09-29T17:24:49.515179-03:00",
+ "gerada_em": "2026-09-30T08:21:36.786465-03:00",
  "numeros": {
-  "veiculos": 182,
+  "veiculos": 186,
   "consultados": 409,
-  "manchetes": 672,
-  "historias": 30
+  "manchetes": 679,
+  "historias": 25
  },
  "backend": "tfidf",
  "limiar": 0.36,
@@ -98,10 +98,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "BIRN",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "Band",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -158,6 +154,10 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
+   "veiculo": "China Digital Times",
+   "motivo": "feed sem itens recentes"
+  },
+  {
    "veiculo": "China Times",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -166,12 +166,12 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Civio",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "CommonWealth",
    "motivo": "sem feed (verificado recentemente)"
+  },
+  {
+   "veiculo": "Correctiv",
+   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Corriere della Sera",
@@ -346,10 +346,6 @@
    "motivo": "feed sem itens recentes"
   },
   {
-   "veiculo": "IDL-Reporteros",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "ITV",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -376,6 +372,10 @@
   {
    "veiculo": "KBS",
    "motivo": "sem feed (verificado recentemente)"
+  },
+  {
+   "veiculo": "Kan",
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Kommersant",
@@ -446,7 +446,7 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Megaphone",
+   "veiculo": "Mensagem de Lisboa",
    "motivo": "feed sem itens recentes"
   },
   {
@@ -490,16 +490,8 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "NewZimbabwe",
-   "motivo": "feed não encontrado ou fora do ar"
-  },
-  {
    "veiculo": "News24",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Newslaundry",
-   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Newstapa",
@@ -520,6 +512,10 @@
   {
    "veiculo": "OhmyNews",
    "motivo": "sem feed (verificado recentemente)"
+  },
+  {
+   "veiculo": "Ouestaf News",
+   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "PCIJ",
@@ -619,10 +615,6 @@
   },
   {
    "veiculo": "Revista Anfibia",
-   "motivo": "feed sem itens recentes"
-  },
-  {
-   "veiculo": "Revista Piauí",
    "motivo": "feed sem itens recentes"
   },
   {
@@ -750,10 +742,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "The Hottest Place in Hell",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "The Indian Express",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -786,8 +774,8 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "The News Minute",
-   "motivo": "feed não encontrado ou fora do ar"
+   "veiculo": "The Reporter (Taiwan)",
+   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "The Reporters' Collective",
@@ -804,6 +792,10 @@
   {
    "veiculo": "The Straits Times",
    "motivo": "feed sem itens recentes"
+  },
+  {
+   "veiculo": "The Sun",
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "The Times",
@@ -894,16 +886,8 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "amaBhungane",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "bianet",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "elDiario.es",
-   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "heise online",
@@ -920,179 +904,181 @@
  ],
  "historias": [
   {
-   "titulo": "Caleb Flynn, former \"American Idol\" contested, found guilty of murdering wife",
+   "titulo": "Israel-bound flight diverted to Saudi Arabia after fight between pilots",
    "veiculos": [
-    "CBS News",
+    "Citizen TV",
     "ABC News (EUA)",
-    "Daily Mail",
-    "Fox News"
+    "CBS News",
+    "SABC",
+    "The Washington Post"
    ]
   },
   {
-   "titulo": "Quaest: Tarcísio tem 44% na disputa pelo governo de São Paulo; Haddad, 24%",
-   "veiculos": [
-    "CartaCapital",
-    "UOL",
-    "Valor Econômico",
-    "Veja"
-   ]
-  },
-  {
-   "titulo": "Fatima El Mansouri Becomes Morocco’s First Woman Prime Minister",
-   "veiculos": [
-    "Channels TV",
-    "France 24",
-    "Stuff"
-   ]
-  },
-  {
-   "titulo": "U.S. Supreme Court sides with Trump administration in third-country deportations",
-   "veiculos": [
-    "NPR",
-    "Axios",
-    "NBC News",
-    "The Intercept"
-   ]
-  },
-  {
-   "titulo": "‘I Enjoyed Myself, Ready To Kick’, Tinubu Says After Returning From Europe Vacation",
-   "veiculos": [
-    "Channels TV",
-    "Premium Times",
-    "ThisDay"
-   ]
-  },
-  {
-   "titulo": "Doblete para Lamine Yamal",
-   "veiculos": [
-    "ABC (Espanha)",
-    "La República (Peru)"
-   ]
-  },
-  {
-   "titulo": "Man City Guilty Of Financial Rule Breaches, Says Premier League",
-   "veiculos": [
-    "Channels TV",
-    "Daily Mail"
-   ]
-  },
-  {
-   "titulo": "Lindsay Clancy's defense makes stunning argument there is NO EVIDENCE she killed her three children as retrial hangs in the balance",
-   "veiculos": [
-    "Daily Mail",
-    "NPR"
-   ]
-  },
-  {
-   "titulo": "Magic Mountain closes X2 coaster permanently after history of injuries",
-   "veiculos": [
-    "Los Angeles Times",
-    "Stuff"
-   ]
-  },
-  {
-   "titulo": "Mystery over UK airbase scare as police find 'quantity of petrol' but no explosives",
-   "veiculos": [
-    "France 24",
-    "South China Morning Post"
-   ]
-  },
-  {
-   "titulo": "Digger review – Tom Cruise’s loudmouth oil tycoon goes hard in Alejandro G Iñárritu’s eco-satire",
-   "veiculos": [
-    "The Guardian",
-    "The Guardian Australia"
-   ]
-  },
-  {
-   "titulo": "AFCON Qualifiers: Guinea-Bissau Beat Super Eagles 3-0, Hand Chelle First Defeat",
-   "veiculos": [
-    "Channels TV",
-    "Punch"
-   ]
-  },
-  {
-   "titulo": "Cámara de Diputados debatirá este jueves censura contra ministro del Interior",
-   "veiculos": [
-    "El Comercio (Peru)",
-    "La República (Peru)"
-   ]
-  },
-  {
-   "titulo": "Governo solicita o bloqueio de 5.209 sites de apostas após assinatura de MP",
-   "veiculos": [
-    "Folha de S.Paulo",
-    "Valor Econômico"
-   ]
-  },
-  {
-   "titulo": "Journalist caught dissing Simmons on hot mic",
+   "titulo": "Flight makes emergency landing in Saudi Arabia after cockpit fight",
    "veiculos": [
     "The Age",
-    "The Sydney Morning Herald"
+    "Channels TV",
+    "The Sydney Morning Herald",
+    "The Wall Street Journal"
    ]
   },
   {
-   "titulo": "España vs. Croacia, EN VIVO por la Nations League: el minuto a minuto del partido",
+   "titulo": "Кремль заявил, что не обсуждал с США смягчение санкций в обмен на освобождение политзаключенных",
    "veiculos": [
+    "iStories / Vazhnye Istorii",
+    "Meduza",
+    "Novaya Gazeta Europe",
+    "The Insider"
+   ]
+  },
+  {
+   "titulo": "US State Of Tennessee To Execute Woman For First Time In 200 Years",
+   "veiculos": [
+    "Channels TV",
+    "Daily Maverick",
+    "Stuff"
+   ]
+  },
+  {
+   "titulo": "Atividade industrial da China recupera crescimento após dois meses",
+   "veiculos": [
+    "Folha de S.Paulo",
+    "Observador",
+    "UOL"
+   ]
+  },
+  {
+   "titulo": "Euro hoy en Chile: precio y cotización de la divisa este miércoles 30 de septiembre de 2026",
+   "veiculos": [
+    "Clarín",
     "La Nación (Argentina)",
-    "La Tercera"
-   ]
-  },
-  {
-   "titulo": "EN VIVO: Comisión de Constitución inicia debate de predictamen que rechaza pedido de facultades del Gobierno",
-   "veiculos": [
-    "El Comercio (Peru)",
     "RPP"
    ]
   },
   {
-   "titulo": "Victorian hospital doctors to hold strike",
+   "titulo": "FOUL PLAY: Manchester City’s ‘sham’ deals leave Premier League in uncharted territory",
+   "veiculos": [
+    "Daily Maverick",
+    "La Tercera"
+   ]
+  },
+  {
+   "titulo": "Why is the US withdrawing its troops from Iraq?",
+   "veiculos": [
+    "France 24",
+    "Stuff"
+   ]
+  },
+  {
+   "titulo": "Un avión de Flydubai aterrizó de emergencia en Arabia Saudita tras un incidente entre los pilotos",
+   "veiculos": [
+    "La Nación (Argentina)",
+    "ABC (Espanha)"
+   ]
+  },
+  {
+   "titulo": "Lula e Flávio Bolsonaro voltam a empatar no 2º turno, e distância cai no 1º no Agregador de Pesquisas da BBC News Brasil",
+   "veiculos": [
+    "BBC News Brasil",
+    "Exame"
+   ]
+  },
+  {
+   "titulo": "‘Blood in the cockpit’: Pilot stabbing on flight to Tel Aviv sparks hijack fears",
    "veiculos": [
     "The Age",
     "The Sydney Morning Herald"
    ]
   },
   {
-   "titulo": "Female motorcyclist tasered in gang attack",
+   "titulo": "Temblor en Chile hoy, 30 de septiembre: ver epicentro y magnitud según reporte CSN",
+   "veiculos": [
+    "El Comercio (Peru)",
+    "Infobae"
+   ]
+  },
+  {
+   "titulo": "Dally M awards 2026 LIVE updates: Surprise Coach of the Year winner; counting continues",
    "veiculos": [
     "The Age",
     "The Sydney Morning Herald"
    ]
   },
   {
-   "titulo": "Family raise alarm for missing hiker",
+   "titulo": "Receita paga nesta quarta lote da malha fina do Imposto de Renda",
+   "veiculos": [
+    "Agência Brasil",
+    "Veja"
+   ]
+  },
+  {
+   "titulo": "Bundesregierung bringt Pflegereform auf den Weg",
+   "veiculos": [
+    "ARD (Tagesschau)",
+    "Frankfurter Allgemeine Zeitung (FAZ)"
+   ]
+  },
+  {
+   "titulo": "Qual o melhor país para o brasileiro morar após se aposentar? Descubra",
+   "veiculos": [
+    "O Globo",
+    "Veja"
+   ]
+  },
+  {
+   "titulo": "Preferência por jogos digitais é 'manipulada', diz varejista de mídia física",
+   "veiculos": [
+    "Folha de S.Paulo",
+    "UOL"
+   ]
+  },
+  {
+   "titulo": "Bogongs change their tune",
    "veiculos": [
     "The Age",
     "The Sydney Morning Herald"
    ]
   },
   {
-   "titulo": "El Rey, sobre Ceuta ante Macron: «No podemos afrontar solos una responsabilidad que es de todos»",
+   "titulo": "Las claves del decreto ley de vivienda",
    "veiculos": [
-    "ABC (Espanha)",
-    "El Mundo"
+    "Civio",
+    "La Vanguardia"
    ]
   },
   {
-   "titulo": "Supreme Court rules Trump admin can continue deporting migrants to 3rd countries",
+   "titulo": "Joe ‘Ferrari’ Sibanyoni denies corrupt Putco deal",
    "veiculos": [
-    "ABC News (EUA)",
-    "PBS"
+    "Mail & Guardian",
+    "eNCA"
    ]
   },
   {
-   "titulo": "Reuters: в бюджете России на 2027 год социальные расходы сократят на 7%, расходы на здравоохранение — на 6,8%, на образование — на 6%",
+   "titulo": "El casero tendrá que indemnizar con 12 mensualidades al inquilino si decide no renovar el alquiler",
    "veiculos": [
-    "Meduza",
-    "iStories / Vazhnye Istorii"
+    "El País",
+    "elDiario.es"
    ]
   },
   {
-   "titulo": "OpenAI hit with landmark lawsuit following Hugging Face hack",
+   "titulo": "Kaçırılma zannedildi, kokpitte kavga çıktı: Dubai-Tel Aviv uçağında neler yaşandı?",
    "veiculos": [
-    "Axios",
-    "Wired"
+    "Medyascope",
+    "Sabah"
+   ]
+  },
+  {
+   "titulo": "El detalle de los decretos de vivienda: consulta aquí los documentos",
+   "veiculos": [
+    "La Vanguardia",
+    "elDiario.es"
+   ]
+  },
+  {
+   "titulo": "Lula não defendeu nem normalizou a pedofilia em discurso no Pará",
+   "veiculos": [
+    "Agência Lupa",
+    "Aos Fatos"
    ]
   },
   {
@@ -1100,41 +1086,6 @@
    "veiculos": [
     "Byline Times",
     "Channel 4"
-   ]
-  },
-  {
-   "titulo": "آمریکا ۱۰ فرد و شرکت مرتبط با صنایع نظامی جمهوری اسلامی را تحریم کرد",
-   "veiculos": [
-    "Iran International",
-    "IranWire"
-   ]
-  },
-  {
-   "titulo": "Нотариусы в нескольких регионах стали требовать у призывников выписки из реестра повесток. Без них отказываются оформлять доверенности",
-   "veiculos": [
-    "Meduza",
-    "Novaya Gazeta Europe"
-   ]
-  },
-  {
-   "titulo": "O meu candidato é da bancada das big techs?",
-   "veiculos": [
-    "Manual do Usuário",
-    "Núcleo"
-   ]
-  },
-  {
-   "titulo": "Família de condenado por garimpo na terra Yanomami bancou vida de Ramagem nos EUA",
-   "veiculos": [
-    "Agência Pública",
-    "Nexo Jornal"
-   ]
-  },
-  {
-   "titulo": "El Gobierno aprueba la protección frente a los desahucios hasta 2030 y la prórroga de los contratos de alquiler hasta 2028",
-   "veiculos": [
-    "El País",
-    "infoLibre"
    ]
   }
  ]

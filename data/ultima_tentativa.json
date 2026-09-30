@@ -1,7 +1,7 @@
 {
-  "gerada_em": "2026-09-29T17:24:49.515179-03:00",
+  "gerada_em": "2026-09-30T08:21:36.786465-03:00",
   "consultados": 409,
-  "com_manchetes": 182,
+  "com_manchetes": 186,
   "falhas": [
     {
       "veiculo": "+972 Magazine",
@@ -92,10 +92,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "BIRN",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Band",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -152,6 +148,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "China Digital Times",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "China Times",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -160,12 +160,12 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Civio",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "CommonWealth",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Correctiv",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Corriere della Sera",
@@ -340,10 +340,6 @@
       "motivo": "feed sem itens recentes"
     },
     {
-      "veiculo": "IDL-Reporteros",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "ITV",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -370,6 +366,10 @@
     {
       "veiculo": "KBS",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Kan",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Kommersant",
@@ -440,7 +440,7 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Megaphone",
+      "veiculo": "Mensagem de Lisboa",
       "motivo": "feed sem itens recentes"
     },
     {
@@ -484,16 +484,8 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "NewZimbabwe",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "News24",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Newslaundry",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Newstapa",
@@ -514,6 +506,10 @@
     {
       "veiculo": "OhmyNews",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Ouestaf News",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "PCIJ",
@@ -613,10 +609,6 @@
     },
     {
       "veiculo": "Revista Anfibia",
-      "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "Revista Piauí",
       "motivo": "feed sem itens recentes"
     },
     {
@@ -744,10 +736,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "The Hottest Place in Hell",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "The Indian Express",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -780,8 +768,8 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "The News Minute",
-      "motivo": "feed não encontrado ou fora do ar"
+      "veiculo": "The Reporter (Taiwan)",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "The Reporters' Collective",
@@ -798,6 +786,10 @@
     {
       "veiculo": "The Straits Times",
       "motivo": "feed sem itens recentes"
+    },
+    {
+      "veiculo": "The Sun",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "The Times",
@@ -888,16 +880,8 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "amaBhungane",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "bianet",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "elDiario.es",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "heise online",
