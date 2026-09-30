@@ -1,7 +1,7 @@
 {
-  "gerada_em": "2026-09-30T08:21:36.786465-03:00",
+  "gerada_em": "2026-09-30T13:18:46.848395-03:00",
   "consultados": 409,
-  "com_manchetes": 186,
+  "com_manchetes": 193,
   "falhas": [
     {
       "veiculo": "+972 Magazine",
@@ -24,16 +24,8 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "ARIJ",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Addis Standard",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Africa Uncensored",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Al Arabiya",
@@ -148,10 +140,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "China Digital Times",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "China Times",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -162,10 +150,6 @@
     {
       "veiculo": "CommonWealth",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Correctiv",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Corriere della Sera",
@@ -368,10 +352,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Kan",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "Kommersant",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -394,6 +374,10 @@
     {
       "veiculo": "La Presse",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "La Stampa",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Le Devoir",
@@ -438,10 +422,6 @@
     {
       "veiculo": "Mediapart",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Mensagem de Lisboa",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Michael West Media",
@@ -506,10 +486,6 @@
     {
       "veiculo": "OhmyNews",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Ouestaf News",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "PCIJ",
@@ -786,10 +762,6 @@
     {
       "veiculo": "The Straits Times",
       "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "The Sun",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "The Times",

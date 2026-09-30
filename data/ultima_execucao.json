@@ -1,10 +1,10 @@
 {
- "gerada_em": "2026-09-30T08:21:36.786465-03:00",
+ "gerada_em": "2026-09-30T13:18:46.848395-03:00",
  "numeros": {
-  "veiculos": 186,
+  "veiculos": 193,
   "consultados": 409,
-  "manchetes": 679,
-  "historias": 25
+  "manchetes": 702,
+  "historias": 26
  },
  "backend": "tfidf",
  "limiar": 0.36,
@@ -30,16 +30,8 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "ARIJ",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "Addis Standard",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Africa Uncensored",
-   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Al Arabiya",
@@ -154,10 +146,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "China Digital Times",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "China Times",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -168,10 +156,6 @@
   {
    "veiculo": "CommonWealth",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Correctiv",
-   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Corriere della Sera",
@@ -374,10 +358,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Kan",
-   "motivo": "feed não encontrado ou fora do ar"
-  },
-  {
    "veiculo": "Kommersant",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -400,6 +380,10 @@
   {
    "veiculo": "La Presse",
    "motivo": "sem feed (verificado recentemente)"
+  },
+  {
+   "veiculo": "La Stampa",
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Le Devoir",
@@ -444,10 +428,6 @@
   {
    "veiculo": "Mediapart",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Mensagem de Lisboa",
-   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Michael West Media",
@@ -512,10 +492,6 @@
   {
    "veiculo": "OhmyNews",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Ouestaf News",
-   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "PCIJ",
@@ -794,10 +770,6 @@
    "motivo": "feed sem itens recentes"
   },
   {
-   "veiculo": "The Sun",
-   "motivo": "feed não encontrado ou fora do ar"
-  },
-  {
    "veiculo": "The Times",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -904,174 +876,185 @@
  ],
  "historias": [
   {
-   "titulo": "Israel-bound flight diverted to Saudi Arabia after fight between pilots",
+   "titulo": "One pilot of Israel-bound flight stabbed the other and tried to crash plane",
    "veiculos": [
-    "Citizen TV",
-    "ABC News (EUA)",
-    "CBS News",
-    "SABC",
+    "Financial Times",
+    "Los Angeles Times",
+    "PBS",
+    "The Wall Street Journal",
     "The Washington Post"
    ]
   },
   {
-   "titulo": "Flight makes emergency landing in Saudi Arabia after cockpit fight",
+   "titulo": "Court temporarily halts Christa Pike's execution in Tennessee",
    "veiculos": [
-    "The Age",
-    "Channels TV",
-    "The Sydney Morning Herald",
-    "The Wall Street Journal"
-   ]
-  },
-  {
-   "titulo": "Кремль заявил, что не обсуждал с США смягчение санкций в обмен на освобождение политзаключенных",
-   "veiculos": [
-    "iStories / Vazhnye Istorii",
-    "Meduza",
-    "Novaya Gazeta Europe",
-    "The Insider"
-   ]
-  },
-  {
-   "titulo": "US State Of Tennessee To Execute Woman For First Time In 200 Years",
-   "veiculos": [
-    "Channels TV",
-    "Daily Maverick",
-    "Stuff"
-   ]
-  },
-  {
-   "titulo": "Atividade industrial da China recupera crescimento após dois meses",
-   "veiculos": [
-    "Folha de S.Paulo",
-    "Observador",
-    "UOL"
-   ]
-  },
-  {
-   "titulo": "Euro hoy en Chile: precio y cotización de la divisa este miércoles 30 de septiembre de 2026",
-   "veiculos": [
-    "Clarín",
-    "La Nación (Argentina)",
-    "RPP"
-   ]
-  },
-  {
-   "titulo": "FOUL PLAY: Manchester City’s ‘sham’ deals leave Premier League in uncharted territory",
-   "veiculos": [
-    "Daily Maverick",
-    "La Tercera"
-   ]
-  },
-  {
-   "titulo": "Why is the US withdrawing its troops from Iraq?",
-   "veiculos": [
+    "CBS News",
+    "Axios",
     "France 24",
-    "Stuff"
+    "NBC News"
    ]
   },
   {
-   "titulo": "Un avión de Flydubai aterrizó de emergencia en Arabia Saudita tras un incidente entre los pilotos",
+   "titulo": "Schrijfster en cabaretière Paulien Cornelisse (50) overleden",
    "veiculos": [
-    "La Nación (Argentina)",
-    "ABC (Espanha)"
+    "NOS",
+    "De Standaard",
+    "de Volkskrant"
    ]
   },
   {
-   "titulo": "Lula e Flávio Bolsonaro voltam a empatar no 2º turno, e distância cai no 1º no Agregador de Pesquisas da BBC News Brasil",
+   "titulo": "Así será la prórroga automática de los alquileres: el propietario tendrá que indemnizar al inquilino con un año de renta si la incumple",
    "veiculos": [
-    "BBC News Brasil",
-    "Exame"
-   ]
-  },
-  {
-   "titulo": "‘Blood in the cockpit’: Pilot stabbing on flight to Tel Aviv sparks hijack fears",
-   "veiculos": [
-    "The Age",
-    "The Sydney Morning Herald"
-   ]
-  },
-  {
-   "titulo": "Temblor en Chile hoy, 30 de septiembre: ver epicentro y magnitud según reporte CSN",
-   "veiculos": [
-    "El Comercio (Peru)",
-    "Infobae"
-   ]
-  },
-  {
-   "titulo": "Dally M awards 2026 LIVE updates: Surprise Coach of the Year winner; counting continues",
-   "veiculos": [
-    "The Age",
-    "The Sydney Morning Herald"
-   ]
-  },
-  {
-   "titulo": "Receita paga nesta quarta lote da malha fina do Imposto de Renda",
-   "veiculos": [
-    "Agência Brasil",
-    "Veja"
-   ]
-  },
-  {
-   "titulo": "Bundesregierung bringt Pflegereform auf den Weg",
-   "veiculos": [
-    "ARD (Tagesschau)",
-    "Frankfurter Allgemeine Zeitung (FAZ)"
-   ]
-  },
-  {
-   "titulo": "Qual o melhor país para o brasileiro morar após se aposentar? Descubra",
-   "veiculos": [
-    "O Globo",
-    "Veja"
-   ]
-  },
-  {
-   "titulo": "Preferência por jogos digitais é 'manipulada', diz varejista de mídia física",
-   "veiculos": [
-    "Folha de S.Paulo",
-    "UOL"
-   ]
-  },
-  {
-   "titulo": "Bogongs change their tune",
-   "veiculos": [
-    "The Age",
-    "The Sydney Morning Herald"
-   ]
-  },
-  {
-   "titulo": "Las claves del decreto ley de vivienda",
-   "veiculos": [
-    "Civio",
+    "elDiario.es",
+    "El País",
     "La Vanguardia"
    ]
   },
   {
-   "titulo": "Joe ‘Ferrari’ Sibanyoni denies corrupt Putco deal",
+   "titulo": "Israel investiga como ataque terrorista el incidente del vuelo de Flydubai: \"Uno de los pilotos apuñaló al otro\"",
    "veiculos": [
-    "Mail & Guardian",
+    "El Mundo",
+    "La Nación (Argentina)"
+   ]
+  },
+  {
+   "titulo": "UK PM says 'strong indications' Iran involved in airbase scare",
+   "veiculos": [
+    "Middle East Eye",
+    "The Wall Street Journal"
+   ]
+  },
+  {
+   "titulo": "What happened on diverted Flydubai flight from Dubai to Tel Aviv?",
+   "veiculos": [
+    "Al Jazeera",
+    "France 24"
+   ]
+  },
+  {
+   "titulo": "Teen killer avoids state’s first female execution in over 200 years – for now",
+   "veiculos": [
+    "Fox News",
+    "South China Morning Post"
+   ]
+  },
+  {
+   "titulo": "Burundi to take third-country deportees from US",
+   "veiculos": [
+    "SABC",
+    "The Intercept"
+   ]
+  },
+  {
+   "titulo": "Mendonça vota para manter decisão de retirar posts de Nossa Senhora",
+   "veiculos": [
+    "Agência Brasil",
+    "BBC News Brasil"
+   ]
+  },
+  {
+   "titulo": "Israeli Leaders Says ‘Jihadist’ Pilot Tried To Crash Flight From Dubai",
+   "veiculos": [
+    "Channels TV",
+    "NPR"
+   ]
+  },
+  {
+   "titulo": "Россия договорилась обмениваться данными об экстремистах и террористах с пятью странами СНГ",
+   "veiculos": [
+    "Meduza",
+    "Novaya Gazeta Europe"
+   ]
+  },
+  {
+   "titulo": "Justiça suspende execução de mulher no Tennessee pouco antes da injeção letal",
+   "veiculos": [
+    "Folha de S.Paulo",
+    "UOL"
+   ]
+  },
+  {
+   "titulo": "Andy Burnham: Sterke indikasjoner på at Iran var involvert i hendelsen ved militær flybase",
+   "veiculos": [
+    "Aftenposten",
+    "NRK"
+   ]
+  },
+  {
+   "titulo": "The new luxury: Why Perth buyers are abandoning beach views for sheds and workshops",
+   "veiculos": [
+    "The Age",
+    "The Sydney Morning Herald"
+   ]
+  },
+  {
+   "titulo": "Paraná Pesquisas em Mato Grosso: Mauro Mendes lidera disputa pelo Senado",
+   "veiculos": [
+    "CartaCapital",
+    "Veja"
+   ]
+  },
+  {
+   "titulo": "Regjeringen gir grønt lys til tømming av gruveavfall i Førdefjorden i tre år fremover",
+   "veiculos": [
+    "NRK",
+    "Aftenposten"
+   ]
+  },
+  {
+   "titulo": "Putin amenaza con armas nucleares a la UE por el enclave de Kaliningrado",
+   "veiculos": [
+    "ABC (Espanha)",
+    "El Mundo"
+   ]
+  },
+  {
+   "titulo": "Los contratos temporales tendrán que justificarse y se regulan también los alquileres por habitaciones",
+   "veiculos": [
+    "Civio",
+    "El País"
+   ]
+  },
+  {
+   "titulo": "Celso Neto encerra temporada da IMSA em Road Atlanta",
+   "veiculos": [
+    "O Globo",
+    "Valor Econômico"
+   ]
+  },
+  {
+   "titulo": "Dangote, Ruto to launch $16 billion Kenya refinery amid land protests",
+   "veiculos": [
+    "Premium Times",
+    "ThisDay"
+   ]
+  },
+  {
+   "titulo": "UK triple murder suspect Ndodana Tshuma plea deal hits another snag",
+   "veiculos": [
+    "NewZimbabwe",
     "eNCA"
    ]
   },
   {
-   "titulo": "El casero tendrá que indemnizar con 12 mensualidades al inquilino si decide no renovar el alquiler",
+   "titulo": "Pilot arrested after midair stabbing and crash attempt, ‘heroes’ averted major disaster: Israeli PM",
    "veiculos": [
-    "El País",
-    "elDiario.es"
+    "The Age",
+    "The Sydney Morning Herald"
    ]
   },
   {
-   "titulo": "Kaçırılma zannedildi, kokpitte kavga çıktı: Dubai-Tel Aviv uçağında neler yaşandı?",
+   "titulo": "House prices slump extends to six months",
    "veiculos": [
-    "Medyascope",
-    "Sabah"
+    "The Age",
+    "The Sydney Morning Herald"
    ]
   },
   {
-   "titulo": "El detalle de los decretos de vivienda: consulta aquí los documentos",
+   "titulo": "‘Be prepared’: Victorians warned of thunderstorm asthma risk ahead of intense pollen season",
    "veiculos": [
-    "La Vanguardia",
-    "elDiario.es"
+    "The Age",
+    "The Sydney Morning Herald"
    ]
   },
   {
@@ -1079,13 +1062,6 @@
    "veiculos": [
     "Agência Lupa",
     "Aos Fatos"
-   ]
-  },
-  {
-   "titulo": "Andy Burnham’s Labour Conference Speech Offers a Clear Break From the Politics of Despair",
-   "veiculos": [
-    "Byline Times",
-    "Channel 4"
    ]
   }
  ]
