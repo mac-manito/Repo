@@ -1,10 +1,10 @@
 {
- "gerada_em": "2026-09-30T13:18:46.848395-03:00",
+ "gerada_em": "2026-09-30T16:55:57.469289-03:00",
  "numeros": {
-  "veiculos": 193,
-  "consultados": 409,
-  "manchetes": 702,
-  "historias": 26
+  "veiculos": 217,
+  "consultados": 436,
+  "manchetes": 798,
+  "historias": 29
  },
  "backend": "tfidf",
  "limiar": 0.36,
@@ -32,6 +32,10 @@
   {
    "veiculo": "Addis Standard",
    "motivo": "sem feed (verificado recentemente)"
+  },
+  {
+   "veiculo": "Agência Mural",
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Al Arabiya",
@@ -187,7 +191,7 @@
   },
   {
    "veiculo": "Dataphyte",
-   "motivo": "feed sem itens recentes"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "De Correspondent",
@@ -268,6 +272,10 @@
   {
    "veiculo": "Fanpage.it",
    "motivo": "sem feed (verificado recentemente)"
+  },
+  {
+   "veiculo": "FolhaMax",
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "FragDenStaat",
@@ -382,10 +390,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "La Stampa",
-   "motivo": "feed não encontrado ou fora do ar"
-  },
-  {
    "veiculo": "Le Devoir",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -472,6 +476,10 @@
   {
    "veiculo": "News24",
    "motivo": "sem feed (verificado recentemente)"
+  },
+  {
+   "veiculo": "Newslaundry",
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Newstapa",
@@ -600,6 +608,10 @@
   {
    "veiculo": "SBT",
    "motivo": "sem feed (verificado recentemente)"
+  },
+  {
+   "veiculo": "Saiba Mais",
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Sarawak Report",
@@ -815,7 +827,7 @@
   },
   {
    "veiculo": "Vorágine",
-   "motivo": "feed sem itens recentes"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Welt",
@@ -874,194 +886,237 @@
    "motivo": "sem feed (verificado recentemente)"
   }
  ],
+ "secoes": [
+  {
+   "id": "brasil",
+   "nome": "Brasil",
+   "consultados": 55,
+   "ativos": 45,
+   "manchetes": 174,
+   "backend": "tfidf",
+   "limiar": 0.36
+  },
+  {
+   "id": "mundo",
+   "nome": "Resto do mundo",
+   "consultados": 381,
+   "ativos": 172,
+   "manchetes": 624,
+   "backend": "tfidf",
+   "limiar": 0.36
+  }
+ ],
  "historias": [
   {
-   "titulo": "One pilot of Israel-bound flight stabbed the other and tried to crash plane",
+   "titulo": "Transporte gratuito no DF para as eleições: saiba como vai funcionar em 4 de outubro",
    "veiculos": [
-    "Financial Times",
-    "Los Angeles Times",
-    "PBS",
-    "The Wall Street Journal",
-    "The Washington Post"
+    "Correio Braziliense",
+    "Jornal da Paraíba"
    ]
   },
   {
-   "titulo": "Court temporarily halts Christa Pike's execution in Tennessee",
+   "titulo": "Renan Santos vai ao TSE para tentar participar de debate na ‘Globo’",
    "veiculos": [
-    "CBS News",
-    "Axios",
-    "France 24",
-    "NBC News"
-   ]
-  },
-  {
-   "titulo": "Schrijfster en cabaretière Paulien Cornelisse (50) overleden",
-   "veiculos": [
-    "NOS",
-    "De Standaard",
-    "de Volkskrant"
-   ]
-  },
-  {
-   "titulo": "Así será la prórroga automática de los alquileres: el propietario tendrá que indemnizar al inquilino con un año de renta si la incumple",
-   "veiculos": [
-    "elDiario.es",
-    "El País",
-    "La Vanguardia"
-   ]
-  },
-  {
-   "titulo": "Israel investiga como ataque terrorista el incidente del vuelo de Flydubai: \"Uno de los pilotos apuñaló al otro\"",
-   "veiculos": [
-    "El Mundo",
-    "La Nación (Argentina)"
-   ]
-  },
-  {
-   "titulo": "UK PM says 'strong indications' Iran involved in airbase scare",
-   "veiculos": [
-    "Middle East Eye",
-    "The Wall Street Journal"
-   ]
-  },
-  {
-   "titulo": "What happened on diverted Flydubai flight from Dubai to Tel Aviv?",
-   "veiculos": [
-    "Al Jazeera",
-    "France 24"
-   ]
-  },
-  {
-   "titulo": "Teen killer avoids state’s first female execution in over 200 years – for now",
-   "veiculos": [
-    "Fox News",
-    "South China Morning Post"
-   ]
-  },
-  {
-   "titulo": "Burundi to take third-country deportees from US",
-   "veiculos": [
-    "SABC",
-    "The Intercept"
-   ]
-  },
-  {
-   "titulo": "Mendonça vota para manter decisão de retirar posts de Nossa Senhora",
-   "veiculos": [
-    "Agência Brasil",
-    "BBC News Brasil"
-   ]
-  },
-  {
-   "titulo": "Israeli Leaders Says ‘Jihadist’ Pilot Tried To Crash Flight From Dubai",
-   "veiculos": [
-    "Channels TV",
-    "NPR"
-   ]
-  },
-  {
-   "titulo": "Россия договорилась обмениваться данными об экстремистах и террористах с пятью странами СНГ",
-   "veiculos": [
-    "Meduza",
-    "Novaya Gazeta Europe"
-   ]
-  },
-  {
-   "titulo": "Justiça suspende execução de mulher no Tennessee pouco antes da injeção letal",
-   "veiculos": [
-    "Folha de S.Paulo",
+    "CartaCapital",
     "UOL"
    ]
   },
   {
-   "titulo": "Andy Burnham: Sterke indikasjoner på at Iran var involvert i hendelsen ved militær flybase",
-   "veiculos": [
-    "Aftenposten",
-    "NRK"
-   ]
-  },
-  {
-   "titulo": "The new luxury: Why Perth buyers are abandoning beach views for sheds and workshops",
-   "veiculos": [
-    "The Age",
-    "The Sydney Morning Herald"
-   ]
-  },
-  {
-   "titulo": "Paraná Pesquisas em Mato Grosso: Mauro Mendes lidera disputa pelo Senado",
-   "veiculos": [
-    "CartaCapital",
-    "Veja"
-   ]
-  },
-  {
-   "titulo": "Regjeringen gir grønt lys til tømming av gruveavfall i Førdefjorden i tre år fremover",
-   "veiculos": [
-    "NRK",
-    "Aftenposten"
-   ]
-  },
-  {
-   "titulo": "Putin amenaza con armas nucleares a la UE por el enclave de Kaliningrado",
-   "veiculos": [
-    "ABC (Espanha)",
-    "El Mundo"
-   ]
-  },
-  {
-   "titulo": "Los contratos temporales tendrán que justificarse y se regulan también los alquileres por habitaciones",
-   "veiculos": [
-    "Civio",
-    "El País"
-   ]
-  },
-  {
-   "titulo": "Celso Neto encerra temporada da IMSA em Road Atlanta",
+   "titulo": "Premier britânico diz haver indícios de que Irã esteve envolvido em incidente em base aérea usada pelos EUA no Reino Unido",
    "veiculos": [
     "O Globo",
     "Valor Econômico"
    ]
   },
   {
-   "titulo": "Dangote, Ruto to launch $16 billion Kenya refinery amid land protests",
+   "titulo": "Rafaella Carvalho da Cyrela se torna VP na Ademi-RJ",
+   "veiculos": [
+    "O Globo",
+    "Valor Econômico"
+   ]
+  },
+  {
+   "titulo": "Dino determina que PF investigue ataques a imagens católicas em diferentes estados",
+   "veiculos": [
+    "Estado do Pará Online",
+    "News Rondônia"
+   ]
+  },
+  {
+   "titulo": "Rodrigo Pacheco assume cargo de ministro no TCU e Renzo Braz ocupa vaga no Senado",
+   "veiculos": [
+    "Bahia Notícias",
+    "CartaCapital"
+   ]
+  },
+  {
+   "titulo": "Gilmar Mendes critica vazamento seletivo de investigações no STF",
+   "veiculos": [
+    "Agência Brasil",
+    "Amazonas Atual"
+   ]
+  },
+  {
+   "titulo": "Ministério da Saúde libera doação de sangue de pessoas a partir dos 70 anos",
+   "veiculos": [
+    "Amazonas Atual",
+    "Infonet"
+   ]
+  },
+  {
+   "titulo": "Mudanças na emissão e no controle de receitas médicas entram em vigor",
+   "veiculos": [
+    "Agência Brasil",
+    "Infonet"
+   ]
+  },
+  {
+   "titulo": "Combate à desinformação no digital é mais difícil do que parece",
+   "veiculos": [
+    "Manual do Usuário",
+    "Nexo Jornal"
+   ]
+  },
+  {
+   "titulo": "One pilot of Israel-bound flight stabbed the other and tried to crash plane",
+   "veiculos": [
+    "Financial Times",
+    "France 24",
+    "The Age",
+    "The Sydney Morning Herald",
+    "The Wall Street Journal",
+    "The Washington Post"
+   ]
+  },
+  {
+   "titulo": "‘Strong indications’ Iran was involved in RAF Fairford incident, says Burnham",
+   "veiculos": [
+    "Financial Times",
+    "France 24",
+    "South China Morning Post",
+    "The Wall Street Journal"
+   ]
+  },
+  {
+   "titulo": "Правительство внесло в Госдуму проект бюджета на три ближайших года. Его общий дефицит — почти 16 триллионов рублей",
+   "veiculos": [
+    "Meduza",
+    "iStories / Vazhnye Istorii",
+    "The Insider"
+   ]
+  },
+  {
+   "titulo": "Hoy, Alianza Lima vs Palestino EN VIVO: ¿a qué hora juegan en Matute y dónde ver el amistoso internacional?",
+   "veiculos": [
+    "RPP",
+    "La República (Peru)",
+    "La Tercera"
+   ]
+  },
+  {
+   "titulo": "Rusia amenaza por carta a la OTAN con usar \"armas nucleares\" si los aliados intentan aislar Kaliningrado",
+   "veiculos": [
+    "El Mundo",
+    "ABC (Espanha)",
+    "El País"
+   ]
+  },
+  {
+   "titulo": "Watch Live: Hegseth announcing a 20% cut to general and admirals",
+   "veiculos": [
+    "CBS News",
+    "Middle East Eye"
+   ]
+  },
+  {
+   "titulo": "Cristiano Ronaldo brise le silence et annonce quitter le rassemblement du Portugal",
+   "veiculos": [
+    "Le Soir",
+    "Le Soleil (Senegal)"
+   ]
+  },
+  {
+   "titulo": "UK-France 'one in, one out' migrant exchange deal is scrapped",
+   "veiculos": [
+    "France 24",
+    "South China Morning Post"
+   ]
+  },
+  {
+   "titulo": "Организаторы концертов Канье Уэста в Санкт-Петербурге официально объявили об их отмене",
+   "veiculos": [
+    "Meduza",
+    "RIA Novosti"
+   ]
+  },
+  {
+   "titulo": "Ski : une ancienne free-rideuse française décède dans une avalanche à 29 ans",
+   "veiculos": [
+    "CNews",
+    "TF1"
+   ]
+  },
+  {
+   "titulo": "TV’s most fascinating experiment ends with an emotional gut-punch",
+   "veiculos": [
+    "The Age",
+    "The Sydney Morning Herald"
+   ]
+  },
+  {
+   "titulo": "Can’t afford to buy a house in Tuscany? These TV shows will let you dream about it",
+   "veiculos": [
+    "The Age",
+    "The Sydney Morning Herald"
+   ]
+  },
+  {
+   "titulo": "ASX set to slide, Wall Street higher after inflation update",
+   "veiculos": [
+    "The Age",
+    "The Sydney Morning Herald"
+   ]
+  },
+  {
+   "titulo": "Cemil Tugay, Cumhurbaşkanı Erdoğan ile görüştü",
+   "veiculos": [
+    "Medyascope",
+    "Sabah"
+   ]
+  },
+  {
+   "titulo": "Independence Anniversary: Tinubu to address Nigerians on Thursday",
    "veiculos": [
     "Premium Times",
     "ThisDay"
    ]
   },
   {
-   "titulo": "UK triple murder suspect Ndodana Tshuma plea deal hits another snag",
+   "titulo": "Esther Rantzen dies aged 86",
    "veiculos": [
-    "NewZimbabwe",
-    "eNCA"
+    "The Telegraph",
+    "The i"
    ]
   },
   {
-   "titulo": "Pilot arrested after midair stabbing and crash attempt, ‘heroes’ averted major disaster: Israeli PM",
+   "titulo": "Los Sindicatos de Inquilinas piden a los partidos que apoyen en el Congreso la convalidación de los dos decretos de vivienda",
    "veiculos": [
-    "The Age",
-    "The Sydney Morning Herald"
+    "elDiario.es",
+    "infoLibre"
    ]
   },
   {
-   "titulo": "House prices slump extends to six months",
+   "titulo": "Todas las medidas del decreto ley de vivienda",
    "veiculos": [
-    "The Age",
-    "The Sydney Morning Herald"
+    "Civio",
+    "elDiario.es"
    ]
   },
   {
-   "titulo": "‘Be prepared’: Victorians warned of thunderstorm asthma risk ahead of intense pollen season",
+   "titulo": "El segundo decreto: el propietario indemnizará con 12 meses al inquilino si rompe el contrato",
    "veiculos": [
-    "The Age",
-    "The Sydney Morning Herald"
-   ]
-  },
-  {
-   "titulo": "Lula não defendeu nem normalizou a pedofilia em discurso no Pará",
-   "veiculos": [
-    "Agência Lupa",
-    "Aos Fatos"
+    "La Vanguardia",
+    "elDiario.es"
    ]
   }
  ]

@@ -1,7 +1,7 @@
 {
-  "gerada_em": "2026-09-30T13:18:46.848395-03:00",
-  "consultados": 409,
-  "com_manchetes": 193,
+  "gerada_em": "2026-09-30T16:55:57.469289-03:00",
+  "consultados": 436,
+  "com_manchetes": 217,
   "falhas": [
     {
       "veiculo": "+972 Magazine",
@@ -26,6 +26,10 @@
     {
       "veiculo": "Addis Standard",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Agência Mural",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Al Arabiya",
@@ -181,7 +185,7 @@
     },
     {
       "veiculo": "Dataphyte",
-      "motivo": "feed sem itens recentes"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "De Correspondent",
@@ -262,6 +266,10 @@
     {
       "veiculo": "Fanpage.it",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "FolhaMax",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "FragDenStaat",
@@ -376,10 +384,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "La Stampa",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "Le Devoir",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -466,6 +470,10 @@
     {
       "veiculo": "News24",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Newslaundry",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Newstapa",
@@ -594,6 +602,10 @@
     {
       "veiculo": "SBT",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Saiba Mais",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Sarawak Report",
@@ -809,7 +821,7 @@
     },
     {
       "veiculo": "Vorágine",
-      "motivo": "feed sem itens recentes"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Welt",
