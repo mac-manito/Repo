@@ -92,7 +92,7 @@ def test_fontes_incluem_lista_original_sem_duplicatas():
         originais = list(csv.DictReader(f))
     sites = {v['site'] for v in fontes}
     assert len(sites) == len(fontes)
-    assert len(fontes) >= 544
+    assert len(fontes) >= 679
     assert {v['site'] for v in originais} <= sites
     assert all(capa.url_limpa(v['site']) for v in fontes)
     assert all(not v['feed'] or capa.url_limpa(v['feed']) for v in fontes)
@@ -106,7 +106,7 @@ def test_cobertura_brasil_todas_ufs():
     assert {v['uf'] for v in fontes if v.get('uf')} == ufs
     assert {v['regiao_br'] for v in fontes if v.get('regiao_br')} == {'Norte','Nordeste','Centro-Oeste','Sudeste','Sul'}
     contagem = Counter(v['uf'] for v in fontes if v.get('uf'))
-    assert all(contagem[uf] >= 5 for uf in ufs)
+    assert all(contagem[uf] >= 10 for uf in ufs)
 
 
 def test_quadro_cobertura_preserva_fontes_sem_manchetes():
@@ -114,7 +114,7 @@ def test_quadro_cobertura_preserva_fontes_sem_manchetes():
     secoes, _ = capa.montar_secoes([], fontes, [], 'tfidf', .36)
     cobertura = secoes[0]['cobertura']
     assert len(cobertura) == 27
-    assert all(len(c['fontes']) >= 5 for c in cobertura)
+    assert all(len(c['fontes']) >= 10 for c in cobertura)
     assert all(c['manchetes'] == 0 for c in cobertura)
 
 
