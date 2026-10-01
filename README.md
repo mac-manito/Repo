@@ -1,6 +1,6 @@
 # Capa do Mundo
 
-Agregador pessoal de manchetes de **436 fontes: 55 do Brasil e 381 do restante do mundo**.
+Agregador pessoal de manchetes de **544 fontes: 163 do Brasil e 381 do restante do mundo**.
 Página pública, responsiva, com busca, agrupamento de assuntos e histórico das últimas 90 edições.
 
 ## Brasil e Resto do mundo
@@ -9,8 +9,11 @@ A página tem dois grupos, definidos pelo país cadastrado do veículo — não 
 ou pelo assunto da notícia. Destaques e agrupamentos são calculados separadamente;
 as fontes estrangeiras não aparecem nos destaques brasileiros, nem o contrário.
 
-Foram adicionadas 27 fontes locais brasileiras, uma em cada estado e no Distrito Federal,
-com feeds validados em 30/09/2026. Consulte [a lista por UF](FONTES_BRASIL.md).
+O cadastro inclui 135 fontes locais brasileiras: cinco em cada estado e no Distrito Federal,
+além das 28 fontes nacionais/especializadas anteriores. Consulte [a lista por UF e os feeds](FONTES_BRASIL.md).
+Os endereços RSS identificados são cadastrados diretamente; para fontes sem feed confirmado,
+o coletor mantém a descoberta automática. Cinco fontes cadastradas não garantem cinco fontes
+com notícias em toda edição: disponibilidade e frequência de publicação variam.
 A seção Brasil mostra as cinco regiões, a UF das fontes locais e um quadro de cobertura
 por UF, inclusive quando não houver notícias recentes. Isso não significa cobertura
 de todos os municípios. Os 28 veículos brasileiros anteriores foram preservados.

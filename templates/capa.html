@@ -152,7 +152,7 @@ details.regiao[open]>summary::after{content:"\2212"}
 <p class="grupo-resumo">{{ s.consultados }} fontes cadastradas · {{ s.ativos }} com notícias · {{ s.manchetes }} manchetes nesta edição</p>
 {% if s.cobertura %}
 <details class="falhas-grupo"><summary>Cobertura local: {{ s.cobertura|length }} UFs cadastradas — consulte fontes e disponibilidade</summary>
-<ul>{% for c in s.cobertura %}<li><strong>{{ c.uf }}</strong>: {% for v in c.fontes %}<a href="{{ v.site }}" target="_blank" rel="noopener noreferrer">{{ v.nome }}</a>{% if not loop.last %}, {% endif %}{% endfor %} — {{ c.manchetes }} manchetes nesta edição</li>{% endfor %}</ul>
+<ul>{% for c in s.cobertura %}<li><strong>{{ c.uf }} · {{ c.fontes|length }} fontes</strong>: {% for v in c.fontes %}<a href="{{ v.site }}" target="_blank" rel="noopener noreferrer">{{ v.nome }}</a>{% if not loop.last %}, {% endif %}{% endfor %} — {{ c.manchetes }} manchetes nesta edição</li>{% endfor %}</ul>
 </details>
 {% endif %}
 {% if destaque %}
