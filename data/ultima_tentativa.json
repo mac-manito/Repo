@@ -1,7 +1,7 @@
 {
-  "gerada_em": "2026-10-02T08:49:46.443662-03:00",
+  "gerada_em": "2026-10-02T13:09:23.151938-03:00",
   "consultados": 679,
-  "com_manchetes": 364,
+  "com_manchetes": 368,
   "falhas": [
     {
       "veiculo": "+972 Magazine",
@@ -66,10 +66,6 @@
     {
       "veiculo": "Al-Masry Al-Youm",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Alagoas na Net",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Amapá Digital",
@@ -150,10 +146,6 @@
     {
       "veiculo": "Business Day (África do Sul)",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Byline Times",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "CBC",
@@ -424,6 +416,10 @@
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
+      "veiculo": "Follow the Money (Europa)",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "FragDenStaat",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -437,7 +433,7 @@
     },
     {
       "veiculo": "Frontline Press",
-      "motivo": "feed sem itens recentes"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "GCMAIS",
@@ -458,10 +454,6 @@
     {
       "veiculo": "Gazeta do Povo",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Gazeta do Sul",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Global Times",
@@ -570,10 +562,6 @@
     {
       "veiculo": "KBS",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Kan",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Kayhan",
@@ -724,10 +712,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Newslaundry",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "Newstapa",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -774,6 +758,10 @@
     {
       "veiculo": "OhmyNews",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "OitoMeia",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Olhar Direto",
@@ -1109,10 +1097,6 @@
     },
     {
       "veiculo": "The Markup",
-      "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "The Marshall Project",
       "motivo": "feed sem itens recentes"
     },
     {
