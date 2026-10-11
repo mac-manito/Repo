@@ -1,7 +1,7 @@
 {
-  "gerada_em": "2026-10-10T12:46:44.083336-03:00",
+  "gerada_em": "2026-10-11T13:11:18.168870-03:00",
   "consultados": 679,
-  "com_manchetes": 360,
+  "com_manchetes": 323,
   "falhas": [
     {
       "veiculo": "+972 Magazine",
@@ -52,11 +52,19 @@
       "motivo": "feed sem itens recentes"
     },
     {
+      "veiculo": "Acre Notícias",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Addis Standard",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Africa Uncensored",
+      "motivo": "feed sem itens recentes"
+    },
+    {
+      "veiculo": "Agência Lupa",
       "motivo": "feed sem itens recentes"
     },
     {
@@ -100,8 +108,16 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Aos Fatos",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Apache",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Aqui Acontece",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Arab News",
@@ -112,16 +128,16 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Armando.info",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Asahi Shimbun",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Associated Press (AP)",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Atual7",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "BBC",
@@ -136,8 +152,16 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "BIRN",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Bahia.ba",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Balkan Insight",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Band",
@@ -166,6 +190,10 @@
     {
       "veiculo": "Business Day (África do Sul)",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Byline Times",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "CBC",
@@ -200,6 +228,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Campo Grande News",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "Caracol Noticias",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -209,7 +241,7 @@
     },
     {
       "veiculo": "China Digital Times",
-      "motivo": "feed sem itens recentes"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "China Times",
@@ -240,6 +272,10 @@
       "motivo": "feed sem itens recentes"
     },
     {
+      "veiculo": "Correctiv",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Correio (Bahia)",
       "motivo": "feed sem itens recentes"
     },
@@ -257,6 +293,10 @@
     },
     {
       "veiculo": "Crikey",
+      "motivo": "feed sem itens recentes"
+    },
+    {
+      "veiculo": "Cuestión Pública",
       "motivo": "feed sem itens recentes"
     },
     {
@@ -302,6 +342,10 @@
     {
       "veiculo": "DeSmog",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Defector",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Detik",
@@ -360,6 +404,14 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Drop Site News",
+      "motivo": "feed sem itens recentes"
+    },
+    {
+      "veiculo": "EBC",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "EFE",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -412,6 +464,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Fato Regional",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "FaxAju",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -434,6 +490,10 @@
     {
       "veiculo": "FolhaMax",
       "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
+      "veiculo": "Follow the Money (Europa)",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "FragDenStaat",
@@ -472,6 +532,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Gazeta Wyborcza",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "Gazeta do Povo",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -496,6 +560,10 @@
       "motivo": "feed sem itens recentes"
     },
     {
+      "veiculo": "Hell Gate",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Helsingin Sanomat",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -514,6 +582,10 @@
     {
       "veiculo": "Hürriyet",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "ICIJ",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "ITV",
@@ -538,6 +610,10 @@
     {
       "veiculo": "Investigate Europe",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "IrpiMedia",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Itatiaia",
@@ -590,6 +666,10 @@
     {
       "veiculo": "KRIK",
       "motivo": "feed sem itens recentes"
+    },
+    {
+      "veiculo": "Kan",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Kommersant",
@@ -664,6 +744,14 @@
       "motivo": "feed sem itens recentes"
     },
     {
+      "veiculo": "Maldita.es",
+      "motivo": "feed sem itens recentes"
+    },
+    {
+      "veiculo": "Manual do Usuário",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Matinal",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -704,8 +792,16 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Monte Roraima FM",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Mossoró Hoje",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Myanmar Now",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "NDTV",
@@ -736,12 +832,12 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "NewZimbabwe",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "News24",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Newslaundry",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Newstapa",
@@ -788,12 +884,20 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "OCCRP",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "OhmyNews",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Olhar Direto",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "PBS",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "PCIJ",
@@ -832,12 +936,20 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Ponte Jornalismo",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Portal Amapá",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Portal Amirt",
       "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
+      "veiculo": "Portal Eldo Gomes",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Portal Linguarudos",
@@ -853,11 +965,7 @@
     },
     {
       "veiculo": "Potiguar Notícias",
-      "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "Prachatai",
-      "motivo": "feed sem itens recentes"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Private Eye",
@@ -928,11 +1036,19 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Rest of World",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Reuters",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Revista Anfibia",
+      "motivo": "feed sem itens recentes"
+    },
+    {
+      "veiculo": "Revista Piauí",
       "motivo": "feed sem itens recentes"
     },
     {
@@ -972,6 +1088,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Sagres",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Saiba Mais",
       "motivo": "feed não encontrado ou fora do ar"
     },
@@ -998,6 +1118,14 @@
     {
       "veiculo": "Sky News",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Slidstvo.info",
+      "motivo": "feed sem itens recentes"
+    },
+    {
+      "veiculo": "SlowNews",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Sua Cidade",
@@ -1048,6 +1176,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Tecnoblog",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Televisa (N+)",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -1092,6 +1224,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "The Elephant",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "The Fourth Estate",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -1132,6 +1268,10 @@
       "motivo": "feed sem itens recentes"
     },
     {
+      "veiculo": "The Narwhal",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "The National",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -1142,6 +1282,10 @@
     {
       "veiculo": "The Reporters' Collective",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "The Saturday Paper",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "The Spinoff",
@@ -1174,6 +1318,10 @@
     {
       "veiculo": "The Wire (Índia)",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "The Wire China",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "TheCable",
@@ -1212,7 +1360,7 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Vorágine",
+      "veiculo": "Voice of America (VOA)",
       "motivo": "feed sem itens recentes"
     },
     {
