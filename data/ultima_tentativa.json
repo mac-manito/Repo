@@ -1,7 +1,7 @@
 {
-  "gerada_em": "2026-10-14T11:56:03.728048-03:00",
+  "gerada_em": "2026-10-15T11:44:51.580810-03:00",
   "consultados": 679,
-  "com_manchetes": 368,
+  "com_manchetes": 369,
   "falhas": [
     {
       "veiculo": "+972 Magazine",
@@ -46,6 +46,10 @@
     {
       "veiculo": "AFP",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "ARIJ",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Addis Standard",
@@ -94,6 +98,10 @@
     {
       "veiculo": "Animal Político",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Aos Fatos",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Apache",
@@ -148,10 +156,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Bellingcat",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Bernama",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -200,16 +204,20 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Campo Grande News",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
+      "veiculo": "Capital News",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "Caracol Noticias",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Catve",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "China Digital Times",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "China Times",
@@ -222,10 +230,6 @@
     {
       "veiculo": "Cidades na Net",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Civio",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Cleber Barbosa",
@@ -254,10 +258,6 @@
     {
       "veiculo": "Corriere della Sera",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Cuestión Pública",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "D24am",
@@ -314,10 +314,6 @@
     {
       "veiculo": "Die Zeit",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Direkt36",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Disclose",
@@ -396,6 +392,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Enfoque MS",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "Engeplus",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -418,6 +418,10 @@
     {
       "veiculo": "Foco Regional",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Folha Capital",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Folha de Pernambuco",
@@ -449,10 +453,6 @@
     },
     {
       "veiculo": "Frontline Press",
-      "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "Fumaça",
       "motivo": "feed sem itens recentes"
     },
     {
@@ -514,10 +514,6 @@
     {
       "veiculo": "Hürriyet",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "ICIJ",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "IDL-Reporteros",
@@ -732,10 +728,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Next.ink",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Nikkei",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -940,6 +932,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Sagres",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Saiba Mais",
       "motivo": "feed não encontrado ou fora do ar"
     },
@@ -981,6 +977,10 @@
     },
     {
       "veiculo": "Século Diário",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
+      "veiculo": "Só Sergipe",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
@@ -1102,10 +1102,6 @@
     {
       "veiculo": "The New York Times",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "The Reporter (Taiwan)",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "The Reporters' Collective",
