@@ -1,7 +1,7 @@
 {
-  "gerada_em": "2026-10-19T13:51:30.131937-03:00",
+  "gerada_em": "2026-10-20T08:17:00.671733-03:00",
   "consultados": 679,
-  "com_manchetes": 359,
+  "com_manchetes": 366,
   "falhas": [
     {
       "veiculo": "+972 Magazine",
@@ -45,10 +45,6 @@
     },
     {
       "veiculo": "ARIJ",
-      "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "Acre Notícias",
       "motivo": "feed sem itens recentes"
     },
     {
@@ -264,10 +260,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Cuestión Pública",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "D24am",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -453,7 +445,7 @@
     },
     {
       "veiculo": "Frontline Press",
-      "motivo": "feed sem itens recentes"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Fumaça",
@@ -540,10 +532,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Intercept Brasil",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Investigate Europe",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -568,6 +556,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Jornal Pequeno",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "Jornal da Cidade Bauru",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -582,10 +574,6 @@
     {
       "veiculo": "Jornal do Comércio (RS)",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Jornal do Dia SE",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Jornal do Tocantins",
@@ -832,10 +820,6 @@
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
-      "veiculo": "Portal Linguarudos",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Portal da Tropical",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -964,10 +948,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Sagres",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Saiba Mais",
       "motivo": "feed não encontrado ou fora do ar"
     },
@@ -1045,7 +1025,7 @@
     },
     {
       "veiculo": "Tapajós de Fato",
-      "motivo": "feed sem itens recentes"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Televisa (N+)",
@@ -1125,10 +1105,6 @@
     },
     {
       "veiculo": "The Marshall Project",
-      "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "The Monthly",
       "motivo": "feed sem itens recentes"
     },
     {
@@ -1216,14 +1192,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Voice of America (VOA)",
-      "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "Vorágine",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "WSCom",
       "motivo": "feed não encontrado ou fora do ar"
     },
@@ -1278,6 +1246,10 @@
     {
       "veiculo": "la Repubblica",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "É Assim",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "ČT (Česká televize)",
