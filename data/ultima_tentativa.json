@@ -1,7 +1,7 @@
 {
-  "gerada_em": "2026-10-20T08:17:00.671733-03:00",
+  "gerada_em": "2026-10-20T11:48:26.728900-03:00",
   "consultados": 679,
-  "com_manchetes": 366,
+  "com_manchetes": 367,
   "falhas": [
     {
       "veiculo": "+972 Magazine",
@@ -80,10 +80,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Amapá Online",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Amazonas Notícias",
       "motivo": "feed não encontrado ou fora do ar"
     },
@@ -94,6 +90,10 @@
     {
       "veiculo": "Animal Político",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Aos Fatos",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Apache",
@@ -424,6 +424,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Folha do Amapá",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "Folha do Sul Online",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -445,7 +449,7 @@
     },
     {
       "veiculo": "Frontline Press",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Fumaça",
@@ -556,10 +560,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Jornal Pequeno",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "Jornal da Cidade Bauru",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -586,10 +586,6 @@
     {
       "veiculo": "KBS",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Kan",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Kommersant",
@@ -680,10 +676,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Mensagem de Lisboa",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Michael West Media",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -734,6 +726,10 @@
     {
       "veiculo": "New Naratif",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "NewZimbabwe",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "News24",
@@ -1236,6 +1232,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "amaBhungane",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "bianet",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -1246,10 +1246,6 @@
     {
       "veiculo": "la Repubblica",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "É Assim",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "ČT (Česká televize)",
