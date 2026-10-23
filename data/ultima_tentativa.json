@@ -1,7 +1,7 @@
 {
-  "gerada_em": "2026-10-22T11:55:48.218695-03:00",
+  "gerada_em": "2026-10-23T11:44:13.655556-03:00",
   "consultados": 679,
-  "com_manchetes": 361,
+  "com_manchetes": 367,
   "falhas": [
     {
       "veiculo": "+972 Magazine",
@@ -9,7 +9,7 @@
     },
     {
       "veiculo": "180graus",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "7Segundos",
@@ -18,10 +18,6 @@
     {
       "veiculo": "A Hora do Sul",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "A Voz da Cidade",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "AAP",
@@ -41,7 +37,7 @@
     },
     {
       "veiculo": "AF Notícias",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "AFP",
@@ -54,10 +50,6 @@
     {
       "veiculo": "Africa Uncensored",
       "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "Agora RN",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Agência Mural",
@@ -137,7 +129,7 @@
     },
     {
       "veiculo": "Bahia.ba",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Band",
@@ -156,8 +148,12 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Brasília Agora",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "Brasília Capital",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Business Day (África do Sul)",
@@ -208,10 +204,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "China Digital Times",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "China Times",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -241,19 +233,23 @@
     },
     {
       "veiculo": "Correio do Estado",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Correio do Povo",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Corriere della Sera",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Cuestión Pública",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "D24am",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "DR",
@@ -280,10 +276,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Daraj",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "Dataphyte",
       "motivo": "feed sem itens recentes"
     },
@@ -293,7 +285,7 @@
     },
     {
       "veiculo": "De Fato",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Detik",
@@ -301,7 +293,7 @@
     },
     {
       "veiculo": "Diario de Pernambuco",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Die Zeit",
@@ -313,7 +305,7 @@
     },
     {
       "veiculo": "Divergente",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Diário Corumbaense",
@@ -345,19 +337,11 @@
     },
     {
       "veiculo": "Dourados News",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "EFE",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "ES Brasil",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "ES Hoje",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "El Confidencial",
@@ -397,7 +381,7 @@
     },
     {
       "veiculo": "F5 News",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "FIJ (Foundation for Investigative Journalism)",
@@ -409,7 +393,7 @@
     },
     {
       "veiculo": "FaxAju",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Foco Regional",
@@ -421,10 +405,6 @@
     },
     {
       "veiculo": "Folha de Pernambuco",
-      "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Folha do Amapá",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
@@ -452,12 +432,16 @@
       "motivo": "feed sem itens recentes"
     },
     {
+      "veiculo": "Fumaça",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "GCMAIS",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "GZH",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Garbage Day",
@@ -465,11 +449,11 @@
     },
     {
       "veiculo": "Gazeta Digital",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Gazeta do Povo",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Gazeta do Sul",
@@ -501,7 +485,7 @@
     },
     {
       "veiculo": "Hoje em Dia",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "HumAngle",
@@ -533,7 +517,7 @@
     },
     {
       "veiculo": "Itatiaia",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "JoongAng Ilbo",
@@ -545,7 +529,7 @@
     },
     {
       "veiculo": "Jornal Cruzeiro do Sul",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Jornal Folha do Agreste",
@@ -569,7 +553,7 @@
     },
     {
       "veiculo": "Jornal do Comércio (RS)",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Jornal do Tocantins",
@@ -582,6 +566,10 @@
     {
       "veiculo": "KBS",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Kan",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Kayhan",
@@ -621,10 +609,6 @@
     },
     {
       "veiculo": "LeiaJá",
-      "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Leiagora",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
@@ -652,6 +636,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "MCCI",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Mainichi Shimbun",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -660,12 +648,8 @@
       "motivo": "feed sem itens recentes"
     },
     {
-      "veiculo": "Manual do Usuário",
+      "veiculo": "Marco Zero Conteúdo",
       "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "Matinal",
-      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "MediaNama",
@@ -674,6 +658,10 @@
     {
       "veiculo": "Mediapart",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Megaphone",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Meio News",
@@ -689,7 +677,7 @@
     },
     {
       "veiculo": "Midiamax",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Milenio",
@@ -701,19 +689,11 @@
     },
     {
       "veiculo": "Mossoró Hoje",
-      "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Myanmar Now",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "NDTV",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "NF Notícias",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "NHK",
@@ -744,10 +724,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Newslaundry",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "Next.ink",
       "motivo": "feed sem itens recentes"
     },
@@ -760,24 +736,16 @@
       "motivo": "feed sem itens recentes"
     },
     {
-      "veiculo": "O Estado CE",
-      "motivo": "sem feed (verificado recentemente)"
-    },
-    {
       "veiculo": "O Estado de S. Paulo (Estadão)",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "O Município",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "O Popular",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "O Povo",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "O Progresso",
@@ -785,7 +753,7 @@
     },
     {
       "veiculo": "O Tempo",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "OhmyNews",
@@ -793,10 +761,6 @@
     },
     {
       "veiculo": "Olhar Direto",
-      "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Ouestaf News",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
@@ -812,16 +776,16 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Paraíba Já",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "Pernambuco Online",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Philippine Daily Inquirer",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Platformer",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Politico",
@@ -836,16 +800,24 @@
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
+      "veiculo": "Portal Linguarudos",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Portal da Tropical",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Portal do Marcos Santos",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Potiguar Notícias",
       "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
+      "veiculo": "Prachatai",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Private Eye",
@@ -908,10 +880,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Rappler",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "Rapport",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -925,15 +893,11 @@
     },
     {
       "veiculo": "Revista Anfibia",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "Revista Central",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Roma News",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Rondonotícias",
@@ -949,7 +913,7 @@
     },
     {
       "veiculo": "Roraima em Tempo",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Roraima na Rede",
@@ -966,6 +930,10 @@
     {
       "veiculo": "SBT",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Sagres",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Saiba Mais",
@@ -997,7 +965,7 @@
     },
     {
       "veiculo": "Sua Cidade",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Sunday Times (África do Sul)",
@@ -1005,7 +973,7 @@
     },
     {
       "veiculo": "Surgiu",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Século Diário",
@@ -1092,6 +1060,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "The Elephant",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "The Fourth Estate",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -1121,10 +1093,6 @@
     },
     {
       "veiculo": "The Markup",
-      "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "The Monthly",
       "motivo": "feed sem itens recentes"
     },
     {
@@ -1193,11 +1161,11 @@
     },
     {
       "veiculo": "Tribuna Hoje",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Tudo Rondônia",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "USA Today",
@@ -1213,7 +1181,7 @@
     },
     {
       "veiculo": "Vorágine",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "WSCom",
@@ -1260,6 +1228,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "amaBhungane",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "bianet",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -1270,6 +1242,10 @@
     {
       "veiculo": "la Repubblica",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "É Assim",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "ČT (Česká televize)",

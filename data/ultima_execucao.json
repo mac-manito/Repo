@@ -1,10 +1,10 @@
 {
- "gerada_em": "2026-10-22T11:55:48.218695-03:00",
+ "gerada_em": "2026-10-23T11:44:13.655556-03:00",
  "numeros": {
-  "veiculos": 361,
+  "veiculos": 367,
   "consultados": 679,
-  "manchetes": 1340,
-  "historias": 68
+  "manchetes": 1376,
+  "historias": 82
  },
  "backend": "tfidf",
  "limiar": 0.36,
@@ -15,7 +15,7 @@
   },
   {
    "veiculo": "180graus",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "7Segundos",
@@ -24,10 +24,6 @@
   {
    "veiculo": "A Hora do Sul",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "A Voz da Cidade",
-   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "AAP",
@@ -47,7 +43,7 @@
   },
   {
    "veiculo": "AF Notícias",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "AFP",
@@ -60,10 +56,6 @@
   {
    "veiculo": "Africa Uncensored",
    "motivo": "feed sem itens recentes"
-  },
-  {
-   "veiculo": "Agora RN",
-   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Agência Mural",
@@ -143,7 +135,7 @@
   },
   {
    "veiculo": "Bahia.ba",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Band",
@@ -162,8 +154,12 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
+   "veiculo": "Brasília Agora",
+   "motivo": "feed não encontrado ou fora do ar"
+  },
+  {
    "veiculo": "Brasília Capital",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Business Day (África do Sul)",
@@ -214,10 +210,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "China Digital Times",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "China Times",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -247,19 +239,23 @@
   },
   {
    "veiculo": "Correio do Estado",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Correio do Povo",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Corriere della Sera",
    "motivo": "sem feed (verificado recentemente)"
   },
   {
+   "veiculo": "Cuestión Pública",
+   "motivo": "feed sem itens recentes"
+  },
+  {
    "veiculo": "D24am",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "DR",
@@ -286,10 +282,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Daraj",
-   "motivo": "feed não encontrado ou fora do ar"
-  },
-  {
    "veiculo": "Dataphyte",
    "motivo": "feed sem itens recentes"
   },
@@ -299,7 +291,7 @@
   },
   {
    "veiculo": "De Fato",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Detik",
@@ -307,7 +299,7 @@
   },
   {
    "veiculo": "Diario de Pernambuco",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Die Zeit",
@@ -319,7 +311,7 @@
   },
   {
    "veiculo": "Divergente",
-   "motivo": "feed não encontrado ou fora do ar"
+   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Diário Corumbaense",
@@ -351,19 +343,11 @@
   },
   {
    "veiculo": "Dourados News",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "EFE",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "ES Brasil",
-   "motivo": "feed não encontrado ou fora do ar"
-  },
-  {
-   "veiculo": "ES Hoje",
-   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "El Confidencial",
@@ -403,7 +387,7 @@
   },
   {
    "veiculo": "F5 News",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "FIJ (Foundation for Investigative Journalism)",
@@ -415,7 +399,7 @@
   },
   {
    "veiculo": "FaxAju",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Foco Regional",
@@ -427,10 +411,6 @@
   },
   {
    "veiculo": "Folha de Pernambuco",
-   "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Folha do Amapá",
    "motivo": "feed não encontrado ou fora do ar"
   },
   {
@@ -458,12 +438,16 @@
    "motivo": "feed sem itens recentes"
   },
   {
+   "veiculo": "Fumaça",
+   "motivo": "feed não encontrado ou fora do ar"
+  },
+  {
    "veiculo": "GCMAIS",
    "motivo": "sem feed (verificado recentemente)"
   },
   {
    "veiculo": "GZH",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Garbage Day",
@@ -471,11 +455,11 @@
   },
   {
    "veiculo": "Gazeta Digital",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Gazeta do Povo",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Gazeta do Sul",
@@ -507,7 +491,7 @@
   },
   {
    "veiculo": "Hoje em Dia",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "HumAngle",
@@ -539,7 +523,7 @@
   },
   {
    "veiculo": "Itatiaia",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "JoongAng Ilbo",
@@ -551,7 +535,7 @@
   },
   {
    "veiculo": "Jornal Cruzeiro do Sul",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Jornal Folha do Agreste",
@@ -575,7 +559,7 @@
   },
   {
    "veiculo": "Jornal do Comércio (RS)",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Jornal do Tocantins",
@@ -588,6 +572,10 @@
   {
    "veiculo": "KBS",
    "motivo": "sem feed (verificado recentemente)"
+  },
+  {
+   "veiculo": "Kan",
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Kayhan",
@@ -627,10 +615,6 @@
   },
   {
    "veiculo": "LeiaJá",
-   "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Leiagora",
    "motivo": "feed não encontrado ou fora do ar"
   },
   {
@@ -658,6 +642,10 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
+   "veiculo": "MCCI",
+   "motivo": "feed sem itens recentes"
+  },
+  {
    "veiculo": "Mainichi Shimbun",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -666,12 +654,8 @@
    "motivo": "feed sem itens recentes"
   },
   {
-   "veiculo": "Manual do Usuário",
+   "veiculo": "Marco Zero Conteúdo",
    "motivo": "feed sem itens recentes"
-  },
-  {
-   "veiculo": "Matinal",
-   "motivo": "sem feed (verificado recentemente)"
   },
   {
    "veiculo": "MediaNama",
@@ -680,6 +664,10 @@
   {
    "veiculo": "Mediapart",
    "motivo": "sem feed (verificado recentemente)"
+  },
+  {
+   "veiculo": "Megaphone",
+   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Meio News",
@@ -695,7 +683,7 @@
   },
   {
    "veiculo": "Midiamax",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Milenio",
@@ -707,19 +695,11 @@
   },
   {
    "veiculo": "Mossoró Hoje",
-   "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Myanmar Now",
    "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "NDTV",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "NF Notícias",
-   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "NHK",
@@ -750,10 +730,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Newslaundry",
-   "motivo": "feed não encontrado ou fora do ar"
-  },
-  {
    "veiculo": "Next.ink",
    "motivo": "feed sem itens recentes"
   },
@@ -766,24 +742,16 @@
    "motivo": "feed sem itens recentes"
   },
   {
-   "veiculo": "O Estado CE",
-   "motivo": "sem feed (verificado recentemente)"
-  },
-  {
    "veiculo": "O Estado de S. Paulo (Estadão)",
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "O Município",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "O Popular",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "O Povo",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "O Progresso",
@@ -791,7 +759,7 @@
   },
   {
    "veiculo": "O Tempo",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "OhmyNews",
@@ -799,10 +767,6 @@
   },
   {
    "veiculo": "Olhar Direto",
-   "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Ouestaf News",
    "motivo": "feed não encontrado ou fora do ar"
   },
   {
@@ -818,16 +782,16 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
+   "veiculo": "Paraíba Já",
+   "motivo": "feed não encontrado ou fora do ar"
+  },
+  {
    "veiculo": "Pernambuco Online",
    "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Philippine Daily Inquirer",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Platformer",
-   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Politico",
@@ -842,16 +806,24 @@
    "motivo": "feed não encontrado ou fora do ar"
   },
   {
+   "veiculo": "Portal Linguarudos",
+   "motivo": "feed sem itens recentes"
+  },
+  {
    "veiculo": "Portal da Tropical",
    "motivo": "sem feed (verificado recentemente)"
   },
   {
    "veiculo": "Portal do Marcos Santos",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Potiguar Notícias",
    "motivo": "feed não encontrado ou fora do ar"
+  },
+  {
+   "veiculo": "Prachatai",
+   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Private Eye",
@@ -914,10 +886,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Rappler",
-   "motivo": "feed não encontrado ou fora do ar"
-  },
-  {
    "veiculo": "Rapport",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -931,15 +899,11 @@
   },
   {
    "veiculo": "Revista Anfibia",
-   "motivo": "feed não encontrado ou fora do ar"
-  },
-  {
-   "veiculo": "Revista Central",
-   "motivo": "feed não encontrado ou fora do ar"
+   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Roma News",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Rondonotícias",
@@ -955,7 +919,7 @@
   },
   {
    "veiculo": "Roraima em Tempo",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Roraima na Rede",
@@ -972,6 +936,10 @@
   {
    "veiculo": "SBT",
    "motivo": "sem feed (verificado recentemente)"
+  },
+  {
+   "veiculo": "Sagres",
+   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Saiba Mais",
@@ -1003,7 +971,7 @@
   },
   {
    "veiculo": "Sua Cidade",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Sunday Times (África do Sul)",
@@ -1011,7 +979,7 @@
   },
   {
    "veiculo": "Surgiu",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Século Diário",
@@ -1098,6 +1066,10 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
+   "veiculo": "The Elephant",
+   "motivo": "feed sem itens recentes"
+  },
+  {
    "veiculo": "The Fourth Estate",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -1127,10 +1099,6 @@
   },
   {
    "veiculo": "The Markup",
-   "motivo": "feed sem itens recentes"
-  },
-  {
-   "veiculo": "The Monthly",
    "motivo": "feed sem itens recentes"
   },
   {
@@ -1199,11 +1167,11 @@
   },
   {
    "veiculo": "Tribuna Hoje",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Tudo Rondônia",
-   "motivo": "sem feed (verificado recentemente)"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "USA Today",
@@ -1219,7 +1187,7 @@
   },
   {
    "veiculo": "Vorágine",
-   "motivo": "feed não encontrado ou fora do ar"
+   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "WSCom",
@@ -1266,6 +1234,10 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
+   "veiculo": "amaBhungane",
+   "motivo": "feed sem itens recentes"
+  },
+  {
    "veiculo": "bianet",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -1278,6 +1250,10 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
+   "veiculo": "É Assim",
+   "motivo": "feed não encontrado ou fora do ar"
+  },
+  {
    "veiculo": "ČT (Česká televize)",
    "motivo": "sem feed (verificado recentemente)"
   }
@@ -1287,8 +1263,8 @@
    "id": "brasil",
    "nome": "Brasil",
    "consultados": 298,
-   "ativos": 185,
-   "manchetes": 710,
+   "ativos": 191,
+   "manchetes": 749,
    "backend": "tfidf",
    "limiar": 0.36
   },
@@ -1297,527 +1273,638 @@
    "nome": "Resto do mundo",
    "consultados": 381,
    "ativos": 176,
-   "manchetes": 630,
+   "manchetes": 627,
    "backend": "tfidf",
    "limiar": 0.36
   }
  ],
  "historias": [
   {
-   "titulo": "Termina nesta quinta prazo para realização de comícios e ações de campanha",
+   "titulo": "Propaganda eleitoral gratuita termina nesta sexta-feira",
    "veiculos": [
-    "Tribuna Online",
-    "A8SE",
-    "Acorda Cidade",
     "Agência Brasil",
-    "Alagoas 24 Horas",
-    "Ceará Agora",
+    "A8SE",
+    "Aqui Acontece",
     "Correio de Carajás",
     "DCI Roraima",
-    "Extra de Rondônia",
-    "Fan F1",
+    "Difusora News",
     "News Rondônia",
-    "O Presente",
+    "O Sul",
     "O São Gonçalo",
-    "Portal Correio",
-    "Sul21",
-    "Tribuna do Norte"
+    "Polêmica Paraíba",
+    "Tribuna Online"
    ]
   },
   {
-   "titulo": "Anvisa aprova novo medicamento para câncer de pulmão avançado",
+   "titulo": "Flamengo é eliminado pelo Estudiantes na Copa Libertadores",
+   "veiculos": [
+    "Radar DF",
+    "ES Brasil",
+    "Metrópoles",
+    "O Dia",
+    "O Liberal",
+    "Portal AZ"
+   ]
+  },
+  {
+   "titulo": "TSE dá 24h para Meta e X explicarem distribuição de material político",
    "veiculos": [
     "Agência Brasil",
-    "Acorda Cidade",
-    "ClicRDC",
-    "Correio de Carajás",
-    "Extra de Rondônia",
-    "Imirante",
+    "CartaCapital",
+    "DCI Roraima",
+    "News Rondônia",
     "O São Gonçalo",
-    "Primeira Página MT"
+    "Portal AZ"
    ]
   },
   {
-   "titulo": "Confira a agenda dos presidenciáveis nesta quinta-feira (22)",
+   "titulo": "Real Time: Flávio tem 52% dos votos válidos no 2º turno; Lula, 48%",
    "veiculos": [
-    "Acorda Cidade",
-    "Blog do Elvis",
-    "Blog do Magno",
-    "Jornal Pequeno",
-    "Portal Correio"
-   ]
-  },
-  {
-   "titulo": "Flávio Bolsonaro desponta com 51% dos votos válidos e Lula tem 49%, aponta pesquisa PoderData",
-   "veiculos": [
-    "Diário de Goiás",
-    "Estado de Minas",
-    "Paraíba Já",
+    "Acre Agora",
+    "Extra de Rondônia",
+    "NF Notícias",
+    "Portal M1 (Miséria)",
     "SCC10"
    ]
   },
   {
-   "titulo": "Polícia Civil amplia banco genético com coleta de DNA de 20 presos",
+   "titulo": "Prévia da inflação oficial cai pela metade e fecha outubro em 0,32%",
+   "veiculos": [
+    "Agência Brasil",
+    "A Crítica MS",
+    "Blog do Elvis",
+    "Folha do Amapá",
+    "O Sul"
+   ]
+  },
+  {
+   "titulo": "Boa Vista terá transporte coletivo gratuito no segundo turno das eleições",
    "veiculos": [
     "Monte Roraima FM",
-    "Folha BV",
-    "Roraima em Foco",
-    "Roraima TV"
+    "A Voz da Cidade",
+    "Blog do Elvis",
+    "Gazeta do Cerrado",
+    "O Estado do Acre"
    ]
   },
   {
-   "titulo": "Rapper goiano é morto durante abordagem de PMs em Aparecida de Goiânia",
-   "veiculos": [
-    "Goiás 24 Horas",
-    "g1",
-    "Jornal Opção"
-   ]
-  },
-  {
-   "titulo": "Sobe para 13 o número de locais de votação alterados no Pará; veja lista",
-   "veiculos": [
-    "Zé Dudu",
-    "Diário do Comércio MG",
-    "O Informante"
-   ]
-  },
-  {
-   "titulo": "Mãe é condenada a 19 anos de prisão por matar filha de 7 anos a facadas em Rio Largo",
-   "veiculos": [
-    "Gazetaweb",
-    "CadaMinuto",
-    "TNH1"
-   ]
-  },
-  {
-   "titulo": "Governo do Acre dispensa licitação para contratar banca de concurso da Polícia Civil",
-   "veiculos": [
-    "Acre Agora",
-    "ac24horas",
-    "ContilNet"
-   ]
-  },
-  {
-   "titulo": "Flávio Bolsonaro visita o pai nesta quinta-feira, a três dias do segundo turno das eleições",
-   "veiculos": [
-    "Ceará Agora",
-    "A Gazeta do Amapá",
-    "Estado de Minas"
-   ]
-  },
-  {
-   "titulo": "Palmeiras sofre em casa, mas vence Fluminense nos pênaltis para ir à final da Libertadores",
-   "veiculos": [
-    "Diário da Região",
-    "Folha Vitória",
-    "GPS Brasília"
-   ]
-  },
-  {
-   "titulo": "'Cara-de-Barro', sobre vilão do Batman, estreia nos cinemas da Paraíba",
-   "veiculos": [
-    "Jornal da Paraíba",
-    "MaisPB",
-    "TNH1"
-   ]
-  },
-  {
-   "titulo": "Flamengo e Estudiantes decidem vaga na final da Libertadores",
-   "veiculos": [
-    "Jornal Pequeno",
-    "EBC",
-    "Gazetaweb"
-   ]
-  },
-  {
-   "titulo": "Flávio Bolsonaro tem 45,2% e Lula 44,1% em pesquisa Indexa/Broadcast",
-   "veiculos": [
-    "Amazonas Atual",
-    "GPS Brasília",
-    "Paraíba Online"
-   ]
-  },
-  {
-   "titulo": "Desenrola 3.0 pode renegociar até R$ 90 bilhões em dívidas antigas",
-   "veiculos": [
-    "Só Sergipe",
-    "Aqui Acontece",
-    "É Assim"
-   ]
-  },
-  {
-   "titulo": "Ashwagandha: Anvisa alerta que suplemento do TikTok não tem registro",
+   "titulo": "Segundo turno: saiba como consultar local de votação para domingo",
    "veiculos": [
     "Agência Brasil",
     "Aqui Acontece",
-    "Paraíba Online"
+    "MCP Notícias",
+    "OCP News"
    ]
   },
   {
-   "titulo": "Campanha de Lula entra com ação no TSE para cassar chapa de Flávio",
+   "titulo": "Lula e Flávio Bolsonaro entram em acordo para abrir sigilos",
    "veiculos": [
-    "Aqui Acontece",
+    "Diário do Nordeste",
     "A Gazeta do Amapá",
-    "News Rondônia"
+    "Imirante",
+    "Polêmica Paraíba"
    ]
   },
   {
-   "titulo": "Segurança no DF é reforçada para o segundo turno das eleições",
+   "titulo": "Desenrola 3.0 abre prazo para bancos ofertarem dívidas à União",
    "veiculos": [
-    "Correio Braziliense",
-    "O Dia",
-    "OitoMeia"
+    "Jornal de Brasília",
+    "O Estado CE",
+    "Só Sergipe",
+    "Tribuna Online"
    ]
   },
   {
-   "titulo": "Governo de Roraima e sindicato iniciam diálogo sobre a reestruturação da carreira da Educação",
+   "titulo": "Vox Brasil: Lula tem 50,6% dos votos válidos, Flávio com 49,4%",
    "veiculos": [
-    "Roraima em Foco",
-    "Monte Roraima FM",
+    "Sul21",
+    "Farol de Notícias",
+    "GPS Brasília",
+    "SCC10"
+   ]
+  },
+  {
+   "titulo": "Flávio propõe retomada de privatizações; Lula quer fortalecer empresas",
+   "veiculos": [
+    "Blog do Elvis",
+    "Folha BV",
+    "Portal Correio",
     "Roraima TV"
    ]
   },
   {
-   "titulo": "Lula protocola no TSE autorização para quebra de sigilo; Flávio envia Deltan para analisar documentos",
+   "titulo": "Vacina contra câncer reduz em 42% risco de morte ou volta do melanoma",
    "veiculos": [
-    "98 FM Natal",
-    "Ceará Agora"
-   ]
-  },
-  {
-   "titulo": "MEIs do ES poderão ter dívidas perdoadas e faturar até R$ 140 mil; entenda",
-   "veiculos": [
-    "Aqui Notícias",
-    "ac24horas"
-   ]
-  },
-  {
-   "titulo": "Presidência da CMJP: Republicanos retira candidatura e declara apoio a João Corujinha",
-   "veiculos": [
-    "MaisPB",
-    "PB Agora"
-   ]
-  },
-  {
-   "titulo": "Influenciadora Malévola se pronuncia pela 1ª vez após prisão no Egito",
-   "veiculos": [
-    "CNN Brasil",
-    "Veja"
-   ]
-  },
-  {
-   "titulo": "Motociclista morre após colidir com caminhão na ES 166, em Cachoeiro",
-   "veiculos": [
-    "A Gazeta (Espírito Santo)",
-    "Diário da Região"
-   ]
-  },
-  {
-   "titulo": "Mais um corpo é encontrado na marginal Tietê, em São Paulo",
-   "veiculos": [
-    "Folha de S.Paulo",
+    "Correio de Carajás",
+    "Ceará Agora",
     "Metrópoles"
    ]
   },
   {
-   "titulo": "Mulher é presa ao tentar levar droga escondida em cadeira de rodas para presídio de João Pessoa",
+   "titulo": "O que acontece se Flávio Bolsonaro e Lula empatarem nas urnas no 2º turno?",
    "veiculos": [
-    "Jornal da Paraíba",
-    "g1"
+    "TNH1",
+    "Acorda Cidade",
+    "O Presente"
    ]
   },
   {
-   "titulo": "Aumento de acidentes em Cruzeiro do Sul exige uso mais frequente de ambulância de suporte avançado",
+   "titulo": "Pesquisa Data Control mostra Mailza com 67,05% e Alan Rick com 32,95% dos votos válidos",
    "veiculos": [
+    "O Alto Acre",
     "Acre Agora",
     "O Juruá em Tempo"
    ]
   },
   {
-   "titulo": "Mamdani elogia Lula após aprovação do fim da escala 6x1",
+   "titulo": "STJ manda prender no Brasil torturador uruguaio por crimes na ditadura",
+   "veiculos": [
+    "UOL",
+    "Matinal",
+    "Metro1"
+   ]
+  },
+  {
+   "titulo": "PF deflagra operação contra suspeita de corrupção eleitoral em Rorainópolis",
+   "veiculos": [
+    "Roraima 1",
+    "Folha BV",
+    "Roraima em Foco"
+   ]
+  },
+  {
+   "titulo": "Samarco eleva produção em 4% no 3º trimestre e bate recorde desde retomada",
    "veiculos": [
     "Folha de S.Paulo",
+    "Diário do Comércio MG",
     "UOL"
    ]
   },
   {
-   "titulo": "Lionel Scaloni e Argentina estão próximos de renovar contrato, diz jornal",
+   "titulo": "Lula e Flávio Bolsonaro se enfrentam em debate na Globo nesta sexta; veja horário",
    "veiculos": [
-    "Fato Amazônico",
-    "O Hoje"
+    "Agora RN",
+    "Em Tempo",
+    "OitoMeia"
    ]
   },
   {
-   "titulo": "Enamed: termina nesta quinta-feira o prazo para recurso contra gabarito preliminar",
+   "titulo": "França mobilizará 70 mil agentes de segurança para conter violência em protestos",
    "veiculos": [
-    "A Crítica MS",
-    "Agência Brasil"
+    "Diário do Grande ABC",
+    "Fan F1",
+    "Tribuna do Norte"
    ]
   },
   {
-   "titulo": "“Desafio dos sigilos” agita campanhas de Lula e Flávio a 3 dias do 2º turno",
+   "titulo": "Brasileirão 2026: veja os horários e onde assistir aos jogos da 32ª rodada",
    "veiculos": [
-    "A Gazeta do Acre",
-    "NSC Total"
+    "Exame",
+    "OitoMeia",
+    "Piauí Hoje"
    ]
   },
   {
-   "titulo": "Ex-candidata presidencial de esquerda Luisa González é detida no Equador",
+   "titulo": "Manaus terá ônibus gratuitos no segundo turno neste domingo (25)",
    "veiculos": [
-    "CartaCapital",
-    "Portal do Holanda"
+    "Em Tempo",
+    "O Hoje",
+    "Tribuna Online"
    ]
   },
   {
-   "titulo": "Calças, jaquetas e bonés: PM do Acre prevê gastar mais de 1 milhão de dólares para compra de fardamentos",
+   "titulo": "Libertadores Feminina pode ter final 100% brasileira",
+   "veiculos": [
+    "ES Brasil",
+    "Eixo Capital",
+    "MCP Notícias"
+   ]
+  },
+  {
+   "titulo": "Justiça anuncia acordo para transporte de eleitores indígenas no Vale do Javari",
+   "veiculos": [
+    "Repórter Brasil",
+    "BNC Amazonas",
+    "Ver-o-Fato"
+   ]
+  },
+  {
+   "titulo": "Eleitor que pediu voto em trânsito pode consultar local no e-Título",
+   "veiculos": [
+    "Portal Correio",
+    "A8SE",
+    "TCM Notícia"
+   ]
+  },
+  {
+   "titulo": "Terremoto de magnitude 7 no Tibete mata 16 e deixa 32 feridos",
+   "veiculos": [
+    "AjuNews",
+    "Eixo Capital",
+    "MCP Notícias"
+   ]
+  },
+  {
+   "titulo": "Datafolha: Flávio Bolsonaro e Lula empatam com 50% dos votos válidos cada",
+   "veiculos": [
+    "Teixeira News",
+    "Em Tempo",
+    "Revista Central"
+   ]
+  },
+  {
+   "titulo": "Filho de Cissa Guimarães denuncia perfil que chama de ‘herói’ condenado por matar Rafael Mascarenhas",
+   "veiculos": [
+    "Diário do Nordeste",
+    "Veja"
+   ]
+  },
+  {
+   "titulo": "Agregador de pesquisas indica chance de 79% de vitória de Flávio Bolsonaro",
+   "veiculos": [
+    "O Alto Acre",
+    "SiteBarra"
+   ]
+  },
+  {
+   "titulo": "Bruna Marquezine entra para o elenco de Magnatas do Crime",
+   "veiculos": [
+    "ContilNet",
+    "Veja"
+   ]
+  },
+  {
+   "titulo": "Futuro secretário de Meio Ambiente do Pará advogou para multados pela pasta",
+   "veiculos": [
+    "Repórter Brasil",
+    "ac24horas"
+   ]
+  },
+  {
+   "titulo": "Acidente entre van e caminhão bloqueia BR-470 em Blumenau",
+   "veiculos": [
+    "NSC Total",
+    "O Município"
+   ]
+  },
+  {
+   "titulo": "EQUATORIAL PARÁ REFORÇA OPERAÇÃO PARA O SEGUNDO TURNO DAS ELEIÇÕES 2026",
+   "veiculos": [
+    "O Impacto",
+    "O Imparcial"
+   ]
+  },
+  {
+   "titulo": "Mega-Sena acumula e prêmio chega a R$ 230 milhões",
+   "veiculos": [
+    "Correio Braziliense",
+    "O Imparcial"
+   ]
+  },
+  {
+   "titulo": "Quem era Amanda, enfermeira de 29 anos que morreu em Portugal durante a lua de mel, após comer lula empanada",
+   "veiculos": [
+    "ND Mais",
+    "Tribuna do Norte"
+   ]
+  },
+  {
+   "titulo": "Colégio Militar abre 85 vagas para novos alunos no Acre; inscrições começam na segunda-feira",
    "veiculos": [
     "A Gazeta do Acre",
     "O Juruá em Tempo"
    ]
   },
   {
-   "titulo": "Além do caso Ana Clara, Flávio Bolsonaro advogou para livrar outros PMs acusados pela morte de inocentes de júri popular",
+   "titulo": "Polícia prende suspeito de atirar contra arqueóloga no Leblob",
+   "veiculos": [
+    "Diário do Rio",
+    "Tempo Real RJ"
+   ]
+  },
+  {
+   "titulo": "Incêndio atinge bar no Centro de Afonso Cláudio; veja imagens",
+   "veiculos": [
+    "A Gazeta (Espírito Santo)",
+    "Aqui Notícias"
+   ]
+  },
+  {
+   "titulo": "Pai de Meghan Markle é investigado após denúncia do próprio filho nas Filipinas",
+   "veiculos": [
+    "O Hoje",
+    "TNH1"
+   ]
+  },
+  {
+   "titulo": "Aulas serão retomadas na terça-feira em 775 escolas estaduais da Bahia após o segundo turno",
+   "veiculos": [
+    "Metro1",
+    "Monte Roraima FM"
+   ]
+  },
+  {
+   "titulo": "Justiça decreta prisão preventiva de suspeita de envenenar, decapitar e esquartejar o marido",
    "veiculos": [
     "Extra",
-    "É Assim"
+    "O Globo"
    ]
   },
   {
-   "titulo": "Publicada convocação para avaliação e resultado do concurso da CGE",
+   "titulo": "Receita Federal libera consulta a restituições do Imposto de Renda",
    "veiculos": [
-    "Aqui Acontece",
-    "Já é Notícia"
+    "A Crítica MS",
+    "O Dia"
    ]
   },
   {
-   "titulo": "Homem é esfaqueado no peito em bar no bairro Senador Hélio Campos",
+   "titulo": "Adolescente procurado pela Justiça é apreendido com drogas em Campo Grande",
    "veiculos": [
-    "Folha BV",
-    "Roraima 1"
+    "JD1 Notícias",
+    "g1"
    ]
   },
   {
-   "titulo": "Por mais checagem de fatos – com método e transparência",
+   "titulo": "Cantora é investigada pela Polícia Civil por suspeita de estelionato em casamentos; defesa alega crise financeira",
    "veiculos": [
-    "Agência Lupa",
-    "Sobral Online"
+    "O Imparcial",
+    "O Informante"
    ]
   },
   {
-   "titulo": "Arrecadação federal sobe para R$ 239 bilhões em setembro, novo recorde para o mês",
+   "titulo": "Concurso da Polícia Civil do Acre avança com definição de comissão para seleção com 139 vagas",
    "veiculos": [
-    "Expressão Rondônia",
-    "Tribuna de Petrópolis"
+    "A Gazeta do Acre",
+    "O Juruá em Tempo"
    ]
   },
   {
-   "titulo": "Coordenadora econômica da campanha de Flávio Bolsonaro defende substituir servidores públicos por IA",
+   "titulo": "Passeios para fazer em dias de chuva pelo Espírito Santo",
    "veiculos": [
-    "Farol de Notícias",
-    "PB Agora"
+    "A Gazeta (Espírito Santo)",
+    "Aqui Notícias"
    ]
   },
   {
-   "titulo": "Conta de luz fica mais cara em Goiás: reajuste residencial de 7,36% entra em vigor nesta quinta (22)",
+   "titulo": "Humana Clinic Cidade Verde inaugura com serviços de fisioterapia e reabilitação",
    "veiculos": [
-    "Diário de Goiás",
-    "Radar DF"
+    "98 FM Natal",
+    "Agora RN"
    ]
   },
   {
-   "titulo": "Ex-Fortaleza, Ceará e Ferroviário, Jorge Veras morre aos 67 anos",
+   "titulo": "Trump ataca LeBron James, que rebate com ironia o presidente dos EUA",
    "veiculos": [
-    "CN7",
-    "GP1"
+    "CartaCapital",
+    "Jornal de Brasília"
    ]
   },
   {
-   "titulo": "Investigado por homicídio e tráfico de drogas morre após confronto em Itabaiana",
+   "titulo": "Sindicato rejeita proposta da gestão de Palmas para pagamento da data-base",
+   "veiculos": [
+    "Gazeta do Cerrado",
+    "Jornal Opção Tocantins"
+   ]
+  },
+  {
+   "titulo": "PRF prende homem por receptação e adulteração em Rio Largo",
+   "veiculos": [
+    "Alagoas 24 Horas",
+    "CadaMinuto"
+   ]
+  },
+  {
+   "titulo": "Sabadinho Bom presta homenagem a Benito di Paula neste final de semana",
+   "veiculos": [
+    "ClickPB",
+    "Paraíba Online"
+   ]
+  },
+  {
+   "titulo": "Goleiro mirim do GAS sonha em se tornar profissional e representar Roraima no futebol brasileiro",
+   "veiculos": [
+    "Roraima Press",
+    "Roraima em Foco"
+   ]
+  },
+  {
+   "titulo": "Fundat oferta vagas de emprego e estágio em Aracaju nesta sexta-feira (23)",
    "veiculos": [
     "A8SE",
     "Infonet"
    ]
   },
   {
-   "titulo": "Mulher perde R$ 23 mil em golpe do falso advogado em Mossoró",
+   "titulo": "Prefeitura de Palmas anuncia revisão geral anual de 8,38% e ponto facultativo do Dia do Servidor para 30 de outubro",
    "veiculos": [
-    "TCM Notícia",
-    "Tribuna Online"
+    "Cleber Toledo",
+    "Focoelho"
    ]
   },
   {
-   "titulo": "Idoso morre em acidente envolvendo motociclista suspeito de participar de racha",
+   "titulo": "Veículos da EBC realizam ampla cobertura do segundo turno das Eleições 2026",
    "veiculos": [
-    "Folha BV",
-    "Roraima 1"
-   ]
-  },
-  {
-   "titulo": "PF e Ibama investigam comércio ilegal de madeira em São Domingos do Araguaia",
-   "veiculos": [
-    "Correio de Carajás",
-    "Fato Regional"
-   ]
-  },
-  {
-   "titulo": "Aos 85, Ney Matogrosso passa por cirurgia e cancela shows: “Não é”",
-   "veiculos": [
-    "Folha Vitória",
-    "Portal Correio"
-   ]
-  },
-  {
-   "titulo": "BPA apreende armas de fogo e carcaças de tatus e paca em Joaquim Gomes",
-   "veiculos": [
-    "Alagoas 24 Horas",
-    "Já é Notícia"
-   ]
-  },
-  {
-   "titulo": "Inmet alerta para tempestades em toda a faixa leste do país; saiba mais",
-   "veiculos": [
-    "O São Gonçalo",
-    "Paraíba Online"
-   ]
-  },
-  {
-   "titulo": "Cinco suspeitos são presos menos de 24 horas após lançamento de ação integrada em Anápolis",
-   "veiculos": [
-    "Diário de Goiás",
-    "Jornal Hora Extra"
-   ]
-  },
-  {
-   "titulo": "45ª EXPOFERR PREVÊ MOVIMENTAR R$ 1 BILHÃO EM RORAIMA",
-   "veiculos": [
-    "Roraima TV",
-    "Roraima em Foco"
-   ]
-  },
-  {
-   "titulo": "Operação Argos IX investiga armazenamento de material de abuso sexual infantil em Lagarto",
-   "veiculos": [
-    "A8SE",
-    "Aqui Notícias"
-   ]
-  },
-  {
-   "titulo": "Camilo anuncia ida ao TSE para quebrar sigilos de Lula e desafia Flávio a fazer o mesmo",
-   "veiculos": [
-    "CN7",
-    "É Assim"
-   ]
-  },
-  {
-   "titulo": "Polícia Civil investiga golpe de venda de pacotes de viagens falsos em São Luís",
-   "veiculos": [
-    "Difusora News",
-    "O Blumenauense"
-   ]
-  },
-  {
-   "titulo": "AutoAju 2026: Encontro de inovação e negócios automotivos em Aracaju",
-   "veiculos": [
-    "AjuNews",
-    "Cinform"
-   ]
-  },
-  {
-   "titulo": "Ministério Público encurrala Meta para barrar bloqueios e restrições nas eleições",
-   "veiculos": [
-    "Agência Pública",
+    "EBC",
     "TCM Notícia"
    ]
   },
   {
-   "titulo": "PMRR realiza alinhamento operacional para o segundo turno das eleições",
+   "titulo": "Empresárias de Roraima participam de imersão no mercado da moda em São Paulo",
    "veiculos": [
     "Monte Roraima FM",
     "Roraima TV"
    ]
   },
   {
-   "titulo": "Educação convoca mais 339 aprovados no PSS para atuação na rede municipal de ensino",
+   "titulo": "TSE orienta 158 milhões de eleitores a conferirem o local de votação antes de votarem no segundo turno",
    "veiculos": [
-    "CadaMinuto",
-    "Gazetaweb"
+    "News Rondônia",
+    "Zé Dudu"
    ]
   },
   {
-   "titulo": "Transporte público gratuito terá esquema especial no segundo turno",
+   "titulo": "Datafolha mantém Celina Leão com 60% e Leandro Grass com 40% dos votos válidos no DF",
    "veiculos": [
-    "Correio Braziliense",
-    "Sul21"
+    "Jornal Hora Extra",
+    "SiteBarra"
    ]
   },
   {
-   "titulo": "Com Michelle, Damares e Bia Kicis, Dorinha afirma que nem dinheiro nem poder protegerão agressor de mulher",
+   "titulo": "Many feared trapped as a tall building collapses in Kenya",
    "veiculos": [
-    "Atitude Tocantins",
-    "Cleber Toledo"
+    "ABC News (EUA)",
+    "Channels TV",
+    "SABC"
    ]
   },
   {
-   "titulo": "Israeli settlers suspected of attacking journalist and diplomats released: Press review",
+   "titulo": "Meghan reveals allegations against her father were reported to police in 2018",
    "veiculos": [
-    "Middle East Eye",
-    "New Straits Times"
+    "The Age",
+    "NBC News",
+    "The Sydney Morning Herald"
    ]
   },
   {
-   "titulo": "Kripos bekrefter til TV 2: Foxtrot-topp siktet for granatangrep på Strømmen",
+   "titulo": "Россия и Украина согласились на прекращение огня в Олешках для эвакуации жителей — Белый дом",
+   "veiculos": [
+    "The Insider",
+    "iStories / Vazhnye Istorii",
+    "Novaya Gazeta Europe"
+   ]
+  },
+  {
+   "titulo": "Meghan Markle ‘distressed’ as Philippines probes father over child sexual abuse images",
+   "veiculos": [
+    "South China Morning Post",
+    "Stuff"
+   ]
+  },
+  {
+   "titulo": "Deadly shooting in Paris suburb may be terrorist act, officials say",
+   "veiculos": [
+    "CBS News",
+    "France 24"
+   ]
+  },
+  {
+   "titulo": "Un muerto y cuatro heridos en un tiroteo cerca de París que investiga la Fiscalía Antiterrorista",
+   "veiculos": [
+    "El Mundo",
+    "RPP"
+   ]
+  },
+  {
+   "titulo": "La Casa Blanca asegura que Melania Trump ha logrado un alto el fuego entre Rusia y Ucrania en Oleshki",
+   "veiculos": [
+    "ABC (Espanha)",
+    "Clarín"
+   ]
+  },
+  {
+   "titulo": "Cybercriminalité en Afrique : 1.462 arrestations lors d’une opération internationale dans 21 pays",
+   "veiculos": [
+    "CNews",
+    "Ouestaf News"
+   ]
+  },
+  {
+   "titulo": "Athlétisme : Peres Jepchirchir, championne du monde du marathon, suspendue pour dopage à l’EPO",
+   "veiculos": [
+    "CNews",
+    "Channels TV"
+   ]
+  },
+  {
+   "titulo": "Breaking: Russia, Ukraine agree to Oleshky ceasefire mediated by Melania Trump, White House says",
+   "veiculos": [
+    "Kyiv Independent",
+    "PBS"
+   ]
+  },
+  {
+   "titulo": "‘I struggle to see myself as someone special’: Sandra Hüller on being the star of four - or, possibly, five - of the year’s biggest films",
+   "veiculos": [
+    "The Guardian",
+    "The Guardian Australia"
+   ]
+  },
+  {
+   "titulo": "Frankrijk zet morgen 70.000 agenten in bij aangekondigde nieuwe protesten",
+   "veiculos": [
+    "NOS",
+    "de Volkskrant"
+   ]
+  },
+  {
+   "titulo": "Andrew Mountbatten-Windsor may have to give evidence in High Court fraud case after gifts up to £750,000 were received from an elderly Turkish woman",
+   "veiculos": [
+    "Daily Mail",
+    "The Sun"
+   ]
+  },
+  {
+   "titulo": "Balotaje en Brasil 2026: todo lo que tenés que saber sobre la segunda vuelta entre Bolsonaro y Lula",
+   "veiculos": [
+    "Chequeado",
+    "La Nación (Argentina)"
+   ]
+  },
+  {
+   "titulo": "UBA commences contempt proceedings against WEMPCO directors over alleged disobedience of court order",
+   "veiculos": [
+    "Premium Times",
+    "ThisDay"
+   ]
+  },
+  {
+   "titulo": "Oppjustert flom-farevarsel for deler av Østlandet: – Alvorlig situasjon",
    "veiculos": [
     "Aftenposten",
     "NRK"
    ]
   },
   {
-   "titulo": "En remettant le prix Sakharov à la Cour pénale internationale, le Parlement européen affiche sa fermeté face à Washington",
-   "veiculos": [
-    "Le Monde",
-    "RFI"
-   ]
-  },
-  {
-   "titulo": "Player ratings: From the determined and a hundred to a captain’s shocker",
-   "veiculos": [
-    "The Age",
-    "The Sydney Morning Herald"
-   ]
-  },
-  {
-   "titulo": "Abdul El-Sayed and Mike Rogers clash over cost of living in final Michigan Senate debate",
+   "titulo": "Russian diesel tanker heads to the U.S., the first since Trump’s deal with Putin",
    "veiculos": [
     "NBC News",
     "PBS"
    ]
   },
   {
-   "titulo": "Woman, child found dead outside flats in Melbourne’s east",
+   "titulo": "Mann tiltalt for drap på svigermoren i Alver",
+   "veiculos": [
+    "Aftenposten",
+    "NRK"
+   ]
+  },
+  {
+   "titulo": "Test your general knowledge with the Good Weekend quiz",
    "veiculos": [
     "The Age",
     "The Sydney Morning Herald"
    ]
   },
   {
-   "titulo": "Superquiz, Friday, October 23",
+   "titulo": "Trump ordered to sit for deposition in defamation case against BBC",
    "veiculos": [
     "The Age",
     "The Sydney Morning Herald"
    ]
   },
   {
-   "titulo": "Australia humiliated by an innings and 31 runs in Gqeberha",
+   "titulo": "Россия и Украина обменялись военнопленными и гражданскими жителями",
+   "veiculos": [
+    "Novaya Gazeta Europe",
+    "iStories / Vazhnye Istorii"
+   ]
+  },
+  {
+   "titulo": "AFLW round 11 LIVE: ‘I don’t know if it gets much lower than this’: Magpies suffer goal-less loss to Power",
    "veiculos": [
     "The Age",
     "The Sydney Morning Herald"
    ]
   },
   {
-   "titulo": "Diputados aprobó la Ley de Inviolabilidad a la Propiedad Privada y los cambios en el régimen de discapacidad: qué dicen los proyectos",
+   "titulo": "No, Neha Bora did not call for Bangladesh-like situation in India; viral claim misses important context",
    "veiculos": [
-    "Chequeado",
-    "elDiarioAR"
+    "Alt News",
+    "Newslaundry"
+   ]
+  },
+  {
+   "titulo": "El Supremo exige al Gobierno la lista de los afectados por la ‘ley de nietos’ y amenaza de multa y posible responsabilidad penal si no lo hace",
+   "veiculos": [
+    "El País",
+    "elDiario.es"
+   ]
+  },
+  {
+   "titulo": "Feijóo meterá Igualdad “dentro de otros ministerios” y abrirá el debate del aborto en menores",
+   "veiculos": [
+    "La Vanguardia",
+    "elDiario.es"
    ]
   }
  ]
