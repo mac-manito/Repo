@@ -1,10 +1,10 @@
 {
- "gerada_em": "2026-10-25T11:10:10.470374-03:00",
+ "gerada_em": "2026-10-26T13:38:24.792413-03:00",
  "numeros": {
-  "veiculos": 335,
+  "veiculos": 358,
   "consultados": 679,
-  "manchetes": 1221,
-  "historias": 105
+  "manchetes": 1329,
+  "historias": 85
  },
  "backend": "tfidf",
  "limiar": 0.36,
@@ -82,8 +82,16 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
+   "veiculo": "Alt News",
+   "motivo": "feed sem itens recentes"
+  },
+  {
    "veiculo": "Amapá Digital",
    "motivo": "sem feed (verificado recentemente)"
+  },
+  {
+   "veiculo": "Amapá Online",
+   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Amazonas Notícias",
@@ -102,10 +110,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Aqui Acontece",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "Arab News",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -120,10 +124,6 @@
   {
    "veiculo": "Associated Press (AP)",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Atual7",
-   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "BBC",
@@ -174,10 +174,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Byline Times",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "CBC",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -208,10 +204,6 @@
   {
    "veiculo": "Caixin",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Campo Grande News",
-   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Capital News",
@@ -274,10 +266,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Crikey",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "Cuestión Pública",
    "motivo": "feed sem itens recentes"
   },
@@ -326,10 +314,6 @@
    "motivo": "feed sem itens recentes"
   },
   {
-   "veiculo": "Defector",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "Detik",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -340,10 +324,6 @@
   {
    "veiculo": "Die Zeit",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Direkt36",
-   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Disclose",
@@ -384,14 +364,6 @@
   {
    "veiculo": "Dourados News",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Drop Site News",
-   "motivo": "feed sem itens recentes"
-  },
-  {
-   "veiculo": "EBC",
-   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "EFE",
@@ -442,10 +414,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Fato Regional",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "FaxAju",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -454,12 +422,12 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Folha Capital",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "Folha de Pernambuco",
    "motivo": "sem feed (verificado recentemente)"
+  },
+  {
+   "veiculo": "Folha do Amapá",
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Folha do Sul Online",
@@ -514,6 +482,10 @@
    "motivo": "feed não encontrado ou fora do ar"
   },
   {
+   "veiculo": "Giro de Gravataí",
+   "motivo": "feed sem itens recentes"
+  },
+  {
    "veiculo": "Global Times",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -527,10 +499,6 @@
   },
   {
    "veiculo": "Hankyoreh",
-   "motivo": "feed sem itens recentes"
-  },
-  {
-   "veiculo": "Hell Gate",
    "motivo": "feed sem itens recentes"
   },
   {
@@ -554,10 +522,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "ICIJ",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "IDL-Reporteros",
    "motivo": "feed sem itens recentes"
   },
@@ -574,16 +538,12 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Investigace.cz",
+   "veiculo": "Intercept Brasil",
    "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Investigate Europe",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "IrpiMedia",
-   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Itatiaia",
@@ -626,6 +586,10 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
+   "veiculo": "Jornal do Dia SE",
+   "motivo": "feed sem itens recentes"
+  },
+  {
    "veiculo": "Jornal do Tocantins",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -642,8 +606,8 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "KRIK",
-   "motivo": "feed sem itens recentes"
+   "veiculo": "Kan",
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Kayhan",
@@ -722,20 +686,16 @@
    "motivo": "feed sem itens recentes"
   },
   {
-   "veiculo": "Maldita.es",
-   "motivo": "feed sem itens recentes"
-  },
-  {
-   "veiculo": "Marco Zero Conteúdo",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "MediaNama",
    "motivo": "sem feed (verificado recentemente)"
   },
   {
    "veiculo": "Mediapart",
    "motivo": "sem feed (verificado recentemente)"
+  },
+  {
+   "veiculo": "Megaphone",
+   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Meio News",
@@ -770,10 +730,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Myanmar Now",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "NDTV",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -802,20 +758,8 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "NewZimbabwe",
-   "motivo": "feed não encontrado ou fora do ar"
-  },
-  {
    "veiculo": "News24",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Newslaundry",
-   "motivo": "feed não encontrado ou fora do ar"
-  },
-  {
-   "veiculo": "Newstapa",
-   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Next.ink",
@@ -858,10 +802,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Ouestaf News",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "PCIJ",
    "motivo": "feed sem itens recentes"
   },
@@ -872,10 +812,6 @@
   {
    "veiculo": "PTS (Taiwan)",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "Pernambuco Online",
-   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Philippine Daily Inquirer",
@@ -912,10 +848,6 @@
   {
    "veiculo": "Potiguar Notícias",
    "motivo": "feed não encontrado ou fora do ar"
-  },
-  {
-   "veiculo": "Prachatai",
-   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "Private Eye",
@@ -987,10 +919,6 @@
   },
   {
    "veiculo": "Repórter Brasil",
-   "motivo": "feed sem itens recentes"
-  },
-  {
-   "veiculo": "Rest of World",
    "motivo": "feed sem itens recentes"
   },
   {
@@ -1070,6 +998,10 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
+   "veiculo": "Slidstvo.info",
+   "motivo": "feed sem itens recentes"
+  },
+  {
    "veiculo": "Sua Cidade",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -1119,11 +1051,7 @@
   },
   {
    "veiculo": "Tapajós de Fato",
-   "motivo": "feed sem itens recentes"
-  },
-  {
-   "veiculo": "Tecnoblog",
-   "motivo": "feed sem itens recentes"
+   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "Televisa (N+)",
@@ -1174,10 +1102,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "The Elephant",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "The Fourth Estate",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -1198,10 +1122,6 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "The Isaan Record",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "The Jakarta Post",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -1214,10 +1134,6 @@
    "motivo": "feed sem itens recentes"
   },
   {
-   "veiculo": "The Monthly",
-   "motivo": "feed sem itens recentes"
-  },
-  {
    "veiculo": "The National",
    "motivo": "sem feed (verificado recentemente)"
   },
@@ -1226,12 +1142,12 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "The Reporters' Collective",
-   "motivo": "sem feed (verificado recentemente)"
+   "veiculo": "The Reporter (Taiwan)",
+   "motivo": "feed sem itens recentes"
   },
   {
-   "veiculo": "The Saturday Paper",
-   "motivo": "feed sem itens recentes"
+   "veiculo": "The Reporters' Collective",
+   "motivo": "sem feed (verificado recentemente)"
   },
   {
    "veiculo": "The Spinoff",
@@ -1268,10 +1184,6 @@
   {
    "veiculo": "The Wire (Índia)",
    "motivo": "sem feed (verificado recentemente)"
-  },
-  {
-   "veiculo": "The Wire China",
-   "motivo": "feed sem itens recentes"
   },
   {
    "veiculo": "TheCable",
@@ -1374,12 +1286,8 @@
    "motivo": "sem feed (verificado recentemente)"
   },
   {
-   "veiculo": "Átlátszó",
+   "veiculo": "openDemocracy",
    "motivo": "feed sem itens recentes"
-  },
-  {
-   "veiculo": "É Assim",
-   "motivo": "feed não encontrado ou fora do ar"
   },
   {
    "veiculo": "ČT (Česká televize)",
@@ -1391,8 +1299,8 @@
    "id": "brasil",
    "nome": "Brasil",
    "consultados": 298,
-   "ativos": 188,
-   "manchetes": 715,
+   "ativos": 193,
+   "manchetes": 751,
    "backend": "tfidf",
    "limiar": 0.36
   },
@@ -1400,836 +1308,674 @@
    "id": "mundo",
    "nome": "Resto do mundo",
    "consultados": 381,
-   "ativos": 147,
-   "manchetes": 506,
+   "ativos": 165,
+   "manchetes": 578,
    "backend": "tfidf",
    "limiar": 0.36
   }
  ],
  "historias": [
   {
-   "titulo": "Lula vota em São Bernardo do Campo",
+   "titulo": "Fies 2: inscrições gratuitas para vagas remanescentes estão abertas",
    "veiculos": [
-    "A Voz da Cidade",
-    "A Crítica",
-    "Aqui Notícias",
-    "Defato Online",
-    "Em Tempo",
-    "Folha BV",
-    "Jornal Opção",
-    "MaisPB",
-    "O Estado Online",
-    "Patos Online",
-    "Piauí Hoje",
-    "Portal aRede",
-    "TNH1",
+    "A Gazeta do Acre",
+    "A8SE",
+    "Agência Brasil",
+    "Blog do Elvis",
+    "CadaMinuto",
+    "ClickPB",
+    "DCI Roraima",
+    "Difusora News",
+    "Farol de Notícias",
+    "Jornal de Brasília",
+    "Leiagora",
+    "MCP Notícias",
+    "Paraíba Online",
+    "Pernambuco Online",
     "Tribuna do Norte"
    ]
   },
   {
-   "titulo": "Mega-Sena acumula, e próximo prêmio será de R$ 300 milhões",
-   "veiculos": [
-    "Bahia Notícias",
-    "CadaMinuto",
-    "Eixo Capital",
-    "Engeplus",
-    "ES Hoje",
-    "Expressão Rondônia",
-    "GP1",
-    "NSC Total",
-    "Só Notícias"
-   ]
-  },
-  {
-   "titulo": "Lula vota em São Bernardo do Campo e agradece mobilização popular",
-   "veiculos": [
-    "Paraíba Já",
-    "Cidadeverde.com",
-    "Diário do Comércio MG",
-    "Fato Amazônico",
-    "Goiás 24 Horas",
-    "Metro1",
-    "Polêmica Paraíba",
-    "Portal do Holanda",
-    "Repórter MT"
-   ]
-  },
-  {
-   "titulo": "TSE agiliza aprovação de transporte para indígenas e quilombolas",
+   "titulo": "TSE nega acusação de Flávio sobre expulsão de fiscais de sala-cofre",
    "veiculos": [
     "Agência Brasil",
-    "A Gazeta (Espírito Santo)",
-    "Blog do Elvis",
-    "DCI Roraima",
-    "Estado do Pará Online",
-    "Folha do Amapá",
-    "Infonet",
+    "Brasília Agora",
+    "ClickPB",
+    "Goiás 24 Horas",
+    "GPS Brasília",
+    "News Rondônia",
+    "Rondoniagora",
     "Sul21"
    ]
   },
   {
-   "titulo": "Flávio Bolsonaro vota no Rio de Janeiro neste domingo de segundo turno",
+   "titulo": "Apenas 0,03% dos votos foram registrados após as 17h, diz TSE",
    "veiculos": [
-    "Agora RN",
-    "CartaCapital",
-    "ClicRDC",
-    "Diário do Grande ABC",
-    "O Hoje",
-    "Primeira Página MT",
-    "SCC10"
-   ]
-  },
-  {
-   "titulo": "TRE-SP substitui 52 urnas que apresentaram problemas no estado",
-   "veiculos": [
-    "Agência Brasil",
-    "Blog do Elvis",
-    "DCI Roraima",
-    "Folha do Amapá",
-    "Folha Vitória",
-    "Primeira Página MT",
-    "TNH1"
-   ]
-  },
-  {
-   "titulo": "Ao votar no Rio de Janeiro, Flávio diz que representa a mudança",
-   "veiculos": [
-    "A Voz da Cidade",
-    "Agência Brasil",
-    "Blog do Elvis",
-    "Folha do Amapá",
+    "Tribuna Online",
+    "Diário de Goiás",
+    "GPS Brasília",
     "O Sul",
-    "Tribuna Online"
-   ]
-  },
-  {
-   "titulo": "Paraíba registra substituição de 18 urnas eletrônicas nas primeiras horas de votação",
-   "veiculos": [
-    "Polêmica Paraíba",
-    "A Gazeta (Espírito Santo)",
-    "Gazeta do Cerrado",
-    "Jornal Opção Tocantins",
-    "MaisPB"
-   ]
-  },
-  {
-   "titulo": "Votação no exterior: Flávio Bolsonaro vence no Japão e na Malásia e Lula vence na Nova Zelândia e Austrália",
-   "veiculos": [
-    "JD1 Notícias",
-    "ClickPB",
-    "Goiás 24 Horas",
-    "Portal aRede",
-    "Portal M1 (Miséria)"
-   ]
-  },
-  {
-   "titulo": "Flávio Bolsonaro vota no Rio de Janeiro: “Chegou a hora da mudança”",
-   "veiculos": [
-    "Paraíba Online",
-    "Extra",
-    "Repórter MT",
-    "Sul21",
-    "Tempo Real RJ"
-   ]
-  },
-  {
-   "titulo": "Sargento da PM morre após passar mal enquanto aguardava para votar em Vitória da Conquista",
-   "veiculos": [
-    "Correio de Carajás",
-    "Acorda Cidade",
-    "Metro1",
-    "Polêmica Paraíba"
-   ]
-  },
-  {
-   "titulo": "Flamengo explica tentativa de reverter eliminação na Libertadores: 'Regras valem para todos'",
-   "veiculos": [
-    "Diário do Grande ABC",
-    "Amazonas Atual",
-    "O Liberal",
-    "Tribuna de Petrópolis"
-   ]
-  },
-  {
-   "titulo": "Quais são os estados que vão eleger governador no segundo turno das Eleições 2026?",
-   "veiculos": [
-    "Banda B",
-    "A Tarde",
-    "Ceará Agora",
-    "OCP News"
-   ]
-  },
-  {
-   "titulo": "Trabalhador tem direito de sair do serviço para votar; confira a lei",
-   "veiculos": [
-    "Defato Online",
     "PB Agora",
-    "Portal do Holanda",
+    "Piauí Hoje",
+    "SCC10",
+    "Sul21"
+   ]
+  },
+  {
+   "titulo": "Flávio Bolsonaro não reconhece vitória de Lula e tentará anulação do pleito",
+   "veiculos": [
+    "Extra de Rondônia",
+    "CN7",
+    "NF Notícias",
+    "OitoMeia",
+    "Portal M1 (Miséria)",
+    "Revista Central",
+    "Rondoniagora",
     "Zé Dudu"
    ]
   },
   {
-   "titulo": "‘Estou aqui por causa do povo brasileiro’, diz Lula ao votar em São Bernardo",
+   "titulo": "Bolsa aciona circuit breaker pela primeira vez desde 2020 após vitória de Lula",
    "veiculos": [
-    "O Informante",
-    "ac24horas",
-    "Folha Vitória",
-    "Portal Correio"
-   ]
-  },
-  {
-   "titulo": "Moro vota em Curitiba e aposta em vitória de Flávio Bolsonaro",
-   "veiculos": [
-    "Tarobá News",
-    "Banda B",
-    "CNN Brasil",
-    "Portal aRede"
-   ]
-  },
-  {
-   "titulo": "Flávio Bolsonaro vota no Rio e pede que eleitores compareçam às urnas",
-   "veiculos": [
-    "Em Tempo",
+    "A Gazeta do Amapá",
     "98 FM Natal",
-    "DCI Roraima",
-    "Diário do Comércio MG"
+    "Diário da Região",
+    "Diário do Grande ABC",
+    "Jornal do Commercio (PE)",
+    "Patos Online",
+    "É Assim"
    ]
   },
   {
-   "titulo": "Saiba quais as condutas consideradas crime eleitoral no dia da votação",
+   "titulo": "Nas redes sociais, líderes latino-americanos saúdam Lula pela vitória",
    "veiculos": [
+    "Alagoas 24 Horas",
+    "A Crítica",
+    "A Crítica MS",
+    "Eixo Capital",
+    "O São Gonçalo"
+   ]
+  },
+  {
+   "titulo": "Eleitores de sete cidades escolheram seus prefeitos neste 2º turno",
+   "veiculos": [
+    "Agência Brasil",
+    "Aqui Acontece",
     "Blog do Elvis",
-    "Em Tempo",
-    "Roraima 1",
-    "TCM Notícia"
-   ]
-  },
-  {
-   "titulo": "Efraim Filho vai acompanhar apuração ao lado de Flávio Bolsonaro, em Brasília",
-   "veiculos": [
-    "MaisPB",
-    "Blog do Magno",
+    "Pernambuco Online",
     "Tribuna do Norte"
    ]
   },
   {
-   "titulo": "MJSP: Às 9h, segundo turno já tinha 32 ocorrências de crimes eleitorais",
+   "titulo": "Lula é reeleito presidente do Brasil e conquista o quarto mandato",
    "veiculos": [
-    "Diário do Grande ABC",
-    "Tribuna de Petrópolis",
-    "Valor Econômico"
+    "Só Sergipe",
+    "Atual7",
+    "Caçador Online",
+    "Eixo Capital",
+    "O Município"
    ]
   },
   {
-   "titulo": "Boletim do 2º turno: confira quantas urnas eletrônicas foram substituídas neste domingo",
+   "titulo": "Venceu a democracia",
    "veiculos": [
-    "Acorda Cidade",
-    "A Tarde",
-    "Valor Econômico"
+    "BNC Amazonas",
+    "Blog do Magno",
+    "Fato Regional",
+    "Matinal"
    ]
   },
   {
-   "titulo": "Filho de empresário morre ao cair de caminhão durante carreata em apoio a Flávio Bolsonaro em Goiás",
+   "titulo": "Lula venceu em 13 estados no segundo turno das Eleições 2026; Flávio em 13 e no DF",
    "veiculos": [
-    "O Sul",
-    "Jornal Opção",
-    "Portal 6"
+    "SCC10",
+    "Defato Online",
+    "Estado do Pará Online",
+    "Fato Amazônico"
    ]
   },
   {
-   "titulo": "Lula vota no ABC Paulista e diz nunca ter visto mobilização igual à do segundo turno",
+   "titulo": "TSE confirma Celina Leão como primeira governadora eleita do DF",
    "veiculos": [
-    "Agora RN",
-    "Alagoas 24 Horas",
-    "Piauí Hoje"
+    "Radar DF",
+    "Diário do Nordeste",
+    "O Hoje",
+    "Portal Eldo Gomes"
    ]
   },
   {
-   "titulo": "Acidente entre van e carro deixa três mortos na BR-222",
+   "titulo": "Bola de Ouro 2026; veja horário, local e indicados",
+   "veiculos": [
+    "O Estado CE",
+    "Engeplus",
+    "ES Hoje",
+    "Gazetaweb"
+   ]
+  },
+  {
+   "titulo": "Plebiscito: eleitores de 6 cidades decidem transferência de distritos",
+   "veiculos": [
+    "Agência Brasil",
+    "Blog do Elvis",
+    "DCI Roraima",
+    "Pernambuco Online"
+   ]
+  },
+  {
+   "titulo": "Tesouro recompra R$ 7,1 bilhões em NTN-Fs em meio à disparada das taxas",
+   "veiculos": [
+    "Folha de S.Paulo",
+    "Metrópoles",
+    "Portal do Holanda"
+   ]
+  },
+  {
+   "titulo": "Colisão entre motos deixa um morto e um ferido em São Luís",
    "veiculos": [
     "Jornal Pequeno",
-    "Aqui Notícias",
+    "Campo Grande News",
+    "MaisPB"
+   ]
+  },
+  {
+   "titulo": "Polícia divulga imagem de suspeito de homicídio na Zona Norte de Aracaju",
+   "veiculos": [
+    "Infonet",
+    "A8SE",
+    "HiperNotícias"
+   ]
+  },
+  {
+   "titulo": "Entenda o que é o circuit breaker e quantas vezes o mecanismo já foi acionado na Bolsa",
+   "veiculos": [
+    "ES Hoje",
+    "Expressão Rondônia",
+    "Tribuna Online"
+   ]
+  },
+  {
+   "titulo": "Eduardo Bolsonaro pede que comunidade internacional não aceite vitória de Lula e pressione por anulação",
+   "veiculos": [
+    "TNH1",
+    "Estado de Minas",
+    "Tribuna Online"
+   ]
+  },
+  {
+   "titulo": "Presidente da STF diz que vontade dos eleitores deve ser respeitada",
+   "veiculos": [
+    "O Estado do Acre",
+    "Diário da Região",
+    "PB Agora"
+   ]
+  },
+  {
+   "titulo": "Sergipe oferta 601 vagas de emprego nesta segunda-feira (26)",
+   "veiculos": [
+    "A8SE",
+    "Polêmica Paraíba",
+    "Só Notícias"
+   ]
+  },
+  {
+   "titulo": "Bolsa interrompe negociações com queda de mais de 10% e dólar dispara 12% após reeleição de Lula",
+   "veiculos": [
+    "Banda B",
+    "GPS Brasília",
+    "Jornal Opção Tocantins"
+   ]
+  },
+  {
+   "titulo": "PF registra onze ocorrências de crimes eleitorais em SE no segundo turno",
+   "veiculos": [
+    "Infonet",
+    "TCM Notícia",
+    "Ver-o-Fato"
+   ]
+  },
+  {
+   "titulo": "Rafael Fonteles é cotado para assumir Ministério da Fazenda no governo Lula",
+   "veiculos": [
+    "Cidadeverde.com",
+    "O Dia",
+    "OitoMeia"
+   ]
+  },
+  {
+   "titulo": "Dupla é presa por suspeita de tráfico de drogas e posse irregular de arma em Boquim",
+   "veiculos": [
+    "Fan F1",
+    "Roraima 1"
+   ]
+  },
+  {
+   "titulo": "Quem já reconheceu o resultado das eleições brasileiras",
+   "veiculos": [
+    "Nexo Jornal",
+    "O Sul"
+   ]
+  },
+  {
+   "titulo": "Eleições 2026: Energisa Acre conclui operação especial durante segundo turno",
+   "veiculos": [
+    "ContilNet",
+    "Roraima TV"
+   ]
+  },
+  {
+   "titulo": "PF apura armazenamento de cenas de abuso sexual infantil em MT",
+   "veiculos": [
+    "Leiagora",
     "O Imparcial"
    ]
   },
   {
-   "titulo": "Flávio Bolsonaro votou em uma escola municipal da zona norte do Rio de Janeiro",
+   "titulo": "Republicanos governará maior parcela da população brasileira a partir de 2027; PL lidera em número de governadores",
    "veiculos": [
-    "Defato Online",
-    "GPS Brasília",
-    "O São Gonçalo"
-   ]
-  },
-  {
-   "titulo": "Flávio Bolsonaro vota no Rio de Janeiro e critica violência e endividamento",
-   "veiculos": [
-    "Difusora News",
-    "Amazonas Atual",
-    "O Estado Online"
-   ]
-  },
-  {
-   "titulo": "Alexandre de Moraes vota no segundo turno das eleições em São Paulo",
-   "veiculos": [
-    "Folha Vitória",
-    "Agora RN",
-    "OCP News"
-   ]
-  },
-  {
-   "titulo": "Votação já terminou em países no exterior; veja os primeiros resultados para presidente do Brasil",
-   "veiculos": [
-    "Já é Notícia",
-    "Monte Roraima FM",
-    "O São Gonçalo"
-   ]
-  },
-  {
-   "titulo": "Mudanças climáticas já causam aumento de doenças infecciosas no país",
-   "veiculos": [
-    "Agência Brasil",
-    "Amazonas Atual",
-    "MCP Notícias"
-   ]
-  },
-  {
-   "titulo": "Eleições 2026: confira os países em que Flávio Bolsonaro e Lula venceram",
-   "veiculos": [
-    "Paraíba Já",
-    "GP1",
-    "News Rondônia"
-   ]
-  },
-  {
-   "titulo": "Resultado da Mega-Sena 3074 de hoje (24/10/2026): números sorteados",
-   "veiculos": [
-    "SiteBarra",
-    "BHAZ",
-    "Expressão Rondônia"
-   ]
-  },
-  {
-   "titulo": "Transporte de indígenas deve ser aprovado por juiz, diz o presidente do TSE, Nunes Marques",
-   "veiculos": [
-    "Notícias da Hora",
-    "98 FM Natal",
-    "Portal AZ"
-   ]
-  },
-  {
-   "titulo": "TRE-RR sorteia 23 urnas eletrônicas para auditoria no segundo turno das eleições",
-   "veiculos": [
-    "Monte Roraima FM",
-    "Portal AZ",
-    "Radar DF"
-   ]
-  },
-  {
-   "titulo": "Eleições 2026: Propaganda eleitoral está permitida até as 22h deste sábado (24)",
-   "veiculos": [
-    "A8SE",
-    "Jornal Hora Extra",
-    "TCM Notícia"
-   ]
-  },
-  {
-   "titulo": "Alan Rick diz ter enfrentado “máquina poderosa” no 2º turno e afirma que respeitará resultado das urnas",
-   "veiculos": [
-    "A Gazeta do Acre",
-    "ContilNet"
-   ]
-  },
-  {
-   "titulo": "Daniel Vorcaro e Stefanutto, ex-presidente do INSS, votam na Papudinha",
-   "veiculos": [
-    "ContilNet",
-    "ND Mais"
-   ]
-  },
-  {
-   "titulo": "Mabel abre comemorações dos 93 anos de Goiânia com desfile cívico-militar em Campinas",
-   "veiculos": [
-    "Jornal Hora Extra",
-    "Diário de Goiás"
-   ]
-  },
-  {
-   "titulo": "Tarcísio de Freitas vota em SP",
-   "veiculos": [
-    "Blog do Magno",
-    "ContilNet"
-   ]
-  },
-  {
-   "titulo": "Alan Rick diz estar confiante na vitória e aponta prioridades: “O Acre vai mudar”",
-   "veiculos": [
-    "A Gazeta do Acre",
-    "Aqui Notícias"
-   ]
-  },
-  {
-   "titulo": "'Quem Ama Cuida': Pilar manda Ingrid seduzir Heitor para não ir morar na rua",
-   "veiculos": [
-    "Folha de S.Paulo",
-    "UOL"
-   ]
-  },
-  {
-   "titulo": "Saiba como consultar o local de votação e o número do título no segundo turno",
-   "veiculos": [
-    "JD1 Notícias",
-    "Sul21"
-   ]
-  },
-  {
-   "titulo": "“A esperança virou medo”, diz Flávio Bolsonaro ao criticar segurança e economia do país após voto no Rio",
-   "veiculos": [
-    "Jornal Opção",
-    "Metrópoles"
-   ]
-  },
-  {
-   "titulo": "Carro é esmagado por caminhão e motorista morre preso às ferragens na BR-282 em SC",
-   "veiculos": [
-    "ND Mais",
-    "SCC10"
-   ]
-  },
-  {
-   "titulo": "Motorista com sinais de embriaguez é detido após bater em dois carros em São Miguel dos Campos",
-   "veiculos": [
-    "Alagoas 24 Horas",
-    "Diário da Região"
-   ]
-  },
-  {
-   "titulo": "Natal tem previsão de sol e chuva passageira durante votação neste domingo",
-   "veiculos": [
-    "98 FM Natal",
-    "ES Brasil"
-   ]
-  },
-  {
-   "titulo": "Domingo de eleições em Goiânia terá calor de 35ºC e alerta de tempestades no período da tarde",
-   "veiculos": [
-    "Diário de Goiás",
-    "Primeira Página MT"
-   ]
-  },
-  {
-   "titulo": "Lula e Flávio dividem vitórias em votação no exterior",
-   "veiculos": [
-    "A Crítica",
-    "Jornal do Commercio (PE)"
-   ]
-  },
-  {
-   "titulo": "Governador Elmano de Freitas vota em Caucaia neste domingo",
-   "veiculos": [
-    "CN7",
+    "Bahia Notícias",
     "CNN Brasil"
    ]
   },
   {
-   "titulo": "Efraim Filho vota em João Pessoa e demonstra confiança na vitória de Flávio Bolsonaro",
+   "titulo": "Motorista é preso após atropelar duas pessoas e fugir sem prestar socorro em Oiapoque",
    "veiculos": [
-    "Paraíba Online",
-    "Portal Correio"
+    "Diário do Amapá",
+    "g1"
    ]
   },
   {
-   "titulo": "Presidente Lula (PT), candidato à reeleição, vota em SP",
+   "titulo": "Após conversa com Vicentinho, Governador Wanderlei alinha ações para os próximos 70 dias e prepara decreto de transição",
    "veiculos": [
-    "NSC Total",
-    "O Estado CE"
+    "Gazeta do Cerrado",
+    "Jornal Opção Tocantins"
    ]
   },
   {
-   "titulo": "Icoaraci e Marajó: eleitores denunciam falta de transporte para votar",
+   "titulo": "Homem é preso por aliciar criança de 7 anos em Bandeirantes, no Paraná",
    "veiculos": [
-    "DOL",
-    "Estado do Pará Online"
+    "Bem Paraná",
+    "É Assim"
    ]
   },
   {
-   "titulo": "Mulher é presa suspeita de tráfico de drogas em Urbano Santos",
+   "titulo": "Eleitores de Eduardo Paes criam 'Exército do Dudu' no WhatsApp para cobrar segundo turno no Rio",
    "veiculos": [
-    "Imirante",
-    "O Impacto"
+    "Diário do Rio",
+    "Tempo Real RJ"
    ]
   },
   {
-   "titulo": "Votação no exterior: Lula vence em cinco países e Flávio em sete até as 10h40",
+   "titulo": "Educação convoca mais 151 aprovados no Processo Seletivo Simplificado 2026",
    "veiculos": [
-    "O Hoje",
-    "Portal Correio"
-   ]
-  },
-  {
-   "titulo": "Policial militar passa mal e morre em fila de votação na Bahia",
-   "veiculos": [
-    "Folha Vitória",
-    "NSC Total"
-   ]
-  },
-  {
-   "titulo": "TRE-SP substitui 52 urnas com falha e mantém votação normal",
-   "veiculos": [
-    "AjuNews",
-    "MCP Notícias"
-   ]
-  },
-  {
-   "titulo": "Vereadora do PT desmaia após ser atingida no rosto durante ataque a carreata pró-Lula em MG",
-   "veiculos": [
-    "Fato Amazônico",
-    "O Estado do Acre"
-   ]
-  },
-  {
-   "titulo": "Eleições 2026: Candidatos ao governo do Tocantins votam neste domingo (25)",
-   "veiculos": [
-    "CNN Brasil",
-    "News Rondônia"
-   ]
-  },
-  {
-   "titulo": "Lula: o que eu vi nesse 2º turno foi algo quase que inexplicável",
-   "veiculos": [
-    "Diário do Grande ABC",
-    "Tribuna de Petrópolis"
-   ]
-  },
-  {
-   "titulo": "Campo Grande entra em alerta laranja para temporais na noite deste domingo",
-   "veiculos": [
-    "A Crítica MS",
+    "CadaMinuto",
     "Enfoque MS"
    ]
   },
   {
-   "titulo": "Vídeo mostra briga generalizada que terminou com homem morto em MT",
+   "titulo": "Oposição pede impeachment de Zanin após prorrogação de votação",
    "veiculos": [
-    "HiperNotícias",
-    "Primeira Página MT"
+    "A Tarde",
+    "DCI Roraima"
    ]
   },
   {
-   "titulo": "Buscando quarto mandato como presidente, Lula vota no ABC Paulista",
+   "titulo": "Morre Oswaldinho do Acordeon, referência da sanfona brasileira, aos 72 anos",
    "veiculos": [
-    "Difusora News",
-    "Fan F1"
+    "Jornal Opção",
+    "Paraíba Online"
    ]
   },
   {
-   "titulo": "Eleitores enfrentam filas nas primeiras horas de votação no SIG e Lago Norte",
+   "titulo": "Previsão indica semana de sol e altas temperaturas em Sergipe",
    "veiculos": [
-    "Correio Braziliense",
-    "Tribuna de Minas"
+    "Fan F1",
+    "Portal M1 (Miséria)"
    ]
   },
   {
-   "titulo": "Flávio Bolsonaro vota acompanhado da mulher, mãe e do governador eleito do RJ",
+   "titulo": "Renata Lo Prete aponta contradição de Flávio Bolsonaro e Nikolas Ferreira ao questionarem eleição após derrota para Lula",
    "veiculos": [
-    "Aqui Notícias",
-    "Tribuna de Minas"
+    "Estado do Pará Online",
+    "Fato Amazônico"
    ]
   },
   {
-   "titulo": "“Estou muito confiante na virada”, diz Fábio Mitidieri ao votar no segundo turno das Eleições 2026",
+   "titulo": "Lula cresce em Roraima no segundo turno, mas Flávio vence em 14 municípios; confira resultados",
+   "veiculos": [
+    "Roraima 1",
+    "ac24horas"
+   ]
+  },
+  {
+   "titulo": "Intervenção pode causar interrupção no abastecimento em bairros das Zonas Sul e de Expansão em Aracaju nesta terça, 27",
    "veiculos": [
     "Fan F1",
     "Infonet"
    ]
   },
   {
-   "titulo": "Belém e Ananindeua têm movimentação tranquila nas primeiras horas de votação do segundo turno",
+   "titulo": "Vereador é preso por atirar contra pessoas que comemoravam reeleição de Lula",
    "veiculos": [
-    "Estado do Pará Online",
-    "NF Notícias"
+    "Leiagora",
+    "Primeira Página MT"
    ]
   },
   {
-   "titulo": "Eleição mais acirrada desde a redemocratização opõe Flávio Bolsonaro a Lula com 158 milhões aptos a votar",
+   "titulo": "Zucco fala em ‘interferências abusivas’ e não reconhece vitória de Lula",
+   "veiculos": [
+    "Sul21",
+    "Tribuna de Petrópolis"
+   ]
+  },
+  {
+   "titulo": "Festival Curta Campo Grande traz filmes brasileiros para escolas e aproxima jovens do audiovisual",
    "veiculos": [
     "O Estado Online",
-    "Portal 6"
+    "O São Gonçalo"
    ]
   },
   {
-   "titulo": "CNH do Brasil no celular: 10 funções que muita gente não conhece",
+   "titulo": "34 mil eleitores votaram após as 17h no 2º turno, mostram dados do TSE",
    "veiculos": [
-    "DOL",
-    "Portal Eldo Gomes"
+    "A Gazeta do Acre",
+    "PB Agora"
    ]
   },
   {
-   "titulo": "Eleição entre Lula e Flávio Bolsonaro ganha destaque na imprensa internacional",
+   "titulo": "Lula foi melhor que em 2022 e superou Dilma em 2014",
    "veiculos": [
-    "O Hoje",
-    "O Informante"
+    "Nexo Jornal",
+    "O Sul"
    ]
   },
   {
-   "titulo": "Prefeitura transfere folga do Dia do Servidor para sexta e prolonga descanso até Finados",
+   "titulo": "CBF considera correta expulsão de Neymar contra o Bahia após análise do VAR",
    "veiculos": [
-    "HiperNotícias",
-    "Repórter MT"
-   ]
-  },
-  {
-   "titulo": "TJPA condena pastor a pagar R$ 50 mil por associar autismo à ação do diabo",
-   "veiculos": [
-    "Estado do Pará Online",
-    "Zé Dudu"
-   ]
-  },
-  {
-   "titulo": "Vereadora do PT é atacada por bolsonaristas com tijolos e garrafas de vidro em MG",
-   "veiculos": [
-    "Piauí Hoje",
-    "Polêmica Paraíba"
-   ]
-  },
-  {
-   "titulo": "Helicóptero avaliado em R$ 4 milhões utilizado no transporte de drogas da Venezuela para o Brasil é apreendido em Roraima",
-   "veiculos": [
-    "Folha BV",
-    "Roraima 1"
-   ]
-  },
-  {
-   "titulo": "Definidos os confrontos das semifinais da Copa do Brasil Feminina",
-   "veiculos": [
-    "Roraima Press",
-    "Só Notícias"
-   ]
-  },
-  {
-   "titulo": "Datafolha, Quaest e Atlas apontam empate técnico entre Lula e Flávio Bolsonaro no 2° turno",
-   "veiculos": [
-    "Portal M1 (Miséria)",
-    "Blog do Anderson"
-   ]
-  },
-  {
-   "titulo": "Homem é preso em flagrante suspeito de agredir a própria mãe em Alagoa Nova",
-   "veiculos": [
-    "ClickPB",
-    "Patos Online"
-   ]
-  },
-  {
-   "titulo": "Durante votação, Rogério Carvalho destaca defesa da democracia",
-   "veiculos": [
-    "Infonet",
-    "Jornal do Dia SE"
-   ]
-  },
-  {
-   "titulo": "Allyson Bezerra vota e diz acreditar em vitória da mudança no RN",
-   "veiculos": [
-    "Agora RN",
+    "Bahia Notícias",
     "Gazetaweb"
    ]
   },
   {
-   "titulo": "Eleitores podem usar camisetas e adesivos políticos na votação",
+   "titulo": "Mulher é morta a facadas dentro de casa em Anápolis. Filhos encontraram mãe caída no chão",
    "veiculos": [
-    "Alagoas na Net",
-    "Defato Online"
+    "Goiás 24 Horas",
+    "Portal 6"
    ]
   },
   {
-   "titulo": "Apuração de votos em tempo real: acompanhe a eleição para presidente da República",
+   "titulo": "Mega-Sena terá cinco sorteios na semana, com prêmio de R$ 300 milhões",
+   "veiculos": [
+    "Portal AZ",
+    "Portal do Holanda"
+   ]
+  },
+  {
+   "titulo": "Com apoio de Helder, Lula vence no Pará e amplia votos nos maiores colégios eleitorais",
+   "veiculos": [
+    "Correio de Carajás",
+    "DOL"
+   ]
+  },
+  {
+   "titulo": "Mais de mil ampolas de mounjaro são apreendidas no aeroporto de São Luís",
+   "veiculos": [
+    "Difusora News",
+    "Jornal Pequeno"
+   ]
+  },
+  {
+   "titulo": "PM atropela motociclista durante ato pela vitória de Lula",
    "veiculos": [
     "Alagoas 24 Horas",
-    "O Estado CE"
+    "Polêmica Paraíba"
    ]
   },
   {
-   "titulo": "Boca de urna e propaganda: o que é proibido na véspera e no dia da eleição",
+   "titulo": "Após derrota eleitoral, Flávio Bolsonaro ficará sem cargo público pela primeira vez em 24 anos",
    "veiculos": [
-    "Exame",
-    "Sul in Foco"
+    "O Estado CE",
+    "Portal AZ"
    ]
   },
   {
-   "titulo": "Votação deve durar 12 segundos por eleitor na Paraíba, aponta TRE",
+   "titulo": "Justiça Federal no Tocantins terá ponto facultativo nesta sexta-feira (30)",
    "veiculos": [
-    "Paraíba Já",
-    "Roraima 1"
+    "Atitude Tocantins",
+    "Gazeta do Cerrado"
    ]
   },
   {
-   "titulo": "Eleições 2026: saiba o que caracteriza o crime de boca de urna",
+   "titulo": "Apple lança iPad Mini com tela OLED e chip A20 Pro; veja preços no Brasil",
    "veiculos": [
-    "Brasília Agora",
-    "Rondoniagora"
+    "Tecnoblog",
+    "Ver-o-Fato"
    ]
   },
   {
-   "titulo": "Motociclista de 22 anos morre após bater de frente contra carro de aplicativo",
+   "titulo": "Brandão celebra reeleição de Lula e destaca força do Maranhão na vitória da democracia",
    "veiculos": [
-    "Leiagora",
-    "Sul in Foco"
+    "Domingos Costa",
+    "O Informante"
    ]
   },
   {
-   "titulo": "Flávio Bolsonaro vota no Rio e dispara: “O Brasil não aguenta mais quatro anos do jeito que está”",
+   "titulo": "PF investiga se problemas na circulação de ônibus prejudicaram eleitor",
    "veiculos": [
-    "Goiás 24 Horas",
-    "Portal M1 (Miséria)"
+    "Aqui Acontece",
+    "Blog do Elvis"
    ]
   },
   {
-   "titulo": "Teresina: Mulher é detida suspeita de injúria racial contra GCM durante votação",
+   "titulo": "Sine Alagoas disponibiliza 2.766 oportunidades de emprego nesta semana",
    "veiculos": [
-    "Cidadeverde.com",
-    "OitoMeia"
+    "Alagoas na Net",
+    "Aqui Acontece"
    ]
   },
   {
-   "titulo": "Violência nas eleições 2026: crianças são atropeladas em ato pró-Flávio Bolsonaro e vereadora do PT leva tijolada em MG",
+   "titulo": "EM OFF | Governador eleito Vicentinho Jr tem vitória gigante: a maior votação da história do Tocantins",
    "veiculos": [
-    "Goiás 24 Horas",
-    "OitoMeia"
+    "Cleber Toledo",
+    "Folha Capital"
    ]
   },
   {
-   "titulo": "De desacreditada a favorita, Mailza chega à decisão das urnas com vantagem sobre Alan Rick",
+   "titulo": "Lula é eleito presidente do Brasil. Pela 4ª vez. Em virada histórica.",
    "veiculos": [
-    "Acre Agora",
-    "Notícias da Hora"
+    "Agência Pública",
+    "Cinform"
    ]
   },
   {
-   "titulo": "É falso que mesários podem votar no lugar de eleitores ausentes",
+   "titulo": "Flamengo enfrenta Atlético-MG no Maracanã em busca de reabilitação",
+   "veiculos": [
+    "NF Notícias",
+    "O Liberal"
+   ]
+  },
+  {
+   "titulo": "Em medida de urgência, Zanin prorroga eleição até 19h em todo o país",
+   "veiculos": [
+    "Roraima Press",
+    "Só Sergipe"
+   ]
+  },
+  {
+   "titulo": "Vídeo sobre brasileiros impedidos de votar em Londres é do 1º turno",
    "veiculos": [
     "Agência Lupa",
-    "Jornal do Commercio (PE)"
+    "Aos Fatos"
    ]
   },
   {
-   "titulo": "Rafael Fonteles vota em Teresina e projeta vitória de Lula com menor abstenção",
+   "titulo": "Eric Bauza, modern voice of Bugs Bunny and other Looney Tunes characters, dies at 46",
    "veiculos": [
-    "Cidadeverde.com",
-    "OitoMeia"
+    "PBS",
+    "Expresso",
+    "NewZimbabwe"
    ]
   },
   {
-   "titulo": "Rádio Nacional transmite neste sábado Internacional x Botafogo",
+   "titulo": "El Vaticano confirma el viaje del papa León XIV a Uruguay, Argentina y Perú tras su operación",
    "veiculos": [
-    "Eixo Capital",
-    "Roraima Press"
+    "El Comercio (Peru)",
+    "ABC (Espanha)",
+    "La Nación (Argentina)"
    ]
   },
   {
-   "titulo": "Mais de 158,7 milhões vão às urnas; 1,74 mi votam em Sergipe",
+   "titulo": "Feijóo y Abascal pactan en el Senado que Vox se retire en seis provincias y el PP en tres",
    "veiculos": [
-    "AjuNews",
-    "News Rondônia"
+    "elDiario.es",
+    "El País",
+    "La Vanguardia"
    ]
   },
   {
-   "titulo": "Ifap abre inscrições para 880 vagas em cursos técnicos integrados ao Ensino Médio em 2027",
+   "titulo": "Anthropic begins countdown to IPO with prospectus filing",
    "veiculos": [
-    "Amapá Online",
-    "Roraima em Foco"
+    "Financial Times",
+    "Wired"
    ]
   },
   {
-   "titulo": "Assédio eleitoral",
+   "titulo": "Victoria histórica de Lula en Brasil",
    "veiculos": [
-    "Diário do Amapá",
-    "Zé Dudu"
+    "La Vanguardia",
+    "elDiarioAR"
    ]
   },
   {
-   "titulo": "Quaest: Flávio Bolsonaro tem 51% dos votos válidos, e Lula aparece com 49%",
+   "titulo": "CANLI | Çaykur Rizespor-Trabzonspor! İlk gol geldi",
    "veiculos": [
-    "Ceará Agora",
-    "Expressão Rondônia"
+    "Sabah",
+    "Sözcü"
    ]
   },
   {
-   "titulo": "12 injured, including 6 children, in shooting near Florida university, police say",
+   "titulo": "BEŞİKTAŞ BAŞAKŞEHİR CANLI | Beşiktaş, Başakşehir'i konuk ediyor!",
+   "veiculos": [
+    "Sabah",
+    "Sözcü"
+   ]
+  },
+  {
+   "titulo": "عارف: قهرمانی کشتی فرنگی ایران، جلوه‌ای از خودباوری و توانمندی نسل جوان است",
+   "veiculos": [
+    "IRNA",
+    "Iran International"
+   ]
+  },
+  {
+   "titulo": "Papa León XIV tras confirmar su visita a Perú: \"Me llena de alegría regresar al continente en el que he vivido tantos momentos\"",
+   "veiculos": [
+    "La República (Peru)",
+    "RPP"
+   ]
+  },
+  {
+   "titulo": "Judge reinstates Maurene Comey after ruling her firing unlawful",
    "veiculos": [
     "ABC News (EUA)",
-    "CBS News",
-    "NBC News"
+    "CBS News"
    ]
   },
   {
-   "titulo": "Feijóo relaciona a Sánchez con los disturbios de Barcelona: «Se están resistiendo a abandonar el poder con violencia»",
-   "veiculos": [
-    "ABC (Espanha)",
-    "El País",
-    "elDiario.es"
-   ]
-  },
-  {
-   "titulo": "Superquiz, Monday, October 26",
-   "veiculos": [
-    "The Age",
-    "Newsroom (Nova Zelândia)",
-    "The Sydney Morning Herald"
-   ]
-  },
-  {
-   "titulo": "As Israeli election looms, Trump advisers see opportunity beyond Netanyahu",
-   "veiculos": [
-    "Axios",
-    "Middle East Eye"
-   ]
-  },
-  {
-   "titulo": "Elecciones Brasil segunda vuelta 2026 EN VIVO: Lula da Silva vs. Flávio Bolsonaro por la presidencia",
-   "veiculos": [
-    "El Comercio (Peru)",
-    "La República (Peru)"
-   ]
-  },
-  {
-   "titulo": "Alianza Lima vs. CD Moquegua en vivo: horarios y canales para ver partido por Liga 1",
-   "veiculos": [
-    "El Comercio (Peru)",
-    "La República (Peru)"
-   ]
-  },
-  {
-   "titulo": "Dobrindt plant hohe Hürden für Vergesellschaftungen",
-   "veiculos": [
-    "ARD (Tagesschau)",
-    "taz"
-   ]
-  },
-  {
-   "titulo": "A third of households struggling to feed themselves",
-   "veiculos": [
-    "The Age",
-    "The Sydney Morning Herald"
-   ]
-  },
-  {
-   "titulo": "Best of cartoons, October 26, 2026",
-   "veiculos": [
-    "The Age",
-    "The Sydney Morning Herald"
-   ]
-  },
-  {
-   "titulo": "AFLW round 11: ‘Difficult decision’ as Dons sack inaugural coach; Kangas back on top",
-   "veiculos": [
-    "The Age",
-    "The Sydney Morning Herald"
-   ]
-  },
-  {
-   "titulo": "На свободу вышел последний из пяти полицейский, осужденных по делу о подбросе наркотиков журналисту Ивану Голунову",
+   "titulo": "Айтишнику Юрию Беленькому дали 13 лет по делу о донатах ВСУ. Его данные российским силовикам выдала криптобиржа Binance",
    "veiculos": [
     "Meduza",
-    "iStories / Vazhnye Istorii"
+    "The Insider"
+   ]
+  },
+  {
+   "titulo": "Microsoft tilbyr sluttpakke til 60.000 ansatte",
+   "veiculos": [
+    "Aftenposten",
+    "NRK"
+   ]
+  },
+  {
+   "titulo": "Habitação. Manifestantes detidos no Porto julgados a 13 de novembro",
+   "veiculos": [
+    "Diário de Notícias",
+    "Expresso"
+   ]
+  },
+  {
+   "titulo": "Elecciones en Brasil 2026: las 3 claves de la victoria de Lula frente a Bolsonaro en el balotaje",
+   "veiculos": [
+    "Chequeado",
+    "elDiarioAR"
+   ]
+  },
+  {
+   "titulo": "Stuck in the slow lane: Paper applicants left waiting months for $100 fuel relief",
+   "veiculos": [
+    "The Age",
+    "The Sydney Morning Herald"
+   ]
+  },
+  {
+   "titulo": "Anthropic files for IPO as it competes for dominance in AI arms race",
+   "veiculos": [
+    "CBS News",
+    "NPR"
+   ]
+  },
+  {
+   "titulo": "Mercados de Brasil tras las elecciones: por qué la bolsa y el real se movieron con fuerza",
+   "veiculos": [
+    "El Espectador",
+    "Reforma"
+   ]
+  },
+  {
+   "titulo": "No, estos vídeos de supuestos saqueadores condenados tras las recientes protestas en Francia no son reales: están hechos con IA",
+   "veiculos": [
+    "Maldita.es",
+    "Newtral"
+   ]
+  },
+  {
+   "titulo": "M1 reopened after SAMWU wage protest",
+   "veiculos": [
+    "SABC",
+    "eNCA"
+   ]
+  },
+  {
+   "titulo": "Kreuzfahrtschiff rammt zwei Containerschiffe in Bremerhaven",
+   "veiculos": [
+    "ARD (Tagesschau)",
+    "Frankfurter Allgemeine Zeitung (FAZ)"
+   ]
+  },
+  {
+   "titulo": "Best of cartoons, October 27, 2026",
+   "veiculos": [
+    "The Age",
+    "The Sydney Morning Herald"
+   ]
+  },
+  {
+   "titulo": "James Packer agrees to testify in Netanyahu’s corruption case",
+   "veiculos": [
+    "The Age",
+    "The Sydney Morning Herald"
+   ]
+  },
+  {
+   "titulo": "Bronkhorstspruit crisis highlights SA’s water service failures",
+   "veiculos": [
+    "Mail & Guardian",
+    "eNCA"
+   ]
+  },
+  {
+   "titulo": "Three times the nerves, three times the support: The triplets sitting VCE exams",
+   "veiculos": [
+    "The Age",
+    "The Sydney Morning Herald"
    ]
   }
  ]
