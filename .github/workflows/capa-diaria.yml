@@ -36,7 +36,7 @@ jobs:
       - name: Testar
         run: python -m pytest tests -q
       - name: Coletar manchetes e gerar edição
-        run: python capa.py --backend tfidf --min-veiculos 20
+        run: python capa.py --min-veiculos 20
       - name: Guardar diagnóstico
         if: always()
         uses: actions/upload-artifact@v4
@@ -72,3 +72,4 @@ jobs:
       - name: Publicar no GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+

@@ -1,143 +1,158 @@
-"""Testes rápidos (sem rede):  python -m pytest tests  ou  python tests/test_capa.py"""
+import json
 import sys
+from collections import Counter
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from types import SimpleNamespace
+
+import pytest
+from bs4 import BeautifulSoup
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import capa
+from editorial import classificar, mesmo_assunto, montar_editorias, tipo_publicacao
+
+AGORA = datetime(2026, 10, 22, 12, tzinfo=timezone.utc)
+FONTE = dict(nome='Fonte', site='https://example.org', pais='Brasil', uf='SP')
 
 
-def test_url_limpa_remove_rastreio_e_esquemas_invalidos():
-    assert capa.url_limpa("https://x.com/a?utm_source=t&id=3#topo") == "https://x.com/a?id=3"
-    assert capa.url_limpa("javascript:alert(1)") is None
-    assert capa.url_limpa("ftp://x.com/a") is None
+def entry(title, n=0, days=0):
+    return dict(title=title, link=f'https://example.org/{n}',
+                published=(AGORA-timedelta(days=days)).isoformat())
 
 
-def test_limpar_texto_tira_html_e_entidades():
-    assert capa.limpar_texto("<b>Alta&nbsp;do d&oacute;lar</b>  hoje") == "Alta do dólar hoje"
+@pytest.mark.parametrize('title,theme', [
+    ('Novo software aumenta segurança digital','tecnologia'),
+    ('OpenAI apresenta modelo de inteligência artificial','ia'),
+    ('AI improves research','ia'),
+    ('Cientistas estudam biodiversidade','ciencia'),
+    ('IBS e CBS: nova proposta para reforma tributária','tributaria'),
+    ('STJ decide sobre responsabilidade civil','juridico'),
+    ('STJ nega habeas corpus a preso por roubo',''),
+    ('Tecnologia ajuda polícia após assassinato',''),
+    ('Corrupção e propina são investigadas pelo STF',''),
+    ('LGPD: responsabilidade civil após roubo de dados','juridico'),
+    ('Clube anuncia contratação para campeonato',''),
+    ('CBS News announces new programming',''),
+    ('CBS terá novas regras para contribuintes','tributaria'),
+    ('Pesquisadores apontam risco à democracia se candidato for eleito',''),
+    ('Relator do STJ vota sobre acusado de ajudar em morte de família',''),
+    ('Contratos entram na mira do MP por suspeitas em licitação',''),
+])
+def test_classificar(title, theme):
+    assert classificar(title)[0] == theme
 
 
-def test_agrupamento_junta_o_mesmo_assunto_e_separa_o_resto():
-    titulos = [
-        "Banco Central mantém taxa de juros e sinaliza cautela",
-        "Banco Central mantém juros e sinaliza cautela com inflação",
-        "Terremoto de magnitude 6,8 atinge região costeira",
-        "Terremoto de 6,8 atinge a costa; sem alerta de tsunami",
-        "Escolas testam calendário com semana de quatro dias",
-    ]
-    grupos, _, _, _ = capa.agrupar(titulos, "tfidf", capa.LIMIAR_PADRAO["tfidf"])
-    conjuntos = sorted(sorted(g) for g in grupos)
-    assert conjuntos == [[0, 1], [2, 3], [4]]
+def test_limites_de_palavras_e_fonte():
+    assert classificar('Saia de praia é tendência')[0] == ''
+    assert classificar('Evento reúne servidores', especialidade='juridico')[0] == ''
+    assert classificar('New discovery announced', especialidade='ciencia')[0] == 'ciencia'
 
 
-def test_grupo_de_um_unico_veiculo_nao_vira_historia():
-    itens = [
-        {"veiculo": "A", "titulo": "Chuva forte alaga ruas", "titulo_exibicao": "Chuva forte alaga ruas", "url": "https://a/1",
-         "regiao": "Europa", "site": "https://a", "publicado": None},
-        {"veiculo": "A", "titulo": "Chuva forte alaga ruas da capital", "titulo_exibicao": "Chuva forte alaga ruas da capital",
-         "url": "https://a/2", "regiao": "Europa", "site": "https://a", "publicado": None},
-    ]
-    grupos, sim, _, _ = capa.agrupar([i["titulo_exibicao"] for i in itens], "tfidf", 0.4)
-    historias, consumidos = capa.montar_historias(itens, grupos, sim)
-    assert historias == [] and consumidos == set()
+def test_classifica_antes_de_limitar():
+    entries = [entry('Polícia investiga roubo no centro', i) for i in range(8)]
+    entries.append(entry('Guia da reforma tributária e IBS', 9))
+    itens = capa.extrair_itens(FONTE, SimpleNamespace(entries=entries), AGORA)
+    assert any(i['tema']=='tributaria' for i in itens)
+    assert len(itens) <= 5
 
 
-if __name__ == "__main__":
-    for nome, fn in list(globals().items()):
-        if nome.startswith("test_"):
-            fn(); print("ok", nome)
+def test_janelas_e_datas_invalidas():
+    entries = [entry('Reforma tributária: novos créditos',1,10),
+               entry('Software recebe atualização importante',2,5),
+               entry('STJ decide sobre contratos antigos',3,15),
+               entry('Inteligência artificial para pesquisa',4,-1),
+               dict(title='Cientistas estudam biodiversidade', link='https://example.org/5')]
+    itens=capa.extrair_itens(FONTE,SimpleNamespace(entries=entries),AGORA)
+    assert len(itens)==1 and itens[0]['tema']=='tributaria'
+    assert not itens[0]['geral']
 
 
-def test_datas_portuguesas_e_itens_sem_data():
-    from datetime import datetime, timezone
-    from types import SimpleNamespace
-    agora = datetime(2026, 9, 29, 15, tzinfo=timezone.utc)
-    v = dict(nome='Teste', site='https://example.com', pais='Brasil', regiao='América Latina')
-    titulo = 'Uma manchete suficientemente longa'
-    feed = SimpleNamespace(entries=[
-        dict(title=titulo, link='https://example.com/recente', published='Ter, 29 Set 2026 11:04:05 -0300'),
-        dict(title=titulo+' antiga', link='https://example.com/antiga', published='Mon, 20 Oct 2022 16:00:00 +0000'),
-        dict(title=titulo+' sem data', link='https://example.com/sem-data'),
-        dict(title=titulo+' futura', link='https://example.com/futura', published='Wed, 30 Sep 2026 16:00:00 +0000'),
-    ])
-    itens = capa.extrair_itens(v, feed, agora)
-    assert [i['url'] for i in itens] == ['https://example.com/recente']
-    assert itens[0]['publicado'] == '2026-09-29T14:04:05+00:00'
+def test_rotulos_nao_confirmam_vigencia():
+    assert tipo_publicacao('Proposta de lei altera IBS','tributaria')=='Proposta / discussão'
+    assert tipo_publicacao('STJ decide sobre contratos','juridico')=='Decisão / julgamento'
+    assert tipo_publicacao('Publicada portaria sobre CBS','tributaria')=='Publicação normativa'
+    assert tipo_publicacao('IBS em debate','tributaria')=='Notícia / análise'
 
 
-def test_cobertura_insuficiente_preserva_edicao(monkeypatch, tmp_path):
-    import sys
-    saida = tmp_path / 'docs'
-    saida.mkdir()
-    (saida / 'index.html').write_text('edição anterior')
-    monkeypatch.setattr(capa, 'RAIZ', tmp_path)
-    monkeypatch.setattr(capa, 'carregar_veiculos', lambda: [{}] * 40)
-    monkeypatch.setattr(capa, 'coletar', lambda *a: ([{'titulo':'notícia'}], {'consultados':40,'com_manchetes':1,'falhas':[]}))
-    monkeypatch.setattr(sys, 'argv', ['capa.py','--saida',str(saida)])
-    assert capa.principal() == 1
-    assert (saida / 'index.html').read_text() == 'edição anterior'
-    assert (tmp_path / 'data' / 'ultima_tentativa.json').exists()
+def test_diversidade_limite_e_duplicacao():
+    itens=[]
+    for n in range(20):
+        itens.append(dict(tema='ia',titulo=f'Modelo de inteligência artificial {n}',
+                          relevancia=10,timestamp=n,url=f'https://example.org/{n}',veiculo=f'Fonte {n//4}'))
+    itens.append(dict(itens[0],url='https://another.org/0',veiculo='Outra fonte'))
+    e=next(e for e in montar_editorias(itens) if e['id']=='ia')
+    assert len(e['destaques'])==7
+    assert max(Counter(i['veiculo'] for i in e['destaques']).values())<=2
+    assert e['total']==20
+    assert sum(len(i['relacionadas']) for i in e['destaques']+e['demais'])==1
+    assert not mesmo_assunto('tribunal aprova credito 10','tribunal nega credito 10')
+    assert not mesmo_assunto('tributo sobe 10','tributo sobe 20')
 
 
-def test_demo_funciona_com_lista_parcial(monkeypatch):
-    from datetime import datetime, timezone
-    selecionados = capa.carregar_veiculos()[:5]
-    itens, status = capa.carregar_demo(selecionados, datetime.now(timezone.utc))
-    assert status['consultados'] == 5
-    assert all(i['veiculo'] in {v['nome'] for v in selecionados} for i in itens)
+def test_fontes_regionais_preservadas():
+    fontes=capa.carregar_veiculos()
+    estados=Counter(v.get('uf') for v in fontes if v.get('uf'))
+    assert len(estados)==27
+    assert min(estados.values())>=10
+    assert len({v['site'].rstrip('/') for v in fontes})==len(fontes)
 
 
-def test_fontes_incluem_lista_original_sem_duplicatas():
-    import csv
-    fontes = capa.carregar_veiculos()
-    with (capa.RAIZ / 'outlets-completo.csv').open() as f:
-        originais = list(csv.DictReader(f))
-    sites = {v['site'] for v in fontes}
-    assert len(sites) == len(fontes)
-    assert len(fontes) >= 679
-    assert {v['site'] for v in originais} <= sites
-    assert all(capa.url_limpa(v['site']) for v in fontes)
-    assert all(not v['feed'] or capa.url_limpa(v['feed']) for v in fontes)
-    assert sum(bool(v['feed']) for v in fontes) >= 40
+def test_urls_e_datas():
+    assert capa.url_limpa('javascript:alert(1)') is None
+    assert capa.url_limpa('https://example.org/a?utm_source=x&id=3#x')=='https://example.org/a?id=3'
+    assert capa.data_item(dict(published='22 out 2026 09:00:00 -0300'))==AGORA
 
 
-def test_cobertura_brasil_todas_ufs():
-    from collections import Counter
-    fontes = [v for v in capa.carregar_veiculos() if v['pais'] == 'Brasil']
-    ufs = set('AC AL AP AM BA CE DF ES GO MA MT MS MG PA PB PR PE PI RJ RN RS RO RR SC SP SE TO'.split())
-    assert {v['uf'] for v in fontes if v.get('uf')} == ufs
-    assert {v['regiao_br'] for v in fontes if v.get('regiao_br')} == {'Norte','Nordeste','Centro-Oeste','Sudeste','Sul'}
-    contagem = Counter(v['uf'] for v in fontes if v.get('uf'))
-    assert all(contagem[uf] >= 10 for uf in ufs)
+def test_feed_especializado_nao_sonda_portal(monkeypatch):
+    monkeypatch.setattr(capa,'baixar_feed',lambda *a:None)
+    def unexpected(*a):
+        raise AssertionError('sondagem desnecessária')
+    monkeypatch.setattr(capa,'descobrir_feed',unexpected)
+    _,itens,erro=capa.processar_veiculo(dict(FONTE,tema='ia',feed='https://example.org/rss'),None,AGORA)
+    assert not itens and erro
 
 
-def test_quadro_cobertura_preserva_fontes_sem_manchetes():
-    fontes = capa.carregar_veiculos()
-    secoes, _ = capa.montar_secoes([], fontes, [], 'tfidf', .36)
-    cobertura = secoes[0]['cobertura']
-    assert len(cobertura) == 27
-    assert all(len(c['fontes']) >= 10 for c in cobertura)
-    assert all(c['manchetes'] == 0 for c in cobertura)
+def test_renderizacao_e_gerais(tmp_path):
+    fontes=capa.carregar_veiculos()
+    itens,status=capa.carregar_demo(fontes,AGORA)
+    itens[0]['titulo']='<script>alert(1)</script> software'
+    capa.publicar_paginas(itens,fontes,status,AGORA,tmp_path,False)
+    soup=BeautifulSoup((tmp_path/'index.html').read_text(),'html.parser')
+    assert len(soup.select('section.section'))==5
+    assert len(soup.select('article.card'))<=30
+    assert '<script>alert(1)</script>' not in str(soup)
+    assert 'roubo no centro' not in soup.get_text()
+    assert 'roubo no centro' in (tmp_path/'gerais.html').read_text()
+    assert len(list((tmp_path/'editorias').glob('*.html')))==5
+    assert (tmp_path/'edicoes/2026-10-22.html').exists()
+    assert (tmp_path/'edicoes/index.html').exists()
+    for a in soup.select('a[href]'):
+        href=a['href']
+        if not href.startswith('http'):
+            assert (tmp_path/href).exists(),href
 
 
-def test_grupos_separam_pelo_pais_e_nao_pelo_idioma():
-    titulo = 'Banco Central mantém taxa de juros e sinaliza cautela'
-    fontes = [dict(nome='Fonte BR', pais='Brasil', site='https://br.example', uf='RS', regiao_br='Sul'),
-              dict(nome='Fonte estrangeira em português', pais='Portugal', site='https://pt.example')]
-    itens = [dict(veiculo=v['nome'], pais=v['pais'], site=v['site'], regiao='Europa',
-                  titulo=titulo, titulo_exibicao=titulo, url=v['site']+'/noticia', publicado='2026-09-30T10:00:00+00:00') for v in fontes]
-    secoes, historias = capa.montar_secoes(itens, fontes, [], 'tfidf', .36)
-    assert [s['nome'] for s in secoes] == ['Brasil','Resto do mundo']
-    assert [s['manchetes'] for s in secoes] == [1,1]
-    assert historias == [] # títulos iguais em grupos distintos não se misturam
-    assert secoes[0]['destaque']['fontes'][0]['veiculo'] == 'Fonte BR'
-    assert secoes[1]['destaque']['fontes'][0]['veiculo'] == 'Fonte estrangeira em português'
-    assert secoes[0]['cobertura'][0]['uf'] == 'RS'
-    assert secoes[0]['cobertura'][0]['manchetes'] == 1
+def test_coleta_insuficiente_preserva_edicao(tmp_path,monkeypatch):
+    (tmp_path/'index.html').write_text('EDIÇÃO ANTERIOR')
+    monkeypatch.setattr(capa,'carregar_veiculos',lambda:[FONTE])
+    monkeypatch.setattr(capa,'coletar',lambda *a:([],dict(consultados=1,com_manchetes=0,falhas=[])))
+    monkeypatch.setattr(capa,'salvar_json',lambda *a:None)
+    monkeypatch.setattr(sys,'argv',['capa.py','--saida',str(tmp_path)])
+    assert capa.principal()==1
+    assert (tmp_path/'index.html').read_text()=='EDIÇÃO ANTERIOR'
 
 
-def test_grupo_vazio_e_falhas_ficam_no_grupo_correto():
-    fontes = [dict(nome='Fonte BR', pais='Brasil', site='https://br.example')]
-    secoes, historias = capa.montar_secoes([], fontes, [{'veiculo':'Fonte BR','motivo':'sem notícias'}], 'tfidf', .36)
-    assert historias == []
-    assert all(s['destaque'] is None for s in secoes)
-    assert len(secoes[0]['falhas']) == 1
-    assert secoes[1]['falhas'] == []
+def test_erro_na_renderizacao_preserva_edicao(tmp_path, monkeypatch):
+    fontes=capa.carregar_veiculos()
+    itens,status=capa.carregar_demo(fontes,AGORA)
+    (tmp_path/'index.html').write_text('EDIÇÃO ANTERIOR')
+    monkeypatch.setattr(capa,'carregar_veiculos',lambda:fontes)
+    monkeypatch.setattr(capa,'carregar_demo',lambda *a:(itens,status))
+    def falhar(*a):
+        raise RuntimeError('erro simulado')
+    monkeypatch.setattr(capa,'publicar_paginas',falhar)
+    monkeypatch.setattr(sys,'argv',['capa.py','--demo','--saida',str(tmp_path)])
+    with pytest.raises(RuntimeError):
+        capa.principal()
+    assert (tmp_path/'index.html').read_text()=='EDIÇÃO ANTERIOR'

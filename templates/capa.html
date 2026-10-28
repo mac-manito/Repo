@@ -2,238 +2,198 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Capa do Mundo, {{ edicao.data_curta }}</title>
-<link rel="icon" href="data:,">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,800;1,6..72,400&display=swap">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>{{ titulo }} · Capa do Mundo</title>
 <style>
-:root{
-  --papel:#e9ece8; --tinta:#121619; --fio:rgba(18,22,25,.28); --azul:#1d4b7c; --suave:#4b555c; --aviso:#fff3c4;
-  --serifa:"Newsreader",Georgia,"Times New Roman",serif;
-  --fio-sans:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){ --papel:#14181b; --tinta:#e6e9e4; --fio:rgba(230,233,228,.28); --azul:#93bde8; --suave:#a3adb3; --aviso:#3a3416; }
-}
-:root[data-theme="dark"]{ --papel:#14181b; --tinta:#e6e9e4; --fio:rgba(230,233,228,.28); --azul:#93bde8; --suave:#a3adb3; --aviso:#3a3416; }
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--papel);color:var(--tinta);font:400 1.0625rem/1.45 var(--serifa)}
+:root{--paper:#f7f5ef;--ink:#202e29;--muted:#59675f;--line:#cdd3c9;--green:#185d49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd761c;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);padding:28px 0 16px}
+.masthead{font:700 clamp(30px,5vw,52px)/1.1 Georgia,serif;text-decoration:none;letter-spacing:-2px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eyebrow,.meta{font-size:12px;color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:14px}
+nav a{text-decoration:none}
+.intro{padding:40px 0 24px}
+h1{font:normal clamp(32px,5vw,56px)/1.1 Georgia,serif;letter-spacing:-1px;margin:10px 0 16px}
+h2{font:normal 30px/1.2 Georgia,serif;margin:0}
+h3{font:normal 23px/1.3 Georgia,serif;margin:12px 0}
+.intro p{max-width:760px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;padding:20px;background:#eaf0e8;border:1px solid var(--line);align-items:end}
+label{display:flex;flex-direction:column;font-size:12px;gap:6px;flex:1;min-width:140px}
+input,select,button{font:inherit;color:inherit;padding:10px;border:1px solid #9aa89d;background:var(--paper);border-radius:3px}
+button{cursor:pointer}
+.status{font-size:13px;color:var(--muted);min-height:22px}
+.section{margin:36px 0;border-top:2px solid var(--ink);padding-top:18px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.section-head a{font-size:13px;white-space:nowrap}
+.description{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.card{padding:24px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.card h3 a{text-decoration:none}
+.badge{display:inline-block;font-size:11px;color:var(--green);border:1px solid #b6c8bc;border-radius:3px;padding:2px 6px;margin:8px 3px 0 0}
+.source{font-size:13px;font-weight:650}
+.card details{font-size:12px;margin-top:12px}
+.card details li{margin-top:8px}
+summary{cursor:pointer}
+.notice{padding:14px 18px;background:#eee5d3;border-left:3px solid #a77624;font-size:14px}
+.empty{color:var(--muted);padding:20px 0}
+.coverage{margin-top:28px;font-size:14px}
+.coverage ul{columns:2;padding-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;margin-top:50px;font-size:12px;color:var(--muted)}
 [hidden]{display:none!important}
-a:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--azul);outline-offset:2px}
-
-.pagina{max-width:1180px;margin:0 auto;padding:0 max(1rem,env(safe-area-inset-right)) 3rem max(1rem,env(safe-area-inset-left))}
-
-/* cabeçalho */
-.cabeca{text-align:center;padding:1.5rem 0 .7rem;border-bottom:4px double var(--tinta)}
-.cabeca h1{margin:0;font-weight:800;font-size:clamp(2.7rem,9.5vw,5.8rem);line-height:.95;letter-spacing:-.02em}
-.cabeca p{margin:.45rem 0 0;font-style:italic;color:var(--suave)}
-.faixa{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.3rem 1.5rem;padding:.5rem 0;border-bottom:1px solid var(--tinta);font:600 .8125rem/1.25 var(--fio-sans)}
-.numeros{display:flex;flex-wrap:wrap;font-weight:400;color:var(--suave)}
-.numeros span{padding:0 .85rem;border-left:1px solid var(--fio)}
-.numeros span:first-child{padding-left:0;border-left:0}
-.numeros b{color:var(--tinta);font-weight:600}
-.aviso{margin:.8rem 0 0;padding:.6rem .8rem;background:var(--aviso);border:1px solid var(--tinta);font:400 .875rem/1.35 var(--fio-sans)}
-.busca{padding:.7rem 0;border-bottom:1px solid var(--fio)}
-.busca input{width:100%;padding:.5rem 0;border:0;border-bottom:1px solid var(--tinta);background:transparent;color:inherit;font:400 1rem var(--fio-sans);border-radius:0}
-
-/* títulos e fontes */
-.t a{color:inherit;text-decoration:none}
-.t a:hover{color:var(--azul);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.15em}
-.fontes{margin:.4rem 0 0;font:400 .8125rem/1.4 var(--fio-sans);color:var(--suave)}
-.fontes .n{margin-right:.45rem;font-weight:600;color:var(--tinta)}
-.fontes a{color:var(--azul);text-decoration:none}
-.fontes a:hover{text-decoration:underline}
-.fontes .l a:not(:last-child)::after{content:",";color:var(--suave)}
-.orig{margin:.25rem 0 0;font-style:italic;font-size:.9rem;color:var(--suave)}
-
-/* topo: manchete + lateral */
-.topo{display:grid;grid-template-columns:minmax(0,1.85fr) minmax(0,1fr);border-bottom:1px solid var(--tinta)}
-.principal{padding:1.3rem 1.5rem 1.5rem 0;border-right:1px solid var(--fio)}
-.principal .t{margin:0 0 .5rem;font-weight:800;font-size:clamp(2rem,5.4vw,3.7rem);line-height:1.04;letter-spacing:-.01em}
-.principal .fontes{font-size:.875rem}
-.cada{margin:1rem 0 0;border-top:1px solid var(--fio);padding-top:.5rem}
-.cada summary{cursor:pointer;font:600 .875rem var(--fio-sans)}
-.cada ul{list-style:none;margin:.6rem 0 0;padding:0;font-size:.98rem;line-height:1.35}
-.cada li{margin:0 0 .45rem}
-.cada li a{font:600 .8125rem var(--fio-sans);color:var(--azul);text-decoration:none;margin-right:.4rem}
-.lateral{padding:1.3rem 0 1.2rem 1.5rem}
-.lateral h2,.secao{margin:0;font:600 1rem/1.2 var(--fio-sans)}
-.lateral .historia{padding:.8rem 0;border-bottom:1px solid var(--fio)}
-.lateral .historia:last-child{border-bottom:0}
-@media (max-width:820px){
-  .topo{grid-template-columns:1fr}
-  .principal{padding-right:0;border-right:0;border-bottom:1px solid var(--tinta)}
-  .lateral{padding-left:0}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.top{align-items:start;flex-direction:column}
+.wrap{padding:0 20px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}
+.section-head{align-items:start;flex-direction:column;gap:8px}
+.coverage ul{columns:1}
+h3{font-size:24px}
+.intro{padding-top:28px}
 }
 
-/* histórias: o tamanho do título acompanha quantos veículos deram o assunto */
-.historia .t{margin:0;line-height:1.12}
-.peso-2 .t{font-size:1.06rem;font-weight:600}
-.peso-3 .t{font-size:1.2rem;font-weight:600}
-.peso-4 .t{font-size:1.38rem;font-weight:800}
-.peso-5 .t{font-size:1.65rem;font-weight:800;line-height:1.08}
-.secao{margin:1.6rem 0 0;padding-top:.5rem;border-top:4px double var(--tinta)}
-.colunas{column-width:19rem;column-gap:1.6rem;column-rule:1px solid var(--fio);padding-top:.8rem}
-.colunas .historia{break-inside:avoid;margin:0 0 .9rem;padding:0 0 .9rem;border-bottom:1px solid var(--fio)}
-
-/* regiões */
-details.regiao{border-top:1px solid var(--tinta)}
-details.regiao:last-of-type{border-bottom:1px solid var(--tinta)}
-details.regiao>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.75rem 0}
-details.regiao>summary::-webkit-details-marker{display:none}
-details.regiao>summary .nome{font-size:1.45rem;font-weight:800}
-details.regiao>summary .qtd{font:400 .8125rem var(--fio-sans);color:var(--suave);margin-left:auto}
-details.regiao>summary::after{content:"+";font:600 1.3rem var(--fio-sans)}
-details.regiao[open]>summary::after{content:"\2212"}
-.veiculos{column-width:17rem;column-gap:1.6rem;column-rule:1px solid var(--fio);padding:.3rem 0 1rem}
-.veiculo{break-inside:avoid;margin:0 0 1rem}
-.veiculo h4{margin:0 0 .25rem;font:600 .875rem/1.2 var(--fio-sans)}
-.veiculo h4 a{color:var(--azul);text-decoration:none}
-.veiculo h4 span{font-weight:400;color:var(--suave)}
-.veiculo ul{list-style:none;margin:0;padding:0}
-.veiculo li{margin:0 0 .35rem;font-size:.98rem;line-height:1.3}
-.veiculo li a{color:inherit;text-decoration:none}
-.veiculo li a:hover{color:var(--azul);text-decoration:underline}
-
-.rodape{margin-top:2rem;padding-top:.8rem;border-top:4px double var(--tinta);font:400 .8125rem/1.5 var(--fio-sans);color:var(--suave)}
-.rodape details{margin:.6rem 0}
-.rodape summary{cursor:pointer;font-weight:600;color:var(--tinta)}
-.rodape ul{columns:16rem;margin:.5rem 0 0;padding-left:1.1rem}
-.grupos-nav{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0;font-family:var(--fio-sans)}
-.grupos-nav a{padding:.65rem 1rem;border:1px solid var(--tinta);color:var(--tinta);text-decoration:none}
-.grupo{scroll-margin-top:1rem;margin-top:2rem}
-.grupo>h2{font-size:2rem;border-bottom:4px double var(--tinta);margin:0}
-.grupo-resumo{font:400 .875rem/1.4 var(--fio-sans);color:var(--suave)}
-.falhas-grupo{margin:1rem 0;font:400 .875rem/1.4 var(--fio-sans)}
-.falhas-grupo ul{columns:18rem;padding-left:1.2rem}
 </style>
 </head>
 <body>
-<div class="pagina">
-
-<header class="cabeca">
-  <h1>Capa do Mundo</h1>
-  <p>Notícias do mundo · {{ numeros.consultados }} fontes acompanhadas · edição diária</p>
+<div class="wrap">
+<header>
+<div class="top">
+<a class="masthead" href="{{ base }}index.html">Capa do Mundo<span style="color:var(--green)">.</span>
+</a>
+<div class="meta">Atualizado em {{ atualizacao }} · Brasília<br>{{ fontes_ativas }} de {{ total_fontes }} fontes com notícias</div>
+</div>
+<nav aria-label="Navegação principal">
+<a href="{{ base }}index.html">Capa temática</a>
+<a href="{{ base }}editorias/tecnologia.html">Tecnologia</a>
+<a href="{{ base }}editorias/ia.html">Inteligência artificial</a>
+<a href="{{ base }}editorias/ciencia.html">Ciência</a>
+<a href="{{ base }}editorias/tributaria.html">Tributária</a>
+<a href="{{ base }}editorias/juridico.html">Jurídico</a>
+<a href="{{ base }}gerais.html">Notícias gerais</a>
+<a href="{{ base }}edicoes/index.html">Arquivo</a>
+</nav>
 </header>
-<div class="faixa">
-  <span>{{ edicao.data }}</span>
-  <span class="numeros">
-    <span><b>{{ numeros.veiculos }}</b> veículos com manchetes</span>
-    <span><b>{{ numeros.manchetes }}</b> manchetes lidas</span>
-    <span><b>{{ numeros.historias }}</b> assuntos em mais de um veículo</span>
-  </span>
+<main>
+<div class="intro">
+<div class="eyebrow">Informação para acompanhar o que importa</div>
+<h1>{{ titulo }}</h1>{% if pagina == 'capa' %}
+<p>Tecnologia, inteligência artificial, ciência, tributação e direito. Uma seleção por assunto, com diferentes fontes e acesso direto à publicação original.</p>{% elif pagina == 'gerais' %}
+<p>A cobertura regional e internacional continua aqui, com as notícias publicadas nas últimas 36 horas.</p>{% endif %}
 </div>
 {% if demo %}
-<p class="aviso"><strong>Prévia do layout.</strong> Os títulos abaixo são fictícios e os links levam à página inicial de cada veículo. A edição real usa as manchetes publicadas nos feeds de cada veículo.</p>
-{% endif %}
-<p class="aviso">Atualização programada para as 7h de Brasília, sujeita a atrasos. Manchetes no idioma original de cada fonte. {% if not demo %}<a href="{{ arquivo_href }}">Edições anteriores</a>{% endif %}</p>
-<div class="busca"><input id="q" type="search" placeholder="Filtrar por palavra ou veículo" aria-label="Filtrar manchetes"></div>
-<nav class="grupos-nav" aria-label="Grupos de fontes">
-{% for s in secoes %}<a href="#{{ s.id }}">{{ s.nome }} · {{ s.ativos }} veículos com notícias</a>{% endfor %}
-</nav>
-<p class="grupo-resumo">Divisão pelo país do veículo, não pelo assunto da notícia. No Brasil, a UF indica a base de cobertura local, não uma garantia de cobertura de todos os municípios.</p>
-
-{% macro fontes(h) -%}
-<p class="fontes"><span class="n">{{ h.n }} {{ 'veículo' if h.n == 1 else 'veículos' }}</span><span class="l">{% for f in h.fontes %}<a href="{{ f.url }}" title="{{ f.original }}" target="_blank" rel="noopener noreferrer">{{ f.veiculo }}</a> {% endfor %}</span></p>
-{%- endmacro %}
-
-{% for s in secoes %}
-{% set destaque = s.destaque %}
-{% set laterais = s.laterais %}
-{% set demais = s.demais %}
-{% set regioes = s.regioes %}
-<section class="grupo" id="{{ s.id }}" aria-labelledby="titulo-{{ s.id }}">
-<h2 id="titulo-{{ s.id }}">{{ s.nome }}</h2>
-<p class="grupo-resumo">{{ s.consultados }} fontes cadastradas · {{ s.ativos }} com notícias · {{ s.manchetes }} manchetes nesta edição</p>
-{% if s.cobertura %}
-<details class="falhas-grupo"><summary>Cobertura local: {{ s.cobertura|length }} UFs cadastradas — consulte fontes e disponibilidade</summary>
-<ul>{% for c in s.cobertura %}<li><strong>{{ c.uf }} · {{ c.fontes|length }} fontes</strong>: {% for v in c.fontes %}<a href="{{ v.site }}" target="_blank" rel="noopener noreferrer">{{ v.nome }}</a>{% if not loop.last %}, {% endif %}{% endfor %} — {{ c.manchetes }} manchetes nesta edição</li>{% endfor %}</ul>
-</details>
-{% endif %}
-{% if destaque %}
-<section class="topo">
-  <article class="principal" data-busca="{{ destaque.busca }}">
-    <h2 class="t"><a href="{{ destaque.url }}" target="_blank" rel="noopener noreferrer">{{ destaque.titulo }}</a></h2>
-    {% if destaque.original != destaque.titulo %}<p class="orig">{{ destaque.original }}</p>{% endif %}
-    {{ fontes(destaque) }}
-    {% if destaque.n > 1 %}
-    <details class="cada">
-      <summary>Como cada veículo chamou o assunto</summary>
-      <ul>{% for f in destaque.fontes %}<li><a href="{{ f.url }}" target="_blank" rel="noopener noreferrer">{{ f.veiculo }}</a>{{ f.titulo }}</li>{% endfor %}</ul>
-    </details>
-    {% endif %}
-  </article>
-  <aside class="lateral">
-    {% if laterais %}<h2>Também em vários veículos</h2>{% endif %}
-    {% for h in laterais %}
-    <article class="historia peso-{{ h.peso }}" data-busca="{{ h.busca }}">
-      <h3 class="t"><a href="{{ h.url }}" target="_blank" rel="noopener noreferrer">{{ h.titulo }}</a></h3>
-      {{ fontes(h) }}
-    </article>
-    {% endfor %}
-  </aside>
-</section>
-{% else %}
-<p>Nenhuma manchete recente disponível neste grupo.</p>
-{% endif %}
-
-{% if demais %}
-<h2 class="secao">Mais assuntos repetidos</h2>
-<section class="colunas">
-  {% for h in demais %}
-  <article class="historia peso-{{ h.peso }}" data-busca="{{ h.busca }}">
-    <h3 class="t"><a href="{{ h.url }}" target="_blank" rel="noopener noreferrer">{{ h.titulo }}</a></h3>
-    {{ fontes(h) }}
-  </article>
-  {% endfor %}
-</section>
-{% endif %}
-
-{% if regioes %}<h3 class="secao">Outras manchetes por região</h3>{% endif %}
-{% for r in regioes %}
-<details class="regiao"{% if loop.first %} open{% endif %}>
-  <summary><span class="nome">{{ r.nome }}</span><span class="qtd">{{ r.veiculos|length }} veículos, {{ r.total }} manchetes</span></summary>
-  <div class="veiculos">
-    {% for v in r.veiculos %}
-    <div class="veiculo" data-busca="{{ v.busca }}">
-      <h4><a href="{{ v.site }}" target="_blank" rel="noopener noreferrer">{{ v.nome }}</a> <span>{{ v.uf or v.pais }}</span></h4>
-      <ul>{% for i in v.itens %}<li><a href="{{ i.url }}" title="{{ i.original }}" target="_blank" rel="noopener noreferrer">{{ i.titulo }}</a></li>{% endfor %}</ul>
-    </div>
-    {% endfor %}
-  </div>
-</details>
+<p class="notice">Demonstração: todos os títulos desta prévia são fictícios.</p>{% endif %}
+{% if pagina != 'arquivo' %}
+<form class="filters" id="filters" role="search">
+<label>Buscar nesta página<input id="search" type="search" placeholder="Assunto ou fonte">
+</label>
+<label>Origem da fonte<select id="origin">
+<option value="">Todas</option>
+<option value="brasil">Brasil</option>
+<option value="mundo">Resto do mundo</option>
+</select>
+</label>
+<label>Estado da fonte<select id="uf">
+<option value="">Todos / nacionais</option>{% for uf in ufs %}
+<option value="{{ uf }}">{{ uf }}</option>{% endfor %}
+</select>
+</label>
+<button type="reset">Limpar filtros</button>
+</form>
+<p class="status" id="status" aria-live="polite">
+</p>
+<p class="empty" id="no-results" hidden>Nenhuma notícia corresponde aos filtros nesta página. Consulte também a página da editoria para ver mais notícias.</p>{% endif %}
+{% macro noticia(i) %}
+<article class="card" data-origin="{{ 'brasil' if i.pais == 'Brasil' else 'mundo' }}" data-uf="{{ i.uf }}" data-search="{{ i.titulo }} {{ i.veiculo }} {{ i.pais }}">
+<div class="source">{{ i.veiculo }}</div>
+<div class="meta">{{ i.pais }}
+{% if i.uf %} · {{ i.uf }}
+{% endif %} · {{ i.publicado }}</div>
+<h3>
+<a href="{{ i.url }}" target="_blank" rel="noopener noreferrer">{{ i.titulo }}</a>
+</h3>{% if i.natureza != 'jornalismo' %}
+<span class="badge">{{ {'empresa':'Fonte: empresa','oficial':'Fonte oficial','institucional':'Fonte institucional'}.get(i.natureza,i.natureza) }}</span>{% endif %}
+{% if i.tipo %}
+<span class="badge">{{ i.tipo }}</span>{% endif %}
+{% if i.relacionadas %}
+<details>
+<summary>Também publicado por {{ i.relacionadas|length }} fonte(s)</summary>
+<ul>{% for r in i.relacionadas %}
+<li>
+<a href="{{ r.url }}" target="_blank" rel="noopener noreferrer">{{ r.veiculo }} — {{ r.titulo }}</a>
+</li>{% endfor %}
+</ul>
+</details>{% endif %}
+</article>{% endmacro %}
+{% if pagina in ['capa','editoria'] %}
+{% for e in editorias %}
+<section class="section" id="{{ e.id }}">
+<div class="section-head">
+<h2>{{ e.nome }}</h2>{% if pagina == 'capa' %}
+<a href="{{ base }}editorias/{{ e.id }}.html">Ver editoria · {{ e.total }} notícias →</a>{% endif %}
+</div>
+<p class="description">{{ e.descricao }} · Publicações dos últimos {{ e.dias }} dias.</p>{% if e.id in ['tributaria','juridico'] %}
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>{% endif %}
+<div class="grid">{% for i in e.destaques %}
+{{ noticia(i) }}
 {% endfor %}
-{% if s.falhas %}
-<details class="falhas-grupo"><summary>{{ s.falhas|length }} fontes de {{ s.nome }} sem manchetes nesta edição</summary>
-<ul>{% for f in s.falhas %}<li>{{ f.veiculo }} — {{ f.motivo }}</li>{% endfor %}</ul></details>
-{% endif %}
-</section>
+</div>{% if not e.destaques %}
+<p class="empty">Nenhuma notícia recente selecionada nesta atualização.</p>{% endif %}
+{% if pagina == 'editoria' and e.demais %}
+<h3>Mais notícias da editoria</h3>
+<div class="grid">{% for i in e.demais %}
+{{ noticia(i) }}
 {% endfor %}
-
-<footer class="rodape">
-  <p>Edição gerada em {{ edicao.gerada_em }} (horário de Brasília). A página mostra só títulos e links; o conteúdo pertence a cada veículo.
-  A seleção usa feeds públicos, que podem ser gerais ou de editorias específicas; não representa necessariamente a capa editorial de cada veículo. O acesso ao texto completo pode exigir assinatura do veículo. Manchetes sobre o mesmo assunto são reunidas por similaridade de texto{% if traduzida %}, depois de traduzidas para o português{% endif %}, então o agrupamento pode errar em casos limítrofes.</p>
-</footer>
-
+</div>{% endif %}
+</section>{% endfor %}
+{% elif pagina == 'gerais' %}
+{% for g in grupos %}
+<section class="section">
+<div class="section-head">
+<h2>{{ g.nome }}</h2>
+<span class="meta">{{ g.consultados }} fontes cadastradas</span>
+</div>
+<div class="grid">{% for i in g.itens %}
+{{ noticia(i) }}
+{% endfor %}
+</div>{% if not g.itens %}
+<p class="empty">Sem notícias recentes nesta atualização.</p>{% endif %}
+{% if g.cobertura %}
+<details class="coverage">
+<summary>Fontes brasileiras por estado e Distrito Federal</summary>{% for estado in g.cobertura %}
+<h3>{{ estado.uf }} · {{ estado.fontes|length }} fontes</h3>
+<ul>{% for f in estado.fontes %}
+<li>
+<a href="{{ f.site }}" target="_blank" rel="noopener noreferrer">{{ f.nome }}</a>
+</li>{% endfor %}
+</ul>{% endfor %}
+</details>{% endif %}
+{% if g.falhas %}
+<details class="coverage">
+<summary>{{ g.falhas|length }} fontes sem notícias nesta atualização</summary>
+<ul>{% for f in g.falhas %}
+<li>{{ f.veiculo }} — {{ f.motivo }}</li>{% endfor %}
+</ul>
+</details>{% endif %}
+</section>{% endfor %}
+{% elif pagina == 'arquivo' %}
+<ul>{% for dia in arquivo %}
+<li>
+<a href="{{ dia }}.html">{{ dia }}</a>
+</li>{% endfor %}
+</ul>{% endif %}
+</main>
+<footer>Seleção automática por regras de assunto, relevância e data. Até dois destaques por fonte em cada editoria. Os filtros consideram a origem da fonte principal, não o local do acontecimento. Títulos no idioma original; nenhuma tradução ou resumo gerado por IA. A disponibilidade depende dos feeds públicos.<br>
+<a href="https://github.com/mac-manito/Repo">Código e metodologia</a> · Links externos abrem a publicação original.</footer>
 </div>
 <script>
-(function(){
-  var q=document.getElementById('q'); if(!q) return;
-  var alvos=[].slice.call(document.querySelectorAll('[data-busca]'));
-  var regs=[].slice.call(document.querySelectorAll('details.regiao'));
-  var estado=regs.map(function(d){return d.open;});
-  q.addEventListener('input',function(){
-    var norm=function(s){return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();};
-    var t=norm(q.value.trim());
-    alvos.forEach(function(el){ el.hidden = !!t && norm(el.getAttribute('data-busca')).indexOf(t)<0; });
-    regs.forEach(function(d,i){ d.open = t ? true : estado[i]; });
-  });
-})();
+(()=>{const form=document.querySelector('#filters');if(!form)return;const search=document.querySelector('#search'),origin=document.querySelector('#origin'),uf=document.querySelector('#uf'),cards=[...document.querySelectorAll('.card')];const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const terms=cards.map(c=>norm(c.dataset.search));function filter(){if(origin.value==='mundo')uf.value='';uf.disabled=origin.value==='mundo';const query=norm(search.value).trim();let count=0;cards.forEach((card,i)=>{const match=(!origin.value||card.dataset.origin===origin.value)&&(!uf.value||card.dataset.uf===uf.value)&&terms[i].includes(query);card.hidden=!match;if(match)count++});document.querySelector('#status').textContent=count+' de '+cards.length+' notícias exibidas nesta página';document.querySelector('#no-results').hidden=count>0}form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter()})();
 </script>
 </body>
 </html>

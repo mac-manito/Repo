@@ -1,0 +1,131 @@
+[
+  {
+    "nome": "Agência FAPESP",
+    "site": "https://agencia.fapesp.br",
+    "pais": "Brasil",
+    "tema": "ciencia",
+    "tipo": "institucional",
+    "feed": "https://agencia.fapesp.br/rss"
+  },
+  {
+    "nome": "ScienceDaily",
+    "site": "https://www.sciencedaily.com",
+    "pais": "EUA",
+    "tema": "ciencia",
+    "tipo": "jornalismo",
+    "feed": "https://www.sciencedaily.com/rss/all.xml"
+  },
+  {
+    "nome": "MIT News — IA",
+    "site": "https://news.mit.edu/topic/artificial-intelligence2",
+    "pais": "EUA",
+    "tema": "ia",
+    "tipo": "institucional",
+    "feed": "https://news.mit.edu/rss/topic/artificial-intelligence2"
+  },
+  {
+    "nome": "Google — IA",
+    "site": "https://blog.google/technology/ai",
+    "pais": "EUA",
+    "tema": "ia",
+    "tipo": "empresa",
+    "feed": "https://blog.google/technology/ai/rss/"
+  },
+  {
+    "nome": "Hugging Face",
+    "site": "https://huggingface.co/blog",
+    "pais": "EUA",
+    "tema": "ia",
+    "tipo": "empresa",
+    "feed": "https://huggingface.co/blog/feed.xml"
+  },
+  {
+    "nome": "Google DeepMind",
+    "site": "https://deepmind.google/blog",
+    "pais": "Reino Unido",
+    "tema": "ia",
+    "tipo": "empresa",
+    "feed": "https://deepmind.google/blog/rss.xml"
+  },
+  {
+    "nome": "OpenAI",
+    "site": "https://openai.com/news",
+    "pais": "EUA",
+    "tema": "ia",
+    "tipo": "empresa",
+    "feed": "https://openai.com/news/rss.xml"
+  },
+  {
+    "nome": "Receita Federal",
+    "site": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias",
+    "pais": "Brasil",
+    "tema": "tributaria",
+    "tipo": "oficial",
+    "feed": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/RSS"
+  },
+  {
+    "nome": "Portal Contábeis",
+    "site": "https://www.contabeis.com.br",
+    "pais": "Brasil",
+    "tema": "tributaria",
+    "tipo": "jornalismo",
+    "feed": "https://www.contabeis.com.br/rss/noticias/"
+  },
+  {
+    "nome": "STJ",
+    "site": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias.aspx",
+    "pais": "Brasil",
+    "tema": "juridico",
+    "tipo": "oficial",
+    "feed": "https://res.stj.jus.br/hrestp-c-portalp/RSS.xml"
+  },
+  {
+    "nome": "JOTA",
+    "site": "https://www.jota.info",
+    "pais": "Brasil",
+    "tema": "tributaria",
+    "tipo": "jornalismo",
+    "feed": "https://www.jota.info/feed/"
+  },
+  {
+    "nome": "STF",
+    "site": "https://noticias.stf.jus.br",
+    "pais": "Brasil",
+    "tema": "juridico",
+    "tipo": "oficial",
+    "feed": "https://noticias.stf.jus.br/feed/"
+  },
+  {
+    "nome": "Manual do Usuário",
+    "site": "https://manualdousuario.net",
+    "pais": "Brasil",
+    "regiao": "América Latina",
+    "feed": "https://manualdousuario.net/feed/",
+    "uf": "",
+    "regiao_br": "",
+    "tema": "tecnologia",
+    "tipo": "jornalismo"
+  },
+  {
+    "nome": "Tecnoblog",
+    "site": "https://tecnoblog.net",
+    "pais": "Brasil",
+    "regiao": "América Latina",
+    "feed": "https://tecnoblog.net/feed/",
+    "uf": "",
+    "regiao_br": "",
+    "tema": "tecnologia",
+    "tipo": "jornalismo"
+  },
+  {
+    "nome": "Ars Technica",
+    "site": "https://arstechnica.com",
+    "pais": "EUA",
+    "regiao": "América do Norte",
+    "feed": "https://feeds.arstechnica.com/arstechnica/index",
+    "uf": "",
+    "regiao_br": "",
+    "tema": "tecnologia",
+    "tipo": "jornalismo"
+  }
+]

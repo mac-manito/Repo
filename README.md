@@ -1,75 +1,86 @@
 # Capa do Mundo
 
-Agregador pessoal de manchetes de **679 fontes: 298 do Brasil e 381 do restante do mundo**.
-Página pública, responsiva, com busca, agrupamento de assuntos e histórico das últimas 90 edições.
+Agregador de títulos e links, com capa temática e notícias gerais separadas.
+Site: https://mac-manito.github.io/Repo/
 
-## Brasil e Resto do mundo
+## Capa temática
 
-A página tem dois grupos, definidos pelo país cadastrado do veículo — não pelo idioma
-ou pelo assunto da notícia. Destaques e agrupamentos são calculados separadamente;
-as fontes estrangeiras não aparecem nos destaques brasileiros, nem o contrário.
+| Editoria | Destaques máximos | Janela de publicação |
+|---|---:|---:|
+| Tecnologia | 5 | 3 dias |
+| Inteligência artificial | 7 | 7 dias |
+| Ciência | 5 | 7 dias |
+| Tributária e reforma tributária | 8 | 14 dias |
+| Jurídico | 5 | 14 dias |
 
-O cadastro inclui 270 fontes locais brasileiras: dez em cada estado e no Distrito Federal,
-além das 28 fontes nacionais/especializadas anteriores. Consulte [a lista por UF e os feeds](FONTES_BRASIL.md).
-Os endereços RSS identificados são cadastrados diretamente; para fontes sem feed confirmado,
-o coletor mantém a descoberta automática. Dez fontes cadastradas não garantem dez fontes
-com notícias em toda edição: disponibilidade e frequência de publicação variam.
-A seção Brasil mostra as cinco regiões, a UF das fontes locais e um quadro de cobertura
-por UF, inclusive quando não houver notícias recentes. Isso não significa cobertura
-de todos os municípios. Os 28 veículos brasileiros anteriores foram preservados.
+Cada editoria tem sua própria página com as demais notícias selecionadas. A capa
+limita a dois destaques por fonte em cada editoria. Quando faltam notícias, exibe
+menos destaques; nunca inventa conteúdo para preencher espaços.
 
-## Colocar no ar — uma configuração
+Notícias gerais ficam em `gerais.html`, em dois grupos: Brasil e resto do mundo.
+Mantivemos as 679 fontes anteriores, incluindo dez por estado brasileiro e Distrito
+Federal. Doze fontes especializadas foram acrescentadas, totalizando 691 fontes.
+A lista por UF continua disponível nessa página e em [FONTES_BRASIL.md](FONTES_BRASIL.md).
+Cadastro não garante publicação diária nem disponibilidade do RSS.
 
-1. Neste repositório, abra **Settings → Pages**.
-2. Em **Build and deployment → Source**, selecione **GitHub Actions**.
-3. Abra **Actions → Capa diária → Run workflow → Run workflow**.
-4. Aguarde os trabalhos `gerar` e `publicar` terminarem. O endereço previsto é:
-   **https://mac-manito.github.io/Repo/**.
+Busca e filtros por origem e UF atuam nas notícias da página aberta. A localização
+é a da fonte principal, não a do acontecimento. Fontes nacionais não recebem UF.
 
-A execução também ocorre diariamente às **7h de Brasília (10h UTC)**, sujeita a atrasos
-na fila do GitHub. O workflow precisa permanecer habilitado. O GitHub pode desabilitar
-agendamentos após períodos prolongados sem atividade; nesse caso, reative em Actions.
+## Seleção e limites
 
-## Custo
+1. Consulta RSS/Atom públicos, com até 24 trabalhadores, sessões HTTP reutilizadas,
+   timeout e limite de resposta de 8 MB. Feeds descobertos ficam em cache;
+   fontes sem feed são verificadas novamente após sete dias.
+2. Examina até 100 entradas por feed e classifica antes de aplicar limites.
+   Datas ausentes, inválidas ou mais de seis horas no futuro são descartadas.
+3. Usa termos configuráveis em português e inglês. O título tem mais peso que
+   descrição/categoria; especialização da fonte apoia tecnologia, IA e ciência.
+   Fontes jurídicas e tributárias exigem correspondência temática explícita.
+4. Reduz conteúdo policial/penal e corrupção na capa, mantendo exceções úteis
+   como LGPD, cibersegurança e reforma tributária. Notícias gerais não recebem
+   esse filtro. Regras podem errar e não cobrem todos os idiomas.
+5. Retém até oito candidatos por tema/fonte, além das quatro notícias gerais
+   mais recentes das últimas 36 horas. Ordena por relevância temática e depois
+   data. Agrupa URLs iguais e títulos muito semelhantes, com proteção para
+   números e negações diferentes. Não garante detectar toda repetição.
+6. Exige pelo menos 20 fontes com notícias e algum conteúdo temático para
+   publicar. Gera todas as páginas antes de substituir arquivos. O workflow
+   só publica se geração e testes passarem, preservando o site em caso de falha.
 
-Esta configuração usa GitHub Pages e executores Linux padrão do GitHub Actions em
-repositório público. Não usa API paga, servidor contratado, domínio próprio ou chave de IA.
-As regras e limites dos serviços se aplicam. Os textos completos dos veículos podem ter paywall;
-o app mostra apenas títulos e links e não contorna assinaturas.
+Fontes de empresas e instituições são identificadas. Rótulos jurídicos distinguem
+proposta/discussão, decisão/julgamento, publicação normativa, orientação e notícia/análise
+com base no título. **Não confirmam vigência, efeito vinculante ou aplicabilidade**;
+consulte a publicação e o documento original.
 
-## Como funciona
+Sem API de IA, modelos baixados, tradução automática ou resumos gerados. A aplicação
+mostra títulos no idioma original e links; não contorna paywalls. O agrupamento usa
+apenas a biblioteca padrão do Python, sem matriz global de similaridade.
 
-- Consulta feeds RSS/Atom públicos configurados em `outlets.csv`.
-- Aceita até quatro manchetes por fonte, com publicação nas últimas 36 horas.
-- Exclui itens sem data interpretável ou mais de seis horas no futuro.
-- Usa TF-IDF local para agrupar títulos semelhantes. Não traduz: as manchetes
-  permanecem no idioma original, e o agrupamento entre idiomas não é garantido.
-- O destaque considera o número de veículos e a diversidade de regiões no grupo,
-  não uma avaliação editorial da importância da notícia.
-- Um feed pode representar uma editoria específica, e a ordem do feed não equivale
-  necessariamente à capa editorial do veículo.
-- Exige pelo menos 20 fontes com notícias recentes antes de substituir a edição.
-- Preserva a edição anterior se a geração falhar. O rodapé informa a data da última edição;
-  cada grupo informa suas fontes sem notícias recentes, sem preencher lacunas com títulos fictícios.
-- Todas as histórias agrupadas são exibidas; não há corte silencioso dos grupos excedentes.
+## Atualizar no GitHub
 
-## Fontes
+Abra **Actions → Capa diária → Run workflow → Run workflow** e aguarde `gerar` e
+`publicar`. Também há execução agendada para 7h de Brasília (10h UTC), sujeita à fila
+e à disponibilidade do GitHub. Em Settings → Pages, a origem deve ser GitHub Actions.
+A publicação é pública. Não há servidor contratado nem chave de API; aplicam-se
+as regras e limites dos serviços utilizados.
 
-`outlets.csv` contém toda a lista ativa. Os 40 feeds do piloto foram preservados;
-para as demais fontes, o coletor procura RSS/Atom automaticamente e guarda o resultado em cache.
-`outlets-completo.csv` preserva o cadastro original de 408 veículos como referência.
-A lista ativa não depende de todas as fontes publicarem todos os dias.
-As colunas opcionais `uf` e `regiao_br` identificam as fontes locais brasileiras.
-Fontes brasileiras sem classificação local ficam em “Nacionais e especializados”.
+## Configuração
 
-As fontes anteriormente substituídas no piloto voltaram à coleta. Todas as fontes da
-lista original são consultadas; algumas podem não oferecer RSS público ou notícias recentes.
-A presença no cadastro não garante manchetes em cada edição.
-A disponibilidade pode mudar, inclusive entre o ambiente local e os executores do GitHub.
+- `outlets.csv`: cadastro geral preservado, incluindo fontes por UF.
+- `fontes_tematicas.json`: fontes especializadas e especialidade das já cadastradas.
+- `editorias.json`: nomes, limites, janelas e palavras-chave das cinco editorias.
+- `editorial.py`: classificação, rótulos e seleção dos destaques.
+- `capa.py`: coleta, validação de datas, cache e geração das páginas.
+- `templates/capa.html`: layout responsivo e filtros locais, sem bibliotecas JavaScript.
+- `outlets-completo.csv`: cadastro histórico de referência, preservado.
+
+Para acrescentar uma fonte especializada, cadastre nome, site, país, tema, tipo
+(`jornalismo`, `empresa`, `institucional` ou `oficial`) e feed validado no JSON.
+Sites já presentes no CSV recebem os metadados e o feed explícito, quando informado, sem duplicação.
 
 ## Executar localmente
 
-Requer Python 3.12.
+Python 3.12:
 
 ```sh
 python -m venv .venv
@@ -80,26 +91,27 @@ python capa.py
 python -m http.server 8000 --directory docs
 ```
 
-Abra http://localhost:8000. Para uma prévia explicitamente fictícia, sem rede:
+Abra http://localhost:8000. Prévia fictícia, sem rede:
 
 ```sh
 python capa.py --demo --saida /tmp/capa-demo
 ```
 
-Para verificar os testes:
+Testes:
 
 ```sh
 python -m pip install pytest==9.1.1
 python -m pytest tests -q
 ```
 
-## Diagnóstico e manutenção
+## Diagnóstico e histórico
 
-- `data/ultima_execucao.json`: resultado da última edição gerada.
-- `data/ultima_tentativa.json`: cobertura da tentativa, inclusive quando insuficiente.
-- `data/feeds_cache.json`: descoberta e cache dos feeds.
-- Em **Actions**, o artefato `diagnostico` é guardado por sete dias, inclusive após falhas.
-- O workflow faz commit das edições e do cache; a publicação ocorre explicitamente com
-  `upload-pages-artifact` e `deploy-pages`, sem depender do commit do robô para disparar Pages.
-- Para trocar uma fonte, edite `outlets.csv`, sem duplicar o endereço do veículo, e execute novamente.
-- O acesso à página é público. Não coloque senhas, chaves ou informação privada no repositório.
+`data/ultima_execucao.json` registra cobertura e quantidade por editoria;
+`data/ultima_tentativa.json` registra a tentativa, mesmo quando insuficiente.
+`data/feeds_cache.json` armazena os feeds descobertos. O artefato `diagnostico`
+fica disponível em Actions por sete dias. As últimas 90 edições diárias ficam
+em `docs/edicoes`; edições anteriores à mudança conservam seu formato original.
+Os links de navegação das edições históricas levam às editorias atuais.
+
+Os workflows mantidos têm funções distintas: testes de pull requests e
+coleta/publicação diária. Não há workflow separado ou serviço para IA.
