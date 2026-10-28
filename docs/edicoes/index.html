@@ -1,29 +1,192 @@
-<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Edições — Capa do Mundo</title><body><h1>Edições anteriores</h1><p><a href="../index.html">Voltar à capa atual</a></p><ul><li><a href="2026-10-27.html">2026-10-27</a></li>
-<li><a href="2026-10-26.html">2026-10-26</a></li>
-<li><a href="2026-10-25.html">2026-10-25</a></li>
-<li><a href="2026-10-24.html">2026-10-24</a></li>
-<li><a href="2026-10-23.html">2026-10-23</a></li>
-<li><a href="2026-10-22.html">2026-10-22</a></li>
-<li><a href="2026-10-21.html">2026-10-21</a></li>
-<li><a href="2026-10-20.html">2026-10-20</a></li>
-<li><a href="2026-10-19.html">2026-10-19</a></li>
-<li><a href="2026-10-18.html">2026-10-18</a></li>
-<li><a href="2026-10-17.html">2026-10-17</a></li>
-<li><a href="2026-10-16.html">2026-10-16</a></li>
-<li><a href="2026-10-15.html">2026-10-15</a></li>
-<li><a href="2026-10-14.html">2026-10-14</a></li>
-<li><a href="2026-10-13.html">2026-10-13</a></li>
-<li><a href="2026-10-12.html">2026-10-12</a></li>
-<li><a href="2026-10-11.html">2026-10-11</a></li>
-<li><a href="2026-10-10.html">2026-10-10</a></li>
-<li><a href="2026-10-09.html">2026-10-09</a></li>
-<li><a href="2026-10-08.html">2026-10-08</a></li>
-<li><a href="2026-10-07.html">2026-10-07</a></li>
-<li><a href="2026-10-06.html">2026-10-06</a></li>
-<li><a href="2026-10-05.html">2026-10-05</a></li>
-<li><a href="2026-10-04.html">2026-10-04</a></li>
-<li><a href="2026-10-03.html">2026-10-03</a></li>
-<li><a href="2026-10-02.html">2026-10-02</a></li>
-<li><a href="2026-10-01.html">2026-10-01</a></li>
-<li><a href="2026-09-30.html">2026-09-30</a></li>
-<li><a href="2026-09-29.html">2026-09-29</a></li></ul></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Edições anteriores · Capa do Mundo</title>
+<style>
+:root{--paper:#f7f5ef;--ink:#202e29;--muted:#59675f;--line:#cdd3c9;--green:#185d49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd761c;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);padding:28px 0 16px}
+.masthead{font:700 clamp(30px,5vw,52px)/1.1 Georgia,serif;text-decoration:none;letter-spacing:-2px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eyebrow,.meta{font-size:12px;color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:14px}
+nav a{text-decoration:none}
+.intro{padding:40px 0 24px}
+h1{font:normal clamp(32px,5vw,56px)/1.1 Georgia,serif;letter-spacing:-1px;margin:10px 0 16px}
+h2{font:normal 30px/1.2 Georgia,serif;margin:0}
+h3{font:normal 23px/1.3 Georgia,serif;margin:12px 0}
+.intro p{max-width:760px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;padding:20px;background:#eaf0e8;border:1px solid var(--line);align-items:end}
+label{display:flex;flex-direction:column;font-size:12px;gap:6px;flex:1;min-width:140px}
+input,select,button{font:inherit;color:inherit;padding:10px;border:1px solid #9aa89d;background:var(--paper);border-radius:3px}
+button{cursor:pointer}
+.status{font-size:13px;color:var(--muted);min-height:22px}
+.section{margin:36px 0;border-top:2px solid var(--ink);padding-top:18px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.section-head a{font-size:13px;white-space:nowrap}
+.description{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.card{padding:24px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.card h3 a{text-decoration:none}
+.badge{display:inline-block;font-size:11px;color:var(--green);border:1px solid #b6c8bc;border-radius:3px;padding:2px 6px;margin:8px 3px 0 0}
+.source{font-size:13px;font-weight:650}
+.card details{font-size:12px;margin-top:12px}
+.card details li{margin-top:8px}
+summary{cursor:pointer}
+.notice{padding:14px 18px;background:#eee5d3;border-left:3px solid #a77624;font-size:14px}
+.empty{color:var(--muted);padding:20px 0}
+.coverage{margin-top:28px;font-size:14px}
+.coverage ul{columns:2;padding-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;margin-top:50px;font-size:12px;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.top{align-items:start;flex-direction:column}
+.wrap{padding:0 20px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}
+.section-head{align-items:start;flex-direction:column;gap:8px}
+.coverage ul{columns:1}
+h3{font-size:24px}
+.intro{padding-top:28px}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="top">
+<a class="masthead" href="../index.html">Capa do Mundo<span style="color:var(--green)">.</span>
+</a>
+<div class="meta">Atualizado em 28/10/2026 às 08:35 · Brasília<br>377 de 691 fontes com notícias</div>
+</div>
+<nav aria-label="Navegação principal">
+<a href="../index.html">Capa temática</a>
+<a href="../editorias/tecnologia.html">Tecnologia</a>
+<a href="../editorias/ia.html">Inteligência artificial</a>
+<a href="../editorias/ciencia.html">Ciência</a>
+<a href="../editorias/tributaria.html">Tributária</a>
+<a href="../editorias/juridico.html">Jurídico</a>
+<a href="../gerais.html">Notícias gerais</a>
+<a href="../edicoes/index.html">Arquivo</a>
+</nav>
+</header>
+<main>
+<div class="intro">
+<div class="eyebrow">Informação para acompanhar o que importa</div>
+<h1>Edições anteriores</h1>
+</div>
+
+
+
+
+<ul>
+<li>
+<a href="2026-10-28.html">2026-10-28</a>
+</li>
+<li>
+<a href="2026-10-27.html">2026-10-27</a>
+</li>
+<li>
+<a href="2026-10-26.html">2026-10-26</a>
+</li>
+<li>
+<a href="2026-10-25.html">2026-10-25</a>
+</li>
+<li>
+<a href="2026-10-24.html">2026-10-24</a>
+</li>
+<li>
+<a href="2026-10-23.html">2026-10-23</a>
+</li>
+<li>
+<a href="2026-10-22.html">2026-10-22</a>
+</li>
+<li>
+<a href="2026-10-21.html">2026-10-21</a>
+</li>
+<li>
+<a href="2026-10-20.html">2026-10-20</a>
+</li>
+<li>
+<a href="2026-10-19.html">2026-10-19</a>
+</li>
+<li>
+<a href="2026-10-18.html">2026-10-18</a>
+</li>
+<li>
+<a href="2026-10-17.html">2026-10-17</a>
+</li>
+<li>
+<a href="2026-10-16.html">2026-10-16</a>
+</li>
+<li>
+<a href="2026-10-15.html">2026-10-15</a>
+</li>
+<li>
+<a href="2026-10-14.html">2026-10-14</a>
+</li>
+<li>
+<a href="2026-10-13.html">2026-10-13</a>
+</li>
+<li>
+<a href="2026-10-12.html">2026-10-12</a>
+</li>
+<li>
+<a href="2026-10-11.html">2026-10-11</a>
+</li>
+<li>
+<a href="2026-10-10.html">2026-10-10</a>
+</li>
+<li>
+<a href="2026-10-09.html">2026-10-09</a>
+</li>
+<li>
+<a href="2026-10-08.html">2026-10-08</a>
+</li>
+<li>
+<a href="2026-10-07.html">2026-10-07</a>
+</li>
+<li>
+<a href="2026-10-06.html">2026-10-06</a>
+</li>
+<li>
+<a href="2026-10-05.html">2026-10-05</a>
+</li>
+<li>
+<a href="2026-10-04.html">2026-10-04</a>
+</li>
+<li>
+<a href="2026-10-03.html">2026-10-03</a>
+</li>
+<li>
+<a href="2026-10-02.html">2026-10-02</a>
+</li>
+<li>
+<a href="2026-10-01.html">2026-10-01</a>
+</li>
+<li>
+<a href="2026-09-30.html">2026-09-30</a>
+</li>
+<li>
+<a href="2026-09-29.html">2026-09-29</a>
+</li>
+</ul>
+</main>
+<footer>Seleção automática por regras de assunto, relevância e data. Até dois destaques por fonte em cada editoria. Os filtros consideram a origem da fonte principal, não o local do acontecimento. Títulos no idioma original; nenhuma tradução ou resumo gerado por IA. A disponibilidade depende dos feeds públicos.<br>
+<a href="https://github.com/mac-manito/Repo">Código e metodologia</a> · Links externos abrem a publicação original.</footer>
+</div>
+<script>
+(()=>{const form=document.querySelector('#filters');if(!form)return;const search=document.querySelector('#search'),origin=document.querySelector('#origin'),uf=document.querySelector('#uf'),cards=[...document.querySelectorAll('.card')];const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const terms=cards.map(c=>norm(c.dataset.search));function filter(){if(origin.value==='mundo')uf.value='';uf.disabled=origin.value==='mundo';const query=norm(search.value).trim();let count=0;cards.forEach((card,i)=>{const match=(!origin.value||card.dataset.origin===origin.value)&&(!uf.value||card.dataset.uf===uf.value)&&terms[i].includes(query);card.hidden=!match;if(match)count++});document.querySelector('#status').textContent=count+' de '+cards.length+' notícias exibidas nesta página';document.querySelector('#no-results').hidden=count>0}form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter()})();
+</script>
+</body>
+</html>

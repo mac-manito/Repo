@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Jurídico · Capa do Mundo</title>
+<style>
+:root{--paper:#f7f5ef;--ink:#202e29;--muted:#59675f;--line:#cdd3c9;--green:#185d49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd761c;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);padding:28px 0 16px}
+.masthead{font:700 clamp(30px,5vw,52px)/1.1 Georgia,serif;text-decoration:none;letter-spacing:-2px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eyebrow,.meta{font-size:12px;color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:14px}
+nav a{text-decoration:none}
+.intro{padding:40px 0 24px}
+h1{font:normal clamp(32px,5vw,56px)/1.1 Georgia,serif;letter-spacing:-1px;margin:10px 0 16px}
+h2{font:normal 30px/1.2 Georgia,serif;margin:0}
+h3{font:normal 23px/1.3 Georgia,serif;margin:12px 0}
+.intro p{max-width:760px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;padding:20px;background:#eaf0e8;border:1px solid var(--line);align-items:end}
+label{display:flex;flex-direction:column;font-size:12px;gap:6px;flex:1;min-width:140px}
+input,select,button{font:inherit;color:inherit;padding:10px;border:1px solid #9aa89d;background:var(--paper);border-radius:3px}
+button{cursor:pointer}
+.status{font-size:13px;color:var(--muted);min-height:22px}
+.section{margin:36px 0;border-top:2px solid var(--ink);padding-top:18px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.section-head a{font-size:13px;white-space:nowrap}
+.description{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.card{padding:24px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.card h3 a{text-decoration:none}
+.badge{display:inline-block;font-size:11px;color:var(--green);border:1px solid #b6c8bc;border-radius:3px;padding:2px 6px;margin:8px 3px 0 0}
+.source{font-size:13px;font-weight:650}
+.card details{font-size:12px;margin-top:12px}
+.card details li{margin-top:8px}
+summary{cursor:pointer}
+.notice{padding:14px 18px;background:#eee5d3;border-left:3px solid #a77624;font-size:14px}
+.empty{color:var(--muted);padding:20px 0}
+.coverage{margin-top:28px;font-size:14px}
+.coverage ul{columns:2;padding-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;margin-top:50px;font-size:12px;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.top{align-items:start;flex-direction:column}
+.wrap{padding:0 20px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}
+.section-head{align-items:start;flex-direction:column;gap:8px}
+.coverage ul{columns:1}
+h3{font-size:24px}
+.intro{padding-top:28px}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="top">
+<a class="masthead" href="../index.html">Capa do Mundo<span style="color:var(--green)">.</span>
+</a>
+<div class="meta">Atualizado em 28/10/2026 às 08:35 · Brasília<br>377 de 691 fontes com notícias</div>
+</div>
+<nav aria-label="Navegação principal">
+<a href="../index.html">Capa temática</a>
+<a href="../editorias/tecnologia.html">Tecnologia</a>
+<a href="../editorias/ia.html">Inteligência artificial</a>
+<a href="../editorias/ciencia.html">Ciência</a>
+<a href="../editorias/tributaria.html">Tributária</a>
+<a href="../editorias/juridico.html">Jurídico</a>
+<a href="../gerais.html">Notícias gerais</a>
+<a href="../edicoes/index.html">Arquivo</a>
+</nav>
+</header>
+<main>
+<div class="intro">
+<div class="eyebrow">Informação para acompanhar o que importa</div>
+<h1>Jurídico</h1>
+</div>
+
+
+<form class="filters" id="filters" role="search">
+<label>Buscar nesta página<input id="search" type="search" placeholder="Assunto ou fonte">
+</label>
+<label>Origem da fonte<select id="origin">
+<option value="">Todas</option>
+<option value="brasil">Brasil</option>
+<option value="mundo">Resto do mundo</option>
+</select>
+</label>
+<label>Estado da fonte<select id="uf">
+<option value="">Todos / nacionais</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option>
+</select>
+</label>
+<button type="reset">Limpar filtros</button>
+</form>
+<p class="status" id="status" aria-live="polite">
+</p>
+<p class="empty" id="no-results" hidden>Nenhuma notícia corresponde aos filtros nesta página. Consulte também a página da editoria para ver mais notícias.</p>
+
+
+
+<section class="section" id="juridico">
+<div class="section-head">
+<h2>Jurídico</h2>
+</div>
+<p class="description">Empresas, contratos, trabalho e jurisprudência. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="MT" data-search="Vídeo | Coronel Dias aponta falhas em licitação da CS Mobi e diz que contrato pode ser nulo Leiagora Brasil">
+<div class="source">Leiagora</div>
+<div class="meta">Brasil
+ · MT
+ · 27/10/2026 18:45</div>
+<h3>
+<a href="https://leiagora.com.br/coronel-dias-aponta-falhas-em-licitacao-da-cs-mobi-e-diz-que-contrato-pode-ser-nulo/" target="_blank" rel="noopener noreferrer">Vídeo | Coronel Dias aponta falhas em licitação da CS Mobi e diz que contrato pode ser nulo</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="SE" data-search="Aracaju abre licitação de R$ 93,2 milhões para gestão das feiras livres Só Sergipe Brasil">
+<div class="source">Só Sergipe</div>
+<div class="meta">Brasil
+ · SE
+ · 26/10/2026 12:31</div>
+<h3>
+<a href="https://www.sosergipe.com.br/aracaju-abre-licitacao-de-r-932-milhoes-para-gestao-das-feiras-livres/" target="_blank" rel="noopener noreferrer">Aracaju abre licitação de R$ 93,2 milhões para gestão das feiras livres</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="TO" data-search="Demissão por voto é ilegal e pode gerar indenização; saiba como denunciar Gazeta do Cerrado Brasil">
+<div class="source">Gazeta do Cerrado</div>
+<div class="meta">Brasil
+ · TO
+ · 28/10/2026 08:28</div>
+<h3>
+<a href="https://gazetadocerrado.com.br/mundo/brasil-mundo-2/demissao-por-voto-e-ilegal-e-pode-gerar-indenizacao-saiba-como-denunciar/" target="_blank" rel="noopener noreferrer">Demissão por voto é ilegal e pode gerar indenização; saiba como denunciar</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AP" data-search="Amapá Suspende Licitação de Loteria para Alinhar Edital à Nova Legislação Nacional de Apostas MCP Notícias Brasil">
+<div class="source">MCP Notícias</div>
+<div class="meta">Brasil
+ · AP
+ · 28/10/2026 07:58</div>
+<h3>
+<a href="https://noticias.macapa.br/amapa-suspende-licitacao-loteria/" target="_blank" rel="noopener noreferrer">Amapá Suspende Licitação de Loteria para Alinhar Edital à Nova Legislação Nacional de Apostas</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Pesquisa mostra que maioria dos jovens vê regime CLT como &#39;trabalho ideal&#39; para os próximos anos g1 Brasil">
+<div class="source">g1</div>
+<div class="meta">Brasil
+ · 28/10/2026 07:18</div>
+<h3>
+<a href="https://g1.globo.com/sp/sorocaba-jundiai/noticia/2026/10/28/pesquisa-mostra-que-maioria-dos-jovens-ve-regime-clt-como-trabalho-ideal-para-os-proximos-anos.ghtml" target="_blank" rel="noopener noreferrer">Pesquisa mostra que maioria dos jovens vê regime CLT como &#39;trabalho ideal&#39; para os próximos anos</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+<h3>Mais notícias da editoria</h3>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="RN" data-search="Richarlison ironiza ida de Flávio Bolsonaro aos Estados Unidos e recebe resposta de Neymar: “Lê o contrato, seu moleque” Focoelho Brasil">
+<div class="source">Focoelho</div>
+<div class="meta">Brasil
+ · RN
+ · 28/10/2026 06:38</div>
+<h3>
+<a href="https://www.focoelho.com/2026/10/richarlison-ironiza-ida-de-flavio.html" target="_blank" rel="noopener noreferrer">Richarlison ironiza ida de Flávio Bolsonaro aos Estados Unidos e recebe resposta de Neymar: “Lê o contrato, seu moleque”</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PI" data-search="Ministério Público investiga irregularidades em contratos temporários da Prefeitura de Bertolínia GP1 Brasil">
+<div class="source">GP1</div>
+<div class="meta">Brasil
+ · PI
+ · 28/10/2026 06:00</div>
+<h3>
+<a href="https://www.gp1.com.br/pi/piaui/noticia/2026/10/28/ministerio-publico-investiga-irregularidades-em-contratos-temporarios-da-prefeitura-de-bertolinia-634967.html" target="_blank" rel="noopener noreferrer">Ministério Público investiga irregularidades em contratos temporários da Prefeitura de Bertolínia</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RR" data-search="Câmara aprova MP que amplia alcance de indenização para servidores em áreas estratégicas de fronteira DCI Roraima Brasil">
+<div class="source">DCI Roraima</div>
+<div class="meta">Brasil
+ · RR
+ · 28/10/2026 05:36</div>
+<h3>
+<a href="https://www.dciroraima.com/noticia/14020/politica/camara-aprova-mp-que-amplia-alcance-de-indenizacao-para-servidores-em-areas-estrategicas-de-fronteira.html" target="_blank" rel="noopener noreferrer">Câmara aprova MP que amplia alcance de indenização para servidores em áreas estratégicas de fronteira</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="“No tengo nada que ocultar”: Blanca Cruz García, bajo cuestionamientos por contrato de 129 millones antes de asumir el INE Infobae Argentina">
+<div class="source">Infobae</div>
+<div class="meta">Argentina
+ · 28/10/2026 04:40</div>
+<h3>
+<a href="https://www.infobae.com/mexico/2026/10/28/no-tengo-nada-que-ocultar-blanca-cruz-garcia-bajo-cuestionamientos-por-contrato-de-129-millones-antes-de-asumir-el-ine/" target="_blank" rel="noopener noreferrer">“No tengo nada que ocultar”: Blanca Cruz García, bajo cuestionamientos por contrato de 129 millones antes de asumir el INE</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MT" data-search="Justiça decreta falência do Grupo Pelissari e determina bloqueio de até R$ 45,3 milhões HiperNotícias Brasil">
+<div class="source">HiperNotícias</div>
+<div class="meta">Brasil
+ · MT
+ · 27/10/2026 22:35</div>
+<h3>
+<a href="https://www.hnt.com.br/justica/justica-decreta-falencia-do-grupo-pelissari-e-determina-bloqueio-de-ate-r-453-milhoes/583669" target="_blank" rel="noopener noreferrer">Justiça decreta falência do Grupo Pelissari e determina bloqueio de até R$ 45,3 milhões</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="SC" data-search="Dilma Rousseff terá indenização mensal de R$ 17,5 mil e valor retroativo por perseguição na ditadura NSC Total Brasil">
+<div class="source">NSC Total</div>
+<div class="meta">Brasil
+ · SC
+ · 27/10/2026 21:57</div>
+<h3>
+<a href="https://www.nsctotal.com.br/politica/dilma-rousseff-tera-indenizacao-mensal-de-r-175-mil-e-valor-retroativo-por-perseguicao-na-ditadura" target="_blank" rel="noopener noreferrer">Dilma Rousseff terá indenização mensal de R$ 17,5 mil e valor retroativo por perseguição na ditadura</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Gobierno vuelve a Thomas Greg y firman contrato de pasaportes La Silla Vacía Colômbia">
+<div class="source">La Silla Vacía</div>
+<div class="meta">Colômbia
+ · 27/10/2026 20:38</div>
+<h3>
+<a href="https://www.lasillavacia.com/en-vivo/gobierno-vuelve-a-thomas-greg-y-firman-contrato-de-pasaportes/" target="_blank" rel="noopener noreferrer">Gobierno vuelve a Thomas Greg y firman contrato de pasaportes</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="TO" data-search="Vicentinho Júnior formaliza equipe de transição e pede acesso a contas, contratos e sistemas do Governo do Tocantins Jornal Opção Tocantins Brasil">
+<div class="source">Jornal Opção Tocantins</div>
+<div class="meta">Brasil
+ · TO
+ · 27/10/2026 20:03</div>
+<h3>
+<a href="https://tocantins.jornalopcao.com.br/noticias/vicentinho-junior-formaliza-equipe-de-transicao-e-pede-acesso-a-contas-contratos-e-sistemas-do-governo-do-tocantins-603435/" target="_blank" rel="noopener noreferrer">Vicentinho Júnior formaliza equipe de transição e pede acesso a contas, contratos e sistemas do Governo do Tocantins</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AL" data-search="Dilma receberá indenização mensal de R$ 17 mil por perseguição na ditadura TNH1 Brasil">
+<div class="source">TNH1</div>
+<div class="meta">Brasil
+ · AL
+ · 27/10/2026 19:45</div>
+<h3>
+<a href="https://www.tnh1.com.br/noticia/nid/dilma-recebera-indenizacao-mensal-de-r-17-mil-por-perseguicao-na-ditadura/" target="_blank" rel="noopener noreferrer">Dilma receberá indenização mensal de R$ 17 mil por perseguição na ditadura</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="BA" data-search="Dilma receberá indenização mensal de R$ 17,5 mil por perseguição na ditadura Bahia Notícias Brasil">
+<div class="source">Bahia Notícias</div>
+<div class="meta">Brasil
+ · BA
+ · 27/10/2026 18:00</div>
+<h3>
+<a href="https://www.bahianoticias.com.br/noticia/323031-dilma-recebera-indenizacao-mensal-de-r-175-mil-por-perseguicao-na-ditadura" target="_blank" rel="noopener noreferrer">Dilma receberá indenização mensal de R$ 17,5 mil por perseguição na ditadura</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MT" data-search="Juíza decreta falência de produtores rurais de MT e determina bloqueio de R$ 45 milhões Repórter MT Brasil">
+<div class="source">Repórter MT</div>
+<div class="meta">Brasil
+ · MT
+ · 27/10/2026 17:00</div>
+<h3>
+<a href="https://www.reportermt.com/cidades/juiza-decreta-falencia-de-produtores-rurais-de-mt-e-determina-bloqueio-de-r-45-milhoes/245789" target="_blank" rel="noopener noreferrer">Juíza decreta falência de produtores rurais de MT e determina bloqueio de R$ 45 milhões</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MG" data-search="PBH abre licitação para instalação de estações de calistenia em praças de BH BHAZ Brasil">
+<div class="source">BHAZ</div>
+<div class="meta">Brasil
+ · MG
+ · 27/10/2026 16:49</div>
+<h3>
+<a href="https://bhaz.com.br/noticias/bh/pbh-licitacao-instalacao-estacoes-calistenia-pracas-bh/" target="_blank" rel="noopener noreferrer">PBH abre licitação para instalação de estações de calistenia em praças de BH</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="CE" data-search="MP cobra esclarecimentos da Prefeitura de Caririaçu sobre contrato de R$ 14,5 milhões com OS Portal M1 (Miséria) Brasil">
+<div class="source">Portal M1 (Miséria)</div>
+<div class="meta">Brasil
+ · CE
+ · 27/10/2026 16:20</div>
+<h3>
+<a href="https://www.miseria.com.br/ultimas-noticias/cariri/mp-cobra-esclarecimentos-da-prefeitura-de-caririacu-sobre-contrato-de-r-145-milhoes-com-os/" target="_blank" rel="noopener noreferrer">MP cobra esclarecimentos da Prefeitura de Caririaçu sobre contrato de R$ 14,5 milhões com OS</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MA" data-search="Governo fixa indenização mensal de R$ 17,5 mil para Dilma Rousseff por perseguição na ditadura Imirante Brasil">
+<div class="source">Imirante</div>
+<div class="meta">Brasil
+ · MA
+ · 27/10/2026 11:52</div>
+<h3>
+<a href="https://imirante.com/noticias/brasil/2026/10/27/ipolitica-dilma-recebe-indenizacao-perseguicao-ditadura-militar" target="_blank" rel="noopener noreferrer">Governo fixa indenização mensal de R$ 17,5 mil para Dilma Rousseff por perseguição na ditadura</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RJ" data-search="Boicote a Mbappé: contratos encerrados com gigantes chinesas e perda de patrocínios Extra Brasil">
+<div class="source">Extra</div>
+<div class="meta">Brasil
+ · RJ
+ · 27/10/2026 09:09</div>
+<h3>
+<a href="https://extra.globo.com/economia/noticia/2026/10/boiocote-a-mbappe-contratos-encerrados-com-gigantes-chinesas-e-perda-de-patrocinios.ghtml" target="_blank" rel="noopener noreferrer">Boicote a Mbappé: contratos encerrados com gigantes chinesas e perda de patrocínios</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="SC" data-search="Famílias esperam há mais de 20 anos por indenizações de terras no Parque da Serra do Itajaí O Blumenauense Brasil">
+<div class="source">O Blumenauense</div>
+<div class="meta">Brasil
+ · SC
+ · 27/10/2026 08:58</div>
+<h3>
+<a href="https://oblumenauense.com.br/familias-esperam-ha-mais-de-20-anos-por-indenizacoes-de-terras-no-parque-da-serra-do-itajai/" target="_blank" rel="noopener noreferrer">Famílias esperam há mais de 20 anos por indenizações de terras no Parque da Serra do Itajaí</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Firma de abogados creada por ministro Iván Cancino incrementó sus ingresos por contratos públicos en 442 % este año frente a 2025 Cuestión Pública Colômbia">
+<div class="source">Cuestión Pública</div>
+<div class="meta">Colômbia
+ · 25/10/2026 13:09</div>
+<h3>
+<a href="https://cuestionpublica.com/firma-de-abogados-creada-por-ministro-ivan-cancino-incremento-sus-ingresos-por-contratos-publicos-en-442-este-ano-frente-a-2025/" target="_blank" rel="noopener noreferrer">Firma de abogados creada por ministro Iván Cancino incrementó sus ingresos por contratos públicos en 442 % este año frente a 2025</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PA" data-search="Parauapebas terá 496 apartamentos do Minha Casa, Minha Vida; contratos para construção são assinados Fato Regional Brasil">
+<div class="source">Fato Regional</div>
+<div class="meta">Brasil
+ · PA
+ · 22/10/2026 10:50</div>
+<h3>
+<a href="https://fatoregional.com.br/parauapebas-contratos-496-moradias-minha-casa-minha-vida/" target="_blank" rel="noopener noreferrer">Parauapebas terá 496 apartamentos do Minha Casa, Minha Vida; contratos para construção são assinados</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Alquilar una habitación sin contrato ni garantías a los 50, una ‘estrategia’ para sobrevivir frente a la crisis de vivienda El País Espanha">
+<div class="source">El País</div>
+<div class="meta">Espanha
+ · 28/10/2026 07:51</div>
+<h3>
+<a href="https://elpais.com/sociedad/2026-10-28/alquilar-una-habitacion-sin-contrato-ni-garantias-a-los-50-una-estrategia-para-sobrevivir-frente-a-la-crisis-de-vivienda.html" target="_blank" rel="noopener noreferrer">Alquilar una habitación sin contrato ni garantías a los 50, una ‘estrategia’ para sobrevivir frente a la crisis de vivienda</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Contratos millonarios del INE se negociaban en casa del empresario José Alfredo Hernández, destacan en investigación periodística Infobae Argentina">
+<div class="source">Infobae</div>
+<div class="meta">Argentina
+ · 28/10/2026 07:25</div>
+<h3>
+<a href="https://www.infobae.com/mexico/2026/10/28/contratos-millonarios-del-ine-se-negociaban-en-casa-del-empresario-jose-alfredo-hernandez-destacan-en-investigacion-periodistica/" target="_blank" rel="noopener noreferrer">Contratos millonarios del INE se negociaban en casa del empresario José Alfredo Hernández, destacan en investigación periodística</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AL" data-search="Senador Rui Palmeira abre licitação para compra de baterias para a frota municipal Alagoas na Net Brasil">
+<div class="source">Alagoas na Net</div>
+<div class="meta">Brasil
+ · AL
+ · 28/10/2026 05:36</div>
+<h3>
+<a href="https://www.alagoasnanet.com.br/noticia/18081/santana-do-ipanema/municipios/senador-rui-palmeira-abre-licitacao-para-compra-de-baterias-para-a-frota-municipal.html" target="_blank" rel="noopener noreferrer">Senador Rui Palmeira abre licitação para compra de baterias para a frota municipal</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Qual é a responsabilidade civil do Estado por atos praticados nas CPIs? JOTA Brasil">
+<div class="source">JOTA</div>
+<div class="meta">Brasil
+ · 28/10/2026 05:00</div>
+<h3>
+<a href="https://www.jota.info/opiniao-e-analise/colunas/defensor-legis/qual-e-a-responsabilidade-civil-do-estado-por-atos-praticados-nas-cpis" target="_blank" rel="noopener noreferrer">Qual é a responsabilidade civil do Estado por atos praticados nas CPIs?</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PR" data-search="Venezuelano é indenizado após pressão para assinar dispensa por justa causa no Paraná Bonde Brasil">
+<div class="source">Bonde</div>
+<div class="meta">Brasil
+ · PR
+ · 27/10/2026 16:12</div>
+<h3>
+<a href="https://www.bonde.com.br/bondenews/parana/venezuelano-e-indenizado-apos-pressao-para-assinar-dispensa-por-justa-causa-no-parana" target="_blank" rel="noopener noreferrer">Venezuelano é indenizado após pressão para assinar dispensa por justa causa no Paraná</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RO" data-search="Ministério dos Direitos Humanos estabelece indenização mensal de R$ 17,5 mil a Dilma Rousseff por perseguição na ditadura News Rondônia Brasil">
+<div class="source">News Rondônia</div>
+<div class="meta">Brasil
+ · RO
+ · 27/10/2026 14:12</div>
+<h3>
+<a href="https://newsrondonia.com.br/politica/2026/10/27/ministerio-dos-direitos-humanos-estabelece-indenizacao-mensal-de-r-175-mil-a-dilma-rousseff-por-perseguicao-na-ditadura/" target="_blank" rel="noopener noreferrer">Ministério dos Direitos Humanos estabelece indenização mensal de R$ 17,5 mil a Dilma Rousseff por perseguição na ditadura</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="BA" data-search="Prefeitura de Matina esclarece licitação apurada pelo MP e nega irregularidades Achei Sudoeste Brasil">
+<div class="source">Achei Sudoeste</div>
+<div class="meta">Brasil
+ · BA
+ · 27/10/2026 13:00</div>
+<h3>
+<a href="https://www.acheisudoeste.com.br/noticias/matina/prefeitura-de-matina-esclarece-licitacao-apurada-pelo-mp-e-nega-irregularidades" target="_blank" rel="noopener noreferrer">Prefeitura de Matina esclarece licitação apurada pelo MP e nega irregularidades</a>
+</h3>
+
+<span class="badge">Orientação</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PR" data-search="TJPR libera licitação do transporte coletivo de Curitiba Plural Curitiba Brasil">
+<div class="source">Plural Curitiba</div>
+<div class="meta">Brasil
+ · PR
+ · 27/10/2026 12:34</div>
+<h3>
+<a href="https://www.plural.jor.br/curitiba/tjpr-libera-licitacao-do-transporte-coletivo-de-curitiba/" target="_blank" rel="noopener noreferrer">TJPR libera licitação do transporte coletivo de Curitiba</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PA" data-search="Fim de linha! Paysandu não renova contrato com o goleiro Gabriel Mesquita O Liberal Brasil">
+<div class="source">O Liberal</div>
+<div class="meta">Brasil
+ · PA
+ · 27/10/2026 12:26</div>
+<h3>
+<a href="https://www.oliberal.com/esportes/paysandu/fim-de-linha-paysandu-nao-renova-contrato-com-o-goleiro-gabriel-mesquita-1.1187394" target="_blank" rel="noopener noreferrer">Fim de linha! Paysandu não renova contrato com o goleiro Gabriel Mesquita</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MT" data-search="Vídeo | Pivetta autoriza processo de licitação para túnel do Portão do Inferno e duplicação de rodovia mesmo sem aval do Ibama Leiagora Brasil">
+<div class="source">Leiagora</div>
+<div class="meta">Brasil
+ · MT
+ · 26/10/2026 19:40</div>
+<h3>
+<a href="https://leiagora.com.br/video-pivetta-autoriza-processo-de-licitacao-para-tunel-do-portao-do-inferno-e-duplicacao-de-rodovia-mesmo-sem-aval-do-ibama/" target="_blank" rel="noopener noreferrer">Vídeo | Pivetta autoriza processo de licitação para túnel do Portão do Inferno e duplicação de rodovia mesmo sem aval do Ibama</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="SE" data-search="Aracaju publica edital de licitação para gerenciamento das feiras livres A8SE Brasil">
+<div class="source">A8SE</div>
+<div class="meta">Brasil
+ · SE
+ · 26/10/2026 16:43</div>
+<h3>
+<a href="https://a8se.com/noticias/aracaju/2026/10/26/245800-aracaju-publica-edital-de-licitacao-para-gerenciamento-das-feiras-livres" target="_blank" rel="noopener noreferrer">Aracaju publica edital de licitação para gerenciamento das feiras livres</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="BA" data-search="TCM suspende acréscimo de 25% em contrato de limpeza urbana em Rio de Contas Achei Sudoeste Brasil">
+<div class="source">Achei Sudoeste</div>
+<div class="meta">Brasil
+ · BA
+ · 26/10/2026 00:00</div>
+<h3>
+<a href="https://www.acheisudoeste.com.br/noticias/rio-de-contas/tcm-suspende-acrescimo-de-25-em-contrato-de-limpeza-urbana-em-rio-de-contas" target="_blank" rel="noopener noreferrer">TCM suspende acréscimo de 25% em contrato de limpeza urbana em Rio de Contas</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+</section>
+
+</main>
+<footer>Seleção automática por regras de assunto, relevância e data. Até dois destaques por fonte em cada editoria. Os filtros consideram a origem da fonte principal, não o local do acontecimento. Títulos no idioma original; nenhuma tradução ou resumo gerado por IA. A disponibilidade depende dos feeds públicos.<br>
+<a href="https://github.com/mac-manito/Repo">Código e metodologia</a> · Links externos abrem a publicação original.</footer>
+</div>
+<script>
+(()=>{const form=document.querySelector('#filters');if(!form)return;const search=document.querySelector('#search'),origin=document.querySelector('#origin'),uf=document.querySelector('#uf'),cards=[...document.querySelectorAll('.card')];const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const terms=cards.map(c=>norm(c.dataset.search));function filter(){if(origin.value==='mundo')uf.value='';uf.disabled=origin.value==='mundo';const query=norm(search.value).trim();let count=0;cards.forEach((card,i)=>{const match=(!origin.value||card.dataset.origin===origin.value)&&(!uf.value||card.dataset.uf===uf.value)&&terms[i].includes(query);card.hidden=!match;if(match)count++});document.querySelector('#status').textContent=count+' de '+cards.length+' notícias exibidas nesta página';document.querySelector('#no-results').hidden=count>0}form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter()})();
+</script>
+</body>
+</html>

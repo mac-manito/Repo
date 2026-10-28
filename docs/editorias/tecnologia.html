@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Tecnologia · Capa do Mundo</title>
+<style>
+:root{--paper:#f7f5ef;--ink:#202e29;--muted:#59675f;--line:#cdd3c9;--green:#185d49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd761c;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);padding:28px 0 16px}
+.masthead{font:700 clamp(30px,5vw,52px)/1.1 Georgia,serif;text-decoration:none;letter-spacing:-2px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eyebrow,.meta{font-size:12px;color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:14px}
+nav a{text-decoration:none}
+.intro{padding:40px 0 24px}
+h1{font:normal clamp(32px,5vw,56px)/1.1 Georgia,serif;letter-spacing:-1px;margin:10px 0 16px}
+h2{font:normal 30px/1.2 Georgia,serif;margin:0}
+h3{font:normal 23px/1.3 Georgia,serif;margin:12px 0}
+.intro p{max-width:760px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;padding:20px;background:#eaf0e8;border:1px solid var(--line);align-items:end}
+label{display:flex;flex-direction:column;font-size:12px;gap:6px;flex:1;min-width:140px}
+input,select,button{font:inherit;color:inherit;padding:10px;border:1px solid #9aa89d;background:var(--paper);border-radius:3px}
+button{cursor:pointer}
+.status{font-size:13px;color:var(--muted);min-height:22px}
+.section{margin:36px 0;border-top:2px solid var(--ink);padding-top:18px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.section-head a{font-size:13px;white-space:nowrap}
+.description{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.card{padding:24px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.card h3 a{text-decoration:none}
+.badge{display:inline-block;font-size:11px;color:var(--green);border:1px solid #b6c8bc;border-radius:3px;padding:2px 6px;margin:8px 3px 0 0}
+.source{font-size:13px;font-weight:650}
+.card details{font-size:12px;margin-top:12px}
+.card details li{margin-top:8px}
+summary{cursor:pointer}
+.notice{padding:14px 18px;background:#eee5d3;border-left:3px solid #a77624;font-size:14px}
+.empty{color:var(--muted);padding:20px 0}
+.coverage{margin-top:28px;font-size:14px}
+.coverage ul{columns:2;padding-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;margin-top:50px;font-size:12px;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.top{align-items:start;flex-direction:column}
+.wrap{padding:0 20px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}
+.section-head{align-items:start;flex-direction:column;gap:8px}
+.coverage ul{columns:1}
+h3{font-size:24px}
+.intro{padding-top:28px}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="top">
+<a class="masthead" href="../index.html">Capa do Mundo<span style="color:var(--green)">.</span>
+</a>
+<div class="meta">Atualizado em 28/10/2026 às 08:35 · Brasília<br>377 de 691 fontes com notícias</div>
+</div>
+<nav aria-label="Navegação principal">
+<a href="../index.html">Capa temática</a>
+<a href="../editorias/tecnologia.html">Tecnologia</a>
+<a href="../editorias/ia.html">Inteligência artificial</a>
+<a href="../editorias/ciencia.html">Ciência</a>
+<a href="../editorias/tributaria.html">Tributária</a>
+<a href="../editorias/juridico.html">Jurídico</a>
+<a href="../gerais.html">Notícias gerais</a>
+<a href="../edicoes/index.html">Arquivo</a>
+</nav>
+</header>
+<main>
+<div class="intro">
+<div class="eyebrow">Informação para acompanhar o que importa</div>
+<h1>Tecnologia</h1>
+</div>
+
+
+<form class="filters" id="filters" role="search">
+<label>Buscar nesta página<input id="search" type="search" placeholder="Assunto ou fonte">
+</label>
+<label>Origem da fonte<select id="origin">
+<option value="">Todas</option>
+<option value="brasil">Brasil</option>
+<option value="mundo">Resto do mundo</option>
+</select>
+</label>
+<label>Estado da fonte<select id="uf">
+<option value="">Todos / nacionais</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option>
+</select>
+</label>
+<button type="reset">Limpar filtros</button>
+</form>
+<p class="status" id="status" aria-live="polite">
+</p>
+<p class="empty" id="no-results" hidden>Nenhuma notícia corresponde aos filtros nesta página. Consulte também a página da editoria para ver mais notícias.</p>
+
+
+
+<section class="section" id="tecnologia">
+<div class="section-head">
+<h2>Tecnologia</h2>
+</div>
+<p class="description">Ferramentas, automação e segurança digital. · Publicações dos últimos 3 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Cybersecurity CEO Indicted for Allegedly Scamming Millions From Ransomware Victims ProPublica EUA">
+<div class="source">ProPublica</div>
+<div class="meta">EUA
+ · 26/10/2026 06:00</div>
+<h3>
+<a href="https://www.propublica.org/article/zohar-pinhasi-monstercloud-ransomware-indictment" target="_blank" rel="noopener noreferrer">Cybersecurity CEO Indicted for Allegedly Scamming Millions From Ransomware Victims</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Apple refreshes the iMac, entry-level MacBook Pro with the M6 chip Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 27/10/2026 19:37</div>
+<h3>
+<a href="https://arstechnica.com/apple/2026/10/apple-refreshes-the-imac-entry-level-macbook-pro-with-the-m6-chip/" target="_blank" rel="noopener noreferrer">Apple refreshes the iMac, entry-level MacBook Pro with the M6 chip</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="iPhone 18e deve manter tela de 60 Hz mesmo com novo chip Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 27/10/2026 16:34</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/iphone-18e-deve-manter-tela-de-60-hz-mesmo-com-novo-chip/" target="_blank" rel="noopener noreferrer">iPhone 18e deve manter tela de 60 Hz mesmo com novo chip</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Apple anuncia MacBook Pro e iMac de 24 polegadas com chip M6; veja preços Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 27/10/2026 11:29</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/apple-anuncia-macbook-pro-e-imac-de-24-polegadas-com-chip-m6-veja-precos/" target="_blank" rel="noopener noreferrer">Apple anuncia MacBook Pro e iMac de 24 polegadas com chip M6; veja preços</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Vibe genes? Natural(ish) language comes to protein, genome design software Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 27/10/2026 15:49</div>
+<h3>
+<a href="https://arstechnica.com/science/2026/10/vibe-genes-naturalish-language-comes-to-protein-genome-design-software/" target="_blank" rel="noopener noreferrer">Vibe genes? Natural(ish) language comes to protein, genome design software</a>
+</h3>
+
+
+</article>
+
+</div>
+
+<h3>Mais notícias da editoria</h3>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Apple lança iPad Mini com tela OLED e chip A20 Pro; veja preços no Brasil Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 26/10/2026 10:59</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/apple-lanca-ipad-mini-com-tela-oled-e-chip-a20-pro-veja-precos-no-brasil/" target="_blank" rel="noopener noreferrer">Apple lança iPad Mini com tela OLED e chip A20 Pro; veja preços no Brasil</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Número de super-ricos na China atinge maior nível com ascensão de empresários de tecnologia g1 Brasil">
+<div class="source">g1</div>
+<div class="meta">Brasil
+ · 28/10/2026 07:47</div>
+<h3>
+<a href="https://g1.globo.com/tecnologia/noticia/2026/10/28/numero-de-super-ricos-na-china-atinge-maior-nivel-com-ascensao-de-empresarios-de-tecnologia.ghtml" target="_blank" rel="noopener noreferrer">Número de super-ricos na China atinge maior nível com ascensão de empresários de tecnologia</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RJ" data-search="Robótica ganhará mais espaço nas escolas de Volta Redonda após aprovação de projeto na Câmara Diário do Rio Brasil">
+<div class="source">Diário do Rio</div>
+<div class="meta">Brasil
+ · RJ
+ · 27/10/2026 14:00</div>
+<h3>
+<a href="https://diariodorio.com/educacao/2026/10/27/robotica-ganhara-mais-espaco-nas-escolas-de-volta-redonda-apos-aprovacao-de-projeto-na-camara.html" target="_blank" rel="noopener noreferrer">Robótica ganhará mais espaço nas escolas de Volta Redonda após aprovação de projeto na Câmara</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PB" data-search="ALPB vota nesta quarta projeto que prevê isenção de IPVA para motoristas por aplicativo Paraíba Já Brasil">
+<div class="source">Paraíba Já</div>
+<div class="meta">Brasil
+ · PB
+ · 28/10/2026 08:17</div>
+<h3>
+<a href="https://paraibaja.com.br/alpb-vota-nesta-quarta-projeto-que-preve-isencao-de-ipva-para-motoristas-por-aplicativo/" target="_blank" rel="noopener noreferrer">ALPB vota nesta quarta projeto que prevê isenção de IPVA para motoristas por aplicativo</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="CTOS still assessing impact of cybersecurity incident New Straits Times Malásia">
+<div class="source">New Straits Times</div>
+<div class="meta">Malásia
+ · 28/10/2026 08:08</div>
+<h3>
+<a href="https://www.nst.com.my/business/corporate/2026/10/1565662/ctos-still-assessing-impact-cybersecurity-incident" target="_blank" rel="noopener noreferrer">CTOS still assessing impact of cybersecurity incident</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Huawei’s Tau Scaling Law roll-out reaches base stations in blow to US chip curbs South China Morning Post China">
+<div class="source">South China Morning Post</div>
+<div class="meta">China
+ · 28/10/2026 08:00</div>
+<h3>
+<a href="https://www.scmp.com/tech/big-tech/article/3372454/huaweis-tau-scaling-law-roll-out-reaches-base-stations-blow-us-chip-curbs" target="_blank" rel="noopener noreferrer">Huawei’s Tau Scaling Law roll-out reaches base stations in blow to US chip curbs</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AL" data-search="Maravilha prevê salas de robótica e ambientes multissensoriais nas escolas Alagoas na Net Brasil">
+<div class="source">Alagoas na Net</div>
+<div class="meta">Brasil
+ · AL
+ · 28/10/2026 05:36</div>
+<h3>
+<a href="https://www.alagoasnanet.com.br/noticia/18063/santana-do-ipanema/noticias/maravilha-preve-salas-de-robotica-e-ambientes-multissensoriais-nas-escolas.html" target="_blank" rel="noopener noreferrer">Maravilha prevê salas de robótica e ambientes multissensoriais nas escolas</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RJ" data-search="Oficina Maker leva tecnologia e criatividade a estudantes de Manguinhos Extra Brasil">
+<div class="source">Extra</div>
+<div class="meta">Brasil
+ · RJ
+ · 28/10/2026 05:00</div>
+<h3>
+<a href="https://extra.globo.com/blogs/acao-de-responsa/post/2026/10/oficina-maker-leva-tecnologia-e-criatividade-a-estudantes-de-manguinhos.ghtml" target="_blank" rel="noopener noreferrer">Oficina Maker leva tecnologia e criatividade a estudantes de Manguinhos</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Empresário que conduzia Porsche em morte de motorista de aplicativo vai a júri popular Folha de S.Paulo Brasil">
+<div class="source">Folha de S.Paulo</div>
+<div class="meta">Brasil
+ · 28/10/2026 04:00</div>
+<h3>
+<a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/10/empresario-que-conduzia-porsche-em-morte-de-motorista-de-aplicativo-vai-a-juri-popular.shtml" target="_blank" rel="noopener noreferrer">Empresário que conduzia Porsche em morte de motorista de aplicativo vai a júri popular</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MT" data-search="Ministro da Saúde visita Unicamp e conhece tecnologia inédita para diagnóstico de câncer na América Latina Leiagora Brasil">
+<div class="source">Leiagora</div>
+<div class="meta">Brasil
+ · MT
+ · 27/10/2026 21:31</div>
+<h3>
+<a href="https://leiagora.com.br/ministro-da-saude-visita-unicamp-e-conhece-tecnologia-inedita-para-diagnostico-de-cancer-na-america-latina/" target="_blank" rel="noopener noreferrer">Ministro da Saúde visita Unicamp e conhece tecnologia inédita para diagnóstico de câncer na América Latina</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MS" data-search="Greenline leva tecnologia de carbono a fórum em Campo Grande JD1 Notícias Brasil">
+<div class="source">JD1 Notícias</div>
+<div class="meta">Brasil
+ · MS
+ · 27/10/2026 19:55</div>
+<h3>
+<a href="https://www.jd1noticias.com/meio-ambiente/2026/10/27/greenline-leva-tecnologia-de-carbono-a-forum-em-campo-grande.html" target="_blank" rel="noopener noreferrer">Greenline leva tecnologia de carbono a fórum em Campo Grande</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PB" data-search="Lucas Ribeiro encaminha projeto de isenção do IPVA para motoristas de aplicativo Paraíba Já Brasil">
+<div class="source">Paraíba Já</div>
+<div class="meta">Brasil
+ · PB
+ · 27/10/2026 17:43</div>
+<h3>
+<a href="https://paraibaja.com.br/lucas-ribeiro-encaminha-projeto-de-isencao-do-ipva-para-motoristas-de-aplicativo/" target="_blank" rel="noopener noreferrer">Lucas Ribeiro encaminha projeto de isenção do IPVA para motoristas de aplicativo</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="DF" data-search="Aplicativo DF no Ponto ultrapassa 680 mil usuários ativos Radar DF Brasil">
+<div class="source">Radar DF</div>
+<div class="meta">Brasil
+ · DF
+ · 27/10/2026 13:00</div>
+<h3>
+<a href="https://radardf.com.br/distrito-federal/aplicativo-df-no-ponto-ultrapassa-680-mil-usuarios-ativos/" target="_blank" rel="noopener noreferrer">Aplicativo DF no Ponto ultrapassa 680 mil usuários ativos</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PB" data-search="Motociclista por aplicativo morre após colisão com carro, em Bayeux Jornal da Paraíba Brasil">
+<div class="source">Jornal da Paraíba</div>
+<div class="meta">Brasil
+ · PB
+ · 27/10/2026 04:56</div>
+<h3>
+<a href="https://jornaldaparaiba.com.br/cotidiano/motociclista-por-aplicativo-morre-apos-colisao-com-carro-em-bayeux" target="_blank" rel="noopener noreferrer">Motociclista por aplicativo morre após colisão com carro, em Bayeux</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="&#39;Smart City Expo&#39;: la tecnología urbana aborda los retos ante la emergencia climática global y la crisis de la vivienda elDiario.es Espanha">
+<div class="source">elDiario.es</div>
+<div class="meta">Espanha
+ · 27/10/2026 01:00</div>
+<h3>
+<a href="https://www.eldiario.es/edcreativo/smart-city-expo-tecnologia-urbana-aborda-retos-emergencia-climatica-global-crisis-vivienda_1_13616440.html" target="_blank" rel="noopener noreferrer">&#39;Smart City Expo&#39;: la tecnología urbana aborda los retos ante la emergencia climática global y la crisis de la vivienda</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Amazon confirma “crediário” no Brasil; pagamento chega a 12 parcelas Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 28/10/2026 07:42</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/amazon-confirma-crediario-no-brasil-pagamento-chega-a-12-parcelas/" target="_blank" rel="noopener noreferrer">Amazon confirma “crediário” no Brasil; pagamento chega a 12 parcelas</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AM" data-search="Ações chinesas se recuperam; setor de tecnologia acompanha alta generalizada Portal do Holanda Brasil">
+<div class="source">Portal do Holanda</div>
+<div class="meta">Brasil
+ · AM
+ · 28/10/2026 07:29</div>
+<h3>
+<a href="https://www.portaldoholanda.com.br/articles/1004559" target="_blank" rel="noopener noreferrer">Ações chinesas se recuperam; setor de tecnologia acompanha alta generalizada</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Bússola &amp; Cia: cibersegurança é prioridade para 54% das empresas financeiras Exame Brasil">
+<div class="source">Exame</div>
+<div class="meta">Brasil
+ · 28/10/2026 04:00</div>
+<h3>
+<a href="https://exame.com/bussola/bussola-cia-ciberseguranca-e-prioridade-para-54-das-empresas-financeiras/" target="_blank" rel="noopener noreferrer">Bússola &amp; Cia: cibersegurança é prioridade para 54% das empresas financeiras</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="heise+ | Urheberrecht, Patente, Marken: Was beim KI-Nachbau von Software zu beachten ist c&#39;t Alemanha">
+<div class="source">c&#39;t</div>
+<div class="meta">Alemanha
+ · 28/10/2026 04:00</div>
+<h3>
+<a href="https://www.heise.de/hintergrund/Urheberrecht-Patente-Marken-Was-beim-KI-Nachbau-von-Software-zu-beachten-ist-11487778.html" target="_blank" rel="noopener noreferrer">heise+ | Urheberrecht, Patente, Marken: Was beim KI-Nachbau von Software zu beachten ist</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Altman alle aziende: «Prima la sicurezza Ai». Oracle porta in casa i chip di intelligenza artificiale di Google Il Sole 24 Ore Itália">
+<div class="source">Il Sole 24 Ore</div>
+<div class="meta">Itália
+ · 27/10/2026 21:04</div>
+<h3>
+<a href="https://www.ilsole24ore.com/art/altman-aziende-prima-sicurezza-ai-oracle-porta-casa-tpu-google-AJmyALwB" target="_blank" rel="noopener noreferrer">Altman alle aziende: «Prima la sicurezza Ai». Oracle porta in casa i chip di intelligenza artificiale di Google</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Shopee vence na estreia do Top Aplicativo de Compras Folha de S.Paulo Brasil">
+<div class="source">Folha de S.Paulo</div>
+<div class="meta">Brasil
+ · 27/10/2026 21:00</div>
+<h3>
+<a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://top-of-mind.folha.uol.com.br/2026/10/shopee-vence-na-estreia-do-top-aplicativo-de-compras.shtml" target="_blank" rel="noopener noreferrer">Shopee vence na estreia do Top Aplicativo de Compras</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PE" data-search="RioMar terá robô com tecnologia pernambucana como guia do Natal dos Brinquedos Jornal do Commercio (PE) Brasil">
+<div class="source">Jornal do Commercio (PE)</div>
+<div class="meta">Brasil
+ · PE
+ · 27/10/2026 20:33</div>
+<h3>
+<a href="https://jc.uol.com.br/economia/2026/10/27/riomar-tera-robo-com-tecnologia-pernambucana-como-guia-do-natal-dos-brinquedos.html" target="_blank" rel="noopener noreferrer">RioMar terá robô com tecnologia pernambucana como guia do Natal dos Brinquedos</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PR" data-search="BIM: Tecnologia ajuda a evitar erros na construção Tarobá News Brasil">
+<div class="source">Tarobá News</div>
+<div class="meta">Brasil
+ · PR
+ · 27/10/2026 16:22</div>
+<h3>
+<a href="https://taroba.com.br/tv/londrina/taroba-cidade/bim-tecnologia-ajuda-a-evitar-erros-na-construcao" target="_blank" rel="noopener noreferrer">BIM: Tecnologia ajuda a evitar erros na construção</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MT" data-search="Cozinha de alta tecnologia do UNIVAG recebe chefs durante festival gastronômico HiperNotícias Brasil">
+<div class="source">HiperNotícias</div>
+<div class="meta">Brasil
+ · MT
+ · 27/10/2026 15:28</div>
+<h3>
+<a href="https://www.hnt.com.br/cuiabanalia/cozinha-de-alta-tecnologia-do-univag-recebe-chefs-durante-festival-gastronomico/583605" target="_blank" rel="noopener noreferrer">Cozinha de alta tecnologia do UNIVAG recebe chefs durante festival gastronômico</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Notational Velocity e nvALT, antigos apps de anotações do macOS, estão de volta Manual do Usuário Brasil">
+<div class="source">Manual do Usuário</div>
+<div class="meta">Brasil
+ · 27/10/2026 15:10</div>
+<h3>
+<a href="https://manualdousuario.net/notationa-velocity-nvalt-atualizados/" target="_blank" rel="noopener noreferrer">Notational Velocity e nvALT, antigos apps de anotações do macOS, estão de volta</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="PowerToys 0.102: “canivete suíço” do Windows agora facilita uso do mouse Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 27/10/2026 13:56</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/powertoys-0-102-canivete-suico-do-windows-agora-facilita-uso-do-mouse/" target="_blank" rel="noopener noreferrer">PowerToys 0.102: “canivete suíço” do Windows agora facilita uso do mouse</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="From cheap tool to premium subscription: When a beloved app&#39;s price skyrockets Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 27/10/2026 12:50</div>
+<h3>
+<a href="https://arstechnica.com/gadgets/2026/10/from-cheap-tool-to-premium-subscription-when-a-beloved-apps-price-skyrockets/" target="_blank" rel="noopener noreferrer">From cheap tool to premium subscription: When a beloved app&#39;s price skyrockets</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="SE" data-search="AutoAju 2026 reúne indústria, tecnologia e negócios do setor automotivo em Aracaju A8SE Brasil">
+<div class="source">A8SE</div>
+<div class="meta">Brasil
+ · SE
+ · 27/10/2026 10:50</div>
+<h3>
+<a href="https://a8se.com/noticias/agenda/2026/10/27/245834-autoaju-2026-reune-industria-tecnologia-e-negocios-do-setor-automotivo-em-aracaju" target="_blank" rel="noopener noreferrer">AutoAju 2026 reúne indústria, tecnologia e negócios do setor automotivo em Aracaju</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Crise no iPhone Duo: fornecedora nega falha na dobradiça Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 27/10/2026 10:38</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/crise-no-iphone-duo-fornecedora-nega-falha-na-dobradica/" target="_blank" rel="noopener noreferrer">Crise no iPhone Duo: fornecedora nega falha na dobradiça</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PR" data-search="Deputado Batatinha promove audiência para discutir robótica competitiva como esporte no Paraná Tarobá News Brasil">
+<div class="source">Tarobá News</div>
+<div class="meta">Brasil
+ · PR
+ · 27/10/2026 09:05</div>
+<h3>
+<a href="https://taroba.com.br/noticias/cidade/deputado-batatinha-promove-audiencia-para-discutir-robotica-competitiva-como-esporte-no-parana" target="_blank" rel="noopener noreferrer">Deputado Batatinha promove audiência para discutir robótica competitiva como esporte no Paraná</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Smart TV LG QNED Mini LED 65″ fica 27% mais barata em oferta Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 26/10/2026 14:53</div>
+<h3>
+<a href="https://tecnoblog.net/achados/smart-tv-lg-qned-mini-led-65-fica-28-mais-barata-em-oferta/" target="_blank" rel="noopener noreferrer">Smart TV LG QNED Mini LED 65″ fica 27% mais barata em oferta</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Em meio a aumento de preços, Netflix vê audiência cair Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 26/10/2026 10:27</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/em-meio-a-aumento-de-precos-netflix-ve-audiencia-cair/" target="_blank" rel="noopener noreferrer">Em meio a aumento de preços, Netflix vê audiência cair</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="EC refuses to name software used to flag SIR errors, cites ‘trade secrets’ RTI exemption: Report Scroll.in Índia">
+<div class="source">Scroll.in</div>
+<div class="meta">Índia
+ · 25/10/2026 08:43</div>
+<h3>
+<a href="https://scroll.in/latest/1096632/ec-refuses-to-name-software-used-to-flag-sir-errors-cites-trade-secrets-rti-exemption-report" target="_blank" rel="noopener noreferrer">EC refuses to name software used to flag SIR errors, cites ‘trade secrets’ RTI exemption: Report</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="China’s snooping around Pacific undersea cables raises risks for Big Tech Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 28/10/2026 08:00</div>
+<h3>
+<a href="https://arstechnica.com/gadgets/2026/10/google-and-meta-subsea-cables-among-most-at-risk-from-sabotage-in-pacific/" target="_blank" rel="noopener noreferrer">China’s snooping around Pacific undersea cables raises risks for Big Tech</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Imagem do Disney+ fica pior no Brasil, mas preço segue intacto Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 27/10/2026 19:35</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/imagem-do-disney-fica-pior-no-brasil-mas-preco-segue-intacto/" target="_blank" rel="noopener noreferrer">Imagem do Disney+ fica pior no Brasil, mas preço segue intacto</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="South Carolina&#39;s measles outbreak jumped to Washington state 5 times in 2 weeks Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 27/10/2026 19:22</div>
+<h3>
+<a href="https://arstechnica.com/health/2026/10/domestic-travel-poses-growing-risk-for-measles-and-a-new-challenge-for-states/" target="_blank" rel="noopener noreferrer">South Carolina&#39;s measles outbreak jumped to Washington state 5 times in 2 weeks</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="China&#39;s top-secret spaceplane can&#39;t hide in low-Earth orbit Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 27/10/2026 19:04</div>
+<h3>
+<a href="https://arstechnica.com/space/2026/10/chinas-top-secret-spaceplane-cant-hide-in-low-earth-orbit/" target="_blank" rel="noopener noreferrer">China&#39;s top-secret spaceplane can&#39;t hide in low-Earth orbit</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Code-execution flaw in UEFI firmware affects most servers on planet Earth Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 27/10/2026 17:25</div>
+<h3>
+<a href="https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/" target="_blank" rel="noopener noreferrer">Code-execution flaw in UEFI firmware affects most servers on planet Earth</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Google begins certifying Registered App Stores for Android, but not in the US Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 27/10/2026 16:32</div>
+<h3>
+<a href="https://arstechnica.com/gadgets/2026/10/googles-android-registered-app-stores-program-launches-dec-1-applications-now-open/" target="_blank" rel="noopener noreferrer">Google begins certifying Registered App Stores for Android, but not in the US</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="BIGWORDS.PAGE Manual do Usuário Brasil">
+<div class="source">Manual do Usuário</div>
+<div class="meta">Brasil
+ · 27/10/2026 10:00</div>
+<h3>
+<a href="https://manualdousuario.net/bigwords-page/" target="_blank" rel="noopener noreferrer">BIGWORDS.PAGE</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Você piscou e o Google se deu o direito de usar seu Gmail, Drive e fotos para personalizar anúncios Manual do Usuário Brasil">
+<div class="source">Manual do Usuário</div>
+<div class="meta">Brasil
+ · 26/10/2026 08:46</div>
+<h3>
+<a href="https://manualdousuario.net/google-termos-anuncios-gmail-drive-fotos/" target="_blank" rel="noopener noreferrer">Você piscou e o Google se deu o direito de usar seu Gmail, Drive e fotos para personalizar anúncios</a>
+</h3>
+
+
+</article>
+
+</div>
+</section>
+
+</main>
+<footer>Seleção automática por regras de assunto, relevância e data. Até dois destaques por fonte em cada editoria. Os filtros consideram a origem da fonte principal, não o local do acontecimento. Títulos no idioma original; nenhuma tradução ou resumo gerado por IA. A disponibilidade depende dos feeds públicos.<br>
+<a href="https://github.com/mac-manito/Repo">Código e metodologia</a> · Links externos abrem a publicação original.</footer>
+</div>
+<script>
+(()=>{const form=document.querySelector('#filters');if(!form)return;const search=document.querySelector('#search'),origin=document.querySelector('#origin'),uf=document.querySelector('#uf'),cards=[...document.querySelectorAll('.card')];const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const terms=cards.map(c=>norm(c.dataset.search));function filter(){if(origin.value==='mundo')uf.value='';uf.disabled=origin.value==='mundo';const query=norm(search.value).trim();let count=0;cards.forEach((card,i)=>{const match=(!origin.value||card.dataset.origin===origin.value)&&(!uf.value||card.dataset.uf===uf.value)&&terms[i].includes(query);card.hidden=!match;if(match)count++});document.querySelector('#status').textContent=count+' de '+cards.length+' notícias exibidas nesta página';document.querySelector('#no-results').hidden=count>0}form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter()})();
+</script>
+</body>
+</html>

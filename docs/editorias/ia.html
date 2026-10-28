@@ -1,0 +1,2305 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Inteligência artificial · Capa do Mundo</title>
+<style>
+:root{--paper:#f7f5ef;--ink:#202e29;--muted:#59675f;--line:#cdd3c9;--green:#185d49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd761c;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);padding:28px 0 16px}
+.masthead{font:700 clamp(30px,5vw,52px)/1.1 Georgia,serif;text-decoration:none;letter-spacing:-2px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eyebrow,.meta{font-size:12px;color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:14px}
+nav a{text-decoration:none}
+.intro{padding:40px 0 24px}
+h1{font:normal clamp(32px,5vw,56px)/1.1 Georgia,serif;letter-spacing:-1px;margin:10px 0 16px}
+h2{font:normal 30px/1.2 Georgia,serif;margin:0}
+h3{font:normal 23px/1.3 Georgia,serif;margin:12px 0}
+.intro p{max-width:760px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;padding:20px;background:#eaf0e8;border:1px solid var(--line);align-items:end}
+label{display:flex;flex-direction:column;font-size:12px;gap:6px;flex:1;min-width:140px}
+input,select,button{font:inherit;color:inherit;padding:10px;border:1px solid #9aa89d;background:var(--paper);border-radius:3px}
+button{cursor:pointer}
+.status{font-size:13px;color:var(--muted);min-height:22px}
+.section{margin:36px 0;border-top:2px solid var(--ink);padding-top:18px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.section-head a{font-size:13px;white-space:nowrap}
+.description{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.card{padding:24px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.card h3 a{text-decoration:none}
+.badge{display:inline-block;font-size:11px;color:var(--green);border:1px solid #b6c8bc;border-radius:3px;padding:2px 6px;margin:8px 3px 0 0}
+.source{font-size:13px;font-weight:650}
+.card details{font-size:12px;margin-top:12px}
+.card details li{margin-top:8px}
+summary{cursor:pointer}
+.notice{padding:14px 18px;background:#eee5d3;border-left:3px solid #a77624;font-size:14px}
+.empty{color:var(--muted);padding:20px 0}
+.coverage{margin-top:28px;font-size:14px}
+.coverage ul{columns:2;padding-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;margin-top:50px;font-size:12px;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.top{align-items:start;flex-direction:column}
+.wrap{padding:0 20px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}
+.section-head{align-items:start;flex-direction:column;gap:8px}
+.coverage ul{columns:1}
+h3{font-size:24px}
+.intro{padding-top:28px}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="top">
+<a class="masthead" href="../index.html">Capa do Mundo<span style="color:var(--green)">.</span>
+</a>
+<div class="meta">Atualizado em 28/10/2026 às 08:35 · Brasília<br>377 de 691 fontes com notícias</div>
+</div>
+<nav aria-label="Navegação principal">
+<a href="../index.html">Capa temática</a>
+<a href="../editorias/tecnologia.html">Tecnologia</a>
+<a href="../editorias/ia.html">Inteligência artificial</a>
+<a href="../editorias/ciencia.html">Ciência</a>
+<a href="../editorias/tributaria.html">Tributária</a>
+<a href="../editorias/juridico.html">Jurídico</a>
+<a href="../gerais.html">Notícias gerais</a>
+<a href="../edicoes/index.html">Arquivo</a>
+</nav>
+</header>
+<main>
+<div class="intro">
+<div class="eyebrow">Informação para acompanhar o que importa</div>
+<h1>Inteligência artificial</h1>
+</div>
+
+
+<form class="filters" id="filters" role="search">
+<label>Buscar nesta página<input id="search" type="search" placeholder="Assunto ou fonte">
+</label>
+<label>Origem da fonte<select id="origin">
+<option value="">Todas</option>
+<option value="brasil">Brasil</option>
+<option value="mundo">Resto do mundo</option>
+</select>
+</label>
+<label>Estado da fonte<select id="uf">
+<option value="">Todos / nacionais</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option>
+</select>
+</label>
+<button type="reset">Limpar filtros</button>
+</form>
+<p class="status" id="status" aria-live="polite">
+</p>
+<p class="empty" id="no-results" hidden>Nenhuma notícia corresponde aos filtros nesta página. Consulte também a página da editoria para ver mais notícias.</p>
+
+
+
+<section class="section" id="ia">
+<div class="section-head">
+<h2>Inteligência artificial</h2>
+</div>
+<p class="description">Aplicações, pesquisas e novos modelos. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="OpenAI expands partnership with Oracle to bring its apps to ChatGPT OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 27/10/2026 04:00</div>
+<h3>
+<a href="https://openai.com/index/oracle-apps-in-chatgpt" target="_blank" rel="noopener noreferrer">OpenAI expands partnership with Oracle to bring its apps to ChatGPT</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="OpenAI and Poland’s NASK partner to advance AI safety and security OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 22/10/2026 21:00</div>
+<h3>
+<a href="https://openai.com/index/openai-nask-ai-safety-security-partnership" target="_blank" rel="noopener noreferrer">OpenAI and Poland’s NASK partner to advance AI safety and security</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Em teste, IA da DeepSeek desobedece comando e evita ser desativada Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 28/10/2026 05:00</div>
+<h3>
+<a href="https://valor.globo.com/empresas/noticia/2026/10/28/em-teste-ia-da-deepseek-desobedece-comando-e-evita-ser-desativada.ghtml" target="_blank" rel="noopener noreferrer">Em teste, IA da DeepSeek desobedece comando e evita ser desativada</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Quem controla a IA? A Anthropic tem um plano a longo prazo CNN Brasil Brasil">
+<div class="source">CNN Brasil</div>
+<div class="meta">Brasil
+ · 28/10/2026 04:10</div>
+<h3>
+<a href="https://www.cnnbrasil.com.br/economia/money/inteligencia-artificial/quem-controla-a-ia-a-anthropic-tem-um-plano-a-longo-prazo/" target="_blank" rel="noopener noreferrer">Quem controla a IA? A Anthropic tem um plano a longo prazo</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic says risks for investors include blowback from runaway AI PBS EUA">
+<div class="source">PBS</div>
+<div class="meta">EUA
+ · 27/10/2026 15:28</div>
+<h3>
+<a href="https://www.pbs.org/newshour/science/anthropic-says-risks-for-investors-include-blowback-from-runaway-ai" target="_blank" rel="noopener noreferrer">Anthropic says risks for investors include blowback from runaway AI</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Elvis : les ayants droit du King attaquent la société d’IA Anthropic, accusée d’avoir utilisée plus de 270 chansons de la star CNews França">
+<div class="source">CNews</div>
+<div class="meta">França
+ · 27/10/2026 14:36</div>
+<h3>
+<a href="https://www.cnews.fr/culture/2026-10-27/elvis-les-ayants-droit-du-king-attaquent-la-societe-dia-anthropic-accusee-davoir" target="_blank" rel="noopener noreferrer">Elvis : les ayants droit du King attaquent la société d’IA Anthropic, accusée d’avoir utilisée plus de 270 chansons de la star</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="I Tested Every Major AI Agent for a Day. Here’s the Best One Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 27/10/2026 06:30</div>
+<h3>
+<a href="https://www.wired.com/story/i-tested-every-major-ai-agent-for-a-day-heres-the-best-one/" target="_blank" rel="noopener noreferrer">I Tested Every Major AI Agent for a Day. Here’s the Best One</a>
+</h3>
+
+
+</article>
+
+</div>
+
+<h3>Mais notícias da editoria</h3>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Uber brings ChatGPT Work to all employees with OpenAI OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 21/10/2026 21:00</div>
+<h3>
+<a href="https://openai.com/index/uber-chatgpt-work-rollout" target="_blank" rel="noopener noreferrer">Uber brings ChatGPT Work to all employees with OpenAI</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic IPO leads AI&#39;s $235 billion dealmaking blitz Axios EUA">
+<div class="source">Axios</div>
+<div class="meta">EUA
+ · 27/10/2026 06:00</div>
+<h3>
+<a href="https://www.axios.com/2026/10/27/anthropic-ipo-meta-spacex-ai-deals" target="_blank" rel="noopener noreferrer">Anthropic IPO leads AI&#39;s $235 billion dealmaking blitz</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="The Anthropic S-1 Filing Is Also an AI Doomsday Primer Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 26/10/2026 13:01</div>
+<h3>
+<a href="https://www.wired.com/story/the-anthropic-ipo-is-also-a-doomsday-primer/" target="_blank" rel="noopener noreferrer">The Anthropic S-1 Filing Is Also an AI Doomsday Primer</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="OpenAI desiste de treinar modelos de IA com acesso à internet Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 26/10/2026 12:08</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/openai-desiste-de-treinar-modelos-de-ia-com-acesso-a-internet/" target="_blank" rel="noopener noreferrer">OpenAI desiste de treinar modelos de IA com acesso à internet</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic&#39;s Claude bypassed a paywall to access Georgia voter data without authorization Axios EUA">
+<div class="source">Axios</div>
+<div class="meta">EUA
+ · 25/10/2026 19:26</div>
+<h3>
+<a href="https://www.axios.com/2026/10/25/anthropic-claude-georgia-voter-data" target="_blank" rel="noopener noreferrer">Anthropic&#39;s Claude bypassed a paywall to access Georgia voter data without authorization</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic IPO warns its AI could blackmail people, become sentient, end humanity Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 27/10/2026 18:31</div>
+<h3>
+<a href="https://arstechnica.com/ai/2026/10/anthropic-ipo-warns-its-ai-could-blackmail-people-become-sentient-end-humanity/" target="_blank" rel="noopener noreferrer">Anthropic IPO warns its AI could blackmail people, become sentient, end humanity</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic&#39;s IPO outlines AI&#39;s extraordinary risks Axios EUA">
+<div class="source">Axios</div>
+<div class="meta">EUA
+ · 26/10/2026 10:52</div>
+<h3>
+<a href="https://www.axios.com/2026/10/26/anthropic-ipo-risk-factors-humanity" target="_blank" rel="noopener noreferrer">Anthropic&#39;s IPO outlines AI&#39;s extraordinary risks</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="ChatGPT’s expanding world of work OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 26/10/2026 07:00</div>
+<h3>
+<a href="https://openai.com/index/chatgpt-expanding-world-of-work" target="_blank" rel="noopener noreferrer">ChatGPT’s expanding world of work</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II) OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 23/10/2026 14:00</div>
+<h3>
+<a href="https://openai.com/index/scaling-storage-one-billion-users-part-two" target="_blank" rel="noopener noreferrer">Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Q&amp;A: How AI came to model the “messy” human mind MIT News — IA EUA">
+<div class="source">MIT News — IA</div>
+<div class="meta">EUA
+ · 23/10/2026 01:00</div>
+<h3>
+<a href="https://news.mit.edu/2026/qa-how-ai-came-to-model-messy-human-mind-1023" target="_blank" rel="noopener noreferrer">Q&amp;A: How AI came to model the “messy” human mind</a>
+</h3>
+<span class="badge">Fonte institucional</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="OpenAI models are coming to Google Cloud OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 21/10/2026 09:00</div>
+<h3>
+<a href="https://openai.com/index/openai-models-google-cloud" target="_blank" rel="noopener noreferrer">OpenAI models are coming to Google Cloud</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Gärtnern mit ChatGPT und Claude: Sechs Prompts für den individuellen KI-Gartenkalender Frankfurter Allgemeine Zeitung (FAZ) Alemanha">
+<div class="source">Frankfurter Allgemeine Zeitung (FAZ)</div>
+<div class="meta">Alemanha
+ · 28/10/2026 02:50</div>
+<h3>
+<a href="https://www.faz.net/premium/digitalwirtschaft/ki-akademie/mit-chatgpt-zum-persoenlichen-gartenkalender-so-geht-es-accg-201625356.html" target="_blank" rel="noopener noreferrer">Gärtnern mit ChatGPT und Claude: Sechs Prompts für den individuellen KI-Gartenkalender</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Learner collaborates with MIT peers to develop book of AI insights MIT News — IA EUA">
+<div class="source">MIT News — IA</div>
+<div class="meta">EUA
+ · 27/10/2026 17:55</div>
+<h3>
+<a href="https://news.mit.edu/2026/learner-prabha-jha-collaborates-with-mit-peers-to-develop-book-of-ai-insights-1027" target="_blank" rel="noopener noreferrer">Learner collaborates with MIT peers to develop book of AI insights</a>
+</h3>
+<span class="badge">Fonte institucional</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic gaat naar de beurs en geeft toe: het kan catastrofaal misgaan met AI en misschien gaan we nooit geld verdienen de Volkskrant Países Baixos">
+<div class="source">de Volkskrant</div>
+<div class="meta">Países Baixos
+ · 27/10/2026 14:32</div>
+<h3>
+<a href="https://www.volkskrant.nl/economie/anthropic-gaat-naar-de-beurs-en-geeft-toe-het-kan-catastrofaal-misgaan-met-ai-en-misschien-gaan-we-nooit-geld-verdienen~be576b17/" target="_blank" rel="noopener noreferrer">Anthropic gaat naar de beurs en geeft toe: het kan catastrofaal misgaan met AI en misschien gaan we nooit geld verdienen</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="How Fanatics and OpenAI streamline the fan experience OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 26/10/2026 04:00</div>
+<h3>
+<a href="https://openai.com/index/fanatics-streamline-fan-experience" target="_blank" rel="noopener noreferrer">How Fanatics and OpenAI streamline the fan experience</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="How Ultrafast cut incident investigation from hours to minutes at OpenAI OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 26/10/2026 04:00</div>
+<h3>
+<a href="https://openai.com/index/openai-cut-incident-investigation" target="_blank" rel="noopener noreferrer">How Ultrafast cut incident investigation from hours to minutes at OpenAI</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="At MIT, Martha Minow speaks on sustaining democracy, both by using and overcoming AI MIT News — IA EUA">
+<div class="source">MIT News — IA</div>
+<div class="meta">EUA
+ · 23/10/2026 18:00</div>
+<h3>
+<a href="https://news.mit.edu/2026/martha-minow-speaks-on-sustaining-democracy-using-overcoming-ai-1023" target="_blank" rel="noopener noreferrer">At MIT, Martha Minow speaks on sustaining democracy, both by using and overcoming AI</a>
+</h3>
+<span class="badge">Fonte institucional</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Can we trust LLMs to judge whether a research idea is novel? Hugging Face EUA">
+<div class="source">Hugging Face</div>
+<div class="meta">EUA
+ · 27/10/2026 13:12</div>
+<h3>
+<a href="https://huggingface.co/blog/allenai/novelty-bench" target="_blank" rel="noopener noreferrer">Can we trust LLMs to judge whether a research idea is novel?</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Retell uses OpenAI models to help power 100M monthly calls OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 27/10/2026 12:00</div>
+<h3>
+<a href="https://openai.com/index/retell-ai" target="_blank" rel="noopener noreferrer">Retell uses OpenAI models to help power 100M monthly calls</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Our newest AI Quest: Mapping the human brain Google — IA EUA">
+<div class="source">Google — IA</div>
+<div class="meta">EUA
+ · 26/10/2026 13:00</div>
+<h3>
+<a href="https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/" target="_blank" rel="noopener noreferrer">Our newest AI Quest: Mapping the human brain</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required Hugging Face EUA">
+<div class="source">Hugging Face</div>
+<div class="meta">EUA
+ · 21/10/2026 15:26</div>
+<h3>
+<a href="https://huggingface.co/blog/nvidia/kumo-relational" target="_blank" rel="noopener noreferrer">NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="OpenAI deve fechar acordo para comprar chips do Google, diz site Folha de S.Paulo Brasil">
+<div class="source">Folha de S.Paulo</div>
+<div class="meta">Brasil
+ · 28/10/2026 08:21</div>
+<h3>
+<a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://c-level.folha.uol.com.br/ia/2026/10/openai-deve-fechar-acordo-para-comprar-chips-do-google-diz-site.shtml" target="_blank" rel="noopener noreferrer">OpenAI deve fechar acordo para comprar chips do Google, diz site</a>
+</h3>
+
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://c-level.folha.uol.com.br/ia/2026/10/openai-deve-fechar-acordo-para-comprar-chips-do-google-diz-site.shtml" target="_blank" rel="noopener noreferrer">UOL — OpenAI deve fechar acordo para comprar chips do Google, diz site</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Macmillan Staff Say the Publisher Threw a Party for a Workplace AI Assistant That Was Later Killed Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 28/10/2026 07:15</div>
+<h3>
+<a href="https://www.wired.com/story/macmillan-staff-say-the-publisher-threw-a-party-for-a-workplace-ai-assistant-that-was-later-killed/" target="_blank" rel="noopener noreferrer">Macmillan Staff Say the Publisher Threw a Party for a Workplace AI Assistant That Was Later Killed</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="DF" data-search="Líderes do setor de tecnologia e de IA expandem lista de ricos na China Jornal de Brasília Brasil">
+<div class="source">Jornal de Brasília</div>
+<div class="meta">Brasil
+ · DF
+ · 28/10/2026 06:54</div>
+<h3>
+<a href="https://jornaldebrasilia.com.br/noticias/mundo/lideres-do-setor-de-tecnologia-e-de-ia-expandem-lista-de-ricos-na-china/" target="_blank" rel="noopener noreferrer">Líderes do setor de tecnologia e de IA expandem lista de ricos na China</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RO" data-search="Anthropic se prepara para um dos maiores IPOs da história; veja ranking Expressão Rondônia Brasil">
+<div class="source">Expressão Rondônia</div>
+<div class="meta">Brasil
+ · RO
+ · 28/10/2026 04:40</div>
+<h3>
+<a href="https://expressaorondonia.com.br/anthropic-se-prepara-para-um-dos-maiores-ipos-da-historia-veja-ranking/" target="_blank" rel="noopener noreferrer">Anthropic se prepara para um dos maiores IPOs da história; veja ranking</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic’s seven founders tighten grip ahead of blockbuster IPO Financial Times Reino Unido">
+<div class="source">Financial Times</div>
+<div class="meta">Reino Unido
+ · 28/10/2026 02:00</div>
+<h3>
+<a href="https://www.ft.com/content/24a35e41-2641-4cec-97f5-a974412f9952?syn-25a6b1a6=1" target="_blank" rel="noopener noreferrer">Anthropic’s seven founders tighten grip ahead of blockbuster IPO</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="The AI election that wasn&#39;t Platformer EUA">
+<div class="source">Platformer</div>
+<div class="meta">EUA
+ · 27/10/2026 21:23</div>
+<h3>
+<a href="https://www.platformer.news/ai-midterms-openai-deepfakes/" target="_blank" rel="noopener noreferrer">The AI election that wasn&#39;t</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Só 3% das empresas viram ganhos com IA, mostra estudo Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 27/10/2026 18:53</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/so-3-das-empresas-viram-ganhos-com-ia-mostra-estudo/" target="_blank" rel="noopener noreferrer">Só 3% das empresas viram ganhos com IA, mostra estudo</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Claude recusa tarefas de engenharia reversa em TVs e jogos Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 27/10/2026 18:49</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/claude-recusa-tarefas-de-engenharia-reversa-em-tvs-e-jogos/" target="_blank" rel="noopener noreferrer">Claude recusa tarefas de engenharia reversa em TVs e jogos</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic Says It Will Revolutionize Biology—Some Day Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 27/10/2026 16:39</div>
+<h3>
+<a href="https://www.wired.com/story/anthropic-says-it-will-revolutionize-biology-some-day/" target="_blank" rel="noopener noreferrer">Anthropic Says It Will Revolutionize Biology—Some Day</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="DeepMind unveils Genie 4 world model promising more realistic physics and humans Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 27/10/2026 13:00</div>
+<h3>
+<a href="https://arstechnica.com/google/2026/10/deepminds-genie-4-world-model-adds-audio-and-more-realistic-people-to-simulations/" target="_blank" rel="noopener noreferrer">DeepMind unveils Genie 4 world model promising more realistic physics and humans</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="UK Home Office May Face Investigation Over Use of OpenAI Tech Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 27/10/2026 12:10</div>
+<h3>
+<a href="https://www.wired.com/story/uk-home-office-may-face-investigation-over-use-of-openai-tools/" target="_blank" rel="noopener noreferrer">UK Home Office May Face Investigation Over Use of OpenAI Tech</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="AI Agents Are Media’s New Favorite Audience Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 27/10/2026 08:00</div>
+<h3>
+<a href="https://www.wired.com/story/ai-agents-are-medias-new-favorite-audience/" target="_blank" rel="noopener noreferrer">AI Agents Are Media’s New Favorite Audience</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Four takeaways from Anthropic’s potentially record-breaking stock market filing The Guardian Australia Austrália">
+<div class="source">The Guardian Australia</div>
+<div class="meta">Austrália
+ · 27/10/2026 02:00</div>
+<h3>
+<a href="https://www.theguardian.com/technology/2026/oct/26/anthropic-stock-market-filing-takeaways" target="_blank" rel="noopener noreferrer">Four takeaways from Anthropic’s potentially record-breaking stock market filing</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Inside Anthropic&#39;s massive — and wild — IPO prospectus Axios EUA">
+<div class="source">Axios</div>
+<div class="meta">EUA
+ · 26/10/2026 19:58</div>
+<h3>
+<a href="https://www.axios.com/2026/10/26/anthropic-ipo-biggest-surprises" target="_blank" rel="noopener noreferrer">Inside Anthropic&#39;s massive — and wild — IPO prospectus</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Why Anthropic’s IPO Prospectus Is Missing So Many Key Figures Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 26/10/2026 18:27</div>
+<h3>
+<a href="https://www.wired.com/story/anthropic-prospectus-leaves-out-some-numbers/" target="_blank" rel="noopener noreferrer">Why Anthropic’s IPO Prospectus Is Missing So Many Key Figures</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Itaú compra startup de IA por R$ 2,9 bilhões Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 26/10/2026 12:21</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/itau-compra-startup-de-ia-por-r-29-bilhoes/" target="_blank" rel="noopener noreferrer">Itaú compra startup de IA por R$ 2,9 bilhões</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic’s IPO Prospectus Reveals What’s Under the Hood Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 26/10/2026 11:50</div>
+<h3>
+<a href="https://www.wired.com/story/anthropic-ipo-filings-reveal-finances-risks-strategy/" target="_blank" rel="noopener noreferrer">Anthropic’s IPO Prospectus Reveals What’s Under the Hood</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Geoffrey Hinton: &#34;Llegará un momento que no entenderemos a la IA, como las ratas no entienden los números primos&#34; elDiarioAR Argentina">
+<div class="source">elDiarioAR</div>
+<div class="meta">Argentina
+ · 25/10/2026 10:24</div>
+<h3>
+<a href="https://www.eldiarioar.com/tecnologia/geoffrey-hinton-llegara-momento-no-entenderemos-ia-ratas-no-entienden-numeros-primos_1_13603789.html" target="_blank" rel="noopener noreferrer">Geoffrey Hinton: &#34;Llegará un momento que no entenderemos a la IA, como las ratas no entienden los números primos&#34;</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Intelligence artificielle Comment l&#39;IA m&#39;a empêché de la maltraiter Le Canard enchaîné França">
+<div class="source">Le Canard enchaîné</div>
+<div class="meta">França
+ · 24/10/2026 02:59</div>
+<h3>
+<a href="https://www.lecanardenchaine.fr/technologie-sciences/55222-comment-l-ia-m-a-empeche-de-la-maltraiter" target="_blank" rel="noopener noreferrer">Intelligence artificielle Comment l&#39;IA m&#39;a empêché de la maltraiter</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Más de 400 científicos denuncian la “negligencia” de los laboratorios de IA y exigen control internacional elDiarioAR Argentina">
+<div class="source">elDiarioAR</div>
+<div class="meta">Argentina
+ · 24/10/2026 00:02</div>
+<h3>
+<a href="https://www.eldiarioar.com/tecnologia/400-cientificos-denuncian-negligencia-laboratorios-ia-exigen-control-internacional_1_13603268.html" target="_blank" rel="noopener noreferrer">Más de 400 científicos denuncian la “negligencia” de los laboratorios de IA y exigen control internacional</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Wall Street prepares for AI&#39;s &#34;day after&#34; Axios EUA">
+<div class="source">Axios</div>
+<div class="meta">EUA
+ · 23/10/2026 06:30</div>
+<h3>
+<a href="https://www.axios.com/2026/10/23/ai-catastrophe-wall-street" target="_blank" rel="noopener noreferrer">Wall Street prepares for AI&#39;s &#34;day after&#34;</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Can LLMs Supercharge Geolocations? Our Tests Show Big Improvements But Humans Remain Key Bellingcat Internacional">
+<div class="source">Bellingcat</div>
+<div class="meta">Internacional
+ · 22/10/2026 08:06</div>
+<h3>
+<a href="https://www.bellingcat.com/resources/2026/10/22/can-llms-supercharge-geolocations-our-tests-show-big-improvements-but-humans-remain-key/" target="_blank" rel="noopener noreferrer">Can LLMs Supercharge Geolocations? Our Tests Show Big Improvements But Humans Remain Key</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="OpenAI brings its frontier models to rival Google Cloud Axios EUA">
+<div class="source">Axios</div>
+<div class="meta">EUA
+ · 21/10/2026 09:00</div>
+<h3>
+<a href="https://www.axios.com/2026/10/21/openai-google-cloud-ai-models" target="_blank" rel="noopener noreferrer">OpenAI brings its frontier models to rival Google Cloud</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="‘Human is the master’: labour chief says AI is reshaping jobs, not ending them South China Morning Post China">
+<div class="source">South China Morning Post</div>
+<div class="meta">China
+ · 28/10/2026 08:30</div>
+<h3>
+<a href="https://www.scmp.com/news/hong-kong/education/article/3372443/human-master-labour-chief-says-ai-reshaping-jobs-not-ending-them" target="_blank" rel="noopener noreferrer">‘Human is the master’: labour chief says AI is reshaping jobs, not ending them</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Wall Street’s AI Debt Machine Is Starting to Choke on Supply Bloomberg EUA">
+<div class="source">Bloomberg</div>
+<div class="meta">EUA
+ · 28/10/2026 07:30</div>
+<h3>
+<a href="https://www.bloomberg.com/news/articles/2026-10-28/wall-street-s-ai-debt-machine-is-starting-to-choke-on-supply" target="_blank" rel="noopener noreferrer">Wall Street’s AI Debt Machine Is Starting to Choke on Supply</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Crescimento surpreendente do comércio global, com boom de IA, mascara problemas, diz diretora-geral da OMC O Globo Brasil">
+<div class="source">O Globo</div>
+<div class="meta">Brasil
+ · 28/10/2026 07:29</div>
+<h3>
+<a href="https://oglobo.globo.com/economia/noticia/2026/10/28/crescimento-surpreendente-do-comercio-global-com-boom-de-ia-mascara-problemas-diz-diretora-geral-da-omc.ghtml" target="_blank" rel="noopener noreferrer">Crescimento surpreendente do comércio global, com boom de IA, mascara problemas, diz diretora-geral da OMC</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="‘There is no inevitable dystopia’: Jeanette Winterson on AI and the future of humanity The Guardian Reino Unido">
+<div class="source">The Guardian</div>
+<div class="meta">Reino Unido
+ · 28/10/2026 07:00</div>
+<h3>
+<a href="https://www.theguardian.com/books/2026/oct/28/no-inevitable-dystopia-jeanette-winterson-ai-future-of-humanity" target="_blank" rel="noopener noreferrer">‘There is no inevitable dystopia’: Jeanette Winterson on AI and the future of humanity</a>
+</h3>
+
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://www.theguardian.com/books/2026/oct/28/no-inevitable-dystopia-jeanette-winterson-ai-future-of-humanity" target="_blank" rel="noopener noreferrer">The Guardian Australia — ‘There is no inevitable dystopia’: Jeanette Winterson on AI and the future of humanity</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic says its goal is to help humanity, but you may not want to believe it Los Angeles Times EUA">
+<div class="source">Los Angeles Times</div>
+<div class="meta">EUA
+ · 28/10/2026 07:00</div>
+<h3>
+<a href="https://www.latimes.com/business/story/2026-10-28/anthropic-says-its-goal-is-to-help-humanity-but-you-may-not-want-to-believe-it" target="_blank" rel="noopener noreferrer">Anthropic says its goal is to help humanity, but you may not want to believe it</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Klas Granström: Googles AI-söktjänst är en mardröm för världens nyhetsmedier Dagens Nyheter Suécia">
+<div class="source">Dagens Nyheter</div>
+<div class="meta">Suécia
+ · 28/10/2026 06:55</div>
+<h3>
+<a href="https://www.dn.se/kultur/klas-granstrom-googles-ai-soktjanst-ar-en-mardrom-for-varldens-nyhetsmedier/" target="_blank" rel="noopener noreferrer">Klas Granström: Googles AI-söktjänst är en mardröm för världens nyhetsmedier</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Legora is building the agentic operating system for legal work OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 28/10/2026 06:30</div>
+<h3>
+<a href="https://openai.com/index/legora-agentic-operating-system-for-legal-work" target="_blank" rel="noopener noreferrer">Legora is building the agentic operating system for legal work</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Begoña Gómez denuncia al PP por suplantar su imagen con IA ABC (Espanha) Espanha">
+<div class="source">ABC (Espanha)</div>
+<div class="meta">Espanha
+ · 28/10/2026 05:38</div>
+<h3>
+<a href="https://www.abc.es/espana/begona-denuncia-pp-suplantar-imagen-ia-20261028083843-nt.html" target="_blank" rel="noopener noreferrer">Begoña Gómez denuncia al PP por suplantar su imagen con IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Customs foils bid to transit RM49.5mil AI chips through Malaysia, with potential weapons applications [WATCH] New Straits Times Malásia">
+<div class="source">New Straits Times</div>
+<div class="meta">Malásia
+ · 28/10/2026 05:36</div>
+<h3>
+<a href="https://www.nst.com.my/news/nation/2026/10/1565542/customs-foils-bid-transit-rm495mil-ai-chips-through-malaysia-potential" target="_blank" rel="noopener noreferrer">Customs foils bid to transit RM49.5mil AI chips through Malaysia, with potential weapons applications [WATCH]</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Begoña Gómez presenta una denuncia contra el PP por el vídeo generado con IA para atacar al PSOE El País Espanha">
+<div class="source">El País</div>
+<div class="meta">Espanha
+ · 28/10/2026 05:34</div>
+<h3>
+<a href="https://elpais.com/espana/2026-10-28/begona-gomez-presenta-una-denuncia-contra-el-pp-por-el-video-generado-con-ia-para-atacar-al-psoe.html" target="_blank" rel="noopener noreferrer">Begoña Gómez presenta una denuncia contra el PP por el vídeo generado con IA para atacar al PSOE</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Por que a antiga técnica de stop-motion ainda tem vigor em tempos de inovação digital e IA? Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 28/10/2026 05:02</div>
+<h3>
+<a href="https://valor.globo.com/eu-e/noticia/2026/10/28/por-que-a-antiga-tecnica-de-stop-motion-ainda-tem-vigor-em-tempos-de-inovacao-digital-e-ia.ghtml" target="_blank" rel="noopener noreferrer">Por que a antiga técnica de stop-motion ainda tem vigor em tempos de inovação digital e IA?</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="How Lao Gan Ma, China’s iconic chilli brand, got caught in an AI storm South China Morning Post China">
+<div class="source">South China Morning Post</div>
+<div class="meta">China
+ · 28/10/2026 05:00</div>
+<h3>
+<a href="https://www.scmp.com/tech/tech-trends/article/3372414/how-lao-gan-ma-chinas-iconic-chilli-brand-got-caught-ai-storm" target="_blank" rel="noopener noreferrer">How Lao Gan Ma, China’s iconic chilli brand, got caught in an AI storm</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Otimismo com IA impulsiona ações em NY antes de decisão do Fed Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 28/10/2026 05:00</div>
+<h3>
+<a href="https://valor.globo.com/financas/noticia/2026/10/28/otimismo-com-ia-impulsiona-acoes-em-ny-antes-de-decisao-do-fed.ghtml" target="_blank" rel="noopener noreferrer">Otimismo com IA impulsiona ações em NY antes de decisão do Fed</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="IA: adoção não é absorção Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 28/10/2026 05:00</div>
+<h3>
+<a href="https://valor.globo.com/empresas/coluna/ia-adocao-nao-e-absorcao.ghtml" target="_blank" rel="noopener noreferrer">IA: adoção não é absorção</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Agentes de IA desafiam a segurança cibernética Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 28/10/2026 05:00</div>
+<h3>
+<a href="https://valor.globo.com/empresas/noticia/2026/10/28/agentes-de-ia-desafiam-a-seguranca-cibernetica.ghtml" target="_blank" rel="noopener noreferrer">Agentes de IA desafiam a segurança cibernética</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Begoña Gómez denuncia al PP por utilizar su imagen para un vídeo realizado con inteligencia artificial elDiario.es Espanha">
+<div class="source">elDiario.es</div>
+<div class="meta">Espanha
+ · 28/10/2026 04:25</div>
+<h3>
+<a href="https://www.eldiario.es/politica/begona-gomez-denuncia-pp-utilizar-imagen-video-realizado-inteligencia-artificial_1_13620349.html" target="_blank" rel="noopener noreferrer">Begoña Gómez denuncia al PP por utilizar su imagen para un vídeo realizado con inteligencia artificial</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AM" data-search="Bolsas da Ásia fecham em alta com retorno do apetite por IA e balanços Portal do Holanda Brasil">
+<div class="source">Portal do Holanda</div>
+<div class="meta">Brasil
+ · AM
+ · 28/10/2026 03:46</div>
+<h3>
+<a href="https://www.portaldoholanda.com.br/articles/1004543" target="_blank" rel="noopener noreferrer">Bolsas da Ásia fecham em alta com retorno do apetite por IA e balanços</a>
+</h3>
+
+
+<details>
+<summary>Também publicado por 2 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://www.cnnbrasil.com.br/economia/money/mercado/bolsas-da-asia-fecham-em-alta-com-retorno-do-apetite-por-ia-e-balancos/" target="_blank" rel="noopener noreferrer">CNN Brasil — Bolsas da Ásia fecham em alta com retorno do apetite por IA e balanços</a>
+</li>
+<li>
+<a href="https://www.dgabc.com.br/Noticia/4365432/bolsas-da-asia-fecham-em-alta-com-retorno-do-apetite-por-ia-e-balancos" target="_blank" rel="noopener noreferrer">Diário do Grande ABC — Bolsas da Ásia fecham em alta com retorno do apetite por IA e balanços</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Malaysia seizes smuggled AI chips worth US$12 million at Kuala Lumpur airport South China Morning Post China">
+<div class="source">South China Morning Post</div>
+<div class="meta">China
+ · 28/10/2026 03:30</div>
+<h3>
+<a href="https://www.scmp.com/news/asia/southeast-asia/article/3372404/malaysia-seizes-smuggled-ai-chips-worth-us12-million-kuala-lumpur-airport" target="_blank" rel="noopener noreferrer">Malaysia seizes smuggled AI chips worth US$12 million at Kuala Lumpur airport</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="IA nas empresas esbarra em problemas com dados e atrasa projetos de 86% das companhias, diz estudo Exame Brasil">
+<div class="source">Exame</div>
+<div class="meta">Brasil
+ · 28/10/2026 03:03</div>
+<h3>
+<a href="https://exame.com/inteligencia-artificial/ia-nas-empresas-esbarra-em-problemas-com-dados-e-atrasa-projetos-de-86-das-companhias-diz-estudo/" target="_blank" rel="noopener noreferrer">IA nas empresas esbarra em problemas com dados e atrasa projetos de 86% das companhias, diz estudo</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Vor dem Börsengang: Wie Anthropic ein Flywheel für KI gebaut hat Frankfurter Allgemeine Zeitung (FAZ) Alemanha">
+<div class="source">Frankfurter Allgemeine Zeitung (FAZ)</div>
+<div class="meta">Alemanha
+ · 28/10/2026 02:50</div>
+<h3>
+<a href="https://www.faz.net/premium/digitalwirtschaft/kuenstliche-intelligenz/anthropic-vor-dem-boersengang-umsatz-steigt-17-fach-kosten-nur-4-fach-accg-201624565.html" target="_blank" rel="noopener noreferrer">Vor dem Börsengang: Wie Anthropic ein Flywheel für KI gebaut hat</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="‘Emotional intimacy’ from AI chatbots would be banned under Australia’s digital duty of care laws The Guardian Reino Unido">
+<div class="source">The Guardian</div>
+<div class="meta">Reino Unido
+ · 28/10/2026 02:31</div>
+<h3>
+<a href="https://www.theguardian.com/australia-news/2026/oct/28/emotional-intimacy-ai-chatbots-ban-digital-duty-of-care-laws-australian-politics" target="_blank" rel="noopener noreferrer">‘Emotional intimacy’ from AI chatbots would be banned under Australia’s digital duty of care laws</a>
+</h3>
+
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://www.theguardian.com/australia-news/2026/oct/28/emotional-intimacy-ai-chatbots-ban-digital-duty-of-care-laws-australian-politics" target="_blank" rel="noopener noreferrer">The Guardian Australia — ‘Emotional intimacy’ from AI chatbots would be banned under Australia’s digital duty of care laws</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Com IA usando fitas magnéticas, Fujifilm planeja maior expansão em duas décadas Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 28/10/2026 02:17</div>
+<h3>
+<a href="https://valor.globo.com/empresas/noticia/2026/10/28/com-ia-usando-fitas-magnticas-fujifilm-planeja-maior-expanso-em-duas-dcadas.ghtml" target="_blank" rel="noopener noreferrer">Com IA usando fitas magnéticas, Fujifilm planeja maior expansão em duas décadas</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Sobre los 20 años de edición independiente de Almadía y los retos de la IA El País Espanha">
+<div class="source">El País</div>
+<div class="meta">Espanha
+ · 28/10/2026 01:30</div>
+<h3>
+<a href="https://elpais.com/opinion/2026-10-28/sobre-los-20-anos-de-edicion-independiente-de-almadia-y-los-retos-de-la-ia.html" target="_blank" rel="noopener noreferrer">Sobre los 20 años de edición independiente de Almadía y los retos de la IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Cuando ser visto se confunde con existir: redes sociales, identidad, intimidad e inteligencia artificial El País Espanha">
+<div class="source">El País</div>
+<div class="meta">Espanha
+ · 28/10/2026 01:30</div>
+<h3>
+<a href="https://elpais.com/estilo-de-vida/2026-10-28/cuando-ser-visto-se-confunde-con-existir-redes-sociales-identidad-intimidad-e-inteligencia-artificial.html" target="_blank" rel="noopener noreferrer">Cuando ser visto se confunde con existir: redes sociales, identidad, intimidad e inteligencia artificial</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Making machines that can listen MIT News — IA EUA">
+<div class="source">MIT News — IA</div>
+<div class="meta">EUA
+ · 28/10/2026 01:00</div>
+<h3>
+<a href="https://news.mit.edu/2026/making-machines-that-can-listen-paris-smaragdis-1028" target="_blank" rel="noopener noreferrer">Making machines that can listen</a>
+</h3>
+<span class="badge">Fonte institucional</span>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AL" data-search="Cantora gerada por IA abandona banda após anunciar estar &#39;grávida&#39; TNH1 Brasil">
+<div class="source">TNH1</div>
+<div class="meta">Brasil
+ · AL
+ · 27/10/2026 21:47</div>
+<h3>
+<a href="https://www.tnh1.com.br/noticia/nid/cantora-gerada-por-ia-abandona-banda-apos-anunciar-estar-gravida/" target="_blank" rel="noopener noreferrer">Cantora gerada por IA abandona banda após anunciar estar &#39;grávida&#39;</a>
+</h3>
+
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://extra.globo.com/blogs/page-not-found/post/2026/10/cantora-gerada-por-ia-abandona-banda-apos-anunciar-estar-gravida.ghtml" target="_blank" rel="noopener noreferrer">Extra — Cantora gerada por IA abandona banda após anunciar estar &#39;grávida&#39;</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="AI bots flooded 2023 UK government consultation on disposable vapes ban The Guardian Reino Unido">
+<div class="source">The Guardian</div>
+<div class="meta">Reino Unido
+ · 27/10/2026 19:30</div>
+<h3>
+<a href="https://www.theguardian.com/society/2026/oct/27/ai-bots-flooded-2023-uk-government-consultation-disposable-vapes-ban" target="_blank" rel="noopener noreferrer">AI bots flooded 2023 UK government consultation on disposable vapes ban</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AM" data-search="Sul-coreana SK Hynix planeja US$ 75 bilhões em retornos aos acionistas com forte demanda em IA Portal do Holanda Brasil">
+<div class="source">Portal do Holanda</div>
+<div class="meta">Brasil
+ · AM
+ · 27/10/2026 19:12</div>
+<h3>
+<a href="https://www.portaldoholanda.com.br/articles/1004507" target="_blank" rel="noopener noreferrer">Sul-coreana SK Hynix planeja US$ 75 bilhões em retornos aos acionistas com forte demanda em IA</a>
+</h3>
+
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://www.dgabc.com.br/Noticia/4365422/sul-coreana-sk-hynix-planeja-uss-75-bilhoes-em-retornos-aos-acionistas-com-forte-demanda-em-ia" target="_blank" rel="noopener noreferrer">Diário do Grande ABC — Sul-coreana SK Hynix planeja US$ 75 bilhões em retornos aos acionistas com forte demanda em IA</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Pedro Almodóvar: &#34;La inteligencia artificial es un peligro, pero nunca podrá escribir &#39;Hable con ella&#39;&#34; elDiario.es Espanha">
+<div class="source">elDiario.es</div>
+<div class="meta">Espanha
+ · 27/10/2026 18:30</div>
+<h3>
+<a href="https://www.eldiario.es/cultura/libros/pedro-almodovar-inteligencia-artificial-peligro-podra-escribir-hable_1_13619984.html" target="_blank" rel="noopener noreferrer">Pedro Almodóvar: &#34;La inteligencia artificial es un peligro, pero nunca podrá escribir &#39;Hable con ella&#39;&#34;</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Künstliche Intelligenz: Anthropic-Aktionäre müssen wissen, dass sie wenig zu sagen haben Frankfurter Allgemeine Zeitung (FAZ) Alemanha">
+<div class="source">Frankfurter Allgemeine Zeitung (FAZ)</div>
+<div class="meta">Alemanha
+ · 27/10/2026 16:53</div>
+<h3>
+<a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/anthropics-boersenprospekt-hohes-ideal-mit-rissen-201625973.html" target="_blank" rel="noopener noreferrer">Künstliche Intelligenz: Anthropic-Aktionäre müssen wissen, dass sie wenig zu sagen haben</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="De belegger moet voorlopig geen monsterwinsten verwachten van Anthropic De Standaard Bélgica">
+<div class="source">De Standaard</div>
+<div class="meta">Bélgica
+ · 27/10/2026 15:30</div>
+<h3>
+<a href="https://www.standaard.be/economie/de-belegger-moet-voorlopig-geen-monsterwinsten-verwachten-van-anthropic/163696417.html" target="_blank" rel="noopener noreferrer">De belegger moet voorlopig geen monsterwinsten verwachten van Anthropic</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Tech Stocks Add to Gains After Yesterday’s Anthropic Rally The Wall Street Journal EUA">
+<div class="source">The Wall Street Journal</div>
+<div class="meta">EUA
+ · 27/10/2026 15:29</div>
+<h3>
+<a href="https://www.wsj.com/finance/stocks/stock-futures-steady-as-anthropic-rally-stalls-israel-election-in-focus-9c4f12ad?mod=rss_worldnews" target="_blank" rel="noopener noreferrer">Tech Stocks Add to Gains After Yesterday’s Anthropic Rally</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="La Audiencia Nacional rechaza la querella de Leire Díez contra el PP por incluirla en un vídeo hecho con IA: &#34;Es un tema personal&#34; elDiario.es Espanha">
+<div class="source">elDiario.es</div>
+<div class="meta">Espanha
+ · 27/10/2026 13:50</div>
+<h3>
+<a href="https://www.eldiario.es/politica/audiencia-nacional-inadmite-querella-leire-diez-pp-incluirle-video-hecho-ia-tema-personal_1_13619533.html" target="_blank" rel="noopener noreferrer">La Audiencia Nacional rechaza la querella de Leire Díez contra el PP por incluirla en un vídeo hecho con IA: &#34;Es un tema personal&#34;</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Elon Musk’s AI Odyssey review – the dullest, most pointless riposte possible to Christopher Nolan’s brilliant epic The Guardian Australia Austrália">
+<div class="source">The Guardian Australia</div>
+<div class="meta">Austrália
+ · 27/10/2026 10:01</div>
+<h3>
+<a href="https://www.theguardian.com/film/2026/oct/27/elon-musk-ai-odyssey-movie-grok-christopher-nolan" target="_blank" rel="noopener noreferrer">Elon Musk’s AI Odyssey review – the dullest, most pointless riposte possible to Christopher Nolan’s brilliant epic</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Ex-CEO do GitHub lança Entire, plataforma rival feita para IA e humanos Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 27/10/2026 09:53</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/ex-ceo-do-github-lanca-entire-plataforma-rival-feita-para-ia-e-humanos/" target="_blank" rel="noopener noreferrer">Ex-CEO do GitHub lança Entire, plataforma rival feita para IA e humanos</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Linus Larsson: Anthropic drar in miljarder och varnar för vår undergång Dagens Nyheter Suécia">
+<div class="source">Dagens Nyheter</div>
+<div class="meta">Suécia
+ · 27/10/2026 08:32</div>
+<h3>
+<a href="https://www.dn.se/ekonomi/linus-larsson-anthropic-drar-in-miljarder-och-varnar-for-var-undergang/" target="_blank" rel="noopener noreferrer">Linus Larsson: Anthropic drar in miljarder och varnar för vår undergång</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="“Grok, is this real?”: X’s AI gets four in ten answers wrong on average and almost never cites its source Maldita.es Espanha">
+<div class="source">Maldita.es</div>
+<div class="meta">Espanha
+ · 27/10/2026 04:01</div>
+<h3>
+<a href="https://maldita.es/investigaciones/20261027/grok-artificial-intelligence-chatbts-world-cup/" target="_blank" rel="noopener noreferrer">“Grok, is this real?”: X’s AI gets four in ten answers wrong on average and almost never cites its source</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="&#34;Grok, ¿esto es real?&#34;: la IA de X falla en cuatro de cada diez respuestas de media y casi nunca cita la fuente Maldita.es Espanha">
+<div class="source">Maldita.es</div>
+<div class="meta">Espanha
+ · 27/10/2026 04:00</div>
+<h3>
+<a href="https://maldita.es/investigaciones/20261027/grok-esto-es-real-la-ia-de-x-falla-en-cuatro-de-cada-diez-respuestas-de-media-y-casi-nunca-cita-la-fuente/" target="_blank" rel="noopener noreferrer">&#34;Grok, ¿esto es real?&#34;: la IA de X falla en cuatro de cada diez respuestas de media y casi nunca cita la fuente</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="DF" data-search="Validade de provas digitais desafia Justiça na era da IA Portal Eldo Gomes Brasil">
+<div class="source">Portal Eldo Gomes</div>
+<div class="meta">Brasil
+ · DF
+ · 26/10/2026 21:00</div>
+<h3>
+<a href="https://eldogomes.com.br/337981-validade-de-provas-digitais-desafia-justica-na-era-da-ia/" target="_blank" rel="noopener noreferrer">Validade de provas digitais desafia Justiça na era da IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="DF" data-search="Framework Digital leva debate sobre IA ao IT Forum Na Mata Portal Eldo Gomes Brasil">
+<div class="source">Portal Eldo Gomes</div>
+<div class="meta">Brasil
+ · DF
+ · 26/10/2026 21:00</div>
+<h3>
+<a href="https://eldogomes.com.br/339169-framework-digital-leva-debate-sobre-ia-ao-it-forum-na-mata/" target="_blank" rel="noopener noreferrer">Framework Digital leva debate sobre IA ao IT Forum Na Mata</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Microsoft offers a quarter of its global workforce voluntary buyouts as AI spending accelerates Stuff Nova Zelândia">
+<div class="source">Stuff</div>
+<div class="meta">Nova Zelândia
+ · 26/10/2026 14:51</div>
+<h3>
+<a href="https://www.stuff.co.nz/business/361051260/microsoft-offers-quarter-its-global-workforce-voluntary" target="_blank" rel="noopener noreferrer">Microsoft offers a quarter of its global workforce voluntary buyouts as AI spending accelerates</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="ChatGPT Keeps Telling People 404 Media Can Solve Their Tech Support Problems 404 Media EUA">
+<div class="source">404 Media</div>
+<div class="meta">EUA
+ · 26/10/2026 12:49</div>
+<h3>
+<a href="https://www.404media.co/chatgpt-keeps-telling-people-404-media-can-solve-their-tech-support-problems/" target="_blank" rel="noopener noreferrer">ChatGPT Keeps Telling People 404 Media Can Solve Their Tech Support Problems</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="No, estos vídeos de supuestos saqueadores condenados tras las recientes protestas en Francia no son reales: están hechos con IA Maldita.es Espanha">
+<div class="source">Maldita.es</div>
+<div class="meta">Espanha
+ · 26/10/2026 12:22</div>
+<h3>
+<a href="https://maldita.es/desinfo/20261026/video-muestra-como-condenan-a-varios-jovenes-a-22-anos-de-carcel-por-los-disturbios-de-paris/" target="_blank" rel="noopener noreferrer">No, estos vídeos de supuestos saqueadores condenados tras las recientes protestas en Francia no son reales: están hechos con IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="«ChatGPT — это моя вредная свекровь 2.0» Novaya Gazeta Europe Rússia">
+<div class="source">Novaya Gazeta Europe</div>
+<div class="meta">Rússia
+ · 26/10/2026 03:35</div>
+<h3>
+<a href="https://novayagazeta.eu/articles/2026/10/26/chatgpt-eto-moia-vrednaia-svekrov-2-0" target="_blank" rel="noopener noreferrer">«ChatGPT — это моя вредная свекровь 2.0»</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Da IA ultrarrealista ao WhatsApp, como a desinformação moldou as eleições Aos Fatos Brasil">
+<div class="source">Aos Fatos</div>
+<div class="meta">Brasil
+ · 25/10/2026 20:37</div>
+<h3>
+<a href="https://www.aosfatos.org/noticias/ia-ultrarrealista-whatsapp-desinformacao-moldou-eleicoes/" target="_blank" rel="noopener noreferrer">Da IA ultrarrealista ao WhatsApp, como a desinformação moldou as eleições</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="South Africa’s AI strategy must be pro-employment Daily Maverick África do Sul">
+<div class="source">Daily Maverick</div>
+<div class="meta">África do Sul
+ · 25/10/2026 13:38</div>
+<h3>
+<a href="https://www.dailymaverick.co.za/opinionista/2026-10-25-south-africas-ai-strategy-must-be-pro-employment/" target="_blank" rel="noopener noreferrer">South Africa’s AI strategy must be pro-employment</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="How AI Is Changing Digital Creativity: From Simple Ideas to 3D Design Mail &amp; Guardian África do Sul">
+<div class="source">Mail &amp; Guardian</div>
+<div class="meta">África do Sul
+ · 25/10/2026 05:55</div>
+<h3>
+<a href="https://mg.co.za/partner-content/2026-10-25-how-ai-is-changing-digital-creativity-from-simple-ideas-to-3d-design/" target="_blank" rel="noopener noreferrer">How AI Is Changing Digital Creativity: From Simple Ideas to 3D Design</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Black October: why bugs discovered by OpenAI tech are creating a cyber emergency Axios EUA">
+<div class="source">Axios</div>
+<div class="meta">EUA
+ · 22/10/2026 15:01</div>
+<h3>
+<a href="https://www.axios.com/2026/10/22/php-vulnerability-security-update-websites" target="_blank" rel="noopener noreferrer">Black October: why bugs discovered by OpenAI tech are creating a cyber emergency</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="RBC’s AI chief sounds the alarm over AI agents The Logic Canadá">
+<div class="source">The Logic</div>
+<div class="meta">Canadá
+ · 22/10/2026 06:45</div>
+<h3>
+<a href="https://thelogic.co/news/rbc-artificial-intelligence-meta-muse/" target="_blank" rel="noopener noreferrer">RBC’s AI chief sounds the alarm over AI agents</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="AI uncovers massive flaw in web&#39;s foundational code Axios EUA">
+<div class="source">Axios</div>
+<div class="meta">EUA
+ · 21/10/2026 18:26</div>
+<h3>
+<a href="https://www.axios.com/2026/10/21/php-openai-ai-bug-hunting-cyberattacks" target="_blank" rel="noopener noreferrer">AI uncovers massive flaw in web&#39;s foundational code</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Google DeepMind Engineer Resigns in Protest of Pentagon Contract The Intercept EUA">
+<div class="source">The Intercept</div>
+<div class="meta">EUA
+ · 21/10/2026 13:25</div>
+<h3>
+<a href="https://theintercept.com/2026/10/21/google-deepmind-resign-ai-military-gaza/" target="_blank" rel="noopener noreferrer">Google DeepMind Engineer Resigns in Protest of Pentagon Contract</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="DF" data-search="PCDF prende grupo que usava IA de Gusttavo Lima e Frei Gilson em golpes Metrópoles Brasil">
+<div class="source">Metrópoles</div>
+<div class="meta">Brasil
+ · DF
+ · 28/10/2026 08:13</div>
+<h3>
+<a href="https://www.metropoles.com/distrito-federal/na-mira/pcdf-prende-grupo-que-usava-deepfake-de-gusttavo-lima-em-golpe-milionario" target="_blank" rel="noopener noreferrer">PCDF prende grupo que usava IA de Gusttavo Lima e Frei Gilson em golpes</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="HCLTech launches AI-powered nano GCC offering on AWS The Hindu Índia">
+<div class="source">The Hindu</div>
+<div class="meta">Índia
+ · 28/10/2026 08:10</div>
+<h3>
+<a href="https://www.thehindu.com/business/Industry/hcltech-launches-ai-powered-nano-gcc-offering-on-aws/article71635482.ece" target="_blank" rel="noopener noreferrer">HCLTech launches AI-powered nano GCC offering on AWS</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Banjir Semarang bakal terdeteksi lebih cepat! Peta bencana kini dipantau alat berteknologi AI dan IoT Antara Indonésia">
+<div class="source">Antara</div>
+<div class="meta">Indonésia
+ · 28/10/2026 07:43</div>
+<h3>
+<a href="https://www.antaranews.com/foto/5817323/banjir-semarang-bakal-terdeteksi-lebih-cepat-peta-bencana-kini-dipantau-alat-berteknologi-ai-dan-iot" target="_blank" rel="noopener noreferrer">Banjir Semarang bakal terdeteksi lebih cepat! Peta bencana kini dipantau alat berteknologi AI dan IoT</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Dutch civil service to cut 25,000 public sector jobs using AI Daily Mail Reino Unido">
+<div class="source">Daily Mail</div>
+<div class="meta">Reino Unido
+ · 28/10/2026 07:39</div>
+<h3>
+<a href="https://www.dailymail.com/news/article-16245117/Dutch-civil-service-cut-public-sector-jobs-AI.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490" target="_blank" rel="noopener noreferrer">Dutch civil service to cut 25,000 public sector jobs using AI</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Microsoft, Alphabet Have a Lot to Prove to AI Skeptics Bloomberg EUA">
+<div class="source">Bloomberg</div>
+<div class="meta">EUA
+ · 28/10/2026 07:14</div>
+<h3>
+<a href="https://www.bloomberg.com/news/newsletters/2026-10-28/microsoft-alphabet-have-a-lot-to-prove-to-ai-skeptics" target="_blank" rel="noopener noreferrer">Microsoft, Alphabet Have a Lot to Prove to AI Skeptics</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="AI-powered fraud threatens telecom security, banking – NCC Punch Nigéria">
+<div class="source">Punch</div>
+<div class="meta">Nigéria
+ · 28/10/2026 07:09</div>
+<h3>
+<a href="https://punchng.com/ai-powered-fraud-threatens-telecom-security-banking-ncc/" target="_blank" rel="noopener noreferrer">AI-powered fraud threatens telecom security, banking – NCC</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic IPO太夯！台積電、SK海力士成亞洲「代理投資」新寵 United Daily News Taiwan">
+<div class="source">United Daily News</div>
+<div class="meta">Taiwan
+ · 28/10/2026 06:51</div>
+<h3>
+<a href="https://udn.com/news/story/6811/9842785" target="_blank" rel="noopener noreferrer">Anthropic IPO太夯！台積電、SK海力士成亞洲「代理投資」新寵</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="[주간스타트업동향] 펫나우, 동물보호법 개정 맞춰 ‘반려견 AI 비문등록’ 사업 본격화 外 Dong-A Ilbo Coreia do Sul">
+<div class="source">Dong-A Ilbo</div>
+<div class="meta">Coreia do Sul
+ · 28/10/2026 06:16</div>
+<h3>
+<a href="https://www.donga.com/news/It/article/all/20261028/134927092/1" target="_blank" rel="noopener noreferrer">[주간스타트업동향] 펫나우, 동물보호법 개정 맞춰 ‘반려견 AI 비문등록’ 사업 본격화 外</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Inside &#34;Black October&#34;: AI&#39;s cyber scare delivers a Y2K lesson Axios EUA">
+<div class="source">Axios</div>
+<div class="meta">EUA
+ · 28/10/2026 06:15</div>
+<h3>
+<a href="https://www.axios.com/2026/10/28/cybersecurity-black-october-ai-hacks" target="_blank" rel="noopener noreferrer">Inside &#34;Black October&#34;: AI&#39;s cyber scare delivers a Y2K lesson</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="NEDO Plans 4,000 Observers, AI Monitoring for 2027 General Election ThisDay Nigéria">
+<div class="source">ThisDay</div>
+<div class="meta">Nigéria
+ · 28/10/2026 06:03</div>
+<h3>
+<a href="https://www.thisdaylive.com/2026/10/28/nedo-plans-4000-observers-ai-monitoring-for-2027-general-election/" target="_blank" rel="noopener noreferrer">NEDO Plans 4,000 Observers, AI Monitoring for 2027 General Election</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Begoña Gómez denuncia al PP por suplantación de identidad por el vídeo hecho con IA La Vanguardia Espanha">
+<div class="source">La Vanguardia</div>
+<div class="meta">Espanha
+ · 28/10/2026 04:55</div>
+<h3>
+<a href="https://www.lavanguardia.com/politica/20261028/11669924/begona-gomez-denuncia-pp-suplantacion-identidad-video-hecho-ia.html" target="_blank" rel="noopener noreferrer">Begoña Gómez denuncia al PP por suplantación de identidad por el vídeo hecho con IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AL" data-search="Alagoas prepara decreto para regulamentar a utilização de inteligência artificial na gestão pública CadaMinuto Brasil">
+<div class="source">CadaMinuto</div>
+<div class="meta">Brasil
+ · AL
+ · 28/10/2026 04:40</div>
+<h3>
+<a href="https://www.cadaminuto.com.br/noticia/2026/10/28/alagoas-prepara-decreto-para-regulamentar-a-utilizacao-de-inteligencia-artificial-na-gestao-publica" target="_blank" rel="noopener noreferrer">Alagoas prepara decreto para regulamentar a utilização de inteligência artificial na gestão pública</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Oscars : face à l’essor de l’IA, l’Académie affirme vouloir continuer à récompenser avant tout le talent humain CNews França">
+<div class="source">CNews</div>
+<div class="meta">França
+ · 28/10/2026 03:52</div>
+<h3>
+<a href="https://www.cnews.fr/culture/2026-10-28/oscars-face-lessor-de-lia-lacademie-affirme-vouloir-continuer-recompenser-avant" target="_blank" rel="noopener noreferrer">Oscars : face à l’essor de l’IA, l’Académie affirme vouloir continuer à récompenser avant tout le talent humain</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Facebook owner Meta accused of &#39;digital piracy&#39; over plans to &#39;steal&#39; British publishers&#39; content to improve its AI models, as calls grow for UK competition watchdog to intervene Daily Mail Reino Unido">
+<div class="source">Daily Mail</div>
+<div class="meta">Reino Unido
+ · 28/10/2026 03:26</div>
+<h3>
+<a href="https://www.dailymail.com/news/article-16243719/Facebook-owner-Meta-accused-digital-piracy.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490" target="_blank" rel="noopener noreferrer">Facebook owner Meta accused of &#39;digital piracy&#39; over plans to &#39;steal&#39; British publishers&#39; content to improve its AI models, as calls grow for UK competition watchdog to intervene</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="IA Le permanence de Sébastien Delogu gonflée aux avis artificiels Le Canard enchaîné França">
+<div class="source">Le Canard enchaîné</div>
+<div class="meta">França
+ · 28/10/2026 02:42</div>
+<h3>
+<a href="https://www.lecanardenchaine.fr/politique/55283-le-permanence-de-sebastien-delogu-gonflee-aux-avis-artificiels" target="_blank" rel="noopener noreferrer">IA Le permanence de Sébastien Delogu gonflée aux avis artificiels</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="The AI diaries The Monthly Austrália">
+<div class="source">The Monthly</div>
+<div class="meta">Austrália
+ · 27/10/2026 23:30</div>
+<h3>
+<a href="https://www.themonthly.com.au/christine-kenneally/2026-10-28/ai-diaries" target="_blank" rel="noopener noreferrer">The AI diaries</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="‘Am I real? Maybe I&#39;m an alien’: Māori actor laughs off claims he’s so hot he must be AI Stuff Nova Zelândia">
+<div class="source">Stuff</div>
+<div class="meta">Nova Zelândia
+ · 27/10/2026 23:27</div>
+<h3>
+<a href="https://www.stuff.co.nz/travel/361052156/meet-kiwi-actor-so-good-looking-people-think-hes-ai" target="_blank" rel="noopener noreferrer">‘Am I real? Maybe I&#39;m an alien’: Māori actor laughs off claims he’s so hot he must be AI</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="UNI ofrece más de 80 cursos virtuales gratuitos de inteligencia artificial y tecnología: matrícula estará abierta hasta el 2 de noviembre La República (Peru) Peru">
+<div class="source">La República (Peru)</div>
+<div class="meta">Peru
+ · 27/10/2026 22:34</div>
+<h3>
+<a href="https://larepublica.pe/sociedad/2026/10/26/uni-ofrece-mas-de-80-cursos-virtuales-gratuitos-aprende-sobre-ia-ciberseguridad-y-analisis-de-datos-1175902" target="_blank" rel="noopener noreferrer">UNI ofrece más de 80 cursos virtuales gratuitos de inteligencia artificial y tecnología: matrícula estará abierta hasta el 2 de noviembre</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="NYC man who lost his job to AI accidentally sent his unemployment benefits to stranger after making typo while filling out form Daily Mail Reino Unido">
+<div class="source">Daily Mail</div>
+<div class="meta">Reino Unido
+ · 27/10/2026 21:39</div>
+<h3>
+<a href="https://www.dailymail.com/news/article-16243841/man-job-ai-unemployment-benefits.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490" target="_blank" rel="noopener noreferrer">NYC man who lost his job to AI accidentally sent his unemployment benefits to stranger after making typo while filling out form</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="«GuérillIA» de Christophe Payet: «Il faut faire de l&#39;IA une arme d&#39;émancipation» RFI França">
+<div class="source">RFI</div>
+<div class="meta">França
+ · 27/10/2026 20:26</div>
+<h3>
+<a href="https://www.rfi.fr/fr/podcasts/invit%C3%A9-culture/20261027-diff-le-29-10-gu%C3%A9rillia-de-christophe-payet-l-ia-n-est-pas-par-essence-technofasciste" target="_blank" rel="noopener noreferrer">«GuérillIA» de Christophe Payet: «Il faut faire de l&#39;IA une arme d&#39;émancipation»</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="El peruano David Silva niega haber usado IA para escribir su novela premiada en México RPP Peru">
+<div class="source">RPP</div>
+<div class="meta">Peru
+ · 27/10/2026 20:00</div>
+<h3>
+<a href="https://rpp.pe/cultura/literatura/el-peruano-david-silva-niega-haber-usado-ia-para-escribir-su-novela-premiada-en-mexico-noticia-1714755" target="_blank" rel="noopener noreferrer">El peruano David Silva niega haber usado IA para escribir su novela premiada en México</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Bedrijven zetten in op AI, maar de rekening loopt steeds hoger op: “Elke maand komt er 40 procent bij” De Standaard Bélgica">
+<div class="source">De Standaard</div>
+<div class="meta">Bélgica
+ · 27/10/2026 19:59</div>
+<h3>
+<a href="https://www.standaard.be/economie/bedrijven-zetten-in-op-ai-maar-de-rekening-loopt-steeds-hoger-op-elke-maand-komt-er-40-procent-bij/163661441.html" target="_blank" rel="noopener noreferrer">Bedrijven zetten in op AI, maar de rekening loopt steeds hoger op: “Elke maand komt er 40 procent bij”</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="&#34;No human at the helm&#34;: Delaware plan would let AI agents run entire businesses Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 27/10/2026 18:50</div>
+<h3>
+<a href="https://arstechnica.com/tech-policy/2026/10/no-human-at-the-helm-delaware-plan-would-let-ai-agents-run-entire-businesses/" target="_blank" rel="noopener noreferrer">&#34;No human at the helm&#34;: Delaware plan would let AI agents run entire businesses</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RJ" data-search="Rio de Janeiro terá cidade da inteligência artificial com computadores gigantes que funcionarão sem gastar água para resfriamento Diário do Rio Brasil">
+<div class="source">Diário do Rio</div>
+<div class="meta">Brasil
+ · RJ
+ · 27/10/2026 18:07</div>
+<h3>
+<a href="https://diariodorio.com/variedades/2026/10/27/rio-de-janeiro-tera-cidade-da-inteligencia-artificial-com-computadores-gigantes-que-funcionarao-sem-gastar-agua-para-resfriamento.html" target="_blank" rel="noopener noreferrer">Rio de Janeiro terá cidade da inteligência artificial com computadores gigantes que funcionarão sem gastar água para resfriamento</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PR" data-search="Produtores testam ferramentas de IA após viagens técnicas aos EUA O Presente Brasil">
+<div class="source">O Presente</div>
+<div class="meta">Brasil
+ · PR
+ · 27/10/2026 16:43</div>
+<h3>
+<a href="https://www.opresente.com.br/agronegocio/produtores-testam-ferramentas-de-ia-apos-viagens-tecnicas-aos-eua/" target="_blank" rel="noopener noreferrer">Produtores testam ferramentas de IA após viagens técnicas aos EUA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MA" data-search="De falsos advogados a romances fictícios: IA e dados reais são usados em fraudes no Maranhão O Imparcial Brasil">
+<div class="source">O Imparcial</div>
+<div class="meta">Brasil
+ · MA
+ · 27/10/2026 15:38</div>
+<h3>
+<a href="https://oimparcial.com.br/noticias/2026/10/de-falsos-advogados-a-romances-ficticios-ia-e-dados-reais-sao-usados-em-fraudes-no-maranhao/" target="_blank" rel="noopener noreferrer">De falsos advogados a romances fictícios: IA e dados reais são usados em fraudes no Maranhão</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Egypt shuts down Mada Masr, convicts editor; Israelis vote as UN panel concludes genocide is ongoing; U.S. demands AI execs’ testimony Drop Site News EUA">
+<div class="source">Drop Site News</div>
+<div class="meta">EUA
+ · 27/10/2026 12:58</div>
+<h3>
+<a href="https://www.dropsitenews.com/p/egypt-mada-masr-journalism-israel-elections-gaza-genocide-us-ai" target="_blank" rel="noopener noreferrer">Egypt shuts down Mada Masr, convicts editor; Israelis vote as UN panel concludes genocide is ongoing; U.S. demands AI execs’ testimony</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="«Globalement mauvais» : Grok, l’assistant IA d’Elon Musk, n’apprécie pas la version de «L’Odyssée» développée par le magnat de la technologie... grâce à l’IA CNews França">
+<div class="source">CNews</div>
+<div class="meta">França
+ · 27/10/2026 12:52</div>
+<h3>
+<a href="https://www.cnews.fr/culture/2026-10-27/globalement-mauvais-grok-lassistant-ia-delon-musk-napprecie-pas-la-version-de" target="_blank" rel="noopener noreferrer">«Globalement mauvais» : Grok, l’assistant IA d’Elon Musk, n’apprécie pas la version de «L’Odyssée» développée par le magnat de la technologie... grâce à l’IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Gabriel Zetterström: Den AI-genererade matens giftiga färger borde vara en varningssignal Dagens Nyheter Suécia">
+<div class="source">Dagens Nyheter</div>
+<div class="meta">Suécia
+ · 27/10/2026 12:49</div>
+<h3>
+<a href="https://www.dn.se/kultur/gabriel-zetterstrom-den-ai-generade-matens-giftiga-farger-borde-vara-en-varningssignal/" target="_blank" rel="noopener noreferrer">Gabriel Zetterström: Den AI-genererade matens giftiga färger borde vara en varningssignal</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Receita leva à OCDE debate sobre privacidade e inteligência artificial Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 27/10/2026 11:30</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80381/receita-leva-a-ocde-debate-sobre-privacidade-e-inteligencia-artificial/" target="_blank" rel="noopener noreferrer">Receita leva à OCDE debate sobre privacidade e inteligência artificial</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="No, este post de Truth Social del 26 de octubre de 2026 donde Trump afirma haber ganado las elecciones de medio mandato antes de haberse celebrado no es real: se ha generado con IA Maldita.es Espanha">
+<div class="source">Maldita.es</div>
+<div class="meta">Espanha
+ · 27/10/2026 10:58</div>
+<h3>
+<a href="https://maldita.es/desinfo/20261027/donald-trump-afirma-en-un-post-de-truth-social-que-los-republicanos-han-ganado-en-todos-los-estados-en-las-midterms-de-2026/" target="_blank" rel="noopener noreferrer">No, este post de Truth Social del 26 de octubre de 2026 donde Trump afirma haber ganado las elecciones de medio mandato antes de haberse celebrado no es real: se ha generado con IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Efter avpubliceringen – så ser svenska medier på AI-användning Dagens Nyheter Suécia">
+<div class="source">Dagens Nyheter</div>
+<div class="meta">Suécia
+ · 27/10/2026 07:13</div>
+<h3>
+<a href="https://www.dn.se/kultur/efter-avpubliceringen-sa-ser-svenska-medier-pa-ai-anvandning/" target="_blank" rel="noopener noreferrer">Efter avpubliceringen – så ser svenska medier på AI-användning</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Microsoft offers exit packages to 60,000 employees as it scales up AI investment Scroll.in Índia">
+<div class="source">Scroll.in</div>
+<div class="meta">Índia
+ · 27/10/2026 06:25</div>
+<h3>
+<a href="https://scroll.in/latest/1096670/microsoft-offers-exit-packages-to-nearly-one-third-of-workforce-as-it-scales-up-ai-investment" target="_blank" rel="noopener noreferrer">Microsoft offers exit packages to 60,000 employees as it scales up AI investment</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Labour Court slams CCMA commissioner for relying on AI hallucination GroundUp África do Sul">
+<div class="source">GroundUp</div>
+<div class="meta">África do Sul
+ · 27/10/2026 05:18</div>
+<h3>
+<a href="https://groundup.org.za/article/labour-court-slams-ccma-commissioner-for-relying-on-ai-hallucination/" target="_blank" rel="noopener noreferrer">Labour Court slams CCMA commissioner for relying on AI hallucination</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Sfruttati e sorvegliati. Come lavorano i data worker della società che addestra l’IA IrpiMedia Itália">
+<div class="source">IrpiMedia</div>
+<div class="meta">Itália
+ · 27/10/2026 05:05</div>
+<h3>
+<a href="https://irpimedia.irpi.eu/ia-outlier-traccia-dipendenti-e-diffonde-dati/" target="_blank" rel="noopener noreferrer">Sfruttati e sorvegliati. Come lavorano i data worker della società che addestra l’IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="DF" data-search="Phishing com IA dificulta detecção de golpes em empresas Portal Eldo Gomes Brasil">
+<div class="source">Portal Eldo Gomes</div>
+<div class="meta">Brasil
+ · DF
+ · 26/10/2026 21:00</div>
+<h3>
+<a href="https://eldogomes.com.br/339742-phishing-com-ia-dificulta-deteccao-de-golpes-em-empresas/" target="_blank" rel="noopener noreferrer">Phishing com IA dificulta detecção de golpes em empresas</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="How Check Point accelerates vulnerability research with Daybreak OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 26/10/2026 21:00</div>
+<h3>
+<a href="https://openai.com/index/check-point-daybreak" target="_blank" rel="noopener noreferrer">How Check Point accelerates vulnerability research with Daybreak</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Jätten till börsen: ”Ny fas för AI-bolagen” Dagens Nyheter Suécia">
+<div class="source">Dagens Nyheter</div>
+<div class="meta">Suécia
+ · 26/10/2026 17:31</div>
+<h3>
+<a href="https://www.dn.se/ekonomi/jatten-till-borsen-ny-fas-for-ai-bolagen/" target="_blank" rel="noopener noreferrer">Jätten till börsen: ”Ny fas för AI-bolagen”</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Proton To ‘Re-Interview’ Staff About AI To See Who Gets To Keep Their Job 404 Media EUA">
+<div class="source">404 Media</div>
+<div class="meta">EUA
+ · 26/10/2026 17:16</div>
+<h3>
+<a href="https://www.404media.co/proton-to-re-interview-staff-about-ai-to-see-who-gets-to-keep-their-job/" target="_blank" rel="noopener noreferrer">Proton To ‘Re-Interview’ Staff About AI To See Who Gets To Keep Their Job</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="At New York Climate Week 2026, MIT connects with a global network MIT News — IA EUA">
+<div class="source">MIT News — IA</div>
+<div class="meta">EUA
+ · 26/10/2026 16:00</div>
+<h3>
+<a href="https://news.mit.edu/2026/at-new-york-climate-week-mit-connects-global-network-1026" target="_blank" rel="noopener noreferrer">At New York Climate Week 2026, MIT connects with a global network</a>
+</h3>
+<span class="badge">Fonte institucional</span>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PI" data-search="Estudantes unem IA e biologia para monitorar polinizadores em Guaribas Cidadeverde.com Brasil">
+<div class="source">Cidadeverde.com</div>
+<div class="meta">Brasil
+ · PI
+ · 26/10/2026 13:54</div>
+<h3>
+<a href="https://cidadeverde.com/cidades/465340/estudantes-unem-ia-e-biologia-para-monitorar-polinizadores-em-guaribas" target="_blank" rel="noopener noreferrer">Estudantes unem IA e biologia para monitorar polinizadores em Guaribas</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="AI kontra van Gogh. 7 rzeczy, których nie wiedzieliśmy tydzień temu Gazeta Wyborcza Polônia">
+<div class="source">Gazeta Wyborcza</div>
+<div class="meta">Polônia
+ · 26/10/2026 13:41</div>
+<h3>
+<a href="https://wyborcza.pl/7,75400,33100000,ai-kontra-van-gogh-7-rzeczy-ktorych-nie-wiedzielismy-tydzien.html" target="_blank" rel="noopener noreferrer">AI kontra van Gogh. 7 rzeczy, których nie wiedzieliśmy tydzień temu</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="ChatGPT Says 404 Media Is Tech Support for Huge Corporations 404 Media EUA">
+<div class="source">404 Media</div>
+<div class="meta">EUA
+ · 26/10/2026 12:59</div>
+<h3>
+<a href="https://www.404media.co/chatgpt-says-404-media-is-tech-support-for-huge-corporations/" target="_blank" rel="noopener noreferrer">ChatGPT Says 404 Media Is Tech Support for Huge Corporations</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="AI models cost more when you don’t use English Rest of World Internacional">
+<div class="source">Rest of World</div>
+<div class="meta">Internacional
+ · 26/10/2026 07:00</div>
+<h3>
+<a href="https://restofworld.org/2026/ai-tokenizer-tax-non-english-languages-cost-inequity/" target="_blank" rel="noopener noreferrer">AI models cost more when you don’t use English</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="AI detects “invisible” signs of pancreatic cancer years before diagnosis ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 26/10/2026 06:25</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/10/261024222031.htm" target="_blank" rel="noopener noreferrer">AI detects “invisible” signs of pancreatic cancer years before diagnosis</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Translation has several different relationships with time. AI does not get any of them Scroll.in Índia">
+<div class="source">Scroll.in</div>
+<div class="meta">Índia
+ · 25/10/2026 00:00</div>
+<h3>
+<a href="https://scroll.in/article/1096501/translation-has-several-different-relationships-with-time-ai-does-not-get-any-of-them" target="_blank" rel="noopener noreferrer">Translation has several different relationships with time. AI does not get any of them</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="No, Paul McCartney no mostró su apoyo a Lula en esta foto: la imagen original es de 2024 y fue alterada con IA Chequeado Argentina">
+<div class="source">Chequeado</div>
+<div class="meta">Argentina
+ · 24/10/2026 18:21</div>
+<h3>
+<a href="https://chequeado.com/ultimas-noticias/no-paul-mccartney-no-mostro-su-apoyo-a-lula-en-esta-foto-la-imagen-original-es-de-2024-y-fue-alterada-con-ia/" target="_blank" rel="noopener noreferrer">No, Paul McCartney no mostró su apoyo a Lula en esta foto: la imagen original es de 2024 y fue alterada con IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Reinforcing the value of human understanding at MIT MIT News — IA EUA">
+<div class="source">MIT News — IA</div>
+<div class="meta">EUA
+ · 23/10/2026 16:35</div>
+<h3>
+<a href="https://news.mit.edu/2026/reinforcing-value-of-human-understanding-at-mit-1023" target="_blank" rel="noopener noreferrer">Reinforcing the value of human understanding at MIT</a>
+</h3>
+<span class="badge">Fonte institucional</span>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Meta tem alterado anúncios com IA sem avisar marcas Núcleo Brasil">
+<div class="source">Núcleo</div>
+<div class="meta">Brasil
+ · 23/10/2026 15:42</div>
+<h3>
+<a href="https://nucleo.jor.br/curtas/2026/10/23/meta-tem-alterado-anuncios-com-ia-sem-avisar-marcas/" target="_blank" rel="noopener noreferrer">Meta tem alterado anúncios com IA sem avisar marcas</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Podcast: ‘Reverse-Engineer Anything’ Is the Next Wave of AI Slop 404 Media EUA">
+<div class="source">404 Media</div>
+<div class="meta">EUA
+ · 23/10/2026 13:36</div>
+<h3>
+<a href="https://www.404media.co/podcast-reverse-engineer-anything-is-the-next-wave-of-ai-slop/" target="_blank" rel="noopener noreferrer">Podcast: ‘Reverse-Engineer Anything’ Is the Next Wave of AI Slop</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PE" data-search="Com telão inflável na rua e uso de IA, audiovisual pernambucano se mobiliza para reeleger Lula Marco Zero Conteúdo Brasil">
+<div class="source">Marco Zero Conteúdo</div>
+<div class="meta">Brasil
+ · PE
+ · 23/10/2026 12:16</div>
+<h3>
+<a href="https://marcozero.org/com-telao-inflavel-na-rua-e-uso-de-ia-audiovisual-pernambucano-se-mobiliza-para-reeleger-lula/" target="_blank" rel="noopener noreferrer">Com telão inflável na rua e uso de IA, audiovisual pernambucano se mobiliza para reeleger Lula</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="AI glasses are everywhere – even at protest sites. Should you be concerned? Scroll.in Índia">
+<div class="source">Scroll.in</div>
+<div class="meta">Índia
+ · 23/10/2026 10:45</div>
+<h3>
+<a href="https://scroll.in/video/1096602/ai-glasses-are-everywhere-even-at-protest-sites-should-you-be-concerned" target="_blank" rel="noopener noreferrer">AI glasses are everywhere – even at protest sites. Should you be concerned?</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="No, la canción &#34;Sin nosotros no&#34; no es de Serrat: ha sido creada con IA Maldita.es Espanha">
+<div class="source">Maldita.es</div>
+<div class="meta">Espanha
+ · 23/10/2026 04:51</div>
+<h3>
+<a href="https://maldita.es/desinfo/20261023/cancion-serrat-sin-nosotros-no-ia/" target="_blank" rel="noopener noreferrer">No, la canción &#34;Sin nosotros no&#34; no es de Serrat: ha sido creada con IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="¿Por qué todos los carteles hechos con IA son iguales? Confidencial Nicarágua">
+<div class="source">Confidencial</div>
+<div class="meta">Nicarágua
+ · 22/10/2026 13:00</div>
+<h3>
+<a href="https://confidencial.digital/revista-niu/por-que-todos-los-carteles-hechos-con-ia-son-iguales/" target="_blank" rel="noopener noreferrer">¿Por qué todos los carteles hechos con IA son iguales?</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="‘Nothing Embodies the Nightmarish Oppression of the “Liberal Elite” More Than the Vast, Impersonal, Know-All, Toxic AI Sheds’ Byline Times Reino Unido">
+<div class="source">Byline Times</div>
+<div class="meta">Reino Unido
+ · 22/10/2026 11:45</div>
+<h3>
+<a href="https://bylinetimes.com/edition/91/nothing-embodies-the-nightmarish-oppression-of-the-liberal-elite-more-than-the-vast-impersonal-know-all-toxic-ai-sheds/" target="_blank" rel="noopener noreferrer">‘Nothing Embodies the Nightmarish Oppression of the “Liberal Elite” More Than the Vast, Impersonal, Know-All, Toxic AI Sheds’</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="AI Is Changing Everything About Hacking. No One Knows What Happens Next 404 Media EUA">
+<div class="source">404 Media</div>
+<div class="meta">EUA
+ · 22/10/2026 11:23</div>
+<h3>
+<a href="https://www.404media.co/php2shell-black-october-ai-is-changing-everything-about-hacking-no-one-knows-what-happens-next/" target="_blank" rel="noopener noreferrer">AI Is Changing Everything About Hacking. No One Knows What Happens Next</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="AI Is Already &#39;Amplifying the Destruction&#39; of War 404 Media EUA">
+<div class="source">404 Media</div>
+<div class="meta">EUA
+ · 22/10/2026 11:20</div>
+<h3>
+<a href="https://www.404media.co/ai-is-already-amplifying-the-destruction-of-war/" target="_blank" rel="noopener noreferrer">AI Is Already &#39;Amplifying the Destruction&#39; of War</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="PHP-Sicherheitsleck: Open AI fand die Lücke – und entschied, wer davon erfuhr Frankfurter Allgemeine Zeitung (FAZ) Alemanha">
+<div class="source">Frankfurter Allgemeine Zeitung (FAZ)</div>
+<div class="meta">Alemanha
+ · 22/10/2026 10:07</div>
+<h3>
+<a href="https://www.faz.net/aktuell/feuilleton/debatten/php-sicherheitsluecke-was-der-ki-fund-fuer-staaten-bedeutet-201611231.html" target="_blank" rel="noopener noreferrer">PHP-Sicherheitsleck: Open AI fand die Lücke – und entschied, wer davon erfuhr</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Seth Center on Talking to China About AI Risk The Wire China China">
+<div class="source">The Wire China</div>
+<div class="meta">China
+ · 22/10/2026 05:45</div>
+<h3>
+<a href="https://www.thewirechina.com/2026/10/22/seth-center-on-talking-to-china-about-ai-risk/" target="_blank" rel="noopener noreferrer">Seth Center on Talking to China About AI Risk</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="National Bank CEO warns AI alone won’t give banks a lasting edge The Logic Canadá">
+<div class="source">The Logic</div>
+<div class="meta">Canadá
+ · 21/10/2026 18:00</div>
+<h3>
+<a href="https://thelogic.co/news/national-bank-ceo-ai/" target="_blank" rel="noopener noreferrer">National Bank CEO warns AI alone won’t give banks a lasting edge</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Perfiles eróticos impulsados ​​por IA usan videos de Flávio Bolsonaro para vender contenido para adultos Chequeado Argentina">
+<div class="source">Chequeado</div>
+<div class="meta">Argentina
+ · 21/10/2026 14:41</div>
+<h3>
+<a href="https://chequeado.com/ultimas-noticias/perfiles-eroticos-impulsados-por-ia-usan-videos-de-flavio-bolsonaro-para-vender-contenido-para-adultos/" target="_blank" rel="noopener noreferrer">Perfiles eróticos impulsados ​​por IA usan videos de Flávio Bolsonaro para vender contenido para adultos</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Build specialized multimodal models with LFM3 Hugging Face EUA">
+<div class="source">Hugging Face</div>
+<div class="meta">EUA
+ · 27/10/2026 14:16</div>
+<h3>
+<a href="https://huggingface.co/blog/LiquidAI/lfm3" target="_blank" rel="noopener noreferrer">Build specialized multimodal models with LFM3</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Genie 4: A new generation of world simulation Google DeepMind Reino Unido">
+<div class="source">Google DeepMind</div>
+<div class="meta">Reino Unido
+ · 27/10/2026 13:01</div>
+<h3>
+<a href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/" target="_blank" rel="noopener noreferrer">Genie 4: A new generation of world simulation</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Does Your Model Run on AWS Trainium? Look It Up Hugging Face EUA">
+<div class="source">Hugging Face</div>
+<div class="meta">EUA
+ · 22/10/2026 21:00</div>
+<h3>
+<a href="https://huggingface.co/blog/torch-neuronx-model-support" target="_blank" rel="noopener noreferrer">Does Your Model Run on AWS Trainium? Look It Up</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox Hugging Face EUA">
+<div class="source">Hugging Face</div>
+<div class="meta">EUA
+ · 22/10/2026 19:24</div>
+<h3>
+<a href="https://huggingface.co/blog/microsoft/thinkingbox-training" target="_blank" rel="noopener noreferrer">Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Beyond tree cover: mapping the world’s forest types Google DeepMind Reino Unido">
+<div class="source">Google DeepMind</div>
+<div class="meta">Reino Unido
+ · 22/10/2026 11:30</div>
+<h3>
+<a href="https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/" target="_blank" rel="noopener noreferrer">Beyond tree cover: mapping the world’s forest types</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Ensemble forecasting with IBM Granite time-series models Hugging Face EUA">
+<div class="source">Hugging Face</div>
+<div class="meta">EUA
+ · 22/10/2026 04:51</div>
+<h3>
+<a href="https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1" target="_blank" rel="noopener noreferrer">Ensemble forecasting with IBM Granite time-series models</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications Hugging Face EUA">
+<div class="source">Hugging Face</div>
+<div class="meta">EUA
+ · 21/10/2026 14:35</div>
+<h3>
+<a href="https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization" target="_blank" rel="noopener noreferrer">How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium. Hugging Face EUA">
+<div class="source">Hugging Face</div>
+<div class="meta">EUA
+ · 21/10/2026 13:04</div>
+<h3>
+<a href="https://huggingface.co/blog/amazon/profiling-torchneuron-part-1" target="_blank" rel="noopener noreferrer">Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium.</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+</div>
+</section>
+
+</main>
+<footer>Seleção automática por regras de assunto, relevância e data. Até dois destaques por fonte em cada editoria. Os filtros consideram a origem da fonte principal, não o local do acontecimento. Títulos no idioma original; nenhuma tradução ou resumo gerado por IA. A disponibilidade depende dos feeds públicos.<br>
+<a href="https://github.com/mac-manito/Repo">Código e metodologia</a> · Links externos abrem a publicação original.</footer>
+</div>
+<script>
+(()=>{const form=document.querySelector('#filters');if(!form)return;const search=document.querySelector('#search'),origin=document.querySelector('#origin'),uf=document.querySelector('#uf'),cards=[...document.querySelectorAll('.card')];const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const terms=cards.map(c=>norm(c.dataset.search));function filter(){if(origin.value==='mundo')uf.value='';uf.disabled=origin.value==='mundo';const query=norm(search.value).trim();let count=0;cards.forEach((card,i)=>{const match=(!origin.value||card.dataset.origin===origin.value)&&(!uf.value||card.dataset.uf===uf.value)&&terms[i].includes(query);card.hidden=!match;if(match)count++});document.querySelector('#status').textContent=count+' de '+cards.length+' notícias exibidas nesta página';document.querySelector('#no-results').hidden=count>0}form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter()})();
+</script>
+</body>
+</html>
