@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Seus interesses, em foco. · Capa do Mundo</title>
+<style>
+:root{--paper:#f7f5ef;--ink:#202e29;--muted:#59675f;--line:#cdd3c9;--green:#185d49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd761c;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);padding:28px 0 16px}
+.masthead{font:700 clamp(30px,5vw,52px)/1.1 Georgia,serif;text-decoration:none;letter-spacing:-2px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eyebrow,.meta{font-size:12px;color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:14px}
+nav a{text-decoration:none}
+.intro{padding:40px 0 24px}
+h1{font:normal clamp(32px,5vw,56px)/1.1 Georgia,serif;letter-spacing:-1px;margin:10px 0 16px}
+h2{font:normal 30px/1.2 Georgia,serif;margin:0}
+h3{font:normal 23px/1.3 Georgia,serif;margin:12px 0}
+.intro p{max-width:760px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;padding:20px;background:#eaf0e8;border:1px solid var(--line);align-items:end}
+label{display:flex;flex-direction:column;font-size:12px;gap:6px;flex:1;min-width:140px}
+input,select,button{font:inherit;color:inherit;padding:10px;border:1px solid #9aa89d;background:var(--paper);border-radius:3px}
+button{cursor:pointer}
+.status{font-size:13px;color:var(--muted);min-height:22px}
+.section{margin:36px 0;border-top:2px solid var(--ink);padding-top:18px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.section-head a{font-size:13px;white-space:nowrap}
+.description{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.card{padding:24px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.card h3 a{text-decoration:none}
+.badge{display:inline-block;font-size:11px;color:var(--green);border:1px solid #b6c8bc;border-radius:3px;padding:2px 6px;margin:8px 3px 0 0}
+.source{font-size:13px;font-weight:650}
+.card details{font-size:12px;margin-top:12px}
+.card details li{margin-top:8px}
+summary{cursor:pointer}
+.notice{padding:14px 18px;background:#eee5d3;border-left:3px solid #a77624;font-size:14px}
+.empty{color:var(--muted);padding:20px 0}
+.coverage{margin-top:28px;font-size:14px}
+.coverage ul{columns:2;padding-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;margin-top:50px;font-size:12px;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.top{align-items:start;flex-direction:column}
+.wrap{padding:0 20px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}
+.section-head{align-items:start;flex-direction:column;gap:8px}
+.coverage ul{columns:1}
+h3{font-size:24px}
+.intro{padding-top:28px}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="top">
+<a class="masthead" href="../index.html">Capa do Mundo<span style="color:var(--green)">.</span>
+</a>
+<div class="meta">Atualizado em 31/10/2026 às 12:38 · Brasília<br>374 de 691 fontes com notícias</div>
+</div>
+<nav aria-label="Navegação principal">
+<a href="../index.html">Capa temática</a>
+<a href="../editorias/tecnologia.html">Tecnologia</a>
+<a href="../editorias/ia.html">Inteligência artificial</a>
+<a href="../editorias/ciencia.html">Ciência</a>
+<a href="../editorias/tributaria.html">Tributária</a>
+<a href="../editorias/juridico.html">Jurídico</a>
+<a href="../gerais.html">Notícias gerais</a>
+<a href="../edicoes/index.html">Arquivo</a>
+</nav>
+</header>
+<main>
+<div class="intro">
+<div class="eyebrow">Informação para acompanhar o que importa</div>
+<h1>Seus interesses, em foco.</h1>
+<p>Tecnologia, inteligência artificial, ciência, tributação e direito. Uma seleção por assunto, com diferentes fontes e acesso direto à publicação original.</p>
+</div>
+
+
+<form class="filters" id="filters" role="search">
+<label>Buscar nesta página<input id="search" type="search" placeholder="Assunto ou fonte">
+</label>
+<label>Origem da fonte<select id="origin">
+<option value="">Todas</option>
+<option value="brasil">Brasil</option>
+<option value="mundo">Resto do mundo</option>
+</select>
+</label>
+<label>Estado da fonte<select id="uf">
+<option value="">Todos / nacionais</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option>
+</select>
+</label>
+<button type="reset">Limpar filtros</button>
+</form>
+<p class="status" id="status" aria-live="polite">
+</p>
+<p class="empty" id="no-results" hidden>Nenhuma notícia corresponde aos filtros nesta página. Consulte também a página da editoria para ver mais notícias.</p>
+
+
+
+<section class="section" id="tecnologia">
+<div class="section-head">
+<h2>Tecnologia</h2>
+<a href="../editorias/tecnologia.html">Ver editoria · 45 notícias →</a>
+</div>
+<p class="description">Ferramentas, automação e segurança digital. · Publicações dos últimos 3 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Chips para notebooks baratos estão esgotados, revela Intel Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 30/10/2026 12:13</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/chips-para-notebooks-baratos-estao-esgotados-revela-intel/" target="_blank" rel="noopener noreferrer">Chips para notebooks baratos estão esgotados, revela Intel</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Google lança Gemini 4 Carbon com avanços em cibersegurança, mas você ainda não pode usá-lo Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 29/10/2026 10:19</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/google-lanca-gemini-4-carbon-com-avancos-em-ciberseguranca-mas-voce-ainda-nao-pode-usa-lo/" target="_blank" rel="noopener noreferrer">Google lança Gemini 4 Carbon com avanços em cibersegurança, mas você ainda não pode usá-lo</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Brasil destina só 6,4% do orçamento de TI à segurança digital Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 30/10/2026 16:00</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80522/brasil-destina-so-6-4-do-orcamento-de-ti-a-seguranca-digital/" target="_blank" rel="noopener noreferrer">Brasil destina só 6,4% do orçamento de TI à segurança digital</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Fábio Thadeu Ferreira analisa tecnologia e eficiência na Urologia Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 30/10/2026 15:53</div>
+<h3>
+<a href="https://valor.globo.com/patrocinado/pulse-brand/noticia/2026/10/30/fabio-thadeu-ferreira-analisa-tecnologia-e-eficiencia-na-urologia-1.ghtml" target="_blank" rel="noopener noreferrer">Fábio Thadeu Ferreira analisa tecnologia e eficiência na Urologia</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MS" data-search="SUS terá mais 9 medicamentos de alta tecnologia para tratamento do câncer Campo Grande News Brasil">
+<div class="source">Campo Grande News</div>
+<div class="meta">Brasil
+ · MS
+ · 31/10/2026 11:58</div>
+<h3>
+<a href="https://www.campograndenews.com.br/saude-e-bem-estar/sus-tera-mais-9-medicamentos-de-alta-tecnologia-para-tratamento-do-cancer" target="_blank" rel="noopener noreferrer">SUS terá mais 9 medicamentos de alta tecnologia para tratamento do câncer</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ia">
+<div class="section-head">
+<h2>Inteligência artificial</h2>
+<a href="../editorias/ia.html">Ver editoria · 173 notícias →</a>
+</div>
+<p class="description">Aplicações, pesquisas e novos modelos. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="OpenAI expands partnership with Oracle to bring its apps to ChatGPT OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 27/10/2026 04:00</div>
+<h3>
+<a href="https://openai.com/index/oracle-apps-in-chatgpt" target="_blank" rel="noopener noreferrer">OpenAI expands partnership with Oracle to bring its apps to ChatGPT</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="OpenAI reduz US$ 10 bi da meta de financiamento em meio a preocupações com setor de IA Folha de S.Paulo Brasil">
+<div class="source">Folha de S.Paulo</div>
+<div class="meta">Brasil
+ · 31/10/2026 11:22</div>
+<h3>
+<a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://c-level.folha.uol.com.br/ia/2026/10/openai-reduz-us-10-bi-da-meta-de-financiamento-em-meio-a-preocupacoes-com-setor-de-ia.shtml" target="_blank" rel="noopener noreferrer">OpenAI reduz US$ 10 bi da meta de financiamento em meio a preocupações com setor de IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="An AI Agent Injected Drugs Into a Live Mouse’s Brain Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 31/10/2026 07:00</div>
+<h3>
+<a href="https://www.wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse/" target="_blank" rel="noopener noreferrer">An AI Agent Injected Drugs Into a Live Mouse’s Brain</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="A Supply Chain Attack Put Malicious Anthropic Claude Extensions on Thousands of Devices Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 30/10/2026 17:38</div>
+<h3>
+<a href="https://www.wired.com/story/trojan-malware-targets-thousands-of-anthropic-claude-developer-systems/" target="_blank" rel="noopener noreferrer">A Supply Chain Attack Put Malicious Anthropic Claude Extensions on Thousands of Devices</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="OpenAI vai limitar acesso de adolescentes a informações sobre armas no ChatGPT Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 30/10/2026 15:31</div>
+<h3>
+<a href="https://valor.globo.com/empresas/noticia/2026/10/30/openai-vai-limitar-acesso-de-adolescentes-a-informaes-sobre-armas-no-chatgpt.ghtml" target="_blank" rel="noopener noreferrer">OpenAI vai limitar acesso de adolescentes a informações sobre armas no ChatGPT</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Google vai encerrar agente de IA que programa sozinho Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 30/10/2026 11:42</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/google-vai-encerrar-agente-de-ia-que-programa-sozinho/" target="_blank" rel="noopener noreferrer">Google vai encerrar agente de IA que programa sozinho</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic IPO leads AI&#39;s $235 billion dealmaking blitz Axios EUA">
+<div class="source">Axios</div>
+<div class="meta">EUA
+ · 27/10/2026 06:00</div>
+<h3>
+<a href="https://www.axios.com/2026/10/27/anthropic-ipo-meta-spacex-ai-deals" target="_blank" rel="noopener noreferrer">Anthropic IPO leads AI&#39;s $235 billion dealmaking blitz</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ciencia">
+<div class="section-head">
+<h2>Ciência</h2>
+<a href="../editorias/ciencia.html">Ver editoria · 43 notícias →</a>
+</div>
+<p class="description">Descobertas, pesquisas e inovação. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Scientists just broke a textbook rule of physics ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 29/10/2026 00:39</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/10/261027063713.htm" target="_blank" rel="noopener noreferrer">Scientists just broke a textbook rule of physics</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Scientists finally discover how a common gut bacterium can trigger colon cancer ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 31/10/2026 10:49</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/10/261031012912.htm" target="_blank" rel="noopener noreferrer">Scientists finally discover how a common gut bacterium can trigger colon cancer</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Are Memories Transferable? Meet the Scientists Replicating an Infamous Study to Find Out Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 31/10/2026 06:30</div>
+<h3>
+<a href="https://www.wired.com/story/are-memories-transferable-meet-the-scientists-replicating-an-infamous-study-to-find-out/" target="_blank" rel="noopener noreferrer">Are Memories Transferable? Meet the Scientists Replicating an Infamous Study to Find Out</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="White Dwarfs Aren’t Just White. Scientists Discover Dying Stars Turning Pink and Green Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 31/10/2026 06:00</div>
+<h3>
+<a href="https://www.wired.com/story/white-dwarfs-arent-just-white-scientists-discover-dying-stars-turning-pink-and-green/" target="_blank" rel="noopener noreferrer">White Dwarfs Aren’t Just White. Scientists Discover Dying Stars Turning Pink and Green</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Biodiversity Cop17 seems to be stalling. Is it time to reform the process? The Guardian Australia Austrália">
+<div class="source">The Guardian Australia</div>
+<div class="meta">Austrália
+ · 30/10/2026 04:00</div>
+<h3>
+<a href="https://www.theguardian.com/environment/2026/oct/30/biodiversity-cop17-process" target="_blank" rel="noopener noreferrer">Biodiversity Cop17 seems to be stalling. Is it time to reform the process?</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="tributaria">
+<div class="section-head">
+<h2>Tributária e reforma tributária</h2>
+<a href="../editorias/tributaria.html">Ver editoria · 44 notícias →</a>
+</div>
+<p class="description">IBS/CBS, obrigações, regulamentação e decisões fiscais. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="NFS-e: ausência de IBS/CBS não causa rejeição técnica no ADN Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 30/10/2026 09:15</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80490/nfs-e-ausencia-de-ibs-cbs-nao-causa-rejeicao-tecnica-no-adn/" target="_blank" rel="noopener noreferrer">NFS-e: ausência de IBS/CBS não causa rejeição técnica no ADN</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="CBS no CT-e: 55% não destacam o tributo em todos Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 30/10/2026 18:30</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80495/cbs-no-ct-e-55-nao-destacam-o-tributo-em-todos/" target="_blank" rel="noopener noreferrer">CBS no CT-e: 55% não destacam o tributo em todos</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Mesmo com redutor, hospitais filantrópicos podem ter alta tributária com alíquota do CBS, diz FeSaúde Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 30/10/2026 14:09</div>
+<h3>
+<a href="https://valor.globo.com/empresas/noticia/2026/10/30/mesmo-com-redutor-hospitais-filantropicos-podem-ter-alta-tributaria-com-aliquota-do-cbs-diz-fesaude.ghtml" target="_blank" rel="noopener noreferrer">Mesmo com redutor, hospitais filantrópicos podem ter alta tributária com alíquota do CBS, diz FeSaúde</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="BA" data-search="Reforma tributária: TCU propõe alíquota de 11,3% para a CBS em 2027; Senado deverá definir percentual Jornal Grande Bahia Brasil">
+<div class="source">Jornal Grande Bahia</div>
+<div class="meta">Brasil
+ · BA
+ · 30/10/2026 11:00</div>
+<h3>
+<a href="https://jornalgrandebahia.com.br/2026/10/reforma-tributaria-tcu-propoe-aliquota-de-113-para-a-cbs-em-2027-senado-devera-definir-percentual/" target="_blank" rel="noopener noreferrer">Reforma tributária: TCU propõe alíquota de 11,3% para a CBS em 2027; Senado deverá definir percentual</a>
+</h3>
+
+<span class="badge">Proposta / discussão</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Quando o tributo não passa pelo caixa: os desafios empresariais do split payment JOTA Brasil">
+<div class="source">JOTA</div>
+<div class="meta">Brasil
+ · 31/10/2026 02:09</div>
+<h3>
+<a href="https://www.jota.info/opiniao-e-analise/artigos/quando-o-tributo-nao-passa-pelo-caixa-os-desafios-empresariais-do-split-payment" target="_blank" rel="noopener noreferrer">Quando o tributo não passa pelo caixa: os desafios empresariais do split payment</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AM" data-search="Braga será relator da CBS e Senado convidará Durigan para debate Amazonas Atual Brasil">
+<div class="source">Amazonas Atual</div>
+<div class="meta">Brasil
+ · AM
+ · 31/10/2026 12:18</div>
+<h3>
+<a href="https://amazonasatual.com.br/braga-sera-relator-da-cbs-e-senado-convidara-durigan-para-debate/" target="_blank" rel="noopener noreferrer">Braga será relator da CBS e Senado convidará Durigan para debate</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Comissão do Senado confirma Eduardo Braga como relator da alíquota da CBS CNN Brasil Brasil">
+<div class="source">CNN Brasil</div>
+<div class="meta">Brasil
+ · 31/10/2026 11:18</div>
+<h3>
+<a href="https://www.cnnbrasil.com.br/economia/money/macroeconomia/comissao-do-senado-confirma-eduardo-braga-como-relator-da-aliquota-da-cbs/" target="_blank" rel="noopener noreferrer">Comissão do Senado confirma Eduardo Braga como relator da alíquota da CBS</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MS" data-search="Do posto ao supermercado, novo ICMS pode pesar no bolso em MS Campo Grande News Brasil">
+<div class="source">Campo Grande News</div>
+<div class="meta">Brasil
+ · MS
+ · 31/10/2026 10:11</div>
+<h3>
+<a href="https://www.campograndenews.com.br/economia/do-posto-ao-supermercado-novo-icms-pode-pesar-no-bolso-em-ms" target="_blank" rel="noopener noreferrer">Do posto ao supermercado, novo ICMS pode pesar no bolso em MS</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="juridico">
+<div class="section-head">
+<h2>Jurídico</h2>
+<a href="../editorias/juridico.html">Ver editoria · 31 notícias →</a>
+</div>
+<p class="description">Empresas, contratos, trabalho e jurisprudência. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="CE" data-search="Ministério Público do Ceará recomenda suspensão de contrato em Sobral por irregularidades Sobral Online Brasil">
+<div class="source">Sobral Online</div>
+<div class="meta">Brasil
+ · CE
+ · 31/10/2026 04:36</div>
+<h3>
+<a href="https://sobralonline.com.br/ministerio-publico-ceara-recomenda-suspensao-contrato-sobral/" target="_blank" rel="noopener noreferrer">Ministério Público do Ceará recomenda suspensão de contrato em Sobral por irregularidades</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Para 2027, estão previstos 3 licitações de transmissão de energia, com R$ 50 bi de investimento, diz Aneel Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 30/10/2026 14:15</div>
+<h3>
+<a href="https://valor.globo.com/empresas/noticia/2026/10/30/para-2027-estao-previstos-3-licitacoes-de-transmissao-de-energia-com-r-50-bi-de-investimento-diz-aneel.ghtml" target="_blank" rel="noopener noreferrer">Para 2027, estão previstos 3 licitações de transmissão de energia, com R$ 50 bi de investimento, diz Aneel</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AC" data-search="MPAC apura possíveis irregularidades em contrato de locação de embarcações em Tarauacá O Juruá em Tempo Brasil">
+<div class="source">O Juruá em Tempo</div>
+<div class="meta">Brasil
+ · AC
+ · 31/10/2026 09:15</div>
+<h3>
+<a href="https://www.juruaemtempo.com.br/acre/mpac-apura-possiveis-irregularidades-em-contrato-de-locacao-de-embarcacoes-em-tarauaca/" target="_blank" rel="noopener noreferrer">MPAC apura possíveis irregularidades em contrato de locação de embarcações em Tarauacá</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PA" data-search="Ídolo do Remo, Marcelo Rangel estende contrato até 2029 DOL Brasil">
+<div class="source">DOL</div>
+<div class="meta">Brasil
+ · PA
+ · 31/10/2026 08:34</div>
+<h3>
+<a href="http://dol.com.br/esporte/remo/967021/idolo-do-remo-marcelo-rangel-estende-contrato-ate-2029" target="_blank" rel="noopener noreferrer">Ídolo do Remo, Marcelo Rangel estende contrato até 2029</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Mark Latham served with bankruptcy papers while at races The Sydney Morning Herald Austrália">
+<div class="source">The Sydney Morning Herald</div>
+<div class="meta">Austrália
+ · 31/10/2026 05:39</div>
+<h3>
+<a href="https://www.smh.com.au/politics/nsw/mark-latham-served-with-bankruptcy-papers-while-at-races-20261031-p61a9w.html" target="_blank" rel="noopener noreferrer">Mark Latham served with bankruptcy papers while at races</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://www.theage.com.au/politics/nsw/mark-latham-served-with-bankruptcy-papers-while-at-races-20261031-p61a9w.html" target="_blank" rel="noopener noreferrer">The Age — Mark Latham served with bankruptcy papers while at races</a>
+</li>
+</ul>
+</details>
+</article>
+
+</div>
+
+</section>
+
+</main>
+<footer>Seleção automática por regras de assunto, relevância e data. Até dois destaques por fonte em cada editoria. Os filtros consideram a origem da fonte principal, não o local do acontecimento. Títulos no idioma original; nenhuma tradução ou resumo gerado por IA. A disponibilidade depende dos feeds públicos.<br>
+<a href="https://github.com/mac-manito/Repo">Código e metodologia</a> · Links externos abrem a publicação original.</footer>
+</div>
+<script>
+(()=>{const form=document.querySelector('#filters');if(!form)return;const search=document.querySelector('#search'),origin=document.querySelector('#origin'),uf=document.querySelector('#uf'),cards=[...document.querySelectorAll('.card')];const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const terms=cards.map(c=>norm(c.dataset.search));function filter(){if(origin.value==='mundo')uf.value='';uf.disabled=origin.value==='mundo';const query=norm(search.value).trim();let count=0;cards.forEach((card,i)=>{const match=(!origin.value||card.dataset.origin===origin.value)&&(!uf.value||card.dataset.uf===uf.value)&&terms[i].includes(query);card.hidden=!match;if(match)count++});document.querySelector('#status').textContent=count+' de '+cards.length+' notícias exibidas nesta página';document.querySelector('#no-results').hidden=count>0}form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter()})();
+</script>
+</body>
+</html>
