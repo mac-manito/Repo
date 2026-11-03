@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Seus interesses, em foco. · Capa do Mundo</title>
+<style>
+:root{--paper:#f7f5ef;--ink:#202e29;--muted:#59675f;--line:#cdd3c9;--green:#185d49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd761c;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);padding:28px 0 16px}
+.masthead{font:700 clamp(30px,5vw,52px)/1.1 Georgia,serif;text-decoration:none;letter-spacing:-2px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eyebrow,.meta{font-size:12px;color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:14px}
+nav a{text-decoration:none}
+.intro{padding:40px 0 24px}
+h1{font:normal clamp(32px,5vw,56px)/1.1 Georgia,serif;letter-spacing:-1px;margin:10px 0 16px}
+h2{font:normal 30px/1.2 Georgia,serif;margin:0}
+h3{font:normal 23px/1.3 Georgia,serif;margin:12px 0}
+.intro p{max-width:760px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;padding:20px;background:#eaf0e8;border:1px solid var(--line);align-items:end}
+label{display:flex;flex-direction:column;font-size:12px;gap:6px;flex:1;min-width:140px}
+input,select,button{font:inherit;color:inherit;padding:10px;border:1px solid #9aa89d;background:var(--paper);border-radius:3px}
+button{cursor:pointer}
+.status{font-size:13px;color:var(--muted);min-height:22px}
+.section{margin:36px 0;border-top:2px solid var(--ink);padding-top:18px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.section-head a{font-size:13px;white-space:nowrap}
+.description{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.card{padding:24px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.card h3 a{text-decoration:none}
+.badge{display:inline-block;font-size:11px;color:var(--green);border:1px solid #b6c8bc;border-radius:3px;padding:2px 6px;margin:8px 3px 0 0}
+.source{font-size:13px;font-weight:650}
+.card details{font-size:12px;margin-top:12px}
+.card details li{margin-top:8px}
+summary{cursor:pointer}
+.notice{padding:14px 18px;background:#eee5d3;border-left:3px solid #a77624;font-size:14px}
+.empty{color:var(--muted);padding:20px 0}
+.coverage{margin-top:28px;font-size:14px}
+.coverage ul{columns:2;padding-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;margin-top:50px;font-size:12px;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.top{align-items:start;flex-direction:column}
+.wrap{padding:0 20px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}
+.section-head{align-items:start;flex-direction:column;gap:8px}
+.coverage ul{columns:1}
+h3{font-size:24px}
+.intro{padding-top:28px}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="top">
+<a class="masthead" href="../index.html">Capa do Mundo<span style="color:var(--green)">.</span>
+</a>
+<div class="meta">Atualizado em 03/11/2026 às 14:37 · Brasília<br>380 de 691 fontes com notícias</div>
+</div>
+<nav aria-label="Navegação principal">
+<a href="../index.html">Capa temática</a>
+<a href="../editorias/tecnologia.html">Tecnologia</a>
+<a href="../editorias/ia.html">Inteligência artificial</a>
+<a href="../editorias/ciencia.html">Ciência</a>
+<a href="../editorias/tributaria.html">Tributária</a>
+<a href="../editorias/juridico.html">Jurídico</a>
+<a href="../gerais.html">Notícias gerais</a>
+<a href="../edicoes/index.html">Arquivo</a>
+</nav>
+</header>
+<main>
+<div class="intro">
+<div class="eyebrow">Informação para acompanhar o que importa</div>
+<h1>Seus interesses, em foco.</h1>
+<p>Tecnologia, inteligência artificial, ciência, tributação e direito. Uma seleção por assunto, com diferentes fontes e acesso direto à publicação original.</p>
+</div>
+
+
+<form class="filters" id="filters" role="search">
+<label>Buscar nesta página<input id="search" type="search" placeholder="Assunto ou fonte">
+</label>
+<label>Origem da fonte<select id="origin">
+<option value="">Todas</option>
+<option value="brasil">Brasil</option>
+<option value="mundo">Resto do mundo</option>
+</select>
+</label>
+<label>Estado da fonte<select id="uf">
+<option value="">Todos / nacionais</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option>
+</select>
+</label>
+<button type="reset">Limpar filtros</button>
+</form>
+<p class="status" id="status" aria-live="polite">
+</p>
+<p class="empty" id="no-results" hidden>Nenhuma notícia corresponde aos filtros nesta página. Consulte também a página da editoria para ver mais notícias.</p>
+
+
+
+<section class="section" id="tecnologia">
+<div class="section-head">
+<h2>Tecnologia</h2>
+<a href="../editorias/tecnologia.html">Ver editoria · 58 notícias →</a>
+</div>
+<p class="description">Ferramentas, automação e segurança digital. · Publicações dos últimos 3 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Polícia e gigantes de tecnologia derrubam botnet com 1,3 milhão de TV boxes Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 03/11/2026 12:45</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/policia-e-gigantes-de-tecnologia-derrubam-botnet-com-13-milhao-de-tv-boxes/" target="_blank" rel="noopener noreferrer">Polícia e gigantes de tecnologia derrubam botnet com 1,3 milhão de TV boxes</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MS" data-search="Inteligência artificial: tecnologia avança, experiência humana permanece Campo Grande News Brasil">
+<div class="source">Campo Grande News</div>
+<div class="meta">Brasil
+ · MS
+ · 03/11/2026 11:50</div>
+<h3>
+<a href="https://www.campograndenews.com.br/colunistas/ensinar-juntos/inteligencia-artificial-tecnologia-avanca-experiencia-humana-permanece" target="_blank" rel="noopener noreferrer">Inteligência artificial: tecnologia avança, experiência humana permanece</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="GO" data-search="Novo aplicativo promete acelerar doações de córneas em Goiás com identificação de óbitos em até 30 minutos Jornal Opção Brasil">
+<div class="source">Jornal Opção</div>
+<div class="meta">Brasil
+ · GO
+ · 03/11/2026 09:56</div>
+<h3>
+<a href="https://www.jornalopcao.com.br/ultimas-noticias/novo-aplicativo-promete-acelerar-doacoes-de-corneas-em-goias-com-identificacao-de-obitos-em-ate-30-minutos-885041/" target="_blank" rel="noopener noreferrer">Novo aplicativo promete acelerar doações de córneas em Goiás com identificação de óbitos em até 30 minutos</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Bolsas caem na Europa com baixa em tecnologia e apesar de alívio no petróleo Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 03/11/2026 14:28</div>
+<h3>
+<a href="https://valor.globo.com/financas/noticia/2026/11/03/bolsas-caem-na-europa-com-baixa-em-tecnologia-e-apesar-de-alivio-no-petroleo.ghtml" target="_blank" rel="noopener noreferrer">Bolsas caem na Europa com baixa em tecnologia e apesar de alívio no petróleo</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AC" data-search="Acre reforça prevenção contra secas e chuvas intensas com tecnologia de monitoramento climático nas propriedades rurais Acre Agora Brasil">
+<div class="source">Acre Agora</div>
+<div class="meta">Brasil
+ · AC
+ · 03/11/2026 14:26</div>
+<h3>
+<a href="https://acreagora.com/2026/11/03/acre-reforca-prevencao-contra-secas-e-chuvas-intensas-com-tecnologia-de-monitoramento-climatico-nas-propriedades-rurais/" target="_blank" rel="noopener noreferrer">Acre reforça prevenção contra secas e chuvas intensas com tecnologia de monitoramento climático nas propriedades rurais</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ia">
+<div class="section-head">
+<h2>Inteligência artificial</h2>
+<a href="../editorias/ia.html">Ver editoria · 158 notícias →</a>
+</div>
+<p class="description">Aplicações, pesquisas e novos modelos. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Anthropic adota estrutura inédita para proteger sua missão de IA CNN Brasil Brasil">
+<div class="source">CNN Brasil</div>
+<div class="meta">Brasil
+ · 03/11/2026 13:09</div>
+<h3>
+<a href="https://www.cnnbrasil.com.br/economia/money/inteligencia-artificial/anthropic-adota-estrutura-inedita-para-proteger-sua-missao-de-ia/" target="_blank" rel="noopener noreferrer">Anthropic adota estrutura inédita para proteger sua missão de IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Why Chinese AI stars like Z.ai, MiniMax struggle to match Anthropic’s profit margin South China Morning Post China">
+<div class="source">South China Morning Post</div>
+<div class="meta">China
+ · 03/11/2026 09:30</div>
+<h3>
+<a href="https://www.scmp.com/tech/big-tech/article/3373124/why-chinese-ai-stars-zai-minimax-struggle-match-anthropics-profit-margin" target="_blank" rel="noopener noreferrer">Why Chinese AI stars like Z.ai, MiniMax struggle to match Anthropic’s profit margin</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="ChatGPT y audios en la PlayStation: los narcos del Puerto de València usaban la IA y la consola para meter toneladas de coca elDiario.es Espanha">
+<div class="source">elDiario.es</div>
+<div class="meta">Espanha
+ · 02/11/2026 18:07</div>
+<h3>
+<a href="https://www.eldiario.es/comunitat-valenciana/chatgpt-audios-playstation-narcos-puerto-valencia-usaban-ia-consola-meter-toneladas-coca_1_13631449.html" target="_blank" rel="noopener noreferrer">ChatGPT y audios en la PlayStation: los narcos del Puerto de València usaban la IA y la consola para meter toneladas de coca</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Claude’s new rules against game cloning won’t stop the AI copying boom Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 02/11/2026 15:05</div>
+<h3>
+<a href="https://arstechnica.com/ai/2026/11/claudes-new-rules-against-game-cloning-wont-stop-the-ai-copying-boom/" target="_blank" rel="noopener noreferrer">Claude’s new rules against game cloning won’t stop the AI copying boom</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Google vai encerrar agente de IA que programa sozinho Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 30/10/2026 11:42</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/google-vai-encerrar-agente-de-ia-que-programa-sozinho/" target="_blank" rel="noopener noreferrer">Google vai encerrar agente de IA que programa sozinho</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic makin dekat dengan AI mampu membangun dirinya sendiri Antara Indonésia">
+<div class="source">Antara</div>
+<div class="meta">Indonésia
+ · 03/11/2026 13:24</div>
+<h3>
+<a href="https://www.antaranews.com/berita/5830119/anthropic-makin-dekat-dengan-ai-mampu-membangun-dirinya-sendiri" target="_blank" rel="noopener noreferrer">Anthropic makin dekat dengan AI mampu membangun dirinya sendiri</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Heimstaden is changing residential real estate management with AI OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 03/11/2026 05:00</div>
+<h3>
+<a href="https://openai.com/index/heimstaden" target="_blank" rel="noopener noreferrer">Heimstaden is changing residential real estate management with AI</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ciencia">
+<div class="section-head">
+<h2>Ciência</h2>
+<a href="../editorias/ciencia.html">Ver editoria · 41 notícias →</a>
+</div>
+<p class="description">Descobertas, pesquisas e inovação. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Scientists discover a surprising clue to autism&#39;s origins hidden in the placenta ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 03/11/2026 09:41</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261102202824.htm" target="_blank" rel="noopener noreferrer">Scientists discover a surprising clue to autism&#39;s origins hidden in the placenta</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Scientists discover new Alzheimer’s drug that repairs DNA damage and reduces brain inflammation ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 03/11/2026 01:11</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261102075806.htm" target="_blank" rel="noopener noreferrer">Scientists discover new Alzheimer’s drug that repairs DNA damage and reduces brain inflammation</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Entenda como a genética dos cães pode ter revelado mistérios do desastre de Chernobyl CNN Brasil Brasil">
+<div class="source">CNN Brasil</div>
+<div class="meta">Brasil
+ · 03/11/2026 13:43</div>
+<h3>
+<a href="https://www.cnnbrasil.com.br/ciencia/entenda-como-a-genetica-dos-caes-pode-ter-revelado-misterios-do-desastre-de-chernobyl/" target="_blank" rel="noopener noreferrer">Entenda como a genética dos cães pode ter revelado mistérios do desastre de Chernobyl</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RJ" data-search="Abacaxi, melancia e mais: estudo revela que a parte mais nutritiva de 10 vegetais costuma ir para o lixo Extra Brasil">
+<div class="source">Extra</div>
+<div class="meta">Brasil
+ · RJ
+ · 03/11/2026 13:04</div>
+<h3>
+<a href="https://extra.globo.com/saude/noticia/2026/11/abacaxi-melancia-e-mais-estudo-revela-que-a-parte-mais-nutritiva-de-10-vegetais-costuma-ir-para-o-lixo.ghtml" target="_blank" rel="noopener noreferrer">Abacaxi, melancia e mais: estudo revela que a parte mais nutritiva de 10 vegetais costuma ir para o lixo</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RR" data-search="Pesquisadores vão à Serra do Aracá (AM) para mapear biodiversidade DCI Roraima Brasil">
+<div class="source">DCI Roraima</div>
+<div class="meta">Brasil
+ · RR
+ · 03/11/2026 11:38</div>
+<h3>
+<a href="https://www.dciroraima.com/noticia/14297/geral/pesquisadores-vao-a-serra-do-araca-am-para-mapear-biodiversidade.html" target="_blank" rel="noopener noreferrer">Pesquisadores vão à Serra do Aracá (AM) para mapear biodiversidade</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="tributaria">
+<div class="section-head">
+<h2>Tributária e reforma tributária</h2>
+<a href="../editorias/tributaria.html">Ver editoria · 35 notícias →</a>
+</div>
+<p class="description">IBS/CBS, obrigações, regulamentação e decisões fiscais. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="RJ" data-search="Relator da Reforma Tributária no Senado afirma que foi pego de surpresa com alíquota de 11,3% para CBS Extra Brasil">
+<div class="source">Extra</div>
+<div class="meta">Brasil
+ · RJ
+ · 03/11/2026 12:10</div>
+<h3>
+<a href="https://extra.globo.com/economia/noticia/2026/11/relator-da-reforma-tributaria-no-senado-afirma-que-foi-pego-de-surpresa-com-aliquota-de-113percent-para-cbs.ghtml" target="_blank" rel="noopener noreferrer">Relator da Reforma Tributária no Senado afirma que foi pego de surpresa com alíquota de 11,3% para CBS</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Relator da Reforma Tributária diz que foi pego de surpresa com alíquota de 11,3% para CBS e defende ‘amplo debate’ O Globo Brasil">
+<div class="source">O Globo</div>
+<div class="meta">Brasil
+ · 03/11/2026 11:26</div>
+<h3>
+<a href="https://oglobo.globo.com/economia/noticia/2026/11/03/relator-da-reforma-tributaria-diz-que-foi-pego-de-surpresa-com-aliquota-de-113percent-para-cbs-e-defende-amplo-debate.ghtml" target="_blank" rel="noopener noreferrer">Relator da Reforma Tributária diz que foi pego de surpresa com alíquota de 11,3% para CBS e defende ‘amplo debate’</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="STJ nega créditos de PIS/Cofins sobre ICMS nas compras Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 03/11/2026 10:45</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80542/stj-nega-creditos-de-pis-cofins-sobre-icms-nas-compras/" target="_blank" rel="noopener noreferrer">STJ nega créditos de PIS/Cofins sobre ICMS nas compras</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="CE" data-search="Governo planeja rever exceções da CBS para reduzir alíquota tributária Sobral Online Brasil">
+<div class="source">Sobral Online</div>
+<div class="meta">Brasil
+ · CE
+ · 03/11/2026 10:28</div>
+<h3>
+<a href="https://sobralonline.com.br/governo-planeja-rever-excecoes-da-cbs/" target="_blank" rel="noopener noreferrer">Governo planeja rever exceções da CBS para reduzir alíquota tributária</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="BA" data-search="Simples Nacional: prazo para cancelar opções de tributos começa terça A Tarde Brasil">
+<div class="source">A Tarde</div>
+<div class="meta">Brasil
+ · BA
+ · 03/11/2026 07:56</div>
+<h3>
+<a href="https://atarde.com.br/economia/simples-nacional-prazo-para-cancelar-opcoes-de-tributos-comeca-terca-1408084" target="_blank" rel="noopener noreferrer">Simples Nacional: prazo para cancelar opções de tributos começa terça</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MS" data-search="Alíquota da CBS a 11,3% aumenta carga tributária sobre consumo em 2027 O Estado Online Brasil">
+<div class="source">O Estado Online</div>
+<div class="meta">Brasil
+ · MS
+ · 01/11/2026 12:40</div>
+<h3>
+<a href="https://oestadoonline.com.br/economia/aliquota-da-cbs-a-113-aumenta-carga-tributaria-sobre-consumo-em-2027/" target="_blank" rel="noopener noreferrer">Alíquota da CBS a 11,3% aumenta carga tributária sobre consumo em 2027</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Relator no Senado diz considerar alíquota da CBS elevada e fala em tributo de até 9% Folha de S.Paulo Brasil">
+<div class="source">Folha de S.Paulo</div>
+<div class="meta">Brasil
+ · 03/11/2026 12:13</div>
+<h3>
+<a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/relator-no-senado-diz-considerar-aliquota-da-cbs-elevada-e-fala-em-tributo-de-ate-9.shtml" target="_blank" rel="noopener noreferrer">Relator no Senado diz considerar alíquota da CBS elevada e fala em tributo de até 9%</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MG" data-search="Relator da CBS, Eduardo Braga diz não estar de acordo com alíquota de 11,3% Diário do Comércio MG Brasil">
+<div class="source">Diário do Comércio MG</div>
+<div class="meta">Brasil
+ · MG
+ · 03/11/2026 14:20</div>
+<h3>
+<a href="https://diariodocomercio.com.br/financas/relator-da-cbs-eduardo-braga-aliquota/" target="_blank" rel="noopener noreferrer">Relator da CBS, Eduardo Braga diz não estar de acordo com alíquota de 11,3%</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://www.portaldoholanda.com.br/articles/1006145" target="_blank" rel="noopener noreferrer">Portal do Holanda — Relator da CBS, Eduardo Braga diz não estar de acordo com alíquota de 11,3%</a>
+</li>
+</ul>
+</details>
+</article>
+
+</div>
+
+</section>
+<section class="section" id="juridico">
+<div class="section-head">
+<h2>Jurídico</h2>
+<a href="../editorias/juridico.html">Ver editoria · 27 notícias →</a>
+</div>
+<p class="description">Empresas, contratos, trabalho e jurisprudência. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="GO" data-search="PF faz operação na Prefeitura de Aragarças e investiga fraudes em licitações, empresas de fachada e contratos de obras públicas Goiás 24 Horas Brasil">
+<div class="source">Goiás 24 Horas</div>
+<div class="meta">Brasil
+ · GO
+ · 03/11/2026 09:49</div>
+<h3>
+<a href="https://goias24horas.com.br/218501-pf-faz-operacao-na-prefeitura-de-aragarcas-e-investiga-fraudes-em-licitacoes-empresas-de-fachada-e-contratos-de-obras-publicas/" target="_blank" rel="noopener noreferrer">PF faz operação na Prefeitura de Aragarças e investiga fraudes em licitações, empresas de fachada e contratos de obras públicas</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MT" data-search="PF mira empresários em Mato Grosso em investigação sobre fraudes em licitações em Goiás Repórter MT Brasil">
+<div class="source">Repórter MT</div>
+<div class="meta">Brasil
+ · MT
+ · 03/11/2026 11:08</div>
+<h3>
+<a href="https://www.reportermt.com/policia/pf-mira-empresarios-em-mato-grosso-em-investigacao-sobre-fraudes-em-licitacoes-em-goias/246061" target="_blank" rel="noopener noreferrer">PF mira empresários em Mato Grosso em investigação sobre fraudes em licitações em Goiás</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PI" data-search="TCE-PI barra recurso de Edilson Capote e mantém bloqueio de contrato de quase R$ 1 milhão para lanches OitoMeia Brasil">
+<div class="source">OitoMeia</div>
+<div class="meta">Brasil
+ · PI
+ · 03/11/2026 07:52</div>
+<h3>
+<a href="https://www.oitomeia.com.br/noticias/politica/2026/11/03/tce-pi-barra-recurso-edilson-capote-mantem-bloqueio-contrato-quase-r-1-milhao-para-lanches/" target="_blank" rel="noopener noreferrer">TCE-PI barra recurso de Edilson Capote e mantém bloqueio de contrato de quase R$ 1 milhão para lanches</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Hacienda acusa a Aldama de usar contratos de asesoramiento &#39;fake&#39; para ocultar parte del fraude millonario del IVA de hidrocarburos elDiario.es Espanha">
+<div class="source">elDiario.es</div>
+<div class="meta">Espanha
+ · 03/11/2026 14:15</div>
+<h3>
+<a href="https://www.eldiario.es/politica/hacienda-acusa-aldama-contratos-asesoramiento-fake-ocultar-parte-fraude-millonario-iva-hidrocarburos_1_13634707.html" target="_blank" rel="noopener noreferrer">Hacienda acusa a Aldama de usar contratos de asesoramiento &#39;fake&#39; para ocultar parte del fraude millonario del IVA de hidrocarburos</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PI" data-search="FMS prevê licitação de R$ 17,9 milhões para guardar bens e gerir documentos Portal AZ Brasil">
+<div class="source">Portal AZ</div>
+<div class="meta">Brasil
+ · PI
+ · 03/11/2026 14:09</div>
+<h3>
+<a href="https://www.portalaz.com.br/noticia/geral/99531/fms-preve-licitacao-de-r-179-milhoes-para-guardar-bens-e-gerir-documentos/" target="_blank" rel="noopener noreferrer">FMS prevê licitação de R$ 17,9 milhões para guardar bens e gerir documentos</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+
+</main>
+<footer>Seleção automática por regras de assunto, relevância e data. Até dois destaques por fonte em cada editoria. Os filtros consideram a origem da fonte principal, não o local do acontecimento. Títulos no idioma original; nenhuma tradução ou resumo gerado por IA. A disponibilidade depende dos feeds públicos.<br>
+<a href="https://github.com/mac-manito/Repo">Código e metodologia</a> · Links externos abrem a publicação original.</footer>
+</div>
+<script>
+(()=>{const form=document.querySelector('#filters');if(!form)return;const search=document.querySelector('#search'),origin=document.querySelector('#origin'),uf=document.querySelector('#uf'),cards=[...document.querySelectorAll('.card')];const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const terms=cards.map(c=>norm(c.dataset.search));function filter(){if(origin.value==='mundo')uf.value='';uf.disabled=origin.value==='mundo';const query=norm(search.value).trim();let count=0;cards.forEach((card,i)=>{const match=(!origin.value||card.dataset.origin===origin.value)&&(!uf.value||card.dataset.uf===uf.value)&&terms[i].includes(query);card.hidden=!match;if(match)count++});document.querySelector('#status').textContent=count+' de '+cards.length+' notícias exibidas nesta página';document.querySelector('#no-results').hidden=count>0}form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter()})();
+</script>
+</body>
+</html>
