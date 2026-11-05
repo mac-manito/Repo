@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Seus interesses, em foco. · Capa do Mundo</title>
+<style>
+:root{--paper:#f7f5ef;--ink:#202e29;--muted:#59675f;--line:#cdd3c9;--green:#185d49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd761c;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);padding:28px 0 16px}
+.masthead{font:700 clamp(30px,5vw,52px)/1.1 Georgia,serif;text-decoration:none;letter-spacing:-2px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eyebrow,.meta{font-size:12px;color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:14px}
+nav a{text-decoration:none}
+.intro{padding:40px 0 24px}
+h1{font:normal clamp(32px,5vw,56px)/1.1 Georgia,serif;letter-spacing:-1px;margin:10px 0 16px}
+h2{font:normal 30px/1.2 Georgia,serif;margin:0}
+h3{font:normal 23px/1.3 Georgia,serif;margin:12px 0}
+.intro p{max-width:760px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;padding:20px;background:#eaf0e8;border:1px solid var(--line);align-items:end}
+label{display:flex;flex-direction:column;font-size:12px;gap:6px;flex:1;min-width:140px}
+input,select,button{font:inherit;color:inherit;padding:10px;border:1px solid #9aa89d;background:var(--paper);border-radius:3px}
+button{cursor:pointer}
+.status{font-size:13px;color:var(--muted);min-height:22px}
+.section{margin:36px 0;border-top:2px solid var(--ink);padding-top:18px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.section-head a{font-size:13px;white-space:nowrap}
+.description{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.card{padding:24px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.card h3 a{text-decoration:none}
+.badge{display:inline-block;font-size:11px;color:var(--green);border:1px solid #b6c8bc;border-radius:3px;padding:2px 6px;margin:8px 3px 0 0}
+.source{font-size:13px;font-weight:650}
+.card details{font-size:12px;margin-top:12px}
+.card details li{margin-top:8px}
+summary{cursor:pointer}
+.notice{padding:14px 18px;background:#eee5d3;border-left:3px solid #a77624;font-size:14px}
+.empty{color:var(--muted);padding:20px 0}
+.coverage{margin-top:28px;font-size:14px}
+.coverage ul{columns:2;padding-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;margin-top:50px;font-size:12px;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.top{align-items:start;flex-direction:column}
+.wrap{padding:0 20px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}
+.section-head{align-items:start;flex-direction:column;gap:8px}
+.coverage ul{columns:1}
+h3{font-size:24px}
+.intro{padding-top:28px}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="top">
+<a class="masthead" href="../index.html">Capa do Mundo<span style="color:var(--green)">.</span>
+</a>
+<div class="meta">Atualizado em 05/11/2026 às 14:53 · Brasília<br>381 de 691 fontes com notícias</div>
+</div>
+<nav aria-label="Navegação principal">
+<a href="../index.html">Capa temática</a>
+<a href="../editorias/tecnologia.html">Tecnologia</a>
+<a href="../editorias/ia.html">Inteligência artificial</a>
+<a href="../editorias/ciencia.html">Ciência</a>
+<a href="../editorias/tributaria.html">Tributária</a>
+<a href="../editorias/juridico.html">Jurídico</a>
+<a href="../gerais.html">Notícias gerais</a>
+<a href="../edicoes/index.html">Arquivo</a>
+</nav>
+</header>
+<main>
+<div class="intro">
+<div class="eyebrow">Informação para acompanhar o que importa</div>
+<h1>Seus interesses, em foco.</h1>
+<p>Tecnologia, inteligência artificial, ciência, tributação e direito. Uma seleção por assunto, com diferentes fontes e acesso direto à publicação original.</p>
+</div>
+
+
+<form class="filters" id="filters" role="search">
+<label>Buscar nesta página<input id="search" type="search" placeholder="Assunto ou fonte">
+</label>
+<label>Origem da fonte<select id="origin">
+<option value="">Todas</option>
+<option value="brasil">Brasil</option>
+<option value="mundo">Resto do mundo</option>
+</select>
+</label>
+<label>Estado da fonte<select id="uf">
+<option value="">Todos / nacionais</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option>
+</select>
+</label>
+<button type="reset">Limpar filtros</button>
+</form>
+<p class="status" id="status" aria-live="polite">
+</p>
+<p class="empty" id="no-results" hidden>Nenhuma notícia corresponde aos filtros nesta página. Consulte também a página da editoria para ver mais notícias.</p>
+
+
+
+<section class="section" id="tecnologia">
+<div class="section-head">
+<h2>Tecnologia</h2>
+<a href="../editorias/tecnologia.html">Ver editoria · 51 notícias →</a>
+</div>
+<p class="description">Ferramentas, automação e segurança digital. · Publicações dos últimos 3 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="heise+ | Angriffe auf Prozessor-Hardware: Wie der TÜVIT Chips knackt c&#39;t Alemanha">
+<div class="source">c&#39;t</div>
+<div class="meta">Alemanha
+ · 05/11/2026 04:31</div>
+<h3>
+<a href="https://www.heise.de/hintergrund/Angriffe-auf-Prozessor-Hardware-Wie-der-TUeVIT-Chips-knackt-11480775.html" target="_blank" rel="noopener noreferrer">heise+ | Angriffe auf Prozessor-Hardware: Wie der TÜVIT Chips knackt</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Nova tecnologia deixa o Bluetooth 4 vezes mais rápido Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 04/11/2026 15:44</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/nova-tecnologia-deixa-o-bluetooth-4-vezes-mais-rapido/" target="_blank" rel="noopener noreferrer">Nova tecnologia deixa o Bluetooth 4 vezes mais rápido</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Agility Robotics&#39; Nasdaq debut invites scrutiny of humanoid robot market Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 05/11/2026 09:00</div>
+<h3>
+<a href="https://arstechnica.com/ai/2026/11/agility-robotics-nasdaq-debut-invites-scrutiny-of-humanoid-robot-market/" target="_blank" rel="noopener noreferrer">Agility Robotics&#39; Nasdaq debut invites scrutiny of humanoid robot market</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Nintendo&#39;s biggest ROM chip supplier is bowing out of the business Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 04/11/2026 19:47</div>
+<h3>
+<a href="https://arstechnica.com/gaming/2026/11/the-tech-memory-shortage-comes-for-nintendos-cartridge-supply-chain/" target="_blank" rel="noopener noreferrer">Nintendo&#39;s biggest ROM chip supplier is bowing out of the business</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Polícia e gigantes de tecnologia derrubam botnet com 1,3 milhão de TV boxes Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 03/11/2026 12:45</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/policia-e-gigantes-de-tecnologia-derrubam-botnet-com-13-milhao-de-tv-boxes/" target="_blank" rel="noopener noreferrer">Polícia e gigantes de tecnologia derrubam botnet com 1,3 milhão de TV boxes</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ia">
+<div class="section-head">
+<h2>Inteligência artificial</h2>
+<a href="../editorias/ia.html">Ver editoria · 152 notícias →</a>
+</div>
+<p class="description">Aplicações, pesquisas e novos modelos. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="GPT-6 Cyber: OpenAI lança IA especializada em encontrar falhas de segurança CNN Brasil Brasil">
+<div class="source">CNN Brasil</div>
+<div class="meta">Brasil
+ · 05/11/2026 14:20</div>
+<h3>
+<a href="https://www.cnnbrasil.com.br/economia/money/inteligencia-artificial/gpt-6-cyber-openai-lanca-ia-especializada-em-encontrar-falhas-de-seguranca/" target="_blank" rel="noopener noreferrer">GPT-6 Cyber: OpenAI lança IA especializada em encontrar falhas de segurança</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Google lets schools switch off Gemini, but AI in Search is all or nothing MediaNama Índia">
+<div class="source">MediaNama</div>
+<div class="meta">Índia
+ · 04/11/2026 09:27</div>
+<h3>
+<a href="https://www.medianama.com/2026/11/223-google-schools-switch-off-gemini/" target="_blank" rel="noopener noreferrer">Google lets schools switch off Gemini, but AI in Search is all or nothing</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Exclusive: Aina’s Smart Ring Wants to Be a Remote Control for Your AI Agent Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 05/11/2026 11:00</div>
+<h3>
+<a href="https://www.wired.com/story/aina-smart-ring/" target="_blank" rel="noopener noreferrer">Exclusive: Aina’s Smart Ring Wants to Be a Remote Control for Your AI Agent</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="ES" data-search="AI Film Awards Brasil discute uso de inteligência artificial ES Brasil Brasil">
+<div class="source">ES Brasil</div>
+<div class="meta">Brasil
+ · ES
+ · 05/11/2026 10:29</div>
+<h3>
+<a href="https://esbrasil.com.br/ai-film-awards-brasil/" target="_blank" rel="noopener noreferrer">AI Film Awards Brasil discute uso de inteligência artificial</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RS" data-search="A matemática criou a inteligência artificial, mas agora a IA pode destruir a matemática O Sul Brasil">
+<div class="source">O Sul</div>
+<div class="meta">Brasil
+ · RS
+ · 04/11/2026 18:42</div>
+<h3>
+<a href="https://www.osul.com.br/a-matematica-criou-a-inteligencia-artificial-mas-agora-a-ia-pode-destruir-a-matematica/" target="_blank" rel="noopener noreferrer">A matemática criou a inteligência artificial, mas agora a IA pode destruir a matemática</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Heimstaden is changing residential real estate management with AI OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 03/11/2026 05:00</div>
+<h3>
+<a href="https://openai.com/index/heimstaden" target="_blank" rel="noopener noreferrer">Heimstaden is changing residential real estate management with AI</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="The latest AI news we announced in October 2026 Google — IA EUA">
+<div class="source">Google — IA</div>
+<div class="meta">EUA
+ · 02/11/2026 14:45</div>
+<h3>
+<a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/" target="_blank" rel="noopener noreferrer">The latest AI news we announced in October 2026</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ciencia">
+<div class="section-head">
+<h2>Ciência</h2>
+<a href="../editorias/ciencia.html">Ver editoria · 47 notícias →</a>
+</div>
+<p class="description">Descobertas, pesquisas e inovação. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="SLAC scientists find conclusive proof of a mysterious third type of magnetism ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 04/11/2026 07:43</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261104012256.htm" target="_blank" rel="noopener noreferrer">SLAC scientists find conclusive proof of a mysterious third type of magnetism</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Scientists discover that a clogged filter could revolutionize oil refining ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 05/11/2026 11:04</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261103003207.htm" target="_blank" rel="noopener noreferrer">Scientists discover that a clogged filter could revolutionize oil refining</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="‘Revenge of the nerds’: US midterms deliver a win for science – and a rebuke of Maha The Guardian Reino Unido">
+<div class="source">The Guardian</div>
+<div class="meta">Reino Unido
+ · 05/11/2026 10:00</div>
+<h3>
+<a href="https://www.theguardian.com/us-news/2026/nov/05/midterms-science-doctors-maha" target="_blank" rel="noopener noreferrer">‘Revenge of the nerds’: US midterms deliver a win for science – and a rebuke of Maha</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Este pájaro ha llevado el engaño tan lejos que su propia genética está empezando a pagar las consecuencias elDiario.es Espanha">
+<div class="source">elDiario.es</div>
+<div class="meta">Espanha
+ · 04/11/2026 10:33</div>
+<h3>
+<a href="https://www.eldiario.es/spin/mundo-animal/pajaro-llevado-engano-lejos-propia-genetica-empezando-pagar-consecuencias-pm_1_13631858.html" target="_blank" rel="noopener noreferrer">Este pájaro ha llevado el engaño tan lejos que su propia genética está empezando a pagar las consecuencias</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Chernobyl’s Dogs May Be Evolving, but Scientists Don’t Know Why Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 04/11/2026 07:00</div>
+<h3>
+<a href="https://www.wired.com/story/chernobyls-dogs-may-be-evolving-but-scientists-dont-know-why/" target="_blank" rel="noopener noreferrer">Chernobyl’s Dogs May Be Evolving, but Scientists Don’t Know Why</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="tributaria">
+<div class="section-head">
+<h2>Tributária e reforma tributária</h2>
+<a href="../editorias/tributaria.html">Ver editoria · 53 notícias →</a>
+</div>
+<p class="description">IBS/CBS, obrigações, regulamentação e decisões fiscais. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="RN" data-search="Prefeitura de Triunfo Potiguar alerta contribuintes do Simples Nacional sobre novas regras para emissão de notas fiscais Focoelho Brasil">
+<div class="source">Focoelho</div>
+<div class="meta">Brasil
+ · RN
+ · 05/11/2026 12:25</div>
+<h3>
+<a href="https://www.focoelho.com/2026/11/prefeitura-de-triunfo-potiguar-alerta.html" target="_blank" rel="noopener noreferrer">Prefeitura de Triunfo Potiguar alerta contribuintes do Simples Nacional sobre novas regras para emissão de notas fiscais</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Créditos de ICMS: empresas podem recuperar PIS e Cofins? Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 05/11/2026 10:45</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80606/creditos-de-icms-empresas-podem-recuperar-pis-e-cofins/" target="_blank" rel="noopener noreferrer">Créditos de ICMS: empresas podem recuperar PIS e Cofins?</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PA" data-search="Reforma Tributária: Relator contesta alíquota de 11,3% da CBS Ver-o-Fato Brasil">
+<div class="source">Ver-o-Fato</div>
+<div class="meta">Brasil
+ · PA
+ · 05/11/2026 10:44</div>
+<h3>
+<a href="https://ver-o-fato.com.br/reforma-tributaria-relator-contesta-aliquota-de-113-da-cbs/" target="_blank" rel="noopener noreferrer">Reforma Tributária: Relator contesta alíquota de 11,3% da CBS</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="STF afasta PIS e Cofins sobre créditos presumidos de ICMS Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 04/11/2026 14:00</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80586/stf-afasta-pis-e-cofins-sobre-creditos-presumidos-de-icms/" target="_blank" rel="noopener noreferrer">STF afasta PIS e Cofins sobre créditos presumidos de ICMS</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Receita recebe lista de medicamentos com alíquota zero de CBS e IBS nesta semana JOTA Brasil">
+<div class="source">JOTA</div>
+<div class="meta">Brasil
+ · 05/11/2026 07:07</div>
+<h3>
+<a href="https://www.jota.info/saude/receita-recebe-lista-de-medicamentos-com-aliquota-zero-de-cbs-e-ibs-nesta-semana" target="_blank" rel="noopener noreferrer">Receita recebe lista de medicamentos com alíquota zero de CBS e IBS nesta semana</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="IBS e CBS sobre encargos moratórios: o limite constitucional do ‘valor da operação’ JOTA Brasil">
+<div class="source">JOTA</div>
+<div class="meta">Brasil
+ · 05/11/2026 04:23</div>
+<h3>
+<a href="https://www.jota.info/coberturas-especiais/pulso-da-reforma/ibs-e-cbs-sobre-encargos-moratorios-o-limite-constitucional-do-valor-da-operacao" target="_blank" rel="noopener noreferrer">IBS e CBS sobre encargos moratórios: o limite constitucional do ‘valor da operação’</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AC" data-search="Ministro do governo Lula diz que novos impostos não trazem aumento de carga tributária Notícias da Hora Brasil">
+<div class="source">Notícias da Hora</div>
+<div class="meta">Brasil
+ · AC
+ · 05/11/2026 14:47</div>
+<h3>
+<a href="https://noticiasdahora.com.br/politica/ministro-do-governo-lula-diz-que-novos-impostos-nao-trazem-aumento-de-carga-tributaria/" target="_blank" rel="noopener noreferrer">Ministro do governo Lula diz que novos impostos não trazem aumento de carga tributária</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+<details>
+<summary>Também publicado por 3 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://www.polemicaparaiba.com.br/economia/ministro-diz-que-novos-impostos-nao-trazem-aumento-de-carga-tributaria/" target="_blank" rel="noopener noreferrer">Polêmica Paraíba — Ministro diz que novos impostos não trazem aumento de carga tributária</a>
+</li>
+<li>
+<a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/ministro-diz-que-novos-impostos-nao-trazem-aumento-de-carga-tributaria" target="_blank" rel="noopener noreferrer">Agência Brasil — Ministro diz que novos impostos não trazem aumento de carga tributária</a>
+</li>
+<li>
+<a href="https://www.dciroraima.com/noticia/14443/economia/ministro-diz-que-novos-impostos-nao-trazem-aumento-de-carga-tributaria.html" target="_blank" rel="noopener noreferrer">DCI Roraima — Ministro diz que novos impostos não trazem aumento de carga tributária</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="SC" data-search="Cerveja, refrigerante, carros e outros 10 itens têm aumento com Imposto do Pecado após reforma tributária, mas com regras; data para entrar em vigor ND Mais Brasil">
+<div class="source">ND Mais</div>
+<div class="meta">Brasil
+ · SC
+ · 05/11/2026 14:44</div>
+<h3>
+<a href="https://ndmais.com.br/economia/imposto-do-pecado-reforma-tributaria-aliquotas-produtos-2027/" target="_blank" rel="noopener noreferrer">Cerveja, refrigerante, carros e outros 10 itens têm aumento com Imposto do Pecado após reforma tributária, mas com regras; data para entrar em vigor</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="juridico">
+<div class="section-head">
+<h2>Jurídico</h2>
+<a href="../editorias/juridico.html">Ver editoria · 44 notícias →</a>
+</div>
+<p class="description">Empresas, contratos, trabalho e jurisprudência. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="SE" data-search="Aracaju recebe seminário sobre licitações, contratos públicos e Reforma Tributária A8SE Brasil">
+<div class="source">A8SE</div>
+<div class="meta">Brasil
+ · SE
+ · 04/11/2026 17:37</div>
+<h3>
+<a href="https://a8se.com/noticias/sergipe/2026/11/04/246192-aracaju-recebe-seminario-sobre-licitacoes-contratos-publicos-e-reforma-tributaria" target="_blank" rel="noopener noreferrer">Aracaju recebe seminário sobre licitações, contratos públicos e Reforma Tributária</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="BA" data-search="Licitação de R$ 8 milhões é suspensa em Boa Vista do Tupim A Tarde Brasil">
+<div class="source">A Tarde</div>
+<div class="meta">Brasil
+ · BA
+ · 05/11/2026 07:44</div>
+<h3>
+<a href="https://atarde.com.br/politica/licitacao-de-r-8-milhoes-da-saude-e-suspensa-em-boa-vista-do-tupim-1408407" target="_blank" rel="noopener noreferrer">Licitação de R$ 8 milhões é suspensa em Boa Vista do Tupim</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MG" data-search="Com dívida de R$ 5 milhões, Valério corre risco de falência e prepara campanha para salvar o clube Defato Online Brasil">
+<div class="source">Defato Online</div>
+<div class="meta">Brasil
+ · MG
+ · 04/11/2026 19:59</div>
+<h3>
+<a href="https://defatoonline.com.br/com-divida-de-r-5-milhoes-valerio-corre-risco-de-falencia-e-prepara-campanha-para-salvar-o-clube/" target="_blank" rel="noopener noreferrer">Com dívida de R$ 5 milhões, Valério corre risco de falência e prepara campanha para salvar o clube</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="CE" data-search="Entidade baiana que venceu licitação do Agroamigo alega falta de recursos CN7 Brasil">
+<div class="source">CN7</div>
+<div class="meta">Brasil
+ · CE
+ · 04/11/2026 14:16</div>
+<h3>
+<a href="https://cn7.com.br/entidade-baiana-que-venceu-licitacao-do-agroamigo-alega-falta-de-recursos/" target="_blank" rel="noopener noreferrer">Entidade baiana que venceu licitação do Agroamigo alega falta de recursos</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="JEP reduce protección a víctimas, sedes y contratos por Presupuesto La Silla Vacía Colômbia">
+<div class="source">La Silla Vacía</div>
+<div class="meta">Colômbia
+ · 05/11/2026 14:23</div>
+<h3>
+<a href="https://www.lasillavacia.com/en-vivo/jep-reduce-proteccion-a-victimas-sedes-y-contratos-por-presupuesto/" target="_blank" rel="noopener noreferrer">JEP reduce protección a víctimas, sedes y contratos por Presupuesto</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+
+</main>
+<footer>Seleção automática por regras de assunto, relevância e data. Até dois destaques por fonte em cada editoria. Os filtros consideram a origem da fonte principal, não o local do acontecimento. Títulos no idioma original; nenhuma tradução ou resumo gerado por IA. A disponibilidade depende dos feeds públicos.<br>
+<a href="https://github.com/mac-manito/Repo">Código e metodologia</a> · Links externos abrem a publicação original.</footer>
+</div>
+<script>
+(()=>{const form=document.querySelector('#filters');if(!form)return;const search=document.querySelector('#search'),origin=document.querySelector('#origin'),uf=document.querySelector('#uf'),cards=[...document.querySelectorAll('.card')];const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const terms=cards.map(c=>norm(c.dataset.search));function filter(){if(origin.value==='mundo')uf.value='';uf.disabled=origin.value==='mundo';const query=norm(search.value).trim();let count=0;cards.forEach((card,i)=>{const match=(!origin.value||card.dataset.origin===origin.value)&&(!uf.value||card.dataset.uf===uf.value)&&terms[i].includes(query);card.hidden=!match;if(match)count++});document.querySelector('#status').textContent=count+' de '+cards.length+' notícias exibidas nesta página';document.querySelector('#no-results').hidden=count>0}form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter()})();
+</script>
+</body>
+</html>
