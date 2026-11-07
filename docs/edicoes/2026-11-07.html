@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Seus interesses, em foco. · Capa do Mundo</title>
+<style>
+:root{--paper:#f7f5ef;--ink:#202e29;--muted:#59675f;--line:#cdd3c9;--green:#185d49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd761c;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);padding:28px 0 16px}
+.masthead{font:700 clamp(30px,5vw,52px)/1.1 Georgia,serif;text-decoration:none;letter-spacing:-2px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eyebrow,.meta{font-size:12px;color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:14px}
+nav a{text-decoration:none}
+.intro{padding:40px 0 24px}
+h1{font:normal clamp(32px,5vw,56px)/1.1 Georgia,serif;letter-spacing:-1px;margin:10px 0 16px}
+h2{font:normal 30px/1.2 Georgia,serif;margin:0}
+h3{font:normal 23px/1.3 Georgia,serif;margin:12px 0}
+.intro p{max-width:760px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;padding:20px;background:#eaf0e8;border:1px solid var(--line);align-items:end}
+label{display:flex;flex-direction:column;font-size:12px;gap:6px;flex:1;min-width:140px}
+input,select,button{font:inherit;color:inherit;padding:10px;border:1px solid #9aa89d;background:var(--paper);border-radius:3px}
+button{cursor:pointer}
+.status{font-size:13px;color:var(--muted);min-height:22px}
+.section{margin:36px 0;border-top:2px solid var(--ink);padding-top:18px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.section-head a{font-size:13px;white-space:nowrap}
+.description{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.card{padding:24px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.card h3 a{text-decoration:none}
+.badge{display:inline-block;font-size:11px;color:var(--green);border:1px solid #b6c8bc;border-radius:3px;padding:2px 6px;margin:8px 3px 0 0}
+.source{font-size:13px;font-weight:650}
+.card details{font-size:12px;margin-top:12px}
+.card details li{margin-top:8px}
+summary{cursor:pointer}
+.notice{padding:14px 18px;background:#eee5d3;border-left:3px solid #a77624;font-size:14px}
+.empty{color:var(--muted);padding:20px 0}
+.coverage{margin-top:28px;font-size:14px}
+.coverage ul{columns:2;padding-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;margin-top:50px;font-size:12px;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.top{align-items:start;flex-direction:column}
+.wrap{padding:0 20px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}
+.section-head{align-items:start;flex-direction:column;gap:8px}
+.coverage ul{columns:1}
+h3{font-size:24px}
+.intro{padding-top:28px}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="top">
+<a class="masthead" href="../index.html">Capa do Mundo<span style="color:var(--green)">.</span>
+</a>
+<div class="meta">Atualizado em 07/11/2026 às 13:09 · Brasília<br>375 de 691 fontes com notícias</div>
+</div>
+<nav aria-label="Navegação principal">
+<a href="../index.html">Capa temática</a>
+<a href="../editorias/tecnologia.html">Tecnologia</a>
+<a href="../editorias/ia.html">Inteligência artificial</a>
+<a href="../editorias/ciencia.html">Ciência</a>
+<a href="../editorias/tributaria.html">Tributária</a>
+<a href="../editorias/juridico.html">Jurídico</a>
+<a href="../gerais.html">Notícias gerais</a>
+<a href="../edicoes/index.html">Arquivo</a>
+</nav>
+</header>
+<main>
+<div class="intro">
+<div class="eyebrow">Informação para acompanhar o que importa</div>
+<h1>Seus interesses, em foco.</h1>
+<p>Tecnologia, inteligência artificial, ciência, tributação e direito. Uma seleção por assunto, com diferentes fontes e acesso direto à publicação original.</p>
+</div>
+
+
+<form class="filters" id="filters" role="search">
+<label>Buscar nesta página<input id="search" type="search" placeholder="Assunto ou fonte">
+</label>
+<label>Origem da fonte<select id="origin">
+<option value="">Todas</option>
+<option value="brasil">Brasil</option>
+<option value="mundo">Resto do mundo</option>
+</select>
+</label>
+<label>Estado da fonte<select id="uf">
+<option value="">Todos / nacionais</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option>
+</select>
+</label>
+<button type="reset">Limpar filtros</button>
+</form>
+<p class="status" id="status" aria-live="polite">
+</p>
+<p class="empty" id="no-results" hidden>Nenhuma notícia corresponde aos filtros nesta página. Consulte também a página da editoria para ver mais notícias.</p>
+
+
+
+<section class="section" id="tecnologia">
+<div class="section-head">
+<h2>Tecnologia</h2>
+<a href="../editorias/tecnologia.html">Ver editoria · 48 notícias →</a>
+</div>
+<p class="description">Ferramentas, automação e segurança digital. · Publicações dos últimos 3 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="heise+ | Angriffe auf Prozessor-Hardware: Wie der TÜVIT Chips knackt c&#39;t Alemanha">
+<div class="source">c&#39;t</div>
+<div class="meta">Alemanha
+ · 05/11/2026 04:31</div>
+<h3>
+<a href="https://www.heise.de/hintergrund/Angriffe-auf-Prozessor-Hardware-Wie-der-TUeVIT-Chips-knackt-11480775.html" target="_blank" rel="noopener noreferrer">heise+ | Angriffe auf Prozessor-Hardware: Wie der TÜVIT Chips knackt</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Nova tecnologia deixa o Bluetooth 4 vezes mais rápido Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 04/11/2026 15:44</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/nova-tecnologia-deixa-o-bluetooth-4-vezes-mais-rapido/" target="_blank" rel="noopener noreferrer">Nova tecnologia deixa o Bluetooth 4 vezes mais rápido</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="SE" data-search="Estudantes de computação criam aplicativo para guiar pessoas com deficiência na UFS A8SE Brasil">
+<div class="source">A8SE</div>
+<div class="meta">Brasil
+ · SE
+ · 06/11/2026 19:53</div>
+<h3>
+<a href="https://a8se.com/tv-atalaia/jornal-do-estado/2026/11/06/246317-estudantes-de-computacao-criam-aplicativo-para-guiar-pessoas-com-deficiencia-na-ufs" target="_blank" rel="noopener noreferrer">Estudantes de computação criam aplicativo para guiar pessoas com deficiência na UFS</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Nvidia hardware worth $11.4M vanished between Oakland and Texas Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 06/11/2026 17:05</div>
+<h3>
+<a href="https://arstechnica.com/gadgets/2026/11/nvidia-hardware-worth-11-4m-vanished-between-oakland-and-texas/" target="_blank" rel="noopener noreferrer">Nvidia hardware worth $11.4M vanished between Oakland and Texas</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="TikTok Shop ganha aplicativo próprio para compras Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 05/11/2026 17:17</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/tiktok-shop-ganha-aplicativo-proprio-de-compras/" target="_blank" rel="noopener noreferrer">TikTok Shop ganha aplicativo próprio para compras</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ia">
+<div class="section-head">
+<h2>Inteligência artificial</h2>
+<a href="../editorias/ia.html">Ver editoria · 150 notícias →</a>
+</div>
+<p class="description">Aplicações, pesquisas e novos modelos. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Anthropic enfrenta pressão para reduzir avaliação do IPO após tombo das ações de IA Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 06/11/2026 17:35</div>
+<h3>
+<a href="https://valor.globo.com/financas/noticia/2026/11/06/anthropic-enfrenta-pressao-para-reduzir-avaliacao-do-ipo-apos-tombo-das-acoes-de-ia.ghtml" target="_blank" rel="noopener noreferrer">Anthropic enfrenta pressão para reduzir avaliação do IPO após tombo das ações de IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RS" data-search="IA Unicórnio da Gestão: o maior Fórum Estratégico de Inteligência Artificial na Gestão Pública e Privada O Sul Brasil">
+<div class="source">O Sul</div>
+<div class="meta">Brasil
+ · RS
+ · 06/11/2026 14:39</div>
+<h3>
+<a href="https://www.osul.com.br/ia-unicornio-da-gestao-o-maior-forum-estrategico-de-inteligencia-artificial-na-gestao-publica-e-privada/" target="_blank" rel="noopener noreferrer">IA Unicórnio da Gestão: o maior Fórum Estratégico de Inteligência Artificial na Gestão Pública e Privada</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Exclusive: Aina’s Smart Ring Wants to Be a Remote Control for Your AI Agent Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 05/11/2026 11:00</div>
+<h3>
+<a href="https://www.wired.com/story/aina-smart-ring/" target="_blank" rel="noopener noreferrer">Exclusive: Aina’s Smart Ring Wants to Be a Remote Control for Your AI Agent</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Heimstaden is changing residential real estate management with AI OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 03/11/2026 05:00</div>
+<h3>
+<a href="https://openai.com/index/heimstaden" target="_blank" rel="noopener noreferrer">Heimstaden is changing residential real estate management with AI</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="The latest AI news we announced in October 2026 Google — IA EUA">
+<div class="source">Google — IA</div>
+<div class="meta">EUA
+ · 02/11/2026 14:45</div>
+<h3>
+<a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/" target="_blank" rel="noopener noreferrer">The latest AI news we announced in October 2026</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic запустила в Claude сервис Personal Finance для анализа банковских счетов и трат пользователей The Insider Rússia">
+<div class="source">The Insider</div>
+<div class="meta">Rússia
+ · 06/11/2026 09:52</div>
+<h3>
+<a href="https://theins.ru/news/299260" target="_blank" rel="noopener noreferrer">Anthropic запустила в Claude сервис Personal Finance для анализа банковских счетов и трат пользователей</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Partnering with Hacktron to find vulnerabilities in OpenAI’s systems OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 06/11/2026 05:00</div>
+<h3>
+<a href="https://openai.com/index/partnering-with-hacktron" target="_blank" rel="noopener noreferrer">Partnering with Hacktron to find vulnerabilities in OpenAI’s systems</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ciencia">
+<div class="section-head">
+<h2>Ciência</h2>
+<a href="../editorias/ciencia.html">Ver editoria · 38 notícias →</a>
+</div>
+<p class="description">Descobertas, pesquisas e inovação. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Scientists discover Europe&#39;s ancient forests were nothing like we imagined ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 07/11/2026 06:44</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261104012333.htm" target="_blank" rel="noopener noreferrer">Scientists discover Europe&#39;s ancient forests were nothing like we imagined</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="SLAC scientists find conclusive proof of a mysterious third type of magnetism ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 04/11/2026 07:43</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261104012256.htm" target="_blank" rel="noopener noreferrer">SLAC scientists find conclusive proof of a mysterious third type of magnetism</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="The Bantu expansion changed Africa. Scientists are still tracing how. Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 07/11/2026 09:15</div>
+<h3>
+<a href="https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures/" target="_blank" rel="noopener noreferrer">The Bantu expansion changed Africa. Scientists are still tracing how.</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RJ" data-search="Cientista deixa que percevejos o piquem &#39;milhões de vezes&#39; para testar meios de combate a eles Extra Brasil">
+<div class="source">Extra</div>
+<div class="meta">Brasil
+ · RJ
+ · 07/11/2026 08:56</div>
+<h3>
+<a href="https://extra.globo.com/blogs/page-not-found/post/2026/11/cientista-deixa-que-percevejos-o-piquem-milhoes-de-vezes-para-testar-meios-de-combate-a-eles.ghtml" target="_blank" rel="noopener noreferrer">Cientista deixa que percevejos o piquem &#39;milhões de vezes&#39; para testar meios de combate a eles</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Joana Gonçalves de Sá (parte 2): “A ciência, como as artes, não tem de servir para nada. É um ato de criação para honrar o espírito humano” Expresso Portugal">
+<div class="source">Expresso</div>
+<div class="meta">Portugal
+ · 07/11/2026 06:00</div>
+<h3>
+<a href="https://expresso.pt/podcasts/a-beleza-das-pequenas-coisas/2026-11-07-joana-goncalves-de-sa--parte-2--a-ciencia-como-as-artes-nao-tem-de-servir-para-nada.-e-um-ato-de-criacao-para-honrar-o-espirito-humano-ad22001f" target="_blank" rel="noopener noreferrer">Joana Gonçalves de Sá (parte 2): “A ciência, como as artes, não tem de servir para nada. É um ato de criação para honrar o espírito humano”</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="tributaria">
+<div class="section-head">
+<h2>Tributária e reforma tributária</h2>
+<a href="../editorias/tributaria.html">Ver editoria · 30 notícias →</a>
+</div>
+<p class="description">IBS/CBS, obrigações, regulamentação e decisões fiscais. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="NF-e e IBS/CBS: como conferir se uma rejeição já vale Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 07/11/2026 10:00</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80561/nf-e-e-ibs-cbs-como-conferir-se-uma-rejeicao-ja-vale/" target="_blank" rel="noopener noreferrer">NF-e e IBS/CBS: como conferir se uma rejeição já vale</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="NF-e: IBS e CBS ficam fora do campo vProd Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 06/11/2026 17:00</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80671/nf-e-ibs-e-cbs-ficam-fora-do-campo-vprod/" target="_blank" rel="noopener noreferrer">NF-e: IBS e CBS ficam fora do campo vProd</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Ordóñez no descarta cambios en reforma tributaria La Silla Vacía Colômbia">
+<div class="source">La Silla Vacía</div>
+<div class="meta">Colômbia
+ · 07/11/2026 11:31</div>
+<h3>
+<a href="https://www.lasillavacia.com/en-vivo/ordonez-no-descarta-cambios-en-reforma-tributaria/" target="_blank" rel="noopener noreferrer">Ordóñez no descarta cambios en reforma tributaria</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="ES" data-search="O açúcar é essencial, mas o refrigerante é pecado? A contradição da Reforma Tributária ES Hoje Brasil">
+<div class="source">ES Hoje</div>
+<div class="meta">Brasil
+ · ES
+ · 07/11/2026 10:37</div>
+<h3>
+<a href="https://eshoje.com.br/colunistas/2026/11/o-acucar-e-essencial/" target="_blank" rel="noopener noreferrer">O açúcar é essencial, mas o refrigerante é pecado? A contradição da Reforma Tributária</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="As alíquotas do Imposto Seletivo e a reforma tributária levada a sério Folha de S.Paulo Brasil">
+<div class="source">Folha de S.Paulo</div>
+<div class="meta">Brasil
+ · 07/11/2026 08:00</div>
+<h3>
+<a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/opiniao/2026/11/as-aliquotas-do-imposto-seletivo-e-a-reforma-tributaria-levada-a-serio.shtml" target="_blank" rel="noopener noreferrer">As alíquotas do Imposto Seletivo e a reforma tributária levada a sério</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="ES" data-search="Reforma Tributária chega aos portos e à navegação ES Brasil Brasil">
+<div class="source">ES Brasil</div>
+<div class="meta">Brasil
+ · ES
+ · 07/11/2026 07:00</div>
+<h3>
+<a href="https://esbrasil.com.br/reforma-tributaria-fixa-aliquota-113-cbs-portos/" target="_blank" rel="noopener noreferrer">Reforma Tributária chega aos portos e à navegação</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="DF" data-search="Fazenda reforça que novos impostos não elevam carga tributária Radar DF Brasil">
+<div class="source">Radar DF</div>
+<div class="meta">Brasil
+ · DF
+ · 06/11/2026 15:00</div>
+<h3>
+<a href="https://radardf.com.br/economia/fazenda-reforca-que-novos-impostos-nao-elevam-carga-tributaria/" target="_blank" rel="noopener noreferrer">Fazenda reforça que novos impostos não elevam carga tributária</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PA" data-search="Reforma Tributária: sem margem para ilusão Zé Dudu Brasil">
+<div class="source">Zé Dudu</div>
+<div class="meta">Brasil
+ · PA
+ · 05/11/2026 10:45</div>
+<h3>
+<a href="https://www.zedudu.com.br/reforma-tributaria-sem-margem-para-ilusao/" target="_blank" rel="noopener noreferrer">Reforma Tributária: sem margem para ilusão</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="juridico">
+<div class="section-head">
+<h2>Jurídico</h2>
+<a href="../editorias/juridico.html">Ver editoria · 30 notícias →</a>
+</div>
+<p class="description">Empresas, contratos, trabalho e jurisprudência. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="RO" data-search="MPRO apura contratos e licitações de R$ 143,3 milhões em Rondônia News Rondônia Brasil">
+<div class="source">News Rondônia</div>
+<div class="meta">Brasil
+ · RO
+ · 06/11/2026 10:52</div>
+<h3>
+<a href="https://newsrondonia.com.br/politica/2026/11/06/mpro-apura-contratos-e-licitacoes-de-r-1433-milhoes-em-rondonia/" target="_blank" rel="noopener noreferrer">MPRO apura contratos e licitações de R$ 143,3 milhões em Rondônia</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="TCE suspende licitação de R$ 36,2 milhões para secretaria alugar estrutura de eventos g1 Brasil">
+<div class="source">g1</div>
+<div class="meta">Brasil
+ · 07/11/2026 11:58</div>
+<h3>
+<a href="https://g1.globo.com/to/tocantins/noticia/2026/11/07/tce-suspende-licitacao-de-r-362-milhoes-para-secretaria-alugar-estrutura-de-eventos.ghtml" target="_blank" rel="noopener noreferrer">TCE suspende licitação de R$ 36,2 milhões para secretaria alugar estrutura de eventos</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RJ" data-search="Prefeitura renova contrato com a Fórmula 1 e garante GP de São Paulo em Interlagos até 2035 Extra Brasil">
+<div class="source">Extra</div>
+<div class="meta">Brasil
+ · RJ
+ · 07/11/2026 11:32</div>
+<h3>
+<a href="https://extra.globo.com/esporte/noticia/2026/11/prefeitura-renova-contrato-com-a-formula-1-e-garante-gp-de-sao-paulo-em-interlagos-ate-2035.ghtml" target="_blank" rel="noopener noreferrer">Prefeitura renova contrato com a Fórmula 1 e garante GP de São Paulo em Interlagos até 2035</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+<details>
+<summary>Também publicado por 4 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://tribunadonorte.com.br/esportes/prefeitura-renova-contrato-com-a-formula-1-e-garante-gp-de-sao-paulo-em-interlagos-ate-2035/" target="_blank" rel="noopener noreferrer">Tribuna do Norte — Prefeitura renova contrato com a Fórmula 1 e garante GP de São Paulo em Interlagos até 2035</a>
+</li>
+<li>
+<a href="https://tribunadepetropolis.com.br/noticias/prefeitura-renova-contrato-com-a-formula-1-e-garante-gp-de-sao-paulo-em-interlagos-ate-2035/" target="_blank" rel="noopener noreferrer">Tribuna de Petrópolis — Prefeitura renova contrato com a Fórmula 1 e garante GP de São Paulo em Interlagos até 2035</a>
+</li>
+<li>
+<a href="https://oglobo.globo.com/esportes/noticia/2026/11/07/prefeitura-renova-contrato-com-a-formula-1-e-garante-gp-de-sao-paulo-em-interlagos-ate-2035.ghtml" target="_blank" rel="noopener noreferrer">O Globo — Prefeitura renova contrato com a Fórmula 1 e garante GP de São Paulo em Interlagos até 2035</a>
+</li>
+<li>
+<a href="https://www.dgabc.com.br/Noticia/4367462/prefeitura-renova-contrato-com-a-formula-1-e-garante-gp-de-sao-paulo-em-interlagos-ate-2035" target="_blank" rel="noopener noreferrer">Diário do Grande ABC — Prefeitura renova contrato com a Fórmula 1 e garante GP de São Paulo em Interlagos até 2035</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MG" data-search="Número de empresas em falência em Minas Gerais cresce 18% em um ano Diário do Comércio MG Brasil">
+<div class="source">Diário do Comércio MG</div>
+<div class="meta">Brasil
+ · MG
+ · 07/11/2026 05:50</div>
+<h3>
+<a href="https://diariodocomercio.com.br/legislacao/falencias-empresas-mg-recuperacao-judicial/" target="_blank" rel="noopener noreferrer">Número de empresas em falência em Minas Gerais cresce 18% em um ano</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AL" data-search="Ex-funcionários e colaboradores da Oi começam a receber indenizações Já é Notícia Brasil">
+<div class="source">Já é Notícia</div>
+<div class="meta">Brasil
+ · AL
+ · 06/11/2026 18:35</div>
+<h3>
+<a href="https://jaenoticia.com.br/noticias/2026/11/06/153079-ex-funcionarios-e-colaboradores-da-oi-comecam-a-receber-indenizacoes" target="_blank" rel="noopener noreferrer">Ex-funcionários e colaboradores da Oi começam a receber indenizações</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+
+</main>
+<footer>Seleção automática por regras de assunto, relevância e data. Até dois destaques por fonte em cada editoria. Os filtros consideram a origem da fonte principal, não o local do acontecimento. Títulos no idioma original; nenhuma tradução ou resumo gerado por IA. A disponibilidade depende dos feeds públicos.<br>
+<a href="https://github.com/mac-manito/Repo">Código e metodologia</a> · Links externos abrem a publicação original.</footer>
+</div>
+<script>
+(()=>{const form=document.querySelector('#filters');if(!form)return;const search=document.querySelector('#search'),origin=document.querySelector('#origin'),uf=document.querySelector('#uf'),cards=[...document.querySelectorAll('.card')];const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const terms=cards.map(c=>norm(c.dataset.search));function filter(){if(origin.value==='mundo')uf.value='';uf.disabled=origin.value==='mundo';const query=norm(search.value).trim();let count=0;cards.forEach((card,i)=>{const match=(!origin.value||card.dataset.origin===origin.value)&&(!uf.value||card.dataset.uf===uf.value)&&terms[i].includes(query);card.hidden=!match;if(match)count++});document.querySelector('#status').textContent=count+' de '+cards.length+' notícias exibidas nesta página';document.querySelector('#no-results').hidden=count>0}form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter()})();
+</script>
+</body>
+</html>
