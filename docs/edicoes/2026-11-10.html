@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Seus interesses, em foco. · Capa do Mundo</title>
+<style>
+:root{--paper:#f7f5ef;--ink:#202e29;--muted:#59675f;--line:#cdd3c9;--green:#185d49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd761c;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);padding:28px 0 16px}
+.masthead{font:700 clamp(30px,5vw,52px)/1.1 Georgia,serif;text-decoration:none;letter-spacing:-2px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eyebrow,.meta{font-size:12px;color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:14px}
+nav a{text-decoration:none}
+.intro{padding:40px 0 24px}
+h1{font:normal clamp(32px,5vw,56px)/1.1 Georgia,serif;letter-spacing:-1px;margin:10px 0 16px}
+h2{font:normal 30px/1.2 Georgia,serif;margin:0}
+h3{font:normal 23px/1.3 Georgia,serif;margin:12px 0}
+.intro p{max-width:760px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;padding:20px;background:#eaf0e8;border:1px solid var(--line);align-items:end}
+label{display:flex;flex-direction:column;font-size:12px;gap:6px;flex:1;min-width:140px}
+input,select,button{font:inherit;color:inherit;padding:10px;border:1px solid #9aa89d;background:var(--paper);border-radius:3px}
+button{cursor:pointer}
+.status{font-size:13px;color:var(--muted);min-height:22px}
+.section{margin:36px 0;border-top:2px solid var(--ink);padding-top:18px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.section-head a{font-size:13px;white-space:nowrap}
+.description{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.card{padding:24px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.card h3 a{text-decoration:none}
+.badge{display:inline-block;font-size:11px;color:var(--green);border:1px solid #b6c8bc;border-radius:3px;padding:2px 6px;margin:8px 3px 0 0}
+.source{font-size:13px;font-weight:650}
+.card details{font-size:12px;margin-top:12px}
+.card details li{margin-top:8px}
+summary{cursor:pointer}
+.notice{padding:14px 18px;background:#eee5d3;border-left:3px solid #a77624;font-size:14px}
+.empty{color:var(--muted);padding:20px 0}
+.coverage{margin-top:28px;font-size:14px}
+.coverage ul{columns:2;padding-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;margin-top:50px;font-size:12px;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.top{align-items:start;flex-direction:column}
+.wrap{padding:0 20px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}
+.section-head{align-items:start;flex-direction:column;gap:8px}
+.coverage ul{columns:1}
+h3{font-size:24px}
+.intro{padding-top:28px}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="top">
+<a class="masthead" href="../index.html">Capa do Mundo<span style="color:var(--green)">.</span>
+</a>
+<div class="meta">Atualizado em 10/11/2026 às 14:32 · Brasília<br>382 de 691 fontes com notícias</div>
+</div>
+<nav aria-label="Navegação principal">
+<a href="../index.html">Capa temática</a>
+<a href="../editorias/tecnologia.html">Tecnologia</a>
+<a href="../editorias/ia.html">Inteligência artificial</a>
+<a href="../editorias/ciencia.html">Ciência</a>
+<a href="../editorias/tributaria.html">Tributária</a>
+<a href="../editorias/juridico.html">Jurídico</a>
+<a href="../gerais.html">Notícias gerais</a>
+<a href="../edicoes/index.html">Arquivo</a>
+</nav>
+</header>
+<main>
+<div class="intro">
+<div class="eyebrow">Informação para acompanhar o que importa</div>
+<h1>Seus interesses, em foco.</h1>
+<p>Tecnologia, inteligência artificial, ciência, tributação e direito. Uma seleção por assunto, com diferentes fontes e acesso direto à publicação original.</p>
+</div>
+
+
+<form class="filters" id="filters" role="search">
+<label>Buscar nesta página<input id="search" type="search" placeholder="Assunto ou fonte">
+</label>
+<label>Origem da fonte<select id="origin">
+<option value="">Todas</option>
+<option value="brasil">Brasil</option>
+<option value="mundo">Resto do mundo</option>
+</select>
+</label>
+<label>Estado da fonte<select id="uf">
+<option value="">Todos / nacionais</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option>
+</select>
+</label>
+<button type="reset">Limpar filtros</button>
+</form>
+<p class="status" id="status" aria-live="polite">
+</p>
+<p class="empty" id="no-results" hidden>Nenhuma notícia corresponde aos filtros nesta página. Consulte também a página da editoria para ver mais notícias.</p>
+
+
+
+<section class="section" id="tecnologia">
+<div class="section-head">
+<h2>Tecnologia</h2>
+<a href="../editorias/tecnologia.html">Ver editoria · 66 notícias →</a>
+</div>
+<p class="description">Ferramentas, automação e segurança digital. · Publicações dos últimos 3 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Google apresenta versões mais potentes de seus chips de IA Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 09/11/2026 15:53</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/google-apresenta-versoes-mais-potentes-de-seus-chips-de-ia/" target="_blank" rel="noopener noreferrer">Google apresenta versões mais potentes de seus chips de IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Relacionamento de CEO da Nvidia com suposta espiã facilitou envio de US$ 7,5 bilhões em chips para a China, diz site Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 10/11/2026 13:29</div>
+<h3>
+<a href="https://valor.globo.com/empresas/noticia/2026/11/10/relacionamento-de-ceo-da-nvidia-com-suposta-espia-facilitou-envio-de-us-75-bilhoes-em-chips-para-a-china-diz-site.ghtml" target="_blank" rel="noopener noreferrer">Relacionamento de CEO da Nvidia com suposta espiã facilitou envio de US$ 7,5 bilhões em chips para a China, diz site</a>
+</h3>
+
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://www.folhavitoria.com.br/economia/relacao-de-ceo-da-nvidia-com-suposta-espia-facilitou-envio-de-us-75-bi-em-chips-a-china-diz-site/" target="_blank" rel="noopener noreferrer">Folha Vitória — Relação de CEO da Nvidia com suposta espiã facilitou envio de US$ 7,5 bi em chips à China, diz site</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PB" data-search="Polícia Civil de São Paulo sofre suposto ataque cibernético e vazamento de dados Paraíba Já Brasil">
+<div class="source">Paraíba Já</div>
+<div class="meta">Brasil
+ · PB
+ · 10/11/2026 13:26</div>
+<h3>
+<a href="https://paraibaja.com.br/policia-civil-de-sao-paulo-sofre-suposto-ataque-cibernetico-e-vazamento-de-dados/" target="_blank" rel="noopener noreferrer">Polícia Civil de São Paulo sofre suposto ataque cibernético e vazamento de dados</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MS" data-search="Economia digital, criptomoedas e segurança digital podem virar conteúdos ns escolas de MS Enfoque MS Brasil">
+<div class="source">Enfoque MS</div>
+<div class="meta">Brasil
+ · MS
+ · 10/11/2026 13:00</div>
+<h3>
+<a href="https://www.enfoquems.com.br/economia-digital-criptomoedas-e-seguranca-digital-podem-virar-conteudos-ns-escolas-de-ms/" target="_blank" rel="noopener noreferrer">Economia digital, criptomoedas e segurança digital podem virar conteúdos ns escolas de MS</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="How Nvidia CEO’s troubles, US midterms may tighten China chip curbs: ‘adding fuel to fire’ South China Morning Post China">
+<div class="source">South China Morning Post</div>
+<div class="meta">China
+ · 10/11/2026 11:30</div>
+<h3>
+<a href="https://www.scmp.com/tech/big-tech/article/3373977/adding-fuel-fire-how-nvidia-ceos-troubles-us-midterms-may-tighten-china-chip-curbs" target="_blank" rel="noopener noreferrer">How Nvidia CEO’s troubles, US midterms may tighten China chip curbs: ‘adding fuel to fire’</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ia">
+<div class="section-head">
+<h2>Inteligência artificial</h2>
+<a href="../editorias/ia.html">Ver editoria · 190 notícias →</a>
+</div>
+<p class="description">Aplicações, pesquisas e novos modelos. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="TSMC investirá até US$ 1 bilhão na Anthropic e na OpenAI Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 10/11/2026 13:41</div>
+<h3>
+<a href="https://valor.globo.com/empresas/noticia/2026/11/10/tsmc-investir-at-us-1-bilho-na-anthropic-e-na-openai.ghtml" target="_blank" rel="noopener noreferrer">TSMC investirá até US$ 1 bilhão na Anthropic e na OpenAI</a>
+</h3>
+
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://www.portaldoholanda.com.br/articles/1008105" target="_blank" rel="noopener noreferrer">Portal do Holanda — TSMC investirá até US$1 bilhão na Anthropic e na OpenAI</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Anthropic mira avaliação de US$ 1,4 tri em IPO que põe boom da IA à prova Veja Brasil">
+<div class="source">Veja</div>
+<div class="meta">Brasil
+ · 10/11/2026 13:05</div>
+<h3>
+<a href="https://veja.abril.com.br/economia/anthropic-mira-avaliacao-de-us-14-tri-em-ipo-que-poe-boom-da-ia-a-prova/" target="_blank" rel="noopener noreferrer">Anthropic mira avaliação de US$ 1,4 tri em IPO que põe boom da IA à prova</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Australia to introduce mandatory reporting after OpenAI hack to combat artificial intelligence ‘going rogue’ The Guardian Australia Austrália">
+<div class="source">The Guardian Australia</div>
+<div class="meta">Austrália
+ · 10/11/2026 03:00</div>
+<h3>
+<a href="https://www.theguardian.com/technology/2026/nov/10/australia-manadatory-reporting-openai-medicare-hack" target="_blank" rel="noopener noreferrer">Australia to introduce mandatory reporting after OpenAI hack to combat artificial intelligence ‘going rogue’</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="A New AI Tool From Google DeepMind Proved the Signal Protocol Is Secure Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 10/11/2026 02:01</div>
+<h3>
+<a href="https://www.wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol/" target="_blank" rel="noopener noreferrer">A New AI Tool From Google DeepMind Proved the Signal Protocol Is Secure</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic mikt op waardering van 1.400 miljard dollar. Maar weet het beleggers te overtuigen dat AI winstgevend wordt? De Standaard Bélgica">
+<div class="source">De Standaard</div>
+<div class="meta">Bélgica
+ · 10/11/2026 13:51</div>
+<h3>
+<a href="https://www.standaard.be/economie/anthropic-mikt-op-waardering-van-1.400-miljard-dollar.-maar-weet-het-beleggers-te-overtuigen-dat-ai-winstgevend-wordt/164340293.html" target="_blank" rel="noopener noreferrer">Anthropic mikt op waardering van 1.400 miljard dollar. Maar weet het beleggers te overtuigen dat AI winstgevend wordt?</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Summit de IA de La Vanguardia: las empresas tendrán que demostrar en 2027 que la inteligencia artificial les sale a cuenta La Vanguardia Espanha">
+<div class="source">La Vanguardia</div>
+<div class="meta">Espanha
+ · 10/11/2026 13:24</div>
+<h3>
+<a href="https://www.lavanguardia.com/neo/ia/20261110/11680900/summit-ia-vanguardia-2027-sera-ano-empresas-tendran-demostrar-inteligencia-artificial-les-sale-cuenta.html" target="_blank" rel="noopener noreferrer">Summit de IA de La Vanguardia: las empresas tendrán que demostrar en 2027 que la inteligencia artificial les sale a cuenta</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="DeepMind reveals Gemini Robotics 2.5 and open safety benchmark &#34;ASIMOV-jailbreak&#34; Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 10/11/2026 12:00</div>
+<h3>
+<a href="https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak/" target="_blank" rel="noopener noreferrer">DeepMind reveals Gemini Robotics 2.5 and open safety benchmark &#34;ASIMOV-jailbreak&#34;</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ciencia">
+<div class="section-head">
+<h2>Ciência</h2>
+<a href="../editorias/ciencia.html">Ver editoria · 31 notícias →</a>
+</div>
+<p class="description">Descobertas, pesquisas e inovação. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="A quantum breakthrough makes light behave like both a solid and a liquid ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 09/11/2026 08:19</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261105224536.htm" target="_blank" rel="noopener noreferrer">A quantum breakthrough makes light behave like both a solid and a liquid</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Scientists discover Europe&#39;s ancient forests were nothing like we imagined ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 07/11/2026 06:44</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261104012333.htm" target="_blank" rel="noopener noreferrer">Scientists discover Europe&#39;s ancient forests were nothing like we imagined</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PA" data-search="Fapespa divulga resultado de edital de R$ 2,1 milhões para mulheres cientistas DOL Brasil">
+<div class="source">DOL</div>
+<div class="meta">Brasil
+ · PA
+ · 10/11/2026 11:53</div>
+<h3>
+<a href="http://dol.com.br/noticias/para/967910/fapespa-divulga-resultado-de-edital-de-r-21-milhoes-para-mulheres-cientistas" target="_blank" rel="noopener noreferrer">Fapespa divulga resultado de edital de R$ 2,1 milhões para mulheres cientistas</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Scientists May Have Discovered a Massive Starless Galaxy Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 09/11/2026 08:15</div>
+<h3>
+<a href="https://www.wired.com/story/scientists-discover-massive-starless-galaxy/" target="_blank" rel="noopener noreferrer">Scientists May Have Discovered a Massive Starless Galaxy</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="The Bantu expansion changed Africa. Scientists are still tracing how. Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 07/11/2026 09:15</div>
+<h3>
+<a href="https://arstechnica.com/science/2026/11/the-migration-that-transformed-africas-languages-genes-and-cultures/" target="_blank" rel="noopener noreferrer">The Bantu expansion changed Africa. Scientists are still tracing how.</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="tributaria">
+<div class="section-head">
+<h2>Tributária e reforma tributária</h2>
+<a href="../editorias/tributaria.html">Ver editoria · 39 notícias →</a>
+</div>
+<p class="description">IBS/CBS, obrigações, regulamentação e decisões fiscais. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="NF-e sem ICMS: veja as regras para IBS e CBS Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 09/11/2026 15:15</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80708/nf-e-sem-icms-veja-as-regras-para-ibs-e-cbs/" target="_blank" rel="noopener noreferrer">NF-e sem ICMS: veja as regras para IBS e CBS</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Carf impede dedução de isenção de ICMS do IRPJ/CSLL JOTA Brasil">
+<div class="source">JOTA</div>
+<div class="meta">Brasil
+ · 10/11/2026 06:54</div>
+<h3>
+<a href="https://www.jota.info/tributos/carf-impede-deducao-de-isencao-de-icms-do-irpj-csll" target="_blank" rel="noopener noreferrer">Carf impede dedução de isenção de ICMS do IRPJ/CSLL</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Reforma Tributária: documentos para auditar IBS e CBS Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 09/11/2026 16:45</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80716/reforma-tributaria-documentos-para-auditar-ibs-e-cbs/" target="_blank" rel="noopener noreferrer">Reforma Tributária: documentos para auditar IBS e CBS</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Calendário dos bancos prevê pleno funcionamento do &#39;split payment&#39; na Reforma Tributária a partir de outubro de 2027 O Globo Brasil">
+<div class="source">O Globo</div>
+<div class="meta">Brasil
+ · 10/11/2026 12:57</div>
+<h3>
+<a href="https://oglobo.globo.com/economia/fabio-graner/post/2026/11/calendario-dos-bancos-preve-pleno-funcionamento-do-split-payment-na-reforma-tributaria-a-partir-de-outubro-de-2027.ghtml" target="_blank" rel="noopener noreferrer">Calendário dos bancos prevê pleno funcionamento do &#39;split payment&#39; na Reforma Tributária a partir de outubro de 2027</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RJ" data-search="Barradas no Simples Nacional: dívidas deixam 305 mil empresas fora do regime tributário em 2027 Extra Brasil">
+<div class="source">Extra</div>
+<div class="meta">Brasil
+ · RJ
+ · 10/11/2026 07:25</div>
+<h3>
+<a href="https://extra.globo.com/economia/noticia/2026/11/barradas-no-simples-nacional-dividas-deixam-300-mil-empresas-fora-do-regime-tributario-em-2027.ghtml" target="_blank" rel="noopener noreferrer">Barradas no Simples Nacional: dívidas deixam 305 mil empresas fora do regime tributário em 2027</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MT" data-search="CDL Cuiabá apoia PEC que adia para 2028 cobrança definitiva da reforma tributária Só Notícias Brasil">
+<div class="source">Só Notícias</div>
+<div class="meta">Brasil
+ · MT
+ · 10/11/2026 12:42</div>
+<h3>
+<a href="https://www.sonoticias.com.br/politica/cdl-cuiaba-apoia-pec-que-adia-para-2028-cobranca-definitiva-da-reforma-tributaria/" target="_blank" rel="noopener noreferrer">CDL Cuiabá apoia PEC que adia para 2028 cobrança definitiva da reforma tributária</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MS" data-search="Governo estuda subir ICMS, mas deputados querem limitar alta a 19,5% Campo Grande News Brasil">
+<div class="source">Campo Grande News</div>
+<div class="meta">Brasil
+ · MS
+ · 10/11/2026 12:24</div>
+<h3>
+<a href="https://www.campograndenews.com.br/politica/governo-estuda-subir-icms-mas-deputados-querem-limitar-alta-a-19-5" target="_blank" rel="noopener noreferrer">Governo estuda subir ICMS, mas deputados querem limitar alta a 19,5%</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Liberales también cuestionan la tributaria de Abelardo La Silla Vacía Colômbia">
+<div class="source">La Silla Vacía</div>
+<div class="meta">Colômbia
+ · 10/11/2026 11:35</div>
+<h3>
+<a href="https://www.lasillavacia.com/en-vivo/liberales-tambien-cuestionan-la-tributaria-de-abelardo/" target="_blank" rel="noopener noreferrer">Liberales también cuestionan la tributaria de Abelardo</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="juridico">
+<div class="section-head">
+<h2>Jurídico</h2>
+<a href="../editorias/juridico.html">Ver editoria · 34 notícias →</a>
+</div>
+<p class="description">Empresas, contratos, trabalho e jurisprudência. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="RO" data-search="MPRO apura contratos e licitações de R$ 143,3 milhões em Rondônia News Rondônia Brasil">
+<div class="source">News Rondônia</div>
+<div class="meta">Brasil
+ · RO
+ · 06/11/2026 10:52</div>
+<h3>
+<a href="https://newsrondonia.com.br/politica/2026/11/06/mpro-apura-contratos-e-licitacoes-de-r-1433-milhoes-em-rondonia/" target="_blank" rel="noopener noreferrer">MPRO apura contratos e licitações de R$ 143,3 milhões em Rondônia</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PB" data-search="Senado abre licitação de R$ 6 milhões para fornecer iPhones 18 Pro e outros celulares a parlamentares Polêmica Paraíba Brasil">
+<div class="source">Polêmica Paraíba</div>
+<div class="meta">Brasil
+ · PB
+ · 10/11/2026 12:57</div>
+<h3>
+<a href="https://www.polemicaparaiba.com.br/brasil/senado-abre-licitacao-de-r-6-milhoes-para-fornecer-iphones-18-pro-e-outros-celulares-a-parlamentares/" target="_blank" rel="noopener noreferrer">Senado abre licitação de R$ 6 milhões para fornecer iPhones 18 Pro e outros celulares a parlamentares</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MA" data-search="Presidente do TCE proíbe contrato milionário do governo do MA Imirante Brasil">
+<div class="source">Imirante</div>
+<div class="meta">Brasil
+ · MA
+ · 09/11/2026 15:06</div>
+<h3>
+<a href="https://imirante.com/noticias/sao-luis/2026/11/09/ipolitica-presidente-tce-proibe-contratos-milionarios-governo-ma" target="_blank" rel="noopener noreferrer">Presidente do TCE proíbe contrato milionário do governo do MA</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="SC" data-search="Palmeiras disputa meia de seleção com a Atalanta e prepara investida para fechar contrato NSC Total Brasil">
+<div class="source">NSC Total</div>
+<div class="meta">Brasil
+ · SC
+ · 10/11/2026 14:29</div>
+<h3>
+<a href="https://www.nsctotal.com.br/esportes/palmeiras-disputa-meia-de-selecao-com-a-atalanta-e-prepara-investida-para-fechar-contrato" target="_blank" rel="noopener noreferrer">Palmeiras disputa meia de seleção com a Atalanta e prepara investida para fechar contrato</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MT" data-search="Governo suspende licitação de obra na Gruta da Lagoa Azul em Nobres HiperNotícias Brasil">
+<div class="source">HiperNotícias</div>
+<div class="meta">Brasil
+ · MT
+ · 10/11/2026 14:26</div>
+<h3>
+<a href="https://www.hnt.com.br/cidades/governo-suspende-licitacao-de-obra-na-gruta-da-lagoa-azul-em-nobres/586163" target="_blank" rel="noopener noreferrer">Governo suspende licitação de obra na Gruta da Lagoa Azul em Nobres</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+
+</main>
+<footer>Seleção automática por regras de assunto, relevância e data. Até dois destaques por fonte em cada editoria. Os filtros consideram a origem da fonte principal, não o local do acontecimento. Títulos no idioma original; nenhuma tradução ou resumo gerado por IA. A disponibilidade depende dos feeds públicos.<br>
+<a href="https://github.com/mac-manito/Repo">Código e metodologia</a> · Links externos abrem a publicação original.</footer>
+</div>
+<script>
+(()=>{const form=document.querySelector('#filters');if(!form)return;const search=document.querySelector('#search'),origin=document.querySelector('#origin'),uf=document.querySelector('#uf'),cards=[...document.querySelectorAll('.card')];const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const terms=cards.map(c=>norm(c.dataset.search));function filter(){if(origin.value==='mundo')uf.value='';uf.disabled=origin.value==='mundo';const query=norm(search.value).trim();let count=0;cards.forEach((card,i)=>{const match=(!origin.value||card.dataset.origin===origin.value)&&(!uf.value||card.dataset.uf===uf.value)&&terms[i].includes(query);card.hidden=!match;if(match)count++});document.querySelector('#status').textContent=count+' de '+cards.length+' notícias exibidas nesta página';document.querySelector('#no-results').hidden=count>0}form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter()})();
+</script>
+</body>
+</html>

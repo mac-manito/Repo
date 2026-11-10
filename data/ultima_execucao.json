@@ -1,6 +1,6 @@
 {
   "consultados": 691,
-  "com_manchetes": 373,
+  "com_manchetes": 382,
   "falhas": [
     {
       "veiculo": "+972 Magazine",
@@ -37,10 +37,6 @@
     {
       "veiculo": "AFP",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "ARIJ",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Achei Sudoeste",
@@ -107,16 +103,16 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Armando.info",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Asahi Shimbun",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Associated Press (AP)",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Atual7",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "BBC",
@@ -223,10 +219,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Civio",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "CommonWealth",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -297,10 +289,6 @@
     {
       "veiculo": "Die Zeit",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Direkt36",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Disclose",
@@ -377,10 +365,6 @@
     {
       "veiculo": "Emol",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Expressão Rondônia",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "F5 News",
@@ -519,10 +503,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Intercept Brasil",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Investigate Europe",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -571,10 +551,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Jornal do Dia SE",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Jornal do Tocantins",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -585,6 +561,10 @@
     {
       "veiculo": "KBS",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Kan",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Kommersant",
@@ -617,10 +597,6 @@
     {
       "veiculo": "Le Figaro",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Le Soleil (Senegal)",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "LeiaJá",
@@ -660,10 +636,6 @@
     },
     {
       "veiculo": "Mais Goiás",
-      "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "Manual do Usuário",
       "motivo": "feed sem itens recentes"
     },
     {
@@ -731,10 +703,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Newslaundry",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "Next.ink",
       "motivo": "feed sem itens recentes"
     },
@@ -749,6 +717,10 @@
     {
       "veiculo": "O Estado de S. Paulo (Estadão)",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "O Hoje",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "O Município",
@@ -791,10 +763,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Pernambuco Online",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "Philippine Daily Inquirer",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -805,10 +773,6 @@
     {
       "veiculo": "Portal Amapá",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Portal Amazônia",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Portal Amirt",
@@ -967,6 +931,10 @@
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
+      "veiculo": "Sarawak Report",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Semana",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -1099,10 +1067,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "The Hottest Place in Hell",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "The Indian Express",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -1119,12 +1083,20 @@
       "motivo": "feed sem itens recentes"
     },
     {
+      "veiculo": "The Monthly",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "The National",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The New York Times",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "The News Minute",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "The Reporters' Collective",
@@ -1172,7 +1144,7 @@
     },
     {
       "veiculo": "Toronto Star",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Tortoise Media",
@@ -1197,10 +1169,6 @@
     {
       "veiculo": "Viagora",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Voice of America (VOA)",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Vorágine",
@@ -1267,40 +1235,36 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "É Assim",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "ČT (Česká televize)",
       "motivo": "sem feed (verificado recentemente)"
     }
   ],
-  "gerada_em": "2026-11-09T17:30:35.018107-03:00",
-  "manchetes": 1597,
+  "gerada_em": "2026-11-10T14:32:26.603118-03:00",
+  "manchetes": 1714,
   "editorias": [
     {
       "id": "tecnologia",
-      "total": 41,
+      "total": 66,
       "destaques": 5
     },
     {
       "id": "ia",
-      "total": 158,
+      "total": 190,
       "destaques": 7
     },
     {
       "id": "ciencia",
-      "total": 30,
+      "total": 31,
       "destaques": 5
     },
     {
       "id": "tributaria",
-      "total": 38,
+      "total": 39,
       "destaques": 8
     },
     {
       "id": "juridico",
-      "total": 41,
+      "total": 34,
       "destaques": 5
     }
   ]
