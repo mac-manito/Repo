@@ -1,6 +1,6 @@
 {
   "consultados": 691,
-  "com_manchetes": 382,
+  "com_manchetes": 378,
   "falhas": [
     {
       "veiculo": "+972 Magazine",
@@ -195,6 +195,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Campo Grande News",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "Capital News",
       "motivo": "feed não encontrado ou fora do ar"
     },
@@ -205,6 +209,10 @@
     {
       "veiculo": "Catve",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "China Digital Times",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "China Times",
@@ -237,6 +245,10 @@
     {
       "veiculo": "Corriere della Sera",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Cuestión Pública",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "D24am",
@@ -277,6 +289,10 @@
     {
       "veiculo": "De Fato",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "DeSmog",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Detik",
@@ -403,6 +419,10 @@
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
+      "veiculo": "Follow the Money (Europa)",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "FragDenStaat",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -420,7 +440,7 @@
     },
     {
       "veiculo": "Fumaça",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "GCMAIS",
@@ -501,6 +521,10 @@
     {
       "veiculo": "Independente",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Investigace.cz",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Investigate Europe",
@@ -915,10 +939,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "STF",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "STJ",
       "motivo": "feed sem itens recentes"
     },
@@ -953,6 +973,10 @@
     {
       "veiculo": "Sky News",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "SlowNews",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Sunday Times (África do Sul)",
@@ -1083,20 +1107,12 @@
       "motivo": "feed sem itens recentes"
     },
     {
-      "veiculo": "The Monthly",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "The National",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The New York Times",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "The News Minute",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "The Reporters' Collective",
@@ -1239,5 +1255,5 @@
       "motivo": "sem feed (verificado recentemente)"
     }
   ],
-  "gerada_em": "2026-11-10T14:32:26.603118-03:00"
+  "gerada_em": "2026-11-11T14:45:38.403104-03:00"
 }
