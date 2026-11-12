@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Seus interesses, em foco. · Capa do Mundo</title>
+<style>
+:root{--paper:#f7f5ef;--ink:#202e29;--muted:#59675f;--line:#cdd3c9;--green:#185d49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd761c;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);padding:28px 0 16px}
+.masthead{font:700 clamp(30px,5vw,52px)/1.1 Georgia,serif;text-decoration:none;letter-spacing:-2px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eyebrow,.meta{font-size:12px;color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:14px}
+nav a{text-decoration:none}
+.intro{padding:40px 0 24px}
+h1{font:normal clamp(32px,5vw,56px)/1.1 Georgia,serif;letter-spacing:-1px;margin:10px 0 16px}
+h2{font:normal 30px/1.2 Georgia,serif;margin:0}
+h3{font:normal 23px/1.3 Georgia,serif;margin:12px 0}
+.intro p{max-width:760px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;padding:20px;background:#eaf0e8;border:1px solid var(--line);align-items:end}
+label{display:flex;flex-direction:column;font-size:12px;gap:6px;flex:1;min-width:140px}
+input,select,button{font:inherit;color:inherit;padding:10px;border:1px solid #9aa89d;background:var(--paper);border-radius:3px}
+button{cursor:pointer}
+.status{font-size:13px;color:var(--muted);min-height:22px}
+.section{margin:36px 0;border-top:2px solid var(--ink);padding-top:18px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.section-head a{font-size:13px;white-space:nowrap}
+.description{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.card{padding:24px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.card h3 a{text-decoration:none}
+.badge{display:inline-block;font-size:11px;color:var(--green);border:1px solid #b6c8bc;border-radius:3px;padding:2px 6px;margin:8px 3px 0 0}
+.source{font-size:13px;font-weight:650}
+.card details{font-size:12px;margin-top:12px}
+.card details li{margin-top:8px}
+summary{cursor:pointer}
+.notice{padding:14px 18px;background:#eee5d3;border-left:3px solid #a77624;font-size:14px}
+.empty{color:var(--muted);padding:20px 0}
+.coverage{margin-top:28px;font-size:14px}
+.coverage ul{columns:2;padding-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;margin-top:50px;font-size:12px;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.top{align-items:start;flex-direction:column}
+.wrap{padding:0 20px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}
+.section-head{align-items:start;flex-direction:column;gap:8px}
+.coverage ul{columns:1}
+h3{font-size:24px}
+.intro{padding-top:28px}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="top">
+<a class="masthead" href="../index.html">Capa do Mundo<span style="color:var(--green)">.</span>
+</a>
+<div class="meta">Atualizado em 12/11/2026 às 14:58 · Brasília<br>374 de 691 fontes com notícias</div>
+</div>
+<nav aria-label="Navegação principal">
+<a href="../index.html">Capa temática</a>
+<a href="../editorias/tecnologia.html">Tecnologia</a>
+<a href="../editorias/ia.html">Inteligência artificial</a>
+<a href="../editorias/ciencia.html">Ciência</a>
+<a href="../editorias/tributaria.html">Tributária</a>
+<a href="../editorias/juridico.html">Jurídico</a>
+<a href="../gerais.html">Notícias gerais</a>
+<a href="../edicoes/index.html">Arquivo</a>
+</nav>
+</header>
+<main>
+<div class="intro">
+<div class="eyebrow">Informação para acompanhar o que importa</div>
+<h1>Seus interesses, em foco.</h1>
+<p>Tecnologia, inteligência artificial, ciência, tributação e direito. Uma seleção por assunto, com diferentes fontes e acesso direto à publicação original.</p>
+</div>
+
+
+<form class="filters" id="filters" role="search">
+<label>Buscar nesta página<input id="search" type="search" placeholder="Assunto ou fonte">
+</label>
+<label>Origem da fonte<select id="origin">
+<option value="">Todas</option>
+<option value="brasil">Brasil</option>
+<option value="mundo">Resto do mundo</option>
+</select>
+</label>
+<label>Estado da fonte<select id="uf">
+<option value="">Todos / nacionais</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option>
+</select>
+</label>
+<button type="reset">Limpar filtros</button>
+</form>
+<p class="status" id="status" aria-live="polite">
+</p>
+<p class="empty" id="no-results" hidden>Nenhuma notícia corresponde aos filtros nesta página. Consulte também a página da editoria para ver mais notícias.</p>
+
+
+
+<section class="section" id="tecnologia">
+<div class="section-head">
+<h2>Tecnologia</h2>
+<a href="../editorias/tecnologia.html">Ver editoria · 60 notícias →</a>
+</div>
+<p class="description">Ferramentas, automação e segurança digital. · Publicações dos últimos 3 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Go Live Tech se destaca como hub de plataformas de automação O Globo Brasil">
+<div class="source">O Globo</div>
+<div class="meta">Brasil
+ · 12/11/2026 14:00</div>
+<h3>
+<a href="https://oglobo.globo.com/patrocinado/dino/noticia/2026/11/12/go-live-tech-se-destaca-como-hub-de-plataformas-de-automacao-1.ghtml" target="_blank" rel="noopener noreferrer">Go Live Tech se destaca como hub de plataformas de automação</a>
+</h3>
+
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://valor.globo.com/patrocinado/dino/noticia/2026/11/12/go-live-tech-se-destaca-como-hub-de-plataformas-de-automacao-1.ghtml" target="_blank" rel="noopener noreferrer">Valor Econômico — Go Live Tech se destaca como hub de plataformas de automação</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AM" data-search="AMD investirá na PsiQuantum para impulsionar infraestrutura de computação quântica Portal do Holanda Brasil">
+<div class="source">Portal do Holanda</div>
+<div class="meta">Brasil
+ · AM
+ · 12/11/2026 12:38</div>
+<h3>
+<a href="https://www.portaldoholanda.com.br/articles/1008859" target="_blank" rel="noopener noreferrer">AMD investirá na PsiQuantum para impulsionar infraestrutura de computação quântica</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Análise: Impacto da saída de Jensen Huang vai da bolsa ao mercado de chips de IA, passando pela Casa Branca Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 12/11/2026 12:05</div>
+<h3>
+<a href="https://valor.globo.com/empresas/noticia/2026/11/12/anlise-impacto-da-sada-de-jensen-huang-vai-da-bolsa-ao-mercado-de-chips-de-ia-passando-pela-casa-branca.ghtml" target="_blank" rel="noopener noreferrer">Análise: Impacto da saída de Jensen Huang vai da bolsa ao mercado de chips de IA, passando pela Casa Branca</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Scoop: Lutnick stalled curbing Nvidia chip sales to China — again — after Oval Office showdown Axios EUA">
+<div class="source">Axios</div>
+<div class="meta">EUA
+ · 11/11/2026 17:59</div>
+<h3>
+<a href="https://www.axios.com/2026/11/11/trump-lutnick-nvidia-china-chip-export-controls" target="_blank" rel="noopener noreferrer">Scoop: Lutnick stalled curbing Nvidia chip sales to China — again — after Oval Office showdown</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="SC" data-search="Novo aplicativo da Defesa Civil ajuda equipes a agir em acidentes com cargas perigosas ClicRDC Brasil">
+<div class="source">ClicRDC</div>
+<div class="meta">Brasil
+ · SC
+ · 12/11/2026 14:50</div>
+<h3>
+<a href="https://clicrdc.com.br/santa-catarina/novo-aplicativo-da-defesa-civil-ajuda-equipes-a-agir-em-acidentes-com-cargas-perigosas/" target="_blank" rel="noopener noreferrer">Novo aplicativo da Defesa Civil ajuda equipes a agir em acidentes com cargas perigosas</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ia">
+<div class="section-head">
+<h2>Inteligência artificial</h2>
+<a href="../editorias/ia.html">Ver editoria · 196 notícias →</a>
+</div>
+<p class="description">Aplicações, pesquisas e novos modelos. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Demandan a Google, OpenAI, Anthropic, Meta y SpaceX por no poder controlar los efectos negativos de la IA La Nación (Argentina) Argentina">
+<div class="source">La Nación (Argentina)</div>
+<div class="meta">Argentina
+ · 12/11/2026 14:07</div>
+<h3>
+<a href="https://www.lanacion.com.ar/tecnologia/demandan-a-google-openai-anthropic-meta-y-spacex-por-no-poder-controlar-los-efectos-negativos-de-la-nid12112026/" target="_blank" rel="noopener noreferrer">Demandan a Google, OpenAI, Anthropic, Meta y SpaceX por no poder controlar los efectos negativos de la IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Taiwan’s chipmaking giant TSMC to invest $1B in Anthropic, OpenAI Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 11/11/2026 15:16</div>
+<h3>
+<a href="https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/" target="_blank" rel="noopener noreferrer">Taiwan’s chipmaking giant TSMC to invest $1B in Anthropic, OpenAI</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Google libera Gemini 4 Carbon ao público com recurso para equipes de agentes de IA Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 10/11/2026 22:20</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/google-libera-gemini-4-carbon-ao-publico-com-recurso-para-equipes-de-agentes-de-ia/" target="_blank" rel="noopener noreferrer">Google libera Gemini 4 Carbon ao público com recurso para equipes de agentes de IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="DF" data-search="Novas diretrizes do MEC para uso da inteligência artificial reforçam importância de iniciativas como o Brasil.IA Capital do Entorno Brasil">
+<div class="source">Capital do Entorno</div>
+<div class="meta">Brasil
+ · DF
+ · 12/11/2026 14:21</div>
+<h3>
+<a href="https://www.capitaldoentorno.com.br/novas-diretrizes-do-mec-para-uso-da-inteligencia-artificial-reforcam-importancia-de-iniciativas-como-o-brasil-ia/" target="_blank" rel="noopener noreferrer">Novas diretrizes do MEC para uso da inteligência artificial reforçam importância de iniciativas como o Brasil.IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="&#34;La inteligencia artificial no tiene alma&#34;: Manuel Abud, CEO de los Latin Grammy, explica por qué no nominan canciones generadas íntegramente con IA RPP Peru">
+<div class="source">RPP</div>
+<div class="meta">Peru
+ · 12/11/2026 14:00</div>
+<h3>
+<a href="https://rpp.pe/famosos/celebridades/la-inteligencia-artificial-no-tiene-alma-manuel-abud-ceo-de-los-latin-grammy-explica-por-que-no-nominan-canciones-generadas-integramente-con-ia-noticia-1717311" target="_blank" rel="noopener noreferrer">&#34;La inteligencia artificial no tiene alma&#34;: Manuel Abud, CEO de los Latin Grammy, explica por qué no nominan canciones generadas íntegramente con IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="AI zagląda do DNA. Google DeepMind pokazał AlphaGenome 2 Gazeta Wyborcza Polônia">
+<div class="source">Gazeta Wyborcza</div>
+<div class="meta">Polônia
+ · 12/11/2026 05:43</div>
+<h3>
+<a href="https://wyborcza.pl/7,75400,33128486,ai-zaglada-do-dna-google-deepmind-pokazal-alphagenome-2.html" target="_blank" rel="noopener noreferrer">AI zagląda do DNA. Google DeepMind pokazał AlphaGenome 2</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="New research could lead to faster, trustworthy AI models for climate prediction MIT News — IA EUA">
+<div class="source">MIT News — IA</div>
+<div class="meta">EUA
+ · 12/11/2026 02:00</div>
+<h3>
+<a href="https://news.mit.edu/2026/new-research-could-lead-faster-trustworthy-ai-models-climate-prediction-1112" target="_blank" rel="noopener noreferrer">New research could lead to faster, trustworthy AI models for climate prediction</a>
+</h3>
+<span class="badge">Fonte institucional</span>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ciencia">
+<div class="section-head">
+<h2>Ciência</h2>
+<a href="../editorias/ciencia.html">Ver editoria · 42 notícias →</a>
+</div>
+<p class="description">Descobertas, pesquisas e inovação. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="A quantum breakthrough makes light behave like both a solid and a liquid ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 09/11/2026 08:19</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261105224536.htm" target="_blank" rel="noopener noreferrer">A quantum breakthrough makes light behave like both a solid and a liquid</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Scientists discover a common sugar may help cancer cells break free and spread ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 12/11/2026 01:39</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261111221501.htm" target="_blank" rel="noopener noreferrer">Scientists discover a common sugar may help cancer cells break free and spread</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="El telescopio espacial ‘Euclid’ detecta 900 millones de galaxias y comienza el mapa tridimensional del universo El País Espanha">
+<div class="source">El País</div>
+<div class="meta">Espanha
+ · 12/11/2026 08:03</div>
+<h3>
+<a href="https://elpais.com/ciencia/2026-11-12/el-telescopio-espacial-euclid-detecta-900-millones-de-galaxias-y-comienza-el-mapa-tridimensional-del-universo.html" target="_blank" rel="noopener noreferrer">El telescopio espacial ‘Euclid’ detecta 900 millones de galaxias y comienza el mapa tridimensional del universo</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Is BMI working? Cop31 latest, the science of great conversation – podcast The Guardian Australia Austrália">
+<div class="source">The Guardian Australia</div>
+<div class="meta">Austrália
+ · 12/11/2026 02:00</div>
+<h3>
+<a href="https://www.theguardian.com/science/audio/2026/nov/12/is-bmi-working-cop31-latest-the-science-of-great-conversation-podcast" target="_blank" rel="noopener noreferrer">Is BMI working? Cop31 latest, the science of great conversation – podcast</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MT" data-search="Instituto Evandro Chagas celebra 90 anos de contribuição à ciência e à saúde pública Leiagora Brasil">
+<div class="source">Leiagora</div>
+<div class="meta">Brasil
+ · MT
+ · 11/11/2026 17:08</div>
+<h3>
+<a href="https://leiagora.com.br/instituto-evandro-chagas-celebra-90-anos-de-contribuicao-a-ciencia-e-a-saude-publica/" target="_blank" rel="noopener noreferrer">Instituto Evandro Chagas celebra 90 anos de contribuição à ciência e à saúde pública</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="tributaria">
+<div class="section-head">
+<h2>Tributária e reforma tributária</h2>
+<a href="../editorias/tributaria.html">Ver editoria · 40 notícias →</a>
+</div>
+<p class="description">IBS/CBS, obrigações, regulamentação e decisões fiscais. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="CBS e IBS em 2027: o que muda com a reforma tributária Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 12/11/2026 14:00</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80809/cbs-e-ibs-em-2027-o-que-muda-com-a-reforma-tributaria/" target="_blank" rel="noopener noreferrer">CBS e IBS em 2027: o que muda com a reforma tributária</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="TJ-SP suspende decisões sobre IBS e CBS na base do ICMS Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 11/11/2026 16:30</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80793/tj-sp-suspende-decisoes-sobre-ibs-e-cbs-na-base-do-icms/" target="_blank" rel="noopener noreferrer">TJ-SP suspende decisões sobre IBS e CBS na base do ICMS</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RJ" data-search="Reforma Tributária: entenda a proposta que dá 30 dias a mais para empresas pagarem a CBS em 2027 Extra Brasil">
+<div class="source">Extra</div>
+<div class="meta">Brasil
+ · RJ
+ · 12/11/2026 08:30</div>
+<h3>
+<a href="https://extra.globo.com/economia/noticia/2026/11/reforma-tributaria-entenda-a-proposta-que-da-30-dias-a-mais-para-empresas-pagarem-a-cbs-em-2027.ghtml" target="_blank" rel="noopener noreferrer">Reforma Tributária: entenda a proposta que dá 30 dias a mais para empresas pagarem a CBS em 2027</a>
+</h3>
+
+<span class="badge">Proposta / discussão</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RJ" data-search="Reforma Tributária: se Senado reduzir CBS, governo terá de cortar gastos, diz relator Extra Brasil">
+<div class="source">Extra</div>
+<div class="meta">Brasil
+ · RJ
+ · 12/11/2026 08:23</div>
+<h3>
+<a href="https://extra.globo.com/economia/noticia/2026/11/reforma-tributaria-se-senado-reduzir-cbs-governo-tera-de-cortar-gastos-diz-relator.ghtml" target="_blank" rel="noopener noreferrer">Reforma Tributária: se Senado reduzir CBS, governo terá de cortar gastos, diz relator</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="ES" data-search="Receita quer ampliar em 30 dias prazo para pagamento da CBS da reforma tributária Tribuna Online Brasil">
+<div class="source">Tribuna Online</div>
+<div class="meta">Brasil
+ · ES
+ · 11/11/2026 17:33</div>
+<h3>
+<a href="https://tribunaonline.com.br/economia/receita-quer-ampliar-em-30-dias-prazo-para-pagamento-da-cbs-da-reforma-tributaria-334662" target="_blank" rel="noopener noreferrer">Receita quer ampliar em 30 dias prazo para pagamento da CBS da reforma tributária</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RO" data-search="Governo federal proporá ao Congresso regra de transição na cobrança da CBS no âmbito da reforma tributária News Rondônia Brasil">
+<div class="source">News Rondônia</div>
+<div class="meta">Brasil
+ · RO
+ · 11/11/2026 11:51</div>
+<h3>
+<a href="https://newsrondonia.com.br/politica/2026/11/11/governo-federal-propora-ao-congresso-regra-de-transicao-na-cobranca-da-cbs-no-ambito-da-reforma-tributaria/" target="_blank" rel="noopener noreferrer">Governo federal proporá ao Congresso regra de transição na cobrança da CBS no âmbito da reforma tributária</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PB" data-search="Paraibano Vital do Rêgo será ouvido pelo Senado sobre alíquota de novo tributo da Reforma Tributária PB Agora Brasil">
+<div class="source">PB Agora</div>
+<div class="meta">Brasil
+ · PB
+ · 12/11/2026 13:45</div>
+<h3>
+<a href="https://www.pbagora.com.br/noticia/politica/paraibano-vital-do-rego-sera-ouvido-pelo-senado-sobre-aliquota-de-novo-tributo-da-reforma-tributaria/" target="_blank" rel="noopener noreferrer">Paraibano Vital do Rêgo será ouvido pelo Senado sobre alíquota de novo tributo da Reforma Tributária</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Fundações imunes vão pagar CBS e IBS? JOTA Brasil">
+<div class="source">JOTA</div>
+<div class="meta">Brasil
+ · 12/11/2026 03:51</div>
+<h3>
+<a href="https://www.jota.info/opiniao-e-analise/artigos/fundacoes-imunes-vao-pagar-cbs-e-ibs" target="_blank" rel="noopener noreferrer">Fundações imunes vão pagar CBS e IBS?</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="juridico">
+<div class="section-head">
+<h2>Jurídico</h2>
+<a href="../editorias/juridico.html">Ver editoria · 48 notícias →</a>
+</div>
+<p class="description">Empresas, contratos, trabalho e jurisprudência. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="BA" data-search="iPhone 17 Pro e Samsung: Câmara de Salvador fecha contrato de R$ 1 milhão A Tarde Brasil">
+<div class="source">A Tarde</div>
+<div class="meta">Brasil
+ · BA
+ · 12/11/2026 11:39</div>
+<h3>
+<a href="https://atarde.com.br/politica/iphone-17-pro-e-samsung-camara-de-salvador-fecha-contrato-de-r-1-milhao-1409225" target="_blank" rel="noopener noreferrer">iPhone 17 Pro e Samsung: Câmara de Salvador fecha contrato de R$ 1 milhão</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PA" data-search="Paysandu: TJPA nega novamente pedido do MP contra recuperação judicial DOL Brasil">
+<div class="source">DOL</div>
+<div class="meta">Brasil
+ · PA
+ · 12/11/2026 10:42</div>
+<h3>
+<a href="http://dol.com.br/esporte/paysandu/968135/paysandu-tjpa-nega-novamente-pedido-do-mp-contra-recuperacao-judicial" target="_blank" rel="noopener noreferrer">Paysandu: TJPA nega novamente pedido do MP contra recuperação judicial</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Senado vai fornecer iPhones 18 Pro a senadores em contrato de R$ 6 milhões Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 12/11/2026 10:41</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/senado-vai-fornecer-iphones-18-pro-a-senadores-em-contrato-de-r-6-milhoes/" target="_blank" rel="noopener noreferrer">Senado vai fornecer iPhones 18 Pro a senadores em contrato de R$ 6 milhões</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AL" data-search="Vasco tem nove jogadores em fim de contrato; veja a situação de cada um Gazetaweb Brasil">
+<div class="source">Gazetaweb</div>
+<div class="meta">Brasil
+ · AL
+ · 12/11/2026 10:27</div>
+<h3>
+<a href="https://www.gazetaweb.com/noticias/esportes/vasco-tem-nove-jogadores-em-fim-de-contrato-veja-a-situacao-de-cada-um-948848" target="_blank" rel="noopener noreferrer">Vasco tem nove jogadores em fim de contrato; veja a situação de cada um</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="BA" data-search="Alcolumbre reage à polêmica sobre licitação milionária de iPhones no Senado A Tarde Brasil">
+<div class="source">A Tarde</div>
+<div class="meta">Brasil
+ · BA
+ · 12/11/2026 09:21</div>
+<h3>
+<a href="https://atarde.com.br/politica/alcolumbre-reage-a-polemica-sobre-licitacao-milionaria-de-iphones-no-senado-1409211" target="_blank" rel="noopener noreferrer">Alcolumbre reage à polêmica sobre licitação milionária de iPhones no Senado</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+
+</main>
+<footer>Seleção automática por regras de assunto, relevância e data. Até dois destaques por fonte em cada editoria. Os filtros consideram a origem da fonte principal, não o local do acontecimento. Títulos no idioma original; nenhuma tradução ou resumo gerado por IA. A disponibilidade depende dos feeds públicos.<br>
+<a href="https://github.com/mac-manito/Repo">Código e metodologia</a> · Links externos abrem a publicação original.</footer>
+</div>
+<script>
+(()=>{const form=document.querySelector('#filters');if(!form)return;const search=document.querySelector('#search'),origin=document.querySelector('#origin'),uf=document.querySelector('#uf'),cards=[...document.querySelectorAll('.card')];const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const terms=cards.map(c=>norm(c.dataset.search));function filter(){if(origin.value==='mundo')uf.value='';uf.disabled=origin.value==='mundo';const query=norm(search.value).trim();let count=0;cards.forEach((card,i)=>{const match=(!origin.value||card.dataset.origin===origin.value)&&(!uf.value||card.dataset.uf===uf.value)&&terms[i].includes(query);card.hidden=!match;if(match)count++});document.querySelector('#status').textContent=count+' de '+cards.length+' notícias exibidas nesta página';document.querySelector('#no-results').hidden=count>0}form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter()})();
+</script>
+</body>
+</html>
