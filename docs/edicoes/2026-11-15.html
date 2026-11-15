@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Seus interesses, em foco. · Capa do Mundo</title>
+<style>
+:root{--paper:#f7f5ef;--ink:#202e29;--muted:#59675f;--line:#cdd3c9;--green:#185d49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd761c;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);padding:28px 0 16px}
+.masthead{font:700 clamp(30px,5vw,52px)/1.1 Georgia,serif;text-decoration:none;letter-spacing:-2px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eyebrow,.meta{font-size:12px;color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:14px}
+nav a{text-decoration:none}
+.intro{padding:40px 0 24px}
+h1{font:normal clamp(32px,5vw,56px)/1.1 Georgia,serif;letter-spacing:-1px;margin:10px 0 16px}
+h2{font:normal 30px/1.2 Georgia,serif;margin:0}
+h3{font:normal 23px/1.3 Georgia,serif;margin:12px 0}
+.intro p{max-width:760px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;padding:20px;background:#eaf0e8;border:1px solid var(--line);align-items:end}
+label{display:flex;flex-direction:column;font-size:12px;gap:6px;flex:1;min-width:140px}
+input,select,button{font:inherit;color:inherit;padding:10px;border:1px solid #9aa89d;background:var(--paper);border-radius:3px}
+button{cursor:pointer}
+.status{font-size:13px;color:var(--muted);min-height:22px}
+.section{margin:36px 0;border-top:2px solid var(--ink);padding-top:18px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.section-head a{font-size:13px;white-space:nowrap}
+.description{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.card{padding:24px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.card h3 a{text-decoration:none}
+.badge{display:inline-block;font-size:11px;color:var(--green);border:1px solid #b6c8bc;border-radius:3px;padding:2px 6px;margin:8px 3px 0 0}
+.source{font-size:13px;font-weight:650}
+.card details{font-size:12px;margin-top:12px}
+.card details li{margin-top:8px}
+summary{cursor:pointer}
+.notice{padding:14px 18px;background:#eee5d3;border-left:3px solid #a77624;font-size:14px}
+.empty{color:var(--muted);padding:20px 0}
+.coverage{margin-top:28px;font-size:14px}
+.coverage ul{columns:2;padding-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;margin-top:50px;font-size:12px;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.top{align-items:start;flex-direction:column}
+.wrap{padding:0 20px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}
+.section-head{align-items:start;flex-direction:column;gap:8px}
+.coverage ul{columns:1}
+h3{font-size:24px}
+.intro{padding-top:28px}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="top">
+<a class="masthead" href="../index.html">Capa do Mundo<span style="color:var(--green)">.</span>
+</a>
+<div class="meta">Atualizado em 15/11/2026 às 13:51 · Brasília<br>349 de 691 fontes com notícias</div>
+</div>
+<nav aria-label="Navegação principal">
+<a href="../index.html">Capa temática</a>
+<a href="../editorias/tecnologia.html">Tecnologia</a>
+<a href="../editorias/ia.html">Inteligência artificial</a>
+<a href="../editorias/ciencia.html">Ciência</a>
+<a href="../editorias/tributaria.html">Tributária</a>
+<a href="../editorias/juridico.html">Jurídico</a>
+<a href="../gerais.html">Notícias gerais</a>
+<a href="../edicoes/index.html">Arquivo</a>
+</nav>
+</header>
+<main>
+<div class="intro">
+<div class="eyebrow">Informação para acompanhar o que importa</div>
+<h1>Seus interesses, em foco.</h1>
+<p>Tecnologia, inteligência artificial, ciência, tributação e direito. Uma seleção por assunto, com diferentes fontes e acesso direto à publicação original.</p>
+</div>
+
+
+<form class="filters" id="filters" role="search">
+<label>Buscar nesta página<input id="search" type="search" placeholder="Assunto ou fonte">
+</label>
+<label>Origem da fonte<select id="origin">
+<option value="">Todas</option>
+<option value="brasil">Brasil</option>
+<option value="mundo">Resto do mundo</option>
+</select>
+</label>
+<label>Estado da fonte<select id="uf">
+<option value="">Todos / nacionais</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option>
+</select>
+</label>
+<button type="reset">Limpar filtros</button>
+</form>
+<p class="status" id="status" aria-live="polite">
+</p>
+<p class="empty" id="no-results" hidden>Nenhuma notícia corresponde aos filtros nesta página. Consulte também a página da editoria para ver mais notícias.</p>
+
+
+
+<section class="section" id="tecnologia">
+<div class="section-head">
+<h2>Tecnologia</h2>
+<a href="../editorias/tecnologia.html">Ver editoria · 51 notícias →</a>
+</div>
+<p class="description">Ferramentas, automação e segurança digital. · Publicações dos últimos 3 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Tesouro Nacional alerta para vazamento de dados pessoais e chaves Pix Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 13/11/2026 12:23</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/tesouro-nacional-alerta-para-vazamento-de-dados-pessoais-e-chaves-pix/" target="_blank" rel="noopener noreferrer">Tesouro Nacional alerta para vazamento de dados pessoais e chaves Pix</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Motorista de aplicativo é rendida por criminosos e colocada em porta-malas em Barra Mansa g1 Brasil">
+<div class="source">g1</div>
+<div class="meta">Brasil
+ · 15/11/2026 11:38</div>
+<h3>
+<a href="https://g1.globo.com/rj/sul-do-rio-costa-verde/noticia/2026/11/15/motorista-de-aplicativo-e-rendida-por-criminosos-e-colocada-em-porta-malas-em-barra-mansa.ghtml" target="_blank" rel="noopener noreferrer">Motorista de aplicativo é rendida por criminosos e colocada em porta-malas em Barra Mansa</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="DF" data-search="Lula defende que Brasil exporte conhecimento e tecnologia e volta a criticar tarifaço dos EUA Jornal de Brasília Brasil">
+<div class="source">Jornal de Brasília</div>
+<div class="meta">Brasil
+ · DF
+ · 15/11/2026 10:21</div>
+<h3>
+<a href="https://jornaldebrasilia.com.br/noticias/politica-e-poder/lula-defende-que-brasil-exporte-conhecimento-e-tecnologia-e-volta-a-criticar-tarifaco-dos-eua/" target="_blank" rel="noopener noreferrer">Lula defende que Brasil exporte conhecimento e tecnologia e volta a criticar tarifaço dos EUA</a>
+</h3>
+
+
+<details>
+<summary>Também publicado por 2 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://jc.uol.com.br/mundo/2026/11/15/lula-defende-que-brasil-exporte-conhecimento-e-tecnologia-e-volta-a-criticar-tarifaco-dos-eua.html" target="_blank" rel="noopener noreferrer">Jornal do Commercio (PE) — Lula defende que Brasil exporte conhecimento e tecnologia e volta a criticar tarifaço dos EUA</a>
+</li>
+<li>
+<a href="https://www.portaldoholanda.com.br/articles/1009590" target="_blank" rel="noopener noreferrer">Portal do Holanda — Lula defende que Brasil exporte conhecimento e tecnologia e volta a criticar tarifaço dos EUA</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Como aumentar a letra de um único aplicativo no iPhone Exame Brasil">
+<div class="source">Exame</div>
+<div class="meta">Brasil
+ · 15/11/2026 06:00</div>
+<h3>
+<a href="https://exame.com/tecnologia/examelab/como-aumentar-letra-aplicativo-iphone/" target="_blank" rel="noopener noreferrer">Como aumentar a letra de um único aplicativo no iPhone</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PI" data-search="Ministério reconhece núcleo de computação da UFPI como centro nacional Cidadeverde.com Brasil">
+<div class="source">Cidadeverde.com</div>
+<div class="meta">Brasil
+ · PI
+ · 13/11/2026 13:50</div>
+<h3>
+<a href="https://cidadeverde.com/ultimas/466268/ministerio-reconhece-nucleo-de-computacao-da-ufpi-como-centro-nacional" target="_blank" rel="noopener noreferrer">Ministério reconhece núcleo de computação da UFPI como centro nacional</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ia">
+<div class="section-head">
+<h2>Inteligência artificial</h2>
+<a href="../editorias/ia.html">Ver editoria · 196 notícias →</a>
+</div>
+<p class="description">Aplicações, pesquisas e novos modelos. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="ChatGPT Wallet permite que um agente de IA compre e pague por você Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 13/11/2026 14:19</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/chatgpt-wallet-permite-que-um-agente-de-ia-compre-e-pague-por-voce/" target="_blank" rel="noopener noreferrer">ChatGPT Wallet permite que um agente de IA compre e pague por você</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Um em cada três usuários xinga ChatGPT, Gemini ou Claude Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 13/11/2026 10:42</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/um-em-cada-tres-usuarios-xinga-chatgpt-gemini-ou-claude/" target="_blank" rel="noopener noreferrer">Um em cada três usuários xinga ChatGPT, Gemini ou Claude</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic IPO Arrives at a Pivotal AI Moment Bloomberg EUA">
+<div class="source">Bloomberg</div>
+<div class="meta">EUA
+ · 15/11/2026 10:17</div>
+<h3>
+<a href="https://www.bloomberg.com/news/videos/2026-11-15/anthropic-ipo-arrives-at-a-pivotal-ai-moment-video" target="_blank" rel="noopener noreferrer">Anthropic IPO Arrives at a Pivotal AI Moment</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="IPO da Anthropic põe à prova a aposta de US$ 1,4 trilhão em IA Exame Brasil">
+<div class="source">Exame</div>
+<div class="meta">Brasil
+ · 15/11/2026 09:27</div>
+<h3>
+<a href="https://exame.com/inteligencia-artificial/ipo-da-anthropic-poe-a-prova-a-aposta-de-us-14-trilhao-em-ia/" target="_blank" rel="noopener noreferrer">IPO da Anthropic põe à prova a aposta de US$ 1,4 trilhão em IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Interview: MemStore’s Diwank Singh Tomer and Ishita Jindal on AI agent memory, contradictions and deletion MediaNama Índia">
+<div class="source">MediaNama</div>
+<div class="meta">Índia
+ · 13/11/2026 03:20</div>
+<h3>
+<a href="https://www.medianama.com/2026/11/223-memstore-ai-agent-memory-privacy-and-deletion/" target="_blank" rel="noopener noreferrer">Interview: MemStore’s Diwank Singh Tomer and Ishita Jindal on AI agent memory, contradictions and deletion</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="OpenAI board member worries an AI &#34;takeover&#34; of society could be months away Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 13/11/2026 14:25</div>
+<h3>
+<a href="https://arstechnica.com/ai/2026/11/ai-is-the-most-likely-reason-youll-die-openai-board-member-warns/" target="_blank" rel="noopener noreferrer">OpenAI board member worries an AI &#34;takeover&#34; of society could be months away</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="New AI “copilot” helps engineers design better structures MIT News — IA EUA">
+<div class="source">MIT News — IA</div>
+<div class="meta">EUA
+ · 13/11/2026 02:00</div>
+<h3>
+<a href="https://news.mit.edu/2026/new-ai-copilot-helps-engineers-design-better-structures-1113" target="_blank" rel="noopener noreferrer">New AI “copilot” helps engineers design better structures</a>
+</h3>
+<span class="badge">Fonte institucional</span>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ciencia">
+<div class="section-head">
+<h2>Ciência</h2>
+<a href="../editorias/ciencia.html">Ver editoria · 40 notícias →</a>
+</div>
+<p class="description">Descobertas, pesquisas e inovação. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Scientists capture electrons making seemingly impossible quantum jumps ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 13/11/2026 22:13</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261112025523.htm" target="_blank" rel="noopener noreferrer">Scientists capture electrons making seemingly impossible quantum jumps</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Tiny flaws in diamonds could unlock a quantum computing revolution ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 13/11/2026 02:26</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261111005855.htm" target="_blank" rel="noopener noreferrer">Tiny flaws in diamonds could unlock a quantum computing revolution</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="ES" data-search="Vacina contra o câncer faz metástases sumirem no primeiro paciente tratado, e cientistas já preparam doses para mais 20 pessoas Tempo Novo Brasil">
+<div class="source">Tempo Novo</div>
+<div class="meta">Brasil
+ · ES
+ · 15/11/2026 12:49</div>
+<h3>
+<a href="https://www.portaltemponovo.com.br/vacina-contra-cancer-metastases-primeiro-paciente/" target="_blank" rel="noopener noreferrer">Vacina contra o câncer faz metástases sumirem no primeiro paciente tratado, e cientistas já preparam doses para mais 20 pessoas</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Avelino Corma, el científico español más influyente del mundo: &#34;Le diría al próximo presidente que hay que invertir en ciencia&#34; elDiario.es Espanha">
+<div class="source">elDiario.es</div>
+<div class="meta">Espanha
+ · 14/11/2026 17:41</div>
+<h3>
+<a href="https://www.eldiario.es/comunitat-valenciana/sociedad/avelino-corma-cientifico-espanol-influyente-mundo-le-diria-proximo-presidente-hay-invertir-ciencia_128_13659699.html" target="_blank" rel="noopener noreferrer">Avelino Corma, el científico español más influyente del mundo: &#34;Le diría al próximo presidente que hay que invertir en ciencia&#34;</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="BA" data-search="Cientistas apresentam soluções para reduzir impactos das mudanças climáticas nas periferias brasileiras durante audiência no Senado Jornal Grande Bahia Brasil">
+<div class="source">Jornal Grande Bahia</div>
+<div class="meta">Brasil
+ · BA
+ · 14/11/2026 13:00</div>
+<h3>
+<a href="https://jornalgrandebahia.com.br/2026/11/cientistas-apresentam-solucoes-para-reduzir-impactos-das-mudancas-climaticas-nas-periferias-brasileiras-durante-audiencia-no-senado/" target="_blank" rel="noopener noreferrer">Cientistas apresentam soluções para reduzir impactos das mudanças climáticas nas periferias brasileiras durante audiência no Senado</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="tributaria">
+<div class="section-head">
+<h2>Tributária e reforma tributária</h2>
+<a href="../editorias/tributaria.html">Ver editoria · 29 notícias →</a>
+</div>
+<p class="description">IBS/CBS, obrigações, regulamentação e decisões fiscais. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Carf afasta IRPJ e CSLL sobre incentivos de ICMS da Cervejaria Petrópolis JOTA Brasil">
+<div class="source">JOTA</div>
+<div class="meta">Brasil
+ · 14/11/2026 06:54</div>
+<h3>
+<a href="https://www.jota.info/tributos/carf-afasta-irpj-e-csll-sobre-incentivos-de-icms-da-cervejaria-petropolis" target="_blank" rel="noopener noreferrer">Carf afasta IRPJ e CSLL sobre incentivos de ICMS da Cervejaria Petrópolis</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="NFS-e: adesão municipal e preenchimento de IBS e CBS Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 14/11/2026 09:00</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80823/nfs-e-adesao-municipal-e-preenchimento-de-ibs-e-cbs/" target="_blank" rel="noopener noreferrer">NFS-e: adesão municipal e preenchimento de IBS e CBS</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="IBS e CBS na base do ICMS: depósito judicial Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 13/11/2026 18:15</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80828/ibs-e-cbs-na-base-do-icms-deposito-judicial/" target="_blank" rel="noopener noreferrer">IBS e CBS na base do ICMS: depósito judicial</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PI" data-search="Emílio Júnior anuncia estudos sobre ICMS e detalha mudanças na tributação do Piauí O Dia Brasil">
+<div class="source">O Dia</div>
+<div class="meta">Brasil
+ · PI
+ · 13/11/2026 17:28</div>
+<h3>
+<a href="https://portalodia.com/noticias/economia/emilio-junior-anuncia-estudos-sobre-icms-e-detalha-mudancas-na-tributacao-do-piaui-600001066.html" target="_blank" rel="noopener noreferrer">Emílio Júnior anuncia estudos sobre ICMS e detalha mudanças na tributação do Piauí</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RO" data-search="Governo federal proporá ao Congresso regra de transição na cobrança da CBS no âmbito da reforma tributária News Rondônia Brasil">
+<div class="source">News Rondônia</div>
+<div class="meta">Brasil
+ · RO
+ · 11/11/2026 11:51</div>
+<h3>
+<a href="https://newsrondonia.com.br/politica/2026/11/11/governo-federal-propora-ao-congresso-regra-de-transicao-na-cobranca-da-cbs-no-ambito-da-reforma-tributaria/" target="_blank" rel="noopener noreferrer">Governo federal proporá ao Congresso regra de transição na cobrança da CBS no âmbito da reforma tributária</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Empresas perdem primeira rodada na Justiça contra imposto sobre imposto na reforma tributária Folha de S.Paulo Brasil">
+<div class="source">Folha de S.Paulo</div>
+<div class="meta">Brasil
+ · 15/11/2026 12:30</div>
+<h3>
+<a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/11/empresas-perdem-primeira-rodada-na-justica-contra-imposto-sobre-imposto-na-reforma-tributaria.shtml" target="_blank" rel="noopener noreferrer">Empresas perdem primeira rodada na Justiça contra imposto sobre imposto na reforma tributária</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PB" data-search="‘Cashback’ tributário: 70 milhões começam a receber benefício a partir de janeiro Paraíba Já Brasil">
+<div class="source">Paraíba Já</div>
+<div class="meta">Brasil
+ · PB
+ · 15/11/2026 12:05</div>
+<h3>
+<a href="https://paraibaja.com.br/cashback-tributario-70-milhoes-comecam-a-receber-beneficio-a-partir-de-janeiro/" target="_blank" rel="noopener noreferrer">‘Cashback’ tributário: 70 milhões começam a receber benefício a partir de janeiro</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="ES" data-search="IBRAM assina manifesto que pede testes durante todo 2027 e cobrança da CBS só em 2028 SiteBarra Brasil">
+<div class="source">SiteBarra</div>
+<div class="meta">Brasil
+ · ES
+ · 15/11/2026 12:00</div>
+<h3>
+<a href="https://sitebarra.com.br/v8/ibram-assina-manifesto-que-pede-testes-durante-todo-2027-e-cobranca-da-cbs-so-em-2028/" target="_blank" rel="noopener noreferrer">IBRAM assina manifesto que pede testes durante todo 2027 e cobrança da CBS só em 2028</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="juridico">
+<div class="section-head">
+<h2>Jurídico</h2>
+<a href="../editorias/juridico.html">Ver editoria · 31 notícias →</a>
+</div>
+<p class="description">Empresas, contratos, trabalho e jurisprudência. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="RJ" data-search="Demora em licitação e ressalvas jurídicas marcam contrato emergencial de R$ 43,9 milhões da Cedae para vale-alimentação, em processo que se arrasta desde 2025 Tempo Real RJ Brasil">
+<div class="source">Tempo Real RJ</div>
+<div class="meta">Brasil
+ · RJ
+ · 14/11/2026 17:00</div>
+<h3>
+<a href="https://temporealrj.com/cedae-contrato-emergencial-iniciado-2025/" target="_blank" rel="noopener noreferrer">Demora em licitação e ressalvas jurídicas marcam contrato emergencial de R$ 43,9 milhões da Cedae para vale-alimentação, em processo que se arrasta desde 2025</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MT" data-search="TCE-MT cria equipe para investigar contratos, licitações e pagamentos a empresas HiperNotícias Brasil">
+<div class="source">HiperNotícias</div>
+<div class="meta">Brasil
+ · MT
+ · 14/11/2026 12:57</div>
+<h3>
+<a href="https://www.hnt.com.br/justica/tce-mt-cria-equipe-para-investigar-contratos-licitacoes-e-pagamentos-a-empresas/587041" target="_blank" rel="noopener noreferrer">TCE-MT cria equipe para investigar contratos, licitações e pagamentos a empresas</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PB" data-search="STF, STJ e TST somam R$ 10 milhões em contratos com fornecimento de iPhones Patos Online Brasil">
+<div class="source">Patos Online</div>
+<div class="meta">Brasil
+ · PB
+ · 15/11/2026 14:30</div>
+<h3>
+<a href="https://patosonline.com/noticia/282066/stf-stj-e-tst-somam-r-10-milhoes-em-contratos-com-fornecimento-de-iphones" target="_blank" rel="noopener noreferrer">STF, STJ e TST somam R$ 10 milhões em contratos com fornecimento de iPhones</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://www.reportermt.com/politica/stf-stj-e-tst-somam-r-10-milhoes-em-contratos-com-fornecimento-de-iphones/246656" target="_blank" rel="noopener noreferrer">Repórter MT — STF, STJ e TST somam R$ 10 milhões em contratos com fornecimento de iPhones</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PR" data-search="STF, STJ e TST acumulam mais de R$ 10 milhões em contratos com iPhones Portal aRede Brasil">
+<div class="source">Portal aRede</div>
+<div class="meta">Brasil
+ · PR
+ · 15/11/2026 12:45</div>
+<h3>
+<a href="https://arede.info/cotidiano/693158/stf-stj-e-tst-acumulam-mais-de-r-10-milhoes-em-contratos-com-iphones" target="_blank" rel="noopener noreferrer">STF, STJ e TST acumulam mais de R$ 10 milhões em contratos com iPhones</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PI" data-search="TCE apura denúncia sobre licitação de R$ 17,8 milhões da FMS após fim de contratos Piauí Hoje Brasil">
+<div class="source">Piauí Hoje</div>
+<div class="meta">Brasil
+ · PI
+ · 14/11/2026 09:30</div>
+<h3>
+<a href="https://piauihoje.com/noticias/saude/tce-apura-denuncia-sobre-licitacao-de-r-178-milhoes-da-fms-apos-fim-de-contratos-471203.html" target="_blank" rel="noopener noreferrer">TCE apura denúncia sobre licitação de R$ 17,8 milhões da FMS após fim de contratos</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+
+</main>
+<footer>Seleção automática por regras de assunto, relevância e data. Até dois destaques por fonte em cada editoria. Os filtros consideram a origem da fonte principal, não o local do acontecimento. Títulos no idioma original; nenhuma tradução ou resumo gerado por IA. A disponibilidade depende dos feeds públicos.<br>
+<a href="https://github.com/mac-manito/Repo">Código e metodologia</a> · Links externos abrem a publicação original.</footer>
+</div>
+<script>
+(()=>{const form=document.querySelector('#filters');if(!form)return;const search=document.querySelector('#search'),origin=document.querySelector('#origin'),uf=document.querySelector('#uf'),cards=[...document.querySelectorAll('.card')];const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const terms=cards.map(c=>norm(c.dataset.search));function filter(){if(origin.value==='mundo')uf.value='';uf.disabled=origin.value==='mundo';const query=norm(search.value).trim();let count=0;cards.forEach((card,i)=>{const match=(!origin.value||card.dataset.origin===origin.value)&&(!uf.value||card.dataset.uf===uf.value)&&terms[i].includes(query);card.hidden=!match;if(match)count++});document.querySelector('#status').textContent=count+' de '+cards.length+' notícias exibidas nesta página';document.querySelector('#no-results').hidden=count>0}form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter()})();
+</script>
+</body>
+</html>
