@@ -19,6 +19,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "A Voz da Cidade",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "AAP",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -307,10 +311,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Direkt36",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Disclose",
       "motivo": "feed sem itens recentes"
     },
@@ -563,10 +563,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Jornal do Dia SE",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Jornal do Tocantins",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -577,6 +573,10 @@
     {
       "veiculo": "KBS",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Kan",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Kommersant",
@@ -637,6 +637,10 @@
     {
       "veiculo": "MBC",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "MCCI",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "MCP Notícias",
@@ -821,6 +825,10 @@
     {
       "veiculo": "Potiguar Notícias",
       "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
+      "veiculo": "Prachatai",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Private Eye",
@@ -1031,10 +1039,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Tapajós de Fato",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "Televisa (N+)",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -1103,10 +1107,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "The Isaan Record",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "The Jakarta Post",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -1119,7 +1119,7 @@
       "motivo": "feed sem itens recentes"
     },
     {
-      "veiculo": "The Marshall Project",
+      "veiculo": "The Monthly",
       "motivo": "feed sem itens recentes"
     },
     {
@@ -1187,6 +1187,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Tribuna de Minas",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "Tudo Rondônia",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -1201,10 +1205,6 @@
     {
       "veiculo": "Viagora",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Voice of America (VOA)",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Vorágine",
@@ -1279,5 +1279,5 @@
       "motivo": "sem feed (verificado recentemente)"
     }
   ],
-  "gerada_em": "2026-11-16T17:03:51.698110-03:00"
+  "gerada_em": "2026-11-17T15:58:57.956656-03:00"
 }
