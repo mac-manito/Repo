@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Seus interesses, em foco. · Capa do Mundo</title>
+<style>
+:root{--paper:#f7f5ef;--ink:#202e29;--muted:#59675f;--line:#cdd3c9;--green:#185d49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd761c;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);padding:28px 0 16px}
+.masthead{font:700 clamp(30px,5vw,52px)/1.1 Georgia,serif;text-decoration:none;letter-spacing:-2px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eyebrow,.meta{font-size:12px;color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:14px}
+nav a{text-decoration:none}
+.intro{padding:40px 0 24px}
+h1{font:normal clamp(32px,5vw,56px)/1.1 Georgia,serif;letter-spacing:-1px;margin:10px 0 16px}
+h2{font:normal 30px/1.2 Georgia,serif;margin:0}
+h3{font:normal 23px/1.3 Georgia,serif;margin:12px 0}
+.intro p{max-width:760px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;padding:20px;background:#eaf0e8;border:1px solid var(--line);align-items:end}
+label{display:flex;flex-direction:column;font-size:12px;gap:6px;flex:1;min-width:140px}
+input,select,button{font:inherit;color:inherit;padding:10px;border:1px solid #9aa89d;background:var(--paper);border-radius:3px}
+button{cursor:pointer}
+.status{font-size:13px;color:var(--muted);min-height:22px}
+.section{margin:36px 0;border-top:2px solid var(--ink);padding-top:18px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.section-head a{font-size:13px;white-space:nowrap}
+.description{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.card{padding:24px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.card h3 a{text-decoration:none}
+.badge{display:inline-block;font-size:11px;color:var(--green);border:1px solid #b6c8bc;border-radius:3px;padding:2px 6px;margin:8px 3px 0 0}
+.source{font-size:13px;font-weight:650}
+.card details{font-size:12px;margin-top:12px}
+.card details li{margin-top:8px}
+summary{cursor:pointer}
+.notice{padding:14px 18px;background:#eee5d3;border-left:3px solid #a77624;font-size:14px}
+.empty{color:var(--muted);padding:20px 0}
+.coverage{margin-top:28px;font-size:14px}
+.coverage ul{columns:2;padding-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;margin-top:50px;font-size:12px;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.top{align-items:start;flex-direction:column}
+.wrap{padding:0 20px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}
+.section-head{align-items:start;flex-direction:column;gap:8px}
+.coverage ul{columns:1}
+h3{font-size:24px}
+.intro{padding-top:28px}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="top">
+<a class="masthead" href="../index.html">Capa do Mundo<span style="color:var(--green)">.</span>
+</a>
+<div class="meta">Atualizado em 18/11/2026 às 15:43 · Brasília<br>375 de 691 fontes com notícias</div>
+</div>
+<nav aria-label="Navegação principal">
+<a href="../index.html">Capa temática</a>
+<a href="../editorias/tecnologia.html">Tecnologia</a>
+<a href="../editorias/ia.html">Inteligência artificial</a>
+<a href="../editorias/ciencia.html">Ciência</a>
+<a href="../editorias/tributaria.html">Tributária</a>
+<a href="../editorias/juridico.html">Jurídico</a>
+<a href="../gerais.html">Notícias gerais</a>
+<a href="../edicoes/index.html">Arquivo</a>
+</nav>
+</header>
+<main>
+<div class="intro">
+<div class="eyebrow">Informação para acompanhar o que importa</div>
+<h1>Seus interesses, em foco.</h1>
+<p>Tecnologia, inteligência artificial, ciência, tributação e direito. Uma seleção por assunto, com diferentes fontes e acesso direto à publicação original.</p>
+</div>
+
+
+<form class="filters" id="filters" role="search">
+<label>Buscar nesta página<input id="search" type="search" placeholder="Assunto ou fonte">
+</label>
+<label>Origem da fonte<select id="origin">
+<option value="">Todas</option>
+<option value="brasil">Brasil</option>
+<option value="mundo">Resto do mundo</option>
+</select>
+</label>
+<label>Estado da fonte<select id="uf">
+<option value="">Todos / nacionais</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option>
+</select>
+</label>
+<button type="reset">Limpar filtros</button>
+</form>
+<p class="status" id="status" aria-live="polite">
+</p>
+<p class="empty" id="no-results" hidden>Nenhuma notícia corresponde aos filtros nesta página. Consulte também a página da editoria para ver mais notícias.</p>
+
+
+
+<section class="section" id="tecnologia">
+<div class="section-head">
+<h2>Tecnologia</h2>
+<a href="../editorias/tecnologia.html">Ver editoria · 59 notícias →</a>
+</div>
+<p class="description">Ferramentas, automação e segurança digital. · Publicações dos últimos 3 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="O aplicativo do Manual do Usuário Manual do Usuário Brasil">
+<div class="source">Manual do Usuário</div>
+<div class="meta">Brasil
+ · 18/11/2026 11:50</div>
+<h3>
+<a href="https://manualdousuario.net/app-manual-do-usuario/" target="_blank" rel="noopener noreferrer">O aplicativo do Manual do Usuário</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Nvidia não venderá mais chips de IA para a China Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 18/11/2026 11:34</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/nvidia-nao-vendera-mais-chips-de-ia-para-a-china/" target="_blank" rel="noopener noreferrer">Nvidia não venderá mais chips de IA para a China</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="R$ 21 milhões para plataformas digitais de software livre Manual do Usuário Brasil">
+<div class="source">Manual do Usuário</div>
+<div class="meta">Brasil
+ · 18/11/2026 09:47</div>
+<h3>
+<a href="https://manualdousuario.net/chamada-investimento-plataformas-software-livre/" target="_blank" rel="noopener noreferrer">R$ 21 milhões para plataformas digitais de software livre</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="EUA impõem restrições ao Brasil para compra de chips de IA Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 16/11/2026 17:02</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/eua-impoem-restricoes-ao-brasil-para-compra-de-chips-de-ia/" target="_blank" rel="noopener noreferrer">EUA impõem restrições ao Brasil para compra de chips de IA</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PA" data-search="Concursos públicos: 5 cargos que podem perder espaço com o avanço da tecnologia DOL Brasil">
+<div class="source">DOL</div>
+<div class="meta">Brasil
+ · PA
+ · 18/11/2026 12:01</div>
+<h3>
+<a href="https://dol.com.br/concursos/968771/concursos-publicos-5-cargos-que-podem-perder-espaco-com-o-avanco-da-tecnologia" target="_blank" rel="noopener noreferrer">Concursos públicos: 5 cargos que podem perder espaço com o avanço da tecnologia</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ia">
+<div class="section-head">
+<h2>Inteligência artificial</h2>
+<a href="../editorias/ia.html">Ver editoria · 223 notícias →</a>
+</div>
+<p class="description">Aplicações, pesquisas e novos modelos. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 17/11/2026 21:00</div>
+<h3>
+<a href="https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership" target="_blank" rel="noopener noreferrer">Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RO" data-search="IPO da Anthropic: veja como investir na criadora do Claude por meio de BDRs no Brasil Expressão Rondônia Brasil">
+<div class="source">Expressão Rondônia</div>
+<div class="meta">Brasil
+ · RO
+ · 18/11/2026 14:32</div>
+<h3>
+<a href="https://expressaorondonia.com.br/ipo-da-anthropic-veja-como-investir-na-criadora-do-claude-por-meio-de-bdrs-no-brasil/" target="_blank" rel="noopener noreferrer">IPO da Anthropic: veja como investir na criadora do Claude por meio de BDRs no Brasil</a>
+</h3>
+
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://g1.globo.com/economia/noticia/2026/11/18/anthropic-ipo-bolsa-como-investir-bdrs-brasil.ghtml" target="_blank" rel="noopener noreferrer">g1 — IPO da Anthropic: veja como investir na criadora do Claude por meio de BDRs no Brasil</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Google makes it easier to use Gemini without training AI on your data Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 17/11/2026 13:50</div>
+<h3>
+<a href="https://arstechnica.com/ai/2026/11/google-will-let-you-opt-out-of-ai-training-in-gemini-without-losing-your-history/" target="_blank" rel="noopener noreferrer">Google makes it easier to use Gemini without training AI on your data</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="OpenAI releases new image classifier to detect CSAM, including images generated by AI MediaNama Índia">
+<div class="source">MediaNama</div>
+<div class="meta">Índia
+ · 17/11/2026 07:09</div>
+<h3>
+<a href="https://www.medianama.com/2026/11/223-openai-image-classifier-csam-images/" target="_blank" rel="noopener noreferrer">OpenAI releases new image classifier to detect CSAM, including images generated by AI</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Hollywood&#39;s canniest investor Ashton Kutcher set to become a billionaire if AI giant Anthropic goes public Daily Mail Reino Unido">
+<div class="source">Daily Mail</div>
+<div class="meta">Reino Unido
+ · 18/11/2026 15:32</div>
+<h3>
+<a href="https://www.dailymail.com/tvshowbiz/article-16303201/ashton-kutcher-billionaire-ai-anthropic-ipo.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490" target="_blank" rel="noopener noreferrer">Hollywood&#39;s canniest investor Ashton Kutcher set to become a billionaire if AI giant Anthropic goes public</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic&#39;s IPO set for blastoff this week in key test for AI boom CBS News EUA">
+<div class="source">CBS News</div>
+<div class="meta">EUA
+ · 18/11/2026 14:29</div>
+<h3>
+<a href="https://www.cbsnews.com/news/anthropic-ipo-ai-boom-nasdaq-debut/" target="_blank" rel="noopener noreferrer">Anthropic&#39;s IPO set for blastoff this week in key test for AI boom</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Helping AI text detectors keep up with changing conditions MIT News — IA EUA">
+<div class="source">MIT News — IA</div>
+<div class="meta">EUA
+ · 18/11/2026 02:00</div>
+<h3>
+<a href="https://news.mit.edu/2026/helping-ai-text-detectors-keep-up-with-changing-conditions-1118" target="_blank" rel="noopener noreferrer">Helping AI text detectors keep up with changing conditions</a>
+</h3>
+<span class="badge">Fonte institucional</span>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ciencia">
+<div class="section-head">
+<h2>Ciência</h2>
+<a href="../editorias/ciencia.html">Ver editoria · 53 notícias →</a>
+</div>
+<p class="description">Descobertas, pesquisas e inovação. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Quantum computers are getting too powerful to check. Scientists have a solution ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 16/11/2026 21:20</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261115085557.htm" target="_blank" rel="noopener noreferrer">Quantum computers are getting too powerful to check. Scientists have a solution</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Science at the Frontier: How scientists use ChatGPT OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 16/11/2026 09:00</div>
+<h3>
+<a href="https://openai.com/index/science-at-the-frontier" target="_blank" rel="noopener noreferrer">Science at the Frontier: How scientists use ChatGPT</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Scientists create a remarkable new rechargeable battery using vitamin B12 ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 18/11/2026 09:26</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261117033909.htm" target="_blank" rel="noopener noreferrer">Scientists create a remarkable new rechargeable battery using vitamin B12</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="&#39;Rockstar&#39; climate expert urges world to defend science eNCA África do Sul">
+<div class="source">eNCA</div>
+<div class="meta">África do Sul
+ · 18/11/2026 15:30</div>
+<h3>
+<a href="https://www.enca.com/opinion/rockstar-climate-expert-urges-world-defend-science" target="_blank" rel="noopener noreferrer">&#39;Rockstar&#39; climate expert urges world to defend science</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Ciência Para Todos entrega prêmios a estudantes e professores vencedores da edição 2026 O Globo Brasil">
+<div class="source">O Globo</div>
+<div class="meta">Brasil
+ · 18/11/2026 14:55</div>
+<h3>
+<a href="https://oglobo.globo.com/brasil/educacao/noticia/2026/11/18/ciencia-para-todos-entrega-premios-a-estudantes-e-professores-vencedores-da-edicao-2026.ghtml" target="_blank" rel="noopener noreferrer">Ciência Para Todos entrega prêmios a estudantes e professores vencedores da edição 2026</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="tributaria">
+<div class="section-head">
+<h2>Tributária e reforma tributária</h2>
+<a href="../editorias/tributaria.html">Ver editoria · 40 notícias →</a>
+</div>
+<p class="description">IBS/CBS, obrigações, regulamentação e decisões fiscais. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="IBS e CBS na base do ICMS: TJSP suspende decisões Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 17/11/2026 20:00</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80944/ibs-e-cbs-na-base-do-icms-tjsp-suspende-decisoes/" target="_blank" rel="noopener noreferrer">IBS e CBS na base do ICMS: TJSP suspende decisões</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="IBS e CBS no ISS: empresas questionam cobrança na Justiça Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 18/11/2026 09:30</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80960/ibs-e-cbs-no-iss-empresas-questionam-cobranca-na-justica/" target="_blank" rel="noopener noreferrer">IBS e CBS no ISS: empresas questionam cobrança na Justiça</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Tributária: alíquota de 11,3% para imposto federal valerá só em 2027 e, segundo Receita, pode subir ou descer depois; entenda g1 Brasil">
+<div class="source">g1</div>
+<div class="meta">Brasil
+ · 18/11/2026 15:28</div>
+<h3>
+<a href="https://g1.globo.com/economia/noticia/2026/11/18/tributaria-aliquota-de-113percent-para-imposto-federal-valera-so-em-2027-e-segundo-receita-pode-subir-ou-descer-depois-entenda.ghtml" target="_blank" rel="noopener noreferrer">Tributária: alíquota de 11,3% para imposto federal valerá só em 2027 e, segundo Receita, pode subir ou descer depois; entenda</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Regulamento 2.0 da reforma tributária deve sair até a próxima semana, diz Barreirinhas Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 18/11/2026 15:22</div>
+<h3>
+<a href="https://valor.globo.com/brasil/noticia/2026/11/18/regulamento-20-da-reforma-tributaria-deve-sair-ate-a-proxima-semana-diz-barreirinhas.ghtml" target="_blank" rel="noopener noreferrer">Regulamento 2.0 da reforma tributária deve sair até a próxima semana, diz Barreirinhas</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Programa de conformidade da reforma tributária deve ser permanente, diz Barreirinhas Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 18/11/2026 15:02</div>
+<h3>
+<a href="https://valor.globo.com/brasil/noticia/2026/11/18/programa-de-conformidade-da-reforma-tributaria-deve-ser-permanente-diz-barreirinhas.ghtml" target="_blank" rel="noopener noreferrer">Programa de conformidade da reforma tributária deve ser permanente, diz Barreirinhas</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="TO" data-search="Wanderlei Barbosa destaca preparação do Tocantins para a reforma tributária em encontro nacional Gazeta do Cerrado Brasil">
+<div class="source">Gazeta do Cerrado</div>
+<div class="meta">Brasil
+ · TO
+ · 18/11/2026 14:35</div>
+<h3>
+<a href="https://gazetadocerrado.com.br/tocantins/wanderlei-barbosa-destaca-preparacao-do-tocantins-para-a-reforma-tributaria-em-encontro-nacional/" target="_blank" rel="noopener noreferrer">Wanderlei Barbosa destaca preparação do Tocantins para a reforma tributária em encontro nacional</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Reforma Tributária deixa 68% dos CSCs sem modelo de rateio O Globo Brasil">
+<div class="source">O Globo</div>
+<div class="meta">Brasil
+ · 18/11/2026 14:12</div>
+<h3>
+<a href="https://oglobo.globo.com/patrocinado/dino/noticia/2026/11/18/reforma-tributaria-deixa-68-dos-cscs-sem-modelo-de-rateio-1.ghtml" target="_blank" rel="noopener noreferrer">Reforma Tributária deixa 68% dos CSCs sem modelo de rateio</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://valor.globo.com/patrocinado/dino/noticia/2026/11/18/reforma-tributaria-deixa-68-dos-cscs-sem-modelo-de-rateio-1.ghtml" target="_blank" rel="noopener noreferrer">Valor Econômico — Reforma Tributária deixa 68% dos CSCs sem modelo de rateio</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Receita mais otimista com queda da sonegação pode reduzir alíquota da reforma tributária Folha de S.Paulo Brasil">
+<div class="source">Folha de S.Paulo</div>
+<div class="meta">Brasil
+ · 18/11/2026 13:15</div>
+<h3>
+<a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/blogs/que-imposto-e-esse/2026/11/receita-mais-otimista-com-queda-da-sonegacao-pode-reduzir-aliquota-da-reforma-tributaria.shtml" target="_blank" rel="noopener noreferrer">Receita mais otimista com queda da sonegação pode reduzir alíquota da reforma tributária</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="juridico">
+<div class="section-head">
+<h2>Jurídico</h2>
+<a href="../editorias/juridico.html">Ver editoria · 49 notícias →</a>
+</div>
+<p class="description">Empresas, contratos, trabalho e jurisprudência. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Justiça do DF suspende licitação do Senado de R$ 6 milhões para comprar iPhones a parlamentares O Globo Brasil">
+<div class="source">O Globo</div>
+<div class="meta">Brasil
+ · 18/11/2026 15:02</div>
+<h3>
+<a href="https://oglobo.globo.com/politica/noticia/2026/11/18/justica-do-df-suspende-licitacao-do-senado-de-r-6-milhoes-para-comprar-iphones-a-parlamentares.ghtml" target="_blank" rel="noopener noreferrer">Justiça do DF suspende licitação do Senado de R$ 6 milhões para comprar iPhones a parlamentares</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PA" data-search="Justiça suspende licitação para compra de iPhones e celulares pelo Senado DOL Brasil">
+<div class="source">DOL</div>
+<div class="meta">Brasil
+ · PA
+ · 18/11/2026 13:22</div>
+<h3>
+<a href="https://dol.com.br/noticias/politica/968780/justica-suspende-licitacao-para-compra-de-iphones-e-celulares-pelo-senado" target="_blank" rel="noopener noreferrer">Justiça suspende licitação para compra de iPhones e celulares pelo Senado</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MS" data-search="STJ recua após dar puxão de orelha no TJMS e restabelece falência de frigorífico JD1 Notícias Brasil">
+<div class="source">JD1 Notícias</div>
+<div class="meta">Brasil
+ · MS
+ · 18/11/2026 13:15</div>
+<h3>
+<a href="https://www.jd1noticias.com/justica/2026/11/18/stj-recua-apos-dar-puxao-de-orelha-no-tjms-e-restabelece-falencia-de-frigorifico.html" target="_blank" rel="noopener noreferrer">STJ recua após dar puxão de orelha no TJMS e restabelece falência de frigorífico</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="BA" data-search="Justiça suspende licitação que previa gasto de R$ 6 milhões com celulares para parlamentares do Senado Metro1 Brasil">
+<div class="source">Metro1</div>
+<div class="meta">Brasil
+ · BA
+ · 18/11/2026 12:51</div>
+<h3>
+<a href="https://www.metro1.com.br/noticias/politica/191588,justica-suspende-licitacao-que-previa-gasto-de-r-6-milhoes-com-celulares-para-parlamentares-do-senado" target="_blank" rel="noopener noreferrer">Justiça suspende licitação que previa gasto de R$ 6 milhões com celulares para parlamentares do Senado</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://fanf1.com.br/2026/11/18/justica-suspende-licitacao-que-previa-gasto-de-r-6-milhoes-com-iphones-e-outros-celulares-para-parlamentares-e-servidores-do-senado/" target="_blank" rel="noopener noreferrer">Fan F1 — Justiça suspende licitação que previa gasto de R$ 6 milhões com iPhones e outros celulares para parlamentares e servidores do Senado</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PB" data-search="Justiça suspende licitação do Senado do que previa gasto de R$ 6 milhões com celulares Jornal da Paraíba Brasil">
+<div class="source">Jornal da Paraíba</div>
+<div class="meta">Brasil
+ · PB
+ · 18/11/2026 09:38</div>
+<h3>
+<a href="https://jornaldaparaiba.com.br/politica/pleno-poder/justica-suspende-licitacao-do-senado-do-que-previa-gasto-de-r-6-milhoes-com-celulares" target="_blank" rel="noopener noreferrer">Justiça suspende licitação do Senado do que previa gasto de R$ 6 milhões com celulares</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+
+</main>
+<footer>Seleção automática por regras de assunto, relevância e data. Até dois destaques por fonte em cada editoria. Os filtros consideram a origem da fonte principal, não o local do acontecimento. Títulos no idioma original; nenhuma tradução ou resumo gerado por IA. A disponibilidade depende dos feeds públicos.<br>
+<a href="https://github.com/mac-manito/Repo">Código e metodologia</a> · Links externos abrem a publicação original.</footer>
+</div>
+<script>
+(()=>{const form=document.querySelector('#filters');if(!form)return;const search=document.querySelector('#search'),origin=document.querySelector('#origin'),uf=document.querySelector('#uf'),cards=[...document.querySelectorAll('.card')];const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const terms=cards.map(c=>norm(c.dataset.search));function filter(){if(origin.value==='mundo')uf.value='';uf.disabled=origin.value==='mundo';const query=norm(search.value).trim();let count=0;cards.forEach((card,i)=>{const match=(!origin.value||card.dataset.origin===origin.value)&&(!uf.value||card.dataset.uf===uf.value)&&terms[i].includes(query);card.hidden=!match;if(match)count++});document.querySelector('#status').textContent=count+' de '+cards.length+' notícias exibidas nesta página';document.querySelector('#no-results').hidden=count>0}form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter()})();
+</script>
+</body>
+</html>
