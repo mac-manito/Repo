@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Seus interesses, em foco. · Capa do Mundo</title>
+<style>
+:root{--paper:#f7f5ef;--ink:#202e29;--muted:#59675f;--line:#cdd3c9;--green:#185d49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd761c;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);padding:28px 0 16px}
+.masthead{font:700 clamp(30px,5vw,52px)/1.1 Georgia,serif;text-decoration:none;letter-spacing:-2px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eyebrow,.meta{font-size:12px;color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:14px}
+nav a{text-decoration:none}
+.intro{padding:40px 0 24px}
+h1{font:normal clamp(32px,5vw,56px)/1.1 Georgia,serif;letter-spacing:-1px;margin:10px 0 16px}
+h2{font:normal 30px/1.2 Georgia,serif;margin:0}
+h3{font:normal 23px/1.3 Georgia,serif;margin:12px 0}
+.intro p{max-width:760px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;padding:20px;background:#eaf0e8;border:1px solid var(--line);align-items:end}
+label{display:flex;flex-direction:column;font-size:12px;gap:6px;flex:1;min-width:140px}
+input,select,button{font:inherit;color:inherit;padding:10px;border:1px solid #9aa89d;background:var(--paper);border-radius:3px}
+button{cursor:pointer}
+.status{font-size:13px;color:var(--muted);min-height:22px}
+.section{margin:36px 0;border-top:2px solid var(--ink);padding-top:18px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.section-head a{font-size:13px;white-space:nowrap}
+.description{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.card{padding:24px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.card h3 a{text-decoration:none}
+.badge{display:inline-block;font-size:11px;color:var(--green);border:1px solid #b6c8bc;border-radius:3px;padding:2px 6px;margin:8px 3px 0 0}
+.source{font-size:13px;font-weight:650}
+.card details{font-size:12px;margin-top:12px}
+.card details li{margin-top:8px}
+summary{cursor:pointer}
+.notice{padding:14px 18px;background:#eee5d3;border-left:3px solid #a77624;font-size:14px}
+.empty{color:var(--muted);padding:20px 0}
+.coverage{margin-top:28px;font-size:14px}
+.coverage ul{columns:2;padding-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;margin-top:50px;font-size:12px;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.top{align-items:start;flex-direction:column}
+.wrap{padding:0 20px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}
+.section-head{align-items:start;flex-direction:column;gap:8px}
+.coverage ul{columns:1}
+h3{font-size:24px}
+.intro{padding-top:28px}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="top">
+<a class="masthead" href="../index.html">Capa do Mundo<span style="color:var(--green)">.</span>
+</a>
+<div class="meta">Atualizado em 22/11/2026 às 14:40 · Brasília<br>345 de 691 fontes com notícias</div>
+</div>
+<nav aria-label="Navegação principal">
+<a href="../index.html">Capa temática</a>
+<a href="../editorias/tecnologia.html">Tecnologia</a>
+<a href="../editorias/ia.html">Inteligência artificial</a>
+<a href="../editorias/ciencia.html">Ciência</a>
+<a href="../editorias/tributaria.html">Tributária</a>
+<a href="../editorias/juridico.html">Jurídico</a>
+<a href="../gerais.html">Notícias gerais</a>
+<a href="../edicoes/index.html">Arquivo</a>
+</nav>
+</header>
+<main>
+<div class="intro">
+<div class="eyebrow">Informação para acompanhar o que importa</div>
+<h1>Seus interesses, em foco.</h1>
+<p>Tecnologia, inteligência artificial, ciência, tributação e direito. Uma seleção por assunto, com diferentes fontes e acesso direto à publicação original.</p>
+</div>
+
+
+<form class="filters" id="filters" role="search">
+<label>Buscar nesta página<input id="search" type="search" placeholder="Assunto ou fonte">
+</label>
+<label>Origem da fonte<select id="origin">
+<option value="">Todas</option>
+<option value="brasil">Brasil</option>
+<option value="mundo">Resto do mundo</option>
+</select>
+</label>
+<label>Estado da fonte<select id="uf">
+<option value="">Todos / nacionais</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option>
+</select>
+</label>
+<button type="reset">Limpar filtros</button>
+</form>
+<p class="status" id="status" aria-live="polite">
+</p>
+<p class="empty" id="no-results" hidden>Nenhuma notícia corresponde aos filtros nesta página. Consulte também a página da editoria para ver mais notícias.</p>
+
+
+
+<section class="section" id="tecnologia">
+<div class="section-head">
+<h2>Tecnologia</h2>
+<a href="../editorias/tecnologia.html">Ver editoria · 48 notícias →</a>
+</div>
+<p class="description">Ferramentas, automação e segurança digital. · Publicações dos últimos 3 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Grupo assume vazamento de dados de clientes da Visa, Mastercard e JPMorgan Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 20/11/2026 04:08</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/grupo-assume-vazamento-de-dados-de-clientes-da-visa-mastercard-e-jpmorgan/" target="_blank" rel="noopener noreferrer">Grupo assume vazamento de dados de clientes da Visa, Mastercard e JPMorgan</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="iFood sofre outro vazamento de dados de clientes Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 19/11/2026 16:19</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/ifood-sofre-outro-vazamento-de-dados-de-clientes/" target="_blank" rel="noopener noreferrer">iFood sofre outro vazamento de dados de clientes</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AM" data-search="EUA buscam respostas sobre venda de chips da Nvidia para China, diz secretário do Tesouro Portal do Holanda Brasil">
+<div class="source">Portal do Holanda</div>
+<div class="meta">Brasil
+ · AM
+ · 22/11/2026 13:21</div>
+<h3>
+<a href="https://www.portaldoholanda.com.br/articles/1011428" target="_blank" rel="noopener noreferrer">EUA buscam respostas sobre venda de chips da Nvidia para China, diz secretário do Tesouro</a>
+</h3>
+
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://valor.globo.com/empresas/noticia/2026/11/22/eua-buscam-respostas-sobre-venda-de-chips-da-nvidia-para-china-diz-secretrio-do-tesouro.ghtml" target="_blank" rel="noopener noreferrer">Valor Econômico — EUA buscam respostas sobre venda de chips da Nvidia para China, diz secretário do Tesouro</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Alice Huang, &#39;affair&#39; do ex-CEO da Nvidia, tem ligações com mercado clandestino de chips, diz jornal O Globo Brasil">
+<div class="source">O Globo</div>
+<div class="meta">Brasil
+ · 22/11/2026 10:07</div>
+<h3>
+<a href="https://oglobo.globo.com/economia/tecnologia/noticia/2026/11/22/alice-huang-affair-do-ex-ceo-da-nvidia-tem-ligacoes-com-mercado-clandestino-de-chips-diz-jornal.ghtml" target="_blank" rel="noopener noreferrer">Alice Huang, &#39;affair&#39; do ex-CEO da Nvidia, tem ligações com mercado clandestino de chips, diz jornal</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="DF" data-search="Estudantes da rede pública representam o DF na etapa nacional da Olimpíada Brasileira de Robótica Capital do Entorno Brasil">
+<div class="source">Capital do Entorno</div>
+<div class="meta">Brasil
+ · DF
+ · 20/11/2026 22:38</div>
+<h3>
+<a href="https://www.capitaldoentorno.com.br/estudantes-da-rede-publica-representam-o-df-na-etapa-nacional-da-olimpiada-brasileira-de-robotica/" target="_blank" rel="noopener noreferrer">Estudantes da rede pública representam o DF na etapa nacional da Olimpíada Brasileira de Robótica</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ia">
+<div class="section-head">
+<h2>Inteligência artificial</h2>
+<a href="../editorias/ia.html">Ver editoria · 225 notícias →</a>
+</div>
+<p class="description">Aplicações, pesquisas e novos modelos. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic: AI company behind Claude chatbot value rises above $2 trillion in stock market offering Channel 4 Reino Unido">
+<div class="source">Channel 4</div>
+<div class="meta">Reino Unido
+ · 19/11/2026 17:33</div>
+<h3>
+<a href="https://www.channel4.com/news/anthropic-ai-company-behind-claude-chatbot-value-rises-above-2-trillion-in-stock-market-offering" target="_blank" rel="noopener noreferrer">Anthropic: AI company behind Claude chatbot value rises above $2 trillion in stock market offering</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="How OpenAI’s Performance Factory keeps ChatGPT fast OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 19/11/2026 05:00</div>
+<h3>
+<a href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast" target="_blank" rel="noopener noreferrer">How OpenAI’s Performance Factory keeps ChatGPT fast</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 17/11/2026 21:00</div>
+<h3>
+<a href="https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership" target="_blank" rel="noopener noreferrer">Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Is Meghan using ChatGPT to promote As Ever? AI detection software flags winter sale promo pic as artificially generated - as the Duchess poses in cosy clothes Daily Mail Reino Unido">
+<div class="source">Daily Mail</div>
+<div class="meta">Reino Unido
+ · 22/11/2026 13:34</div>
+<h3>
+<a href="https://www.dailymail.com/news/royals/article-16311941/Meghan-fireplace-discount-controversial-Advent-calendar.html?ns_mchannel=rss&amp;ns_campaign=1490&amp;ito=1490" target="_blank" rel="noopener noreferrer">Is Meghan using ChatGPT to promote As Ever? AI detection software flags winter sale promo pic as artificially generated - as the Duchess poses in cosy clothes</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="« Nous ne voulons pas mourir » : sous la pluie, des manifestants interpellent le créateur de l’IA Claude qui entre en Bourse Le Soleil (Senegal) Senegal">
+<div class="source">Le Soleil (Senegal)</div>
+<div class="meta">Senegal
+ · 21/11/2026 19:00</div>
+<h3>
+<a href="https://lesoleil.sn/actualites/technologie/nous-ne-voulons-pas-mourir-sous-la-pluie-des-manifestants-interpellent-le-createur-de-lia-claude-qui-entre-en-bourse/" target="_blank" rel="noopener noreferrer">« Nous ne voulons pas mourir » : sous la pluie, des manifestants interpellent le créateur de l’IA Claude qui entre en Bourse</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Los “millonarios de papel” de la IA: Anthropic crea miles de ricos mientras blinda el poder de su cúpula elDiarioAR Argentina">
+<div class="source">elDiarioAR</div>
+<div class="meta">Argentina
+ · 21/11/2026 00:02</div>
+<h3>
+<a href="https://www.eldiarioar.com/economia/millonarios-papel-ia-anthropic-crea-miles-ricos-blinda-cupula_1_13682169.html" target="_blank" rel="noopener noreferrer">Los “millonarios de papel” de la IA: Anthropic crea miles de ricos mientras blinda el poder de su cúpula</a>
+</h3>
+
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://www.eldiario.es/tecnologia/millonarios-papel-ia-anthropic-crea-miles-ricos-blinda-cupula_1_13677805.html" target="_blank" rel="noopener noreferrer">elDiario.es — Los &#34;millonarios de papel&#34; de la IA: Anthropic crea miles de ricos mientras blinda el poder de su cúpula</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="O que a oferta pública recorde da Anthropic diz do mercado de IA Nexo Jornal Brasil">
+<div class="source">Nexo Jornal</div>
+<div class="meta">Brasil
+ · 20/11/2026 21:19</div>
+<h3>
+<a href="https://www.nexojornal.com.br/expresso/2026/11/20/anthropic-ipo-stock-acao-oferta-publica-claude-ia" target="_blank" rel="noopener noreferrer">O que a oferta pública recorde da Anthropic diz do mercado de IA</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ciencia">
+<div class="section-head">
+<h2>Ciência</h2>
+<a href="../editorias/ciencia.html">Ver editoria · 33 notícias →</a>
+</div>
+<p class="description">Descobertas, pesquisas e inovação. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Even scientists can&#39;t agree on what science actually is ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 21/11/2026 10:55</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261119194541.htm" target="_blank" rel="noopener noreferrer">Even scientists can&#39;t agree on what science actually is</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Quantum computers are getting too powerful to check. Scientists have a solution ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 16/11/2026 21:20</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261115085557.htm" target="_blank" rel="noopener noreferrer">Quantum computers are getting too powerful to check. Scientists have a solution</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Science at the Frontier: How scientists use ChatGPT OpenAI EUA">
+<div class="source">OpenAI</div>
+<div class="meta">EUA
+ · 16/11/2026 09:00</div>
+<h3>
+<a href="https://openai.com/index/science-at-the-frontier" target="_blank" rel="noopener noreferrer">Science at the Frontier: How scientists use ChatGPT</a>
+</h3>
+<span class="badge">Fonte: empresa</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="“Race realism” isn’t realistic—and it isn’t good science Ars Technica EUA">
+<div class="source">Ars Technica</div>
+<div class="meta">EUA
+ · 21/11/2026 09:01</div>
+<h3>
+<a href="https://arstechnica.com/science/2026/11/race-realism-isnt-realistic-and-it-isnt-good-science/" target="_blank" rel="noopener noreferrer">“Race realism” isn’t realistic—and it isn’t good science</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AM" data-search="Os peixes que ninguém vê: a biodiversidade escondida nos riachos da Mata Atlântica BNC Amazonas Brasil">
+<div class="source">BNC Amazonas</div>
+<div class="meta">Brasil
+ · AM
+ · 19/11/2026 07:00</div>
+<h3>
+<a href="https://bncamazonas.com.br/os-peixes-que-ninguem-ve-a-biodiversidade-escondida-nos-riachos-da-mata-atlantica/" target="_blank" rel="noopener noreferrer">Os peixes que ninguém vê: a biodiversidade escondida nos riachos da Mata Atlântica</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="tributaria">
+<div class="section-head">
+<h2>Tributária e reforma tributária</h2>
+<a href="../editorias/tributaria.html">Ver editoria · 27 notícias →</a>
+</div>
+<p class="description">IBS/CBS, obrigações, regulamentação e decisões fiscais. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Carf valida IRPJ e CSLL contra a Caixa por ganho em troca de ações da Bolsa JOTA Brasil">
+<div class="source">JOTA</div>
+<div class="meta">Brasil
+ · 22/11/2026 06:27</div>
+<h3>
+<a href="https://www.jota.info/tributos/carf-valida-irpj-e-csll-contra-a-caixa-por-ganho-em-troca-de-acoes-da-bolsa" target="_blank" rel="noopener noreferrer">Carf valida IRPJ e CSLL contra a Caixa por ganho em troca de ações da Bolsa</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Observância do art. 166 do CTN na repetição do indébito da CBS/IBS JOTA Brasil">
+<div class="source">JOTA</div>
+<div class="meta">Brasil
+ · 22/11/2026 03:39</div>
+<h3>
+<a href="https://www.jota.info/opiniao-e-analise/colunas/pauta-fiscal/observancia-do-art-166-do-ctn-na-repeticao-do-indebito-da-cbs-ibs" target="_blank" rel="noopener noreferrer">Observância do art. 166 do CTN na repetição do indébito da CBS/IBS</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RO" data-search="Senado aprova pedido de explicações ao TCU sobre alíquota de 11,3% da CBS na reforma tributária News Rondônia Brasil">
+<div class="source">News Rondônia</div>
+<div class="meta">Brasil
+ · RO
+ · 18/11/2026 13:44</div>
+<h3>
+<a href="https://newsrondonia.com.br/politica/2026/11/18/senado-aprova-pedido-de-explicacoes-ao-tcu-sobre-aliquota-de-113-da-cbs-na-reforma-tributaria/" target="_blank" rel="noopener noreferrer">Senado aprova pedido de explicações ao TCU sobre alíquota de 11,3% da CBS na reforma tributária</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="GO" data-search="De hotéis a escolas: reforma tributária elevará imposto sobre serviços a 30% e afetará caixa de cidades goianas Diário de Goiás Brasil">
+<div class="source">Diário de Goiás</div>
+<div class="meta">Brasil
+ · GO
+ · 22/11/2026 14:33</div>
+<h3>
+<a href="https://diariodegoias.com.br/de-hoteis-a-escolas-reforma-tributaria-elevara-imposto-sobre-servicos-a-30-e-afetara-caixa-de-cidades-goianas/555325/" target="_blank" rel="noopener noreferrer">De hotéis a escolas: reforma tributária elevará imposto sobre serviços a 30% e afetará caixa de cidades goianas</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="MEI, nanoempreendedor e Simples Nacional: o que muda em 2027 Valor Econômico Brasil">
+<div class="source">Valor Econômico</div>
+<div class="meta">Brasil
+ · 22/11/2026 11:12</div>
+<h3>
+<a href="https://valor.globo.com/legislacao/noticia/2026/11/22/mei-nanoempreendedor-e-simples-nacional-o-que-muda-em-2027.ghtml" target="_blank" rel="noopener noreferrer">MEI, nanoempreendedor e Simples Nacional: o que muda em 2027</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Reforma Tributária: veja o que muda na rotina dos escritórios contábeis em 2027 Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 21/11/2026 11:59</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80949/reforma-tributaria-veja-o-que-muda-na-rotina-dos-escritorios-contabeis-em-2027/" target="_blank" rel="noopener noreferrer">Reforma Tributária: veja o que muda na rotina dos escritórios contábeis em 2027</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="EFD Contribuições 2027: do fechamento de 2026 á apuração da CBS em 2027 Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 20/11/2026 10:29</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/80909/efd-contribuicoes-2027-do-fechamento-de-2026-a-apuracao-da-cbs-em-2027/" target="_blank" rel="noopener noreferrer">EFD Contribuições 2027: do fechamento de 2026 á apuração da CBS em 2027</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RS" data-search="Contribuintes de Porto Alegre têm até o dia 30 para garantir desconto máximo no IPTU de 2027 com CPF nas notas fiscais O Sul Brasil">
+<div class="source">O Sul</div>
+<div class="meta">Brasil
+ · RS
+ · 22/11/2026 13:54</div>
+<h3>
+<a href="https://www.osul.com.br/contribuintes-de-porto-alegre-tem-ate-o-dia-30-para-garantir-desconto-maximo-no-iptu-de-2027-com-cpf-nas-notas-fiscais/" target="_blank" rel="noopener noreferrer">Contribuintes de Porto Alegre têm até o dia 30 para garantir desconto máximo no IPTU de 2027 com CPF nas notas fiscais</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="juridico">
+<div class="section-head">
+<h2>Jurídico</h2>
+<a href="../editorias/juridico.html">Ver editoria · 26 notícias →</a>
+</div>
+<p class="description">Empresas, contratos, trabalho e jurisprudência. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="RJ" data-search="Após quatro anos, TCE-RJ dá prazo de 30 dias e prevê multa diária para prefeita de São João da Barra corrigir investigação sobre contrato de R$ 3 milhões sem licitação Tempo Real RJ Brasil">
+<div class="source">Tempo Real RJ</div>
+<div class="meta">Brasil
+ · RJ
+ · 22/11/2026 14:00</div>
+<h3>
+<a href="https://temporealrj.com/tce-rj-prazo-sao-joao-da-barra-advocacia/" target="_blank" rel="noopener noreferrer">Após quatro anos, TCE-RJ dá prazo de 30 dias e prevê multa diária para prefeita de São João da Barra corrigir investigação sobre contrato de R$ 3 milhões sem licitação</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PR" data-search="Curitiba Turismo registra R$ 5,5 milhões em palcos, geradores e telões, e já fecha R$ 1,75 milhão em contratos publicados com erro Plural Curitiba Brasil">
+<div class="source">Plural Curitiba</div>
+<div class="meta">Brasil
+ · PR
+ · 22/11/2026 13:53</div>
+<h3>
+<a href="https://www.plural.jor.br/curitiba/imt-atas-estrutura-eventos-geradores-paineis-led-curitiba-2026/" target="_blank" rel="noopener noreferrer">Curitiba Turismo registra R$ 5,5 milhões em palcos, geradores e telões, e já fecha R$ 1,75 milhão em contratos publicados com erro</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PR" data-search="Natal 2026: Fundação Cultural já autorizou R$ 5,8 milhões sem licitação, quase o triplo de 12 dias atrás Plural Curitiba Brasil">
+<div class="source">Plural Curitiba</div>
+<div class="meta">Brasil
+ · PR
+ · 22/11/2026 12:50</div>
+<h3>
+<a href="https://www.plural.jor.br/cultura/natal-2026-fcc-contratacoes-sem-licitacao-5-8-milhoes-curitiba/" target="_blank" rel="noopener noreferrer">Natal 2026: Fundação Cultural já autorizou R$ 5,8 milhões sem licitação, quase o triplo de 12 dias atrás</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RN" data-search="Após irregularidades apontadas pelo TCE em Petrolina, Atlântico participa de licitação em Natal Portal da Tropical Brasil">
+<div class="source">Portal da Tropical</div>
+<div class="meta">Brasil
+ · RN
+ · 12/11/2026 11:56</div>
+<h3>
+<a href="https://portaldatropical.com.br/news/apos-irregularidades-apontadas-pelo-tce-em-petrolina-atlantico-participa-de-licitacao-em-natal" target="_blank" rel="noopener noreferrer">Após irregularidades apontadas pelo TCE em Petrolina, Atlântico participa de licitação em Natal</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RJ" data-search="Cedae: TCE-RJ cobra Tomada de Contas Especial não realizada após 11 anos e notifica ex-gestores; contrato inicial era de R$ 4,2 milhões Tempo Real RJ Brasil">
+<div class="source">Tempo Real RJ</div>
+<div class="meta">Brasil
+ · RJ
+ · 22/11/2026 13:00</div>
+<h3>
+<a href="https://temporealrj.com/cedae-tce-rj-tomada-de-contas-contrato-emergencial/" target="_blank" rel="noopener noreferrer">Cedae: TCE-RJ cobra Tomada de Contas Especial não realizada após 11 anos e notifica ex-gestores; contrato inicial era de R$ 4,2 milhões</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+
+</main>
+<footer>Seleção automática por regras de assunto, relevância e data. Até dois destaques por fonte em cada editoria. Os filtros consideram a origem da fonte principal, não o local do acontecimento. Títulos no idioma original; nenhuma tradução ou resumo gerado por IA. A disponibilidade depende dos feeds públicos.<br>
+<a href="https://github.com/mac-manito/Repo">Código e metodologia</a> · Links externos abrem a publicação original.</footer>
+</div>
+<script>
+(()=>{const form=document.querySelector('#filters');if(!form)return;const search=document.querySelector('#search'),origin=document.querySelector('#origin'),uf=document.querySelector('#uf'),cards=[...document.querySelectorAll('.card')];const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const terms=cards.map(c=>norm(c.dataset.search));function filter(){if(origin.value==='mundo')uf.value='';uf.disabled=origin.value==='mundo';const query=norm(search.value).trim();let count=0;cards.forEach((card,i)=>{const match=(!origin.value||card.dataset.origin===origin.value)&&(!uf.value||card.dataset.uf===uf.value)&&terms[i].includes(query);card.hidden=!match;if(match)count++});document.querySelector('#status').textContent=count+' de '+cards.length+' notícias exibidas nesta página';document.querySelector('#no-results').hidden=count>0}form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter()})();
+</script>
+</body>
+</html>
