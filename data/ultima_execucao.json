@@ -1,6 +1,6 @@
 {
   "consultados": 691,
-  "com_manchetes": 365,
+  "com_manchetes": 366,
   "falhas": [
     {
       "veiculo": "+972 Magazine",
@@ -17,10 +17,6 @@
     {
       "veiculo": "A Hora do Sul",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "A Voz da Cidade",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "AAP",
@@ -113,6 +109,10 @@
     {
       "veiculo": "Aristegui Noticias",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Armando.info",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Asahi Shimbun",
@@ -227,6 +227,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Channels TV",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "China Times",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -291,14 +295,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Daraj",
-      "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "Dataphyte",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "De Correspondent",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -324,10 +320,6 @@
     },
     {
       "veiculo": "Direkt36",
-      "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "Disclose",
       "motivo": "feed sem itens recentes"
     },
     {
@@ -431,16 +423,16 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Folha do Amapá",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "Folha do Sul Online",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "FolhaMax",
       "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
+      "veiculo": "Follow the Money (Europa)",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "FragDenStaat",
@@ -460,7 +452,7 @@
     },
     {
       "veiculo": "Fumaça",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "GCMAIS",
@@ -543,6 +535,10 @@
       "motivo": "feed sem itens recentes"
     },
     {
+      "veiculo": "Investigace.cz",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Investigate Europe",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -591,10 +587,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Jornal do Dia SE",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Jornal do Tocantins",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -609,6 +601,10 @@
     {
       "veiculo": "KRIK",
       "motivo": "feed sem itens recentes"
+    },
+    {
+      "veiculo": "Kan",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Kommersant",
@@ -819,6 +815,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Pernambuco Online",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "Philippine Daily Inquirer",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -927,10 +927,6 @@
       "motivo": "feed sem itens recentes"
     },
     {
-      "veiculo": "Revista Piauí",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Roma News",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -945,10 +941,6 @@
     {
       "veiculo": "Rondônia ao Vivo",
       "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "Roraima Press",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Roraima TV",
@@ -1041,10 +1033,6 @@
     {
       "veiculo": "T24",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "TASS",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "TRT",
@@ -1167,6 +1155,10 @@
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
+      "veiculo": "The Reporter (Taiwan)",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "The Reporters' Collective",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -1212,7 +1204,7 @@
     },
     {
       "veiculo": "Toronto Star",
-      "motivo": "feed sem itens recentes"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Tortoise Media",
@@ -1237,6 +1229,10 @@
     {
       "veiculo": "Viagora",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Vorágine",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "WSCom",
@@ -1299,40 +1295,40 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "É Assim",
-      "motivo": "feed não encontrado ou fora do ar"
+      "veiculo": "Átlátszó",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "ČT (Česká televize)",
       "motivo": "sem feed (verificado recentemente)"
     }
   ],
-  "gerada_em": "2026-11-23T18:56:15.951323-03:00",
-  "manchetes": 1648,
+  "gerada_em": "2026-11-24T17:31:52.927326-03:00",
+  "manchetes": 1720,
   "editorias": [
     {
       "id": "tecnologia",
-      "total": 56,
+      "total": 65,
       "destaques": 5
     },
     {
       "id": "ia",
-      "total": 196,
+      "total": 207,
       "destaques": 7
     },
     {
       "id": "ciencia",
-      "total": 45,
+      "total": 38,
       "destaques": 5
     },
     {
       "id": "tributaria",
-      "total": 36,
+      "total": 35,
       "destaques": 8
     },
     {
       "id": "juridico",
-      "total": 45,
+      "total": 59,
       "destaques": 5
     }
   ]
