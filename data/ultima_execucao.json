@@ -1,6 +1,6 @@
 {
   "consultados": 691,
-  "com_manchetes": 366,
+  "com_manchetes": 375,
   "falhas": [
     {
       "veiculo": "+972 Magazine",
@@ -83,6 +83,10 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Amapá Online",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Amazonas Atual",
       "motivo": "feed não encontrado ou fora do ar"
     },
@@ -97,6 +101,10 @@
     {
       "veiculo": "Animal Político",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Aos Fatos",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Apache",
@@ -123,10 +131,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Atual7",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "BBC",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -137,10 +141,6 @@
     {
       "veiculo": "BFM TV",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "BIRN",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Bahia Notícias",
@@ -227,10 +227,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Channels TV",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "China Times",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -241,10 +237,6 @@
     {
       "veiculo": "Cidades na Net",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Civio",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "CommonWealth",
@@ -265,10 +257,6 @@
     {
       "veiculo": "Corriere della Sera",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Cuestión Pública",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "D24am",
@@ -293,6 +281,10 @@
     {
       "veiculo": "Daily Telegraph (Austrália)",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Dataphyte",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "De Correspondent",
@@ -451,10 +443,6 @@
       "motivo": "feed sem itens recentes"
     },
     {
-      "veiculo": "Fumaça",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "GCMAIS",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -543,10 +531,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "IranWire",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "Itatiaia",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -597,14 +581,6 @@
     {
       "veiculo": "KBS",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "KRIK",
-      "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "Kan",
-      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Kommersant",
@@ -685,10 +661,6 @@
     {
       "veiculo": "Mediapart",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Megaphone",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Meio News",
@@ -801,6 +773,10 @@
     {
       "veiculo": "Olhar Direto",
       "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Ouestaf News",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "PCIJ",
@@ -976,7 +952,7 @@
     },
     {
       "veiculo": "STJ",
-      "motivo": "feed sem itens recentes"
+      "motivo": "RSS especializado indisponível"
     },
     {
       "veiculo": "Sagres",
@@ -1127,10 +1103,6 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "The Isaan Record",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "The Jakarta Post",
       "motivo": "sem feed (verificado recentemente)"
     },
@@ -1143,20 +1115,12 @@
       "motivo": "feed sem itens recentes"
     },
     {
-      "veiculo": "The Monthly",
+      "veiculo": "The Marshall Project",
       "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "The National",
       "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "The News Minute",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "The Reporter (Taiwan)",
-      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "The Reporters' Collective",
@@ -1204,7 +1168,7 @@
     },
     {
       "veiculo": "Toronto Star",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Tortoise Media",
@@ -1295,7 +1259,7 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Átlátszó",
+      "veiculo": "openDemocracy",
       "motivo": "feed sem itens recentes"
     },
     {
@@ -1303,32 +1267,32 @@
       "motivo": "sem feed (verificado recentemente)"
     }
   ],
-  "gerada_em": "2026-11-24T17:31:52.927326-03:00",
-  "manchetes": 1720,
+  "gerada_em": "2026-11-25T16:48:53.244846-03:00",
+  "manchetes": 1705,
   "editorias": [
     {
       "id": "tecnologia",
-      "total": 65,
+      "total": 61,
       "destaques": 5
     },
     {
       "id": "ia",
-      "total": 207,
+      "total": 200,
       "destaques": 7
     },
     {
       "id": "ciencia",
-      "total": 38,
+      "total": 41,
       "destaques": 5
     },
     {
       "id": "tributaria",
-      "total": 35,
+      "total": 36,
       "destaques": 8
     },
     {
       "id": "juridico",
-      "total": 59,
+      "total": 39,
       "destaques": 5
     }
   ]
