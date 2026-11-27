@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Seus interesses, em foco. · Capa do Mundo</title>
+<style>
+:root{--paper:#f7f5ef;--ink:#202e29;--muted:#59675f;--line:#cdd3c9;--green:#185d49}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--green)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd761c;outline-offset:4px}
+.wrap{max-width:1180px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line);padding:28px 0 16px}
+.masthead{font:700 clamp(30px,5vw,52px)/1.1 Georgia,serif;text-decoration:none;letter-spacing:-2px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eyebrow,.meta{font-size:12px;color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:24px;font-size:14px}
+nav a{text-decoration:none}
+.intro{padding:40px 0 24px}
+h1{font:normal clamp(32px,5vw,56px)/1.1 Georgia,serif;letter-spacing:-1px;margin:10px 0 16px}
+h2{font:normal 30px/1.2 Georgia,serif;margin:0}
+h3{font:normal 23px/1.3 Georgia,serif;margin:12px 0}
+.intro p{max-width:760px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:16px;padding:20px;background:#eaf0e8;border:1px solid var(--line);align-items:end}
+label{display:flex;flex-direction:column;font-size:12px;gap:6px;flex:1;min-width:140px}
+input,select,button{font:inherit;color:inherit;padding:10px;border:1px solid #9aa89d;background:var(--paper);border-radius:3px}
+button{cursor:pointer}
+.status{font-size:13px;color:var(--muted);min-height:22px}
+.section{margin:36px 0;border-top:2px solid var(--ink);padding-top:18px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.section-head a{font-size:13px;white-space:nowrap}
+.description{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.card{padding:24px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.card h3 a{text-decoration:none}
+.badge{display:inline-block;font-size:11px;color:var(--green);border:1px solid #b6c8bc;border-radius:3px;padding:2px 6px;margin:8px 3px 0 0}
+.source{font-size:13px;font-weight:650}
+.card details{font-size:12px;margin-top:12px}
+.card details li{margin-top:8px}
+summary{cursor:pointer}
+.notice{padding:14px 18px;background:#eee5d3;border-left:3px solid #a77624;font-size:14px}
+.empty{color:var(--muted);padding:20px 0}
+.coverage{margin-top:28px;font-size:14px}
+.coverage ul{columns:2;padding-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;margin-top:50px;font-size:12px;color:var(--muted)}
+[hidden]{display:none!important}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.top{align-items:start;flex-direction:column}
+.wrap{padding:0 20px}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}
+.section-head{align-items:start;flex-direction:column;gap:8px}
+.coverage ul{columns:1}
+h3{font-size:24px}
+.intro{padding-top:28px}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="top">
+<a class="masthead" href="../index.html">Capa do Mundo<span style="color:var(--green)">.</span>
+</a>
+<div class="meta">Atualizado em 27/11/2026 às 16:23 · Brasília<br>369 de 691 fontes com notícias</div>
+</div>
+<nav aria-label="Navegação principal">
+<a href="../index.html">Capa temática</a>
+<a href="../editorias/tecnologia.html">Tecnologia</a>
+<a href="../editorias/ia.html">Inteligência artificial</a>
+<a href="../editorias/ciencia.html">Ciência</a>
+<a href="../editorias/tributaria.html">Tributária</a>
+<a href="../editorias/juridico.html">Jurídico</a>
+<a href="../gerais.html">Notícias gerais</a>
+<a href="../edicoes/index.html">Arquivo</a>
+</nav>
+</header>
+<main>
+<div class="intro">
+<div class="eyebrow">Informação para acompanhar o que importa</div>
+<h1>Seus interesses, em foco.</h1>
+<p>Tecnologia, inteligência artificial, ciência, tributação e direito. Uma seleção por assunto, com diferentes fontes e acesso direto à publicação original.</p>
+</div>
+
+
+<form class="filters" id="filters" role="search">
+<label>Buscar nesta página<input id="search" type="search" placeholder="Assunto ou fonte">
+</label>
+<label>Origem da fonte<select id="origin">
+<option value="">Todas</option>
+<option value="brasil">Brasil</option>
+<option value="mundo">Resto do mundo</option>
+</select>
+</label>
+<label>Estado da fonte<select id="uf">
+<option value="">Todos / nacionais</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option>
+</select>
+</label>
+<button type="reset">Limpar filtros</button>
+</form>
+<p class="status" id="status" aria-live="polite">
+</p>
+<p class="empty" id="no-results" hidden>Nenhuma notícia corresponde aos filtros nesta página. Consulte também a página da editoria para ver mais notícias.</p>
+
+
+
+<section class="section" id="tecnologia">
+<div class="section-head">
+<h2>Tecnologia</h2>
+<a href="../editorias/tecnologia.html">Ver editoria · 59 notícias →</a>
+</div>
+<p class="description">Ferramentas, automação e segurança digital. · Publicações dos últimos 3 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="1Password sofre invasão e alerta clientes sobre vazamento de dados Tecnoblog Brasil">
+<div class="source">Tecnoblog</div>
+<div class="meta">Brasil
+ · 26/11/2026 10:49</div>
+<h3>
+<a href="https://tecnoblog.net/noticias/1password-sofre-invasao-e-alerta-clientes-sobre-vazamento-de-dados/" target="_blank" rel="noopener noreferrer">1Password sofre invasão e alerta clientes sobre vazamento de dados</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Why Goldman Sachs gives Unitree Robotics a sell rating and sees 48% downside South China Morning Post China">
+<div class="source">South China Morning Post</div>
+<div class="meta">China
+ · 27/11/2026 11:15</div>
+<h3>
+<a href="https://www.scmp.com/tech/big-tech/article/3376095/why-goldman-sachs-gives-unitree-robotics-sell-rating-and-sees-48-downside" target="_blank" rel="noopener noreferrer">Why Goldman Sachs gives Unitree Robotics a sell rating and sees 48% downside</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Police handle 30 cybersecurity cases as AI helps hackers exploit flaws South China Morning Post China">
+<div class="source">South China Morning Post</div>
+<div class="meta">China
+ · 27/11/2026 04:55</div>
+<h3>
+<a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3376025/hong-kong-police-handle-30-cybersecurity-cases-past-month-including-ai-assisted-hack" target="_blank" rel="noopener noreferrer">Police handle 30 cybersecurity cases as AI helps hackers exploit flaws</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="A New Breed of Chip Runs AI Models Using Waves of Light Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 27/11/2026 04:00</div>
+<h3>
+<a href="https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/" target="_blank" rel="noopener noreferrer">A New Breed of Chip Runs AI Models Using Waves of Light</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Black Friday de MediaMarkt 2026, en directo: hasta un 50 % en tecnología, hogar y mucho más ABC (Espanha) Espanha">
+<div class="source">ABC (Espanha)</div>
+<div class="meta">Espanha
+ · 27/11/2026 16:00</div>
+<h3>
+<a href="https://www.abc.es/favorito/electronica/black-friday-mediamarkt-2026-directo-tecnologia-hogar-20261125080019-nt.html" target="_blank" rel="noopener noreferrer">Black Friday de MediaMarkt 2026, en directo: hasta un 50 % en tecnología, hogar y mucho más</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ia">
+<div class="section-head">
+<h2>Inteligência artificial</h2>
+<a href="../editorias/ia.html">Ver editoria · 185 notícias →</a>
+</div>
+<p class="description">Aplicações, pesquisas e novos modelos. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Scoop: Anthropic and OpenAI employees fear unreleased AI models are too unsafe to release Axios EUA">
+<div class="source">Axios</div>
+<div class="meta">EUA
+ · 24/11/2026 07:45</div>
+<h3>
+<a href="https://www.axios.com/2026/11/24/anthropic-openai-unreleased-ai-safety-risks" target="_blank" rel="noopener noreferrer">Scoop: Anthropic and OpenAI employees fear unreleased AI models are too unsafe to release</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Los “millonarios de papel” de la IA: Anthropic crea miles de ricos mientras blinda el poder de su cúpula elDiarioAR Argentina">
+<div class="source">elDiarioAR</div>
+<div class="meta">Argentina
+ · 21/11/2026 00:02</div>
+<h3>
+<a href="https://www.eldiarioar.com/economia/millonarios-papel-ia-anthropic-crea-miles-ricos-blinda-cupula_1_13682169.html" target="_blank" rel="noopener noreferrer">Los “millonarios de papel” de la IA: Anthropic crea miles de ricos mientras blinda el poder de su cúpula</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="RS" data-search="O Google teve o melhor modelo de Inteligência Artificial durante 13 dias; a Anthropic tomou o posto e a resposta levou 24 horas O Sul Brasil">
+<div class="source">O Sul</div>
+<div class="meta">Brasil
+ · RS
+ · 26/11/2026 22:16</div>
+<h3>
+<a href="https://www.osul.com.br/o-google-teve-o-melhor-modelo-de-inteligencia-artificial-durante-13-dias-a-anthropic-tomou-o-posto-e-a-resposta-levou-24-horas/" target="_blank" rel="noopener noreferrer">O Google teve o melhor modelo de Inteligência Artificial durante 13 dias; a Anthropic tomou o posto e a resposta levou 24 horas</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Here’s Everything You Can Do With With the New Gemini AI on Android Auto Wired EUA">
+<div class="source">Wired</div>
+<div class="meta">EUA
+ · 26/11/2026 09:00</div>
+<h3>
+<a href="https://www.wired.com/story/heres-everything-you-can-do-with-with-the-new-gemini-ai-on-android-auto/" target="_blank" rel="noopener noreferrer">Here’s Everything You Can Do With With the New Gemini AI on Android Auto</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic CEO pushes back on Axios reporting on AI and free will Axios EUA">
+<div class="source">Axios</div>
+<div class="meta">EUA
+ · 25/11/2026 16:28</div>
+<h3>
+<a href="https://www.axios.com/2026/11/25/anthropic-dario-amodei-ai-free-will-contro-axios" target="_blank" rel="noopener noreferrer">Anthropic CEO pushes back on Axios reporting on AI and free will</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="AI-driven technique could help engineers design analog chips faster and with less expense MIT News — IA EUA">
+<div class="source">MIT News — IA</div>
+<div class="meta">EUA
+ · 23/11/2026 02:00</div>
+<h3>
+<a href="https://news.mit.edu/2026/ai-driven-technique-could-help-engineers-design-analog-chips-faster-and-less-expensive-1123" target="_blank" rel="noopener noreferrer">AI-driven technique could help engineers design analog chips faster and with less expense</a>
+</h3>
+<span class="badge">Fonte institucional</span>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Anthropic plunges as Wall Street suffers AI sell-off The Telegraph Reino Unido">
+<div class="source">The Telegraph</div>
+<div class="meta">Reino Unido
+ · 20/11/2026 18:07</div>
+<h3>
+<a href="https://www.telegraph.co.uk/business/2026/11/20/ai-tech-sell-off-anthropic-claude-nasdaq-ftse-100-markets/" target="_blank" rel="noopener noreferrer">Anthropic plunges as Wall Street suffers AI sell-off</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="ciencia">
+<div class="section-head">
+<h2>Ciência</h2>
+<a href="../editorias/ciencia.html">Ver editoria · 37 notícias →</a>
+</div>
+<p class="description">Descobertas, pesquisas e inovação. · Publicações dos últimos 7 dias.</p>
+<div class="grid">
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Scientists discover signs of a hidden extinction crisis deep beneath the ocean ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 26/11/2026 22:55</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261125045249.htm" target="_blank" rel="noopener noreferrer">Scientists discover signs of a hidden extinction crisis deep beneath the ocean</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="IBM quantum computer solves problem classical computers can’t in just 15 minutes ScienceDaily EUA">
+<div class="source">ScienceDaily</div>
+<div class="meta">EUA
+ · 24/11/2026 01:46</div>
+<h3>
+<a href="https://www.sciencedaily.com/releases/2026/11/261123231244.htm" target="_blank" rel="noopener noreferrer">IBM quantum computer solves problem classical computers can’t in just 15 minutes</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="DF" data-search="Desenvolvimento humano: conheça oito grandes mentores e cientistas do Brasil Jornal de Brasília Brasil">
+<div class="source">Jornal de Brasília</div>
+<div class="meta">Brasil
+ · DF
+ · 27/11/2026 11:06</div>
+<h3>
+<a href="https://jornaldebrasilia.com.br/blogs-e-colunas/analice-nicolau/desenvolvimento-humano-conheca-oito-grandes-mentores-e-cientistas-do-brasil/" target="_blank" rel="noopener noreferrer">Desenvolvimento humano: conheça oito grandes mentores e cientistas do Brasil</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="AC" data-search="Pesquisa do Acre sobre frango caipira vence prêmio nacional de ciência O Estado do Acre Brasil">
+<div class="source">O Estado do Acre</div>
+<div class="meta">Brasil
+ · AC
+ · 27/11/2026 08:28</div>
+<h3>
+<a href="https://oestadoacre.com/2026/11/27/pesquisa-do-acre-sobre-frango-caipira-vence-premio-nacional-de-ciencia/" target="_blank" rel="noopener noreferrer">Pesquisa do Acre sobre frango caipira vence prêmio nacional de ciência</a>
+</h3>
+
+
+</article>
+
+
+<article class="card" data-origin="mundo" data-uf="" data-search="Cientistas encontram dezenas de espécies potencialmente novas em montanhas da Amazônia BBC News Brasil Reino Unido">
+<div class="source">BBC News Brasil</div>
+<div class="meta">Reino Unido
+ · 26/11/2026 15:58</div>
+<h3>
+<a href="https://www.bbc.com/portuguese/articles/c95y1k8z7m6ro?at_campaign=rss" target="_blank" rel="noopener noreferrer">Cientistas encontram dezenas de espécies potencialmente novas em montanhas da Amazônia</a>
+</h3>
+
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="tributaria">
+<div class="section-head">
+<h2>Tributária e reforma tributária</h2>
+<a href="../editorias/tributaria.html">Ver editoria · 33 notícias →</a>
+</div>
+<p class="description">IBS/CBS, obrigações, regulamentação e decisões fiscais. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="MT" data-search="Reforma tributária em 2027: contratos com preço fixo podem pressionar margens com a chegada da CBS Leiagora Brasil">
+<div class="source">Leiagora</div>
+<div class="meta">Brasil
+ · MT
+ · 27/11/2026 15:06</div>
+<h3>
+<a href="https://leiagora.com.br/reforma-tributaria-em-2027-contratos-com-preco-fixo-podem-pressionar-margens-com-a-chegada-da-cbs/" target="_blank" rel="noopener noreferrer">Reforma tributária em 2027: contratos com preço fixo podem pressionar margens com a chegada da CBS</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Carf reconhece direito a créditos de PIS/Cofins sobre IPTU e condomínio Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 27/11/2026 14:00</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/81236/carf-reconhece-direito-a-creditos-de-pis-cofins-sobre-iptu-e-condominio/" target="_blank" rel="noopener noreferrer">Carf reconhece direito a créditos de PIS/Cofins sobre IPTU e condomínio</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="SC" data-search="Tributos: Fiesc obtém avanço no TJSC em ação sobre créditos tributários de produtos intermediários Caçador Online Brasil">
+<div class="source">Caçador Online</div>
+<div class="meta">Brasil
+ · SC
+ · 26/11/2026 09:29</div>
+<h3>
+<a href="https://www.cacador.net/noticias/geral/2026/11/26/tributos-fiesc-obtem-avanco-no-tjsc-em-acao-sobre-creditos-tributarios-de-produtos-intermediarios-66537" target="_blank" rel="noopener noreferrer">Tributos: Fiesc obtém avanço no TJSC em ação sobre créditos tributários de produtos intermediários</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="PA" data-search="Governo do Pará sanciona lei que reduz em até 100% multas e juros de tributos estaduais Zé Dudu Brasil">
+<div class="source">Zé Dudu</div>
+<div class="meta">Brasil
+ · PA
+ · 27/11/2026 16:00</div>
+<h3>
+<a href="https://www.zedudu.com.br/governo-do-para-sanciona-lei-que-reduz-em-ate-100-multas-e-juros-de-tributos-estaduais/" target="_blank" rel="noopener noreferrer">Governo do Pará sanciona lei que reduz em até 100% multas e juros de tributos estaduais</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Carf permite deduzir PLR paga a diretores empregados Portal Contábeis Brasil">
+<div class="source">Portal Contábeis</div>
+<div class="meta">Brasil
+ · 27/11/2026 16:00</div>
+<h3>
+<a href="https://www.contabeis.com.br/noticias/81247/carf-permite-deduzir-plr-paga-a-diretores-empregados/" target="_blank" rel="noopener noreferrer">Carf permite deduzir PLR paga a diretores empregados</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MG" data-search="Às vésperas da reforma tributária, MPMG quer levar educação fiscal às escolas de BH Diário do Comércio MG Brasil">
+<div class="source">Diário do Comércio MG</div>
+<div class="meta">Brasil
+ · MG
+ · 27/11/2026 13:49</div>
+<h3>
+<a href="https://diariodocomercio.com.br/financas/mpmg-educacao-fiscal-escolas/" target="_blank" rel="noopener noreferrer">Às vésperas da reforma tributária, MPMG quer levar educação fiscal às escolas de BH</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Ministra Regina Helena Costa, do STJ, lança livro sobre Código Tributário Nacional JOTA Brasil">
+<div class="source">JOTA</div>
+<div class="meta">Brasil
+ · 27/11/2026 13:21</div>
+<h3>
+<a href="https://www.jota.info/justica/ministra-regina-helena-costa-do-stj-lanca-livro-sobre-codigo-tributario-nacional" target="_blank" rel="noopener noreferrer">Ministra Regina Helena Costa, do STJ, lança livro sobre Código Tributário Nacional</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Capiau terá tributos a Lô Borges e Belchior e festa gastronômica no Beco das Sardinhas O Globo Brasil">
+<div class="source">O Globo</div>
+<div class="meta">Brasil
+ · 27/11/2026 12:04</div>
+<h3>
+<a href="https://oglobo.globo.com/blogs/saideira/post/2026/11/capiau-tera-tributos-a-lo-borges-e-belchior-e-festa-gastronomica-no-beco-das-sardinhas.ghtml" target="_blank" rel="noopener noreferrer">Capiau terá tributos a Lô Borges e Belchior e festa gastronômica no Beco das Sardinhas</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+<section class="section" id="juridico">
+<div class="section-head">
+<h2>Jurídico</h2>
+<a href="../editorias/juridico.html">Ver editoria · 52 notícias →</a>
+</div>
+<p class="description">Empresas, contratos, trabalho e jurisprudência. · Publicações dos últimos 14 dias.</p>
+<p class="meta">Os rótulos são estimados pelo título; não confirmam vigência, efeito vinculante ou aplicação ao seu caso. Confira o documento original.</p>
+<div class="grid">
+
+<article class="card" data-origin="brasil" data-uf="" data-search="CNJ suspende contrato de buffet de R$ 3,3 milhões do TJAM após relator contestar café da manhã de R$ 179 por pessoa g1 Brasil">
+<div class="source">g1</div>
+<div class="meta">Brasil
+ · 27/11/2026 15:37</div>
+<h3>
+<a href="https://g1.globo.com/am/amazonas/noticia/2026/11/27/cnj-suspende-contrato-de-buffet-de-r-33-milhoes-do-tjam-apos-relator-contestar-cafe-da-manha-de-r-179-por-pessoa.ghtml" target="_blank" rel="noopener noreferrer">CNJ suspende contrato de buffet de R$ 3,3 milhões do TJAM após relator contestar café da manhã de R$ 179 por pessoa</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="MA" data-search="Quatro aditivos, um contrato 51,8% maior e nenhum aterro: o que os documentos contam sobre o aterro Sanitário de Imperatriz O Imparcial Brasil">
+<div class="source">O Imparcial</div>
+<div class="meta">Brasil
+ · MA
+ · 27/11/2026 14:12</div>
+<h3>
+<a href="https://oimparcial.com.br/imperatriz/cidades/2026/11/aterro-imperatriz-aditivos-licitacao-suspensa/" target="_blank" rel="noopener noreferrer">Quatro aditivos, um contrato 51,8% maior e nenhum aterro: o que os documentos contam sobre o aterro Sanitário de Imperatriz</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="" data-search="Seguro de responsabilidade civil protege caixa de empresas O Globo Brasil">
+<div class="source">O Globo</div>
+<div class="meta">Brasil
+ · 27/11/2026 13:13</div>
+<h3>
+<a href="https://oglobo.globo.com/patrocinado/dino/noticia/2026/11/27/seguro-de-responsabilidade-civil-protege-caixa-de-empresas-1.ghtml" target="_blank" rel="noopener noreferrer">Seguro de responsabilidade civil protege caixa de empresas</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+<details>
+<summary>Também publicado por 1 fonte(s)</summary>
+<ul>
+<li>
+<a href="https://valor.globo.com/patrocinado/dino/noticia/2026/11/27/seguro-de-responsabilidade-civil-protege-caixa-de-empresas-1.ghtml" target="_blank" rel="noopener noreferrer">Valor Econômico — Seguro de responsabilidade civil protege caixa de empresas</a>
+</li>
+</ul>
+</details>
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="BA" data-search="Ministro do STF Luiz Fux prorroga contrato do TJBA com o BRB por mais 15 dias e suspende transferência de depósitos judiciais para a Caixa Jornal Grande Bahia Brasil">
+<div class="source">Jornal Grande Bahia</div>
+<div class="meta">Brasil
+ · BA
+ · 27/11/2026 10:07</div>
+<h3>
+<a href="https://jornalgrandebahia.com.br/2026/11/ministro-do-stf-luiz-fux-prorroga-contrato-do-tjba-com-o-brb-por-mais-15-dias-e-suspende-transferencia-de-depositos-judiciais-para-a-caixa/" target="_blank" rel="noopener noreferrer">Ministro do STF Luiz Fux prorroga contrato do TJBA com o BRB por mais 15 dias e suspende transferência de depósitos judiciais para a Caixa</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+
+<article class="card" data-origin="brasil" data-uf="SE" data-search="Torre Empreendimentos: aviso de encerramento de contrato de trabalho Infonet Brasil">
+<div class="source">Infonet</div>
+<div class="meta">Brasil
+ · SE
+ · 27/11/2026 10:05</div>
+<h3>
+<a href="https://infonet.com.br/informepublicitario/torre-empreendimentos-aviso-de-encerramento-de-contrato-de-trabalho/" target="_blank" rel="noopener noreferrer">Torre Empreendimentos: aviso de encerramento de contrato de trabalho</a>
+</h3>
+
+<span class="badge">Notícia / análise</span>
+
+</article>
+
+</div>
+
+</section>
+
+</main>
+<footer>Seleção automática por regras de assunto, relevância e data. Até dois destaques por fonte em cada editoria. Os filtros consideram a origem da fonte principal, não o local do acontecimento. Títulos no idioma original; nenhuma tradução ou resumo gerado por IA. A disponibilidade depende dos feeds públicos.<br>
+<a href="https://github.com/mac-manito/Repo">Código e metodologia</a> · Links externos abrem a publicação original.</footer>
+</div>
+<script>
+(()=>{const form=document.querySelector('#filters');if(!form)return;const search=document.querySelector('#search'),origin=document.querySelector('#origin'),uf=document.querySelector('#uf'),cards=[...document.querySelectorAll('.card')];const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const terms=cards.map(c=>norm(c.dataset.search));function filter(){if(origin.value==='mundo')uf.value='';uf.disabled=origin.value==='mundo';const query=norm(search.value).trim();let count=0;cards.forEach((card,i)=>{const match=(!origin.value||card.dataset.origin===origin.value)&&(!uf.value||card.dataset.uf===uf.value)&&terms[i].includes(query);card.hidden=!match;if(match)count++});document.querySelector('#status').textContent=count+' de '+cards.length+' notícias exibidas nesta página';document.querySelector('#no-results').hidden=count>0}form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',filter);form.addEventListener('change',filter);form.addEventListener('reset',()=>setTimeout(filter,0));filter()})();
+</script>
+</body>
+</html>

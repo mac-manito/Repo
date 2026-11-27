@@ -1,14 +1,14 @@
 {
   "consultados": 691,
-  "com_manchetes": 377,
+  "com_manchetes": 369,
   "falhas": [
     {
       "veiculo": "+972 Magazine",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "180graus",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "7Segundos",
@@ -19,28 +19,28 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "A Voz da Cidade",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "AAP",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "ABC (Austrália)",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "ABS-CBN",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "ACidade ON",
-      "motivo": "feed sem itens recentes"
-    },
-    {
-      "veiculo": "AF Notícias",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "AFP",
+      "veiculo": "ABC (Austrália)",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "ABS-CBN",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "AF Notícias",
       "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
+      "veiculo": "AFP",
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "ARIJ",
@@ -52,7 +52,7 @@
     },
     {
       "veiculo": "Addis Standard",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Africa Uncensored",
@@ -63,20 +63,20 @@
       "motivo": "feed sem itens recentes"
     },
     {
-      "veiculo": "Al Arabiya",
+      "veiculo": "Agência Mural",
       "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
+      "veiculo": "Al Arabiya",
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Al-Ahram",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "Al-Ghad",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Al-Masry Al-Youm",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Amapá Digital",
@@ -91,24 +91,32 @@
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
-      "veiculo": "Anadolu",
+      "veiculo": "Amazonas Notícias",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
+      "veiculo": "Anadolu",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
       "veiculo": "Animal Político",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Aos Fatos",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Apache",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Arab News",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Aristegui Noticias",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Armando.info",
@@ -116,15 +124,19 @@
     },
     {
       "veiculo": "Asahi Shimbun",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Associated Press (AP)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Atual7",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "BBC",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "BBC World Service",
@@ -132,19 +144,19 @@
     },
     {
       "veiculo": "BFM TV",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "Bahia.ba",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Band",
+      "veiculo": "Bahia.ba",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
+      "veiculo": "Band",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
       "veiculo": "Bangkok Post",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Bellingcat",
@@ -152,27 +164,27 @@
     },
     {
       "veiculo": "Bernama",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "Blast",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "Brasília Capital",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Business Day (África do Sul)",
+      "veiculo": "Blast",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Brasília Capital",
       "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
+      "veiculo": "Business Day (África do Sul)",
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "CBC",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "CCTV",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "CGN",
@@ -180,22 +192,26 @@
     },
     {
       "veiculo": "CGTN",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "CNA (Singapura)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "CNA (Taiwan)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "CNN / CNN International",
-      "motivo": "erro inesperado: TypeError(\"int() argument must be a string, a bytes-like object or a real number, not 'NoneType'\")"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Caixin",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Campo Grande News",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
@@ -204,27 +220,35 @@
     },
     {
       "veiculo": "Caracol Noticias",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Catve",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "China Digital Times",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "China Times",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Chosun Ilbo",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Cidades na Net",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Cleber Barbosa",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "CommonWealth",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Conexão Tocantins",
@@ -236,35 +260,35 @@
     },
     {
       "veiculo": "Correio do Povo",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Corriere della Sera",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "D24am",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "DR",
+      "veiculo": "D24am",
       "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
+      "veiculo": "DR",
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "DW",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Daily Graphic",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Daily Nation / Nation.Africa",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Daily Telegraph (Austrália)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Dataphyte",
@@ -272,27 +296,27 @@
     },
     {
       "veiculo": "De Correspondent",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "De Fato",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
+      "veiculo": "DeSmog",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Detik",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "Diario de Pernambuco",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Die Zeit",
+      "veiculo": "Diario de Pernambuco",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
-      "veiculo": "Direkt36",
-      "motivo": "feed sem itens recentes"
+      "veiculo": "Die Zeit",
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Disclose",
@@ -323,72 +347,72 @@
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Diário do Povo (People's Daily)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "veiculo": "Diário do Nordeste",
+      "motivo": "feed sem itens recentes"
     },
     {
-      "veiculo": "Dong-A Ilbo",
-      "motivo": "feed não encontrado ou fora do ar"
+      "veiculo": "Diário do Povo (People's Daily)",
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Doordarshan",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Dourados News",
-      "motivo": "sem feed (verificado recentemente)"
+      "veiculo": "Drop Site News",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "EFE",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "El Confidencial",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "El Faro",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "El Mercurio",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "El Mostrador",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "El Salto",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "El Tiempo",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "El Universal (México)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Emol",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "F5 News",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "FIJ (Foundation for Investigative Journalism)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Fanpage.it",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "FaxAju",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Foco Regional",
@@ -400,7 +424,7 @@
     },
     {
       "veiculo": "Folha de Pernambuco",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Folha do Sul Online",
@@ -411,16 +435,20 @@
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
+      "veiculo": "Follow the Money (Europa)",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "FragDenStaat",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "France Télévisions / franceinfo",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Frontier Myanmar",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Frontline Press",
@@ -436,19 +464,19 @@
     },
     {
       "veiculo": "GZH",
-      "motivo": "sem feed (verificado recentemente)"
-    },
-    {
-      "veiculo": "Garbage Day",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
-      "veiculo": "Gazeta Digital",
+      "veiculo": "Garbage Day",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
+      "veiculo": "Gazeta Digital",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "Gazeta do Povo",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Gazeta do Sul",
@@ -456,39 +484,43 @@
     },
     {
       "veiculo": "Global Times",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "GloboNews",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Haaretz",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Hankyoreh",
       "motivo": "feed sem itens recentes"
     },
     {
+      "veiculo": "Hell Gate",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "Helsingin Sanomat",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "Hindustan Times",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "Hoje em Dia",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "HumAngle",
+      "veiculo": "Hindustan Times",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Hoje em Dia",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
+      "veiculo": "HumAngle",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
       "veiculo": "Hürriyet",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "IDL-Reporteros",
@@ -496,7 +528,7 @@
     },
     {
       "veiculo": "ITV",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Imperatriz Online",
@@ -508,27 +540,23 @@
     },
     {
       "veiculo": "Investigate Europe",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "IranWire",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Itatiaia",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "JoongAng Ilbo",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Jordan Times",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Jornal Cruzeiro do Sul",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Jornal Folha do Agreste",
@@ -552,7 +580,7 @@
     },
     {
       "veiculo": "Jornal do Comércio (RS)",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Jornal do Tocantins",
@@ -564,7 +592,7 @@
     },
     {
       "veiculo": "KBS",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Kan",
@@ -572,67 +600,67 @@
     },
     {
       "veiculo": "Kommersant",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "Kompas",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "Kyodo News",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "L'Orient-Le Jour",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "La Jornada",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "La Presse",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "Le Devoir",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "Le Figaro",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "LeiaJá",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "Les Échos",
+      "veiculo": "Kompas",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Kyodo News",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "L'Orient-Le Jour",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "La Jornada",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "La Presse",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Le Devoir",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Le Figaro",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "LeiaJá",
       "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
+      "veiculo": "Les Échos",
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Liberty Times",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Libération",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Local Call",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Lusa",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "MBC",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "MCCI",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "MCP Notícias",
@@ -644,7 +672,7 @@
     },
     {
       "veiculo": "Mainichi Shimbun",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Mais Goiás",
@@ -652,7 +680,7 @@
     },
     {
       "veiculo": "Mediapart",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Meio News",
@@ -660,7 +688,7 @@
     },
     {
       "veiculo": "Michael West Media",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "MidiaNews",
@@ -668,11 +696,11 @@
     },
     {
       "veiculo": "Midiamax",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Milenio",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Montanhas Capixabas",
@@ -680,47 +708,39 @@
     },
     {
       "veiculo": "Mossoró Hoje",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "NDTV",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "NHK",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "NRC",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "NTA",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "NZ Herald",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Narasi",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "New Naratif",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "New Straits Times",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "NewZimbabwe",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "News24",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Newslaundry",
@@ -732,19 +752,15 @@
     },
     {
       "veiculo": "Nikkei",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "O Dia (RJ)",
       "motivo": "feed sem itens recentes"
     },
     {
-      "veiculo": "O Estado CE",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
       "veiculo": "O Estado de S. Paulo (Estadão)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "O Hoje",
@@ -756,11 +772,11 @@
     },
     {
       "veiculo": "O Popular",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "O Povo",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "O Progresso",
@@ -768,43 +784,35 @@
     },
     {
       "veiculo": "O Tempo",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "OhmyNews",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "OitoMeia",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "Olhar Direto",
       "motivo": "sem feed (verificado recentemente)"
     },
     {
-      "veiculo": "PCIJ",
-      "motivo": "feed sem itens recentes"
+      "veiculo": "Olhar Direto",
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "PTI (Press Trust of India)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "PTS (Taiwan)",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "Pernambuco Online",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Philippine Daily Inquirer",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Platformer",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Politico",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Portal Amapá",
@@ -820,7 +828,7 @@
     },
     {
       "veiculo": "Portal do Marcos Santos",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Potiguar Notícias",
@@ -831,20 +839,24 @@
       "motivo": "feed sem itens recentes"
     },
     {
-      "veiculo": "Proceso",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "Project Multatuli",
+      "veiculo": "ProPublica",
       "motivo": "feed sem itens recentes"
     },
     {
-      "veiculo": "Página/12",
+      "veiculo": "Proceso",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Project Multatuli",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
+      "veiculo": "Página/12",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
       "veiculo": "Público (Portugal)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Quinto Elemento Lab",
@@ -852,15 +864,15 @@
     },
     {
       "veiculo": "RAI",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "RBC",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "RCN Noticias",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "RDNews",
@@ -872,27 +884,27 @@
     },
     {
       "veiculo": "RTP",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "RTVE",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Radio France",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Rapport",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Receita Federal",
-      "motivo": "feed sem itens recentes"
+      "motivo": "RSS especializado indisponível"
     },
     {
       "veiculo": "Record / R7",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Repórter MT",
@@ -900,7 +912,7 @@
     },
     {
       "veiculo": "Reuters",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Revista Anfibia",
@@ -908,7 +920,7 @@
     },
     {
       "veiculo": "Roma News",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Rondonotícias",
@@ -928,7 +940,7 @@
     },
     {
       "veiculo": "Roraima em Tempo",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Roraima na Rede",
@@ -944,11 +956,11 @@
     },
     {
       "veiculo": "SBS",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "SBT",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "STF",
@@ -963,12 +975,16 @@
       "motivo": "feed sem itens recentes"
     },
     {
+      "veiculo": "Saiba Mais",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
       "veiculo": "Sarawak Report",
       "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Semana",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Sergipe Notícias",
@@ -976,23 +992,23 @@
     },
     {
       "veiculo": "Shargh",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Shomrim",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Sky News",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Sunday Times (África do Sul)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Surgiu",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Século Diário",
@@ -1000,7 +1016,7 @@
     },
     {
       "veiculo": "Süddeutsche Zeitung",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "T1 Notícias",
@@ -1008,11 +1024,11 @@
     },
     {
       "veiculo": "T24",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "TRT",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "TV Azteca",
@@ -1020,82 +1036,102 @@
     },
     {
       "veiculo": "TV Globo",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "TVN (Chile)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "TVNZ",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Tansa",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "Tapajós de Fato",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Televisa (N+)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Tempo",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Thai PBS",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Australian",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Brazilian Report",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Bureau of Investigative Journalism",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Caravan",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Continent",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Conversation",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Economist",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "The Elephant",
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "The Fourth Estate",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Globe and Mail",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Guardian Nigeria",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Herald (Zimbábue)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Hottest Place in Hell",
       "motivo": "feed sem itens recentes"
     },
     {
+      "veiculo": "The Indian Express",
+      "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
+      "veiculo": "The Isaan Record",
+      "motivo": "feed sem itens recentes"
+    },
+    {
       "veiculo": "The Jakarta Post",
+      "motivo": "sem feed (verificado recentemente)"
+    },
+    {
+      "veiculo": "The Kākā",
       "motivo": "feed não encontrado ou fora do ar"
     },
     {
@@ -1107,20 +1143,12 @@
       "motivo": "feed sem itens recentes"
     },
     {
-      "veiculo": "The Monthly",
-      "motivo": "feed sem itens recentes"
-    },
-    {
       "veiculo": "The National",
-      "motivo": "feed não encontrado ou fora do ar"
-    },
-    {
-      "veiculo": "The News Minute",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Reporters' Collective",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Spinoff",
@@ -1128,11 +1156,11 @@
     },
     {
       "veiculo": "The Standard (Quênia)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Star (Malásia)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Straits Times",
@@ -1140,51 +1168,51 @@
     },
     {
       "veiculo": "The Times",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Times of India",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Tyee",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "The Wire (Índia)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "TheCable",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Times of Israel",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Toronto Star",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "feed sem itens recentes"
     },
     {
       "veiculo": "Tortoise Media",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Tribuna Hoje",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "Tudo Rondônia",
-      "motivo": "sem feed (verificado recentemente)"
+      "motivo": "feed não encontrado ou fora do ar"
     },
     {
       "veiculo": "USA Today",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Vanguard",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Viagora",
@@ -1195,44 +1223,48 @@
       "motivo": "feed sem itens recentes"
     },
     {
-      "veiculo": "Welt",
+      "veiculo": "WSCom",
       "motivo": "feed não encontrado ou fora do ar"
+    },
+    {
+      "veiculo": "Welt",
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Xinhua",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "YLE",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Yedioth Ahronoth",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Ynet",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Yomiuri Shimbun",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Yonhap",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "ZDF",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "Zetland",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "ZimLive",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "amaBhungane",
@@ -1240,15 +1272,15 @@
     },
     {
       "veiculo": "bianet",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "heise online",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "la Repubblica",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     },
     {
       "veiculo": "É Assim",
@@ -1256,8 +1288,8 @@
     },
     {
       "veiculo": "ČT (Česká televize)",
-      "motivo": "feed não encontrado ou fora do ar"
+      "motivo": "sem feed (verificado recentemente)"
     }
   ],
-  "gerada_em": "2026-11-26T16:26:56.772582-03:00"
+  "gerada_em": "2026-11-27T16:23:03.474442-03:00"
 }
